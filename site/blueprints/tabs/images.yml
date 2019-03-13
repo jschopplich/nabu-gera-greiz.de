@@ -1,0 +1,9 @@
+label: Bilder
+icon: file-image
+sections:
+  imagesContent:
+    type: files
+    headline: Dateien
+    template: image
+    layout: cards
+    size: tiny

@@ -1,0 +1,21 @@
+title: Seite
+preset: page
+
+fields:
+  intro:
+    label: Intro
+    type: text
+
+  text:
+    label: Text
+    type: markdown
+
+sidebar:
+  pages:
+    extends: sections/pages
+
+  cover:
+    extends: sections/cover
+
+  files:
+    extends: sections/files

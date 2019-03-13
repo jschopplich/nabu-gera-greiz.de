@@ -1,0 +1,48 @@
+title: Artikel
+preset: page
+pages: false
+num: date
+
+icon: 📄
+
+status:
+  draft:
+    label: Entwurf
+    text: Der Artikel ist im Entwurfsmodus und nur für angemeldete Benutzer sichtbar
+  unlisted:
+    label: in Überprüfung
+    text: Der Artikel kann nur über die URL aufgerufen werden
+  listed:
+    label: Veröffentlicht
+    text: Der Artikel ist öffentlich sichtbar
+
+fields:
+  subtitle:
+    label: Untertitel
+    type: text
+
+  text:
+    label: Text
+    type: markdown
+
+sidebar:
+  meta1:
+    type: fields
+    fields:
+      date:
+        label: Datum
+        type: date
+        time: true
+        default: now
+        required: true
+
+      #authors:
+        #label: Autoren
+        #type: users
+        #multiple: false
+
+  files:
+    extends: sections/files
+
+  meta2:
+    extends: sections/meta

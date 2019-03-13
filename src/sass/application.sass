@@ -1,0 +1,100 @@
+@charset "utf-8"
+
+@import "0-vendor/bulma/utilities/functions"
+@import "1-settings/definitions-variables"
+@import "0-vendor/vendor-bulma"
+
+@import "0-vendor/vendor-flickity"
+@import "0-vendor/vendor-cookieconsent.min"
+
+@import "2-tools/tools-scrollreveal"
+@import "2-tools/tools-mediumzoom"
+@import "2-tools/tools-kirby-uniform"
+
+@import "3-generic/generic-styles"
+@import "3-generic/generic-header"
+@import "3-generic/generic-navigation"
+@import "3-generic/generic-footer"
+
+@import "4-elements/elements-box"
+@import "4-elements/elements-content"
+
+@import "5-components/components-main-content"
+@import "5-components/components-side-content"
+@import "5-components/components-flickity"
+
+@import "6-templates/templates-home"
+@import "6-templates/templates-calendar"
+
+@import "7-helpers/helpers-general"
+@import "7-helpers/helpers-flex"
+@import "7-helpers/helpers-spacing"
+
+
+// Print styles for more legibility
+
+@media print
+  *,
+  *::before,
+  *::after,
+  p::first-letter,
+  div::first-letter,
+  blockquote::first-letter,
+  li::first-letter,
+  p::first-line,
+  div::first-line,
+  blockquote::first-line,
+  li::first-line
+    color: #000 !important
+    background: transparent !important
+    box-shadow: none !important
+    text-shadow: none !important
+
+  a,
+  a:visited
+    text-decoration: underline
+
+  a[href]::after
+    content: " (" attr(href) ")"
+
+  abbr[title]::after
+    content: " (" attr(title) ")"
+
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after
+    content: ""
+
+  pre
+    white-space: pre-wrap !important
+
+  pre,
+  blockquote
+    border: 1px solid #999
+    page-break-inside: avoid
+
+  thead
+    display: table-header-group
+
+  tr,
+  img
+    page-break-inside: avoid
+
+  img
+    max-width: 100% !important
+
+  p,
+  h2,
+  h3
+    orphans: 3
+    widows: 3
+
+  h2,
+  h3
+    page-break-after: avoid
+
+  a[href]::after
+    content: ""
+
+  .header,
+  .side-column
+    display: none

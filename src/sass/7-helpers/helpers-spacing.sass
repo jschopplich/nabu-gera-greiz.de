@@ -1,0 +1,72 @@
+$sizeUnit: rem
+$marginKey: "has-m"
+$paddingKey: "has-p"
+$sizes: ("none", 0), ("auto", auto), ("xsmall", 0.25), ("small", 0.5), ("normal", 1), ("medium", 1.5), ("large", 2), ("xlarge", 3), ("xxlarge", 6)
+$positions: ("t", "top"), ("r", "right"), ("b", "bottom"), ("l", "left")
+
+@function sizeValue($key, $value)
+  @return if($key == "none" or $key == "auto", $value, $value + $sizeUnit)
+
+@each $size in $sizes
+  $sizeKey: nth($size, 1)
+  $sizeValue: nth($size, 2)
+  .#{$marginKey}-#{$sizeKey}
+    margin: sizeValue($sizeKey, $sizeValue) !important
+  .#{$paddingKey}-#{$sizeKey}
+    padding: sizeValue($sizeKey, $sizeValue) !important
+  +mobile
+    .#{$marginKey}-#{$sizeKey}-mobile
+      margin: sizeValue($sizeKey, $sizeValue) !important
+    .#{$paddingKey}-#{$sizeKey}-mobile
+      padding: sizeValue($sizeKey, $sizeValue) !important
+  +tablet
+    .#{$marginKey}-#{$sizeKey}-tablet
+      margin: sizeValue($sizeKey, $sizeValue) !important
+    .#{$paddingKey}-#{$sizeKey}-tablet
+      padding: sizeValue($sizeKey, $sizeValue) !important
+  +touch
+    .#{$marginKey}-#{$sizeKey}-touch
+      margin: sizeValue($sizeKey, $sizeValue) !important
+    .#{$paddingKey}-#{$sizeKey}-touch
+      padding: sizeValue($sizeKey, $sizeValue) !important
+  +desktop
+    .#{$marginKey}-#{$sizeKey}-desktop
+      margin: sizeValue($sizeKey, $sizeValue) !important
+    .#{$paddingKey}-#{$sizeKey}-desktop
+      padding: sizeValue($sizeKey, $sizeValue) !important
+  @each $position in $positions
+    $posKey: nth($position, 1)
+    $posValue: nth($position, 2)
+    .#{$marginKey}#{$posKey}-#{$sizeKey}
+      margin-#{$posValue}: sizeValue($sizeKey, $sizeValue) !important
+    .#{$paddingKey}#{$posKey}-#{$sizeKey}
+      padding-#{$posValue}: sizeValue($sizeKey, $sizeValue) !important
+    +mobile
+      .#{$marginKey}#{$posKey}-#{$sizeKey}-mobile
+        margin-#{$posValue}: sizeValue($sizeKey, $sizeValue) !important
+      .#{$paddingKey}#{$posKey}-#{$sizeKey}-mobile
+        padding-#{$posValue}: sizeValue($sizeKey, $sizeValue) !important
+    +tablet
+      .#{$marginKey}#{$posKey}-#{$sizeKey}-tablet
+        margin-#{$posValue}: sizeValue($sizeKey, $sizeValue) !important
+      .#{$paddingKey}#{$posKey}-#{$sizeKey}-tablet
+        padding-#{$posValue}: sizeValue($sizeKey, $sizeValue) !important
+    +touch
+      .#{$marginKey}#{$posKey}-#{$sizeKey}-touch
+        margin-#{$posValue}: sizeValue($sizeKey, $sizeValue) !important
+      .#{$paddingKey}#{$posKey}-#{$sizeKey}-touch
+        padding-#{$posValue}: sizeValue($sizeKey, $sizeValue) !important
+    +desktop
+      .#{$marginKey}#{$posKey}-#{$sizeKey}-desktop
+        margin-#{$posValue}: sizeValue($sizeKey, $sizeValue) !important
+      .#{$paddingKey}#{$posKey}-#{$sizeKey}-desktop
+        padding-#{$posValue}: sizeValue($sizeKey, $sizeValue) !important
+
+// Alias for margin auto horizontally and vertically
+
+.has-mx-auto
+  @extend .has-ml-auto
+  @extend .has-mr-auto
+.has-my-auto
+  @extend .has-mt-auto
+  @extend .has-mb-auto

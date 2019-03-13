@@ -1,0 +1,27 @@
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-text font-size="16px" line-height="22px" color="#212529" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, sans-serif" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body>
+    <mj-section>
+      <mj-column>
+
+        <mj-image width="130px" src="https://nabu-gera-greiz.de/assets/images/emails/logo-130.png"></mj-image>
+
+        <mj-divider border-color="#0069b3"></mj-divider>
+
+        <mj-text>&lt;<b><?= $email ?></b>&gt; hat sich über nabu-gera-greiz.de für den Newsletter angemeldet.</mj-text>
+        <mj-text>Name=<?= $surname ?><br>
+        Vorname=<?= $forename ?><br>
+        Anrede=<?= $salutation ?><br>
+        Titel=<?= $acadTitle ?></mj-text>
+
+      </mj-column>
+    </mj-section>
+    
+    <mj-divider width="25%" border-width="1px" border-style="dashed" border-color="lightgrey"></mj-divider>
+
+  </mj-body>
+</mjml>

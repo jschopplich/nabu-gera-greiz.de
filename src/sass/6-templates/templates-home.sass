@@ -1,0 +1,37 @@
+.section.is-home
+  +desktop
+    padding-right: 0.75rem
+    padding-left: 0.75rem
+
+.section.is-article-cards
+  .media
+    align-items: center
+    & + .media
+      border-top: 0
+
+    .media-left
+      .image, .icon
+        margin-left: 0
+        margin-right: 1rem
+      .icon
+        width: 96px
+
+    .media-content
+      overflow-x: unset
+
+  .card
+    @extend %box
+    transition: all 0.15s ease-in-out
+    &:hover,
+    &:focus
+      transform: translateY(-2px)
+
+  .card-image
+    img
+      border-radius: $radius-large $radius-large 0 0
+
+  .card-icon
+    padding: 3rem
+
+    svg
+      width: 100%

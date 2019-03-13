@@ -1,0 +1,17 @@
+title: Bild
+
+accept:
+  mime: image/jpeg, image/png, image/svg+xml
+
+fields:
+  alt:
+    label: Alternativtext
+    type: text
+    width: 1/2
+  link:
+    label: Link
+    type: url
+    width: 1/2
+  caption:
+    label: Bildunterschrift
+    type: textarea

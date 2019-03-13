@@ -1,0 +1,73 @@
+title: Veranstaltungen
+preset: page
+pages: false
+
+icon: 📅
+
+fields:
+  intro:
+    label: Intro
+    type: text
+
+  textBeforeCalendar:
+    label: Text vor Kalender
+    type: markdown
+
+  calendar:
+    label: Kalender
+    type: structure
+    columns:
+      eventDate: 
+        width: 1/2
+      eventTitle: 
+        width: 1/2
+    fields:
+      eventTitle:
+        label: Titel
+        type: textarea
+        buttons: false
+        width: 2/3
+        required: true
+      eventDate:
+        label: Datum
+        type: textarea
+        buttons: false
+        width: 1/3
+        required: true
+      eventReferent:
+        label: Referent
+        type: textarea
+        buttons: false
+        width: 1/2
+      eventOrganizer:
+        label: Veranstalter
+        type: textarea
+        buttons: false
+        width: 1/2
+      eventLocation:
+        label: Veranstaltungsort
+        type: textarea
+        buttons: false
+        width: 1/2
+      eventPrice:
+        label: Eintritt
+        type: textarea
+        buttons: false
+        width: 1/2
+      eventDescription:
+        label: Weitere Beschreibung
+        type: textarea
+
+  textAfterCalendar:
+    label: Text nach Kalender
+    type: markdown
+
+sidebar:
+  cover:
+    extends: sections/cover
+
+  files:
+    extends: sections/files
+
+  meta:
+    extends: sections/meta

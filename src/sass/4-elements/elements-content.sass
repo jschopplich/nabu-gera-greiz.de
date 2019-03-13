@@ -1,0 +1,29 @@
+.content
+  p a,
+  li a
+    color: $link
+    background-image: linear-gradient(to bottom, currentColor 0%, currentColor 100%)
+    background-position: 0 100%
+    background-repeat: repeat-x
+    background-size: 0 0
+    text-decoration: none
+    &:focus,
+    &:hover
+      background-size: 1px 1px
+
+  &.is-inverted
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6
+      color: $white
+
+    p a,
+    li a
+      color: $white
+      background-size: 1px 1px
+      &:focus,
+      &:hover
+        color: darken($white, 10%)

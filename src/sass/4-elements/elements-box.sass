@@ -1,0 +1,9 @@
+%box
+  box-shadow: $shadow-box
+  border-radius: $radius-large
+  transition: box-shadow 0.15s ease-in-out
+  &:hover
+    box-shadow: $shadow-box-hover
+
+.box
+  @extend %box

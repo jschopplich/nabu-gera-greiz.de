@@ -1,0 +1,7 @@
+title: Datei
+
+fields:
+  alt:
+    label: Alternativtext
+    type: text
+    help: nur für Bilddateien nötig

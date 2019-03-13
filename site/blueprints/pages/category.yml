@@ -1,0 +1,29 @@
+title: Kategorie
+
+icon: 📖
+
+options:
+  url: false
+  status: false
+  delete: false
+
+columns:
+  - width: 1/2
+    sections:
+      drafts:
+        extends: sections/pages
+        headline: Entwürfe
+        status: draft
+
+      unlisted:
+        extends: sections/pages
+        headline: Ungelistet
+        status: unlisted
+
+  - width: 1/2
+    sections:
+      listed:
+        extends: sections/pages
+        headline: Veröffentlicht
+        status: listed
+        layout: cards

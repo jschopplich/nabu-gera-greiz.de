@@ -1,0 +1,69 @@
+title: Aktuelles
+
+icon: 📝
+
+options:
+  url: false
+  status: false
+  delete: false
+
+tabs:
+
+  articles:
+    label: Artikel
+    icon: edit
+    columns:
+      - width: 1/2
+        sections:
+          drafts:
+            extends: sections/articles
+            headline: Entwürfe
+            status: draft
+
+          unlisted:
+            extends: sections/articles
+            headline: Artikel in Überprüfung
+            status: unlisted
+
+      - width: 1/2
+        sections:
+          listed:
+            extends: sections/articles
+            headline: Veröffentlichte Artikel
+            status: listed
+            layout: cards
+
+  content:
+    label: Seite
+    icon: page
+    preset: page
+    pages: false
+
+    fields:
+      intro:
+        label: Intro
+        type: text
+
+      text:
+        label: Text
+        type: markdown
+
+    sidebar:
+      cover:
+        extends: sections/cover
+
+      files:
+        extends: sections/files
+
+      excerpts:
+        type: fields
+        fields:
+          perPage:
+            label: Artikelauszüge
+            type: number
+            default: 4
+            min: 1
+            max: 20
+
+      meta:
+        extends: sections/meta

@@ -1,0 +1,88 @@
+// Cosmetic change
+.navbar.is-spaced
+  .navbar-dropdown
+    .navbar-item
+      border-radius: 0
+
+// Adapt styling to default pages
+.header.is-default
+  .navbar.is-spaced
+    +desktop
+      padding-right: 0
+      padding-left: 0
+
+// More appealing dropdown arrow
+.navbar-link:not(.is-arrowless)::after
+  width: 0.5em
+  height: 0.5em
+  margin-top: -0.25em
+  border-radius: initial
+
+// Styling for homepage
+.navbar.is-home
+  position: absolute
+  top: 0
+  background-color: rgba(255, 255, 255, 0.9)
+  border-radius: $radius-large $radius-large 0 0
+  width: 100%
+
+  .navbar-link:not(.is-arrowless)::after
+    border-color: currentColor
+
+// Additional dropdown styles for wider content
+.navbar-dropdown.has-more
+  .navbar-item
+    padding-left: 3em
+    position: relative
+
+  .icon
+    position: absolute
+    top: .375rem
+    left: 1rem
+    width: 1em
+    text-align: center
+
+  +desktop
+    width: 21rem
+    .navbar-item
+      padding-right: 1rem
+      white-space: normal
+      .level
+        flex-grow: 1
+
+// Navigation for mobile screens
+
+.navbar-brand
+  background-color: $primary
+
+.navbar-brand-tabs
+  margin-bottom: 0 !important
+  
+  ul
+    border-bottom: 0
+
+  a
+    color: $white
+    border-bottom-color: transparent
+    &:hover
+      color: darken($white, 10%)
+      border-bottom-color: $white
+
+  li.is-active a
+    color: $white
+    border-bottom-color: $white
+
+// Indicate tabs to be horizontally scrollable
+.navbar-burger
+  position: relative
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    bottom: 0
+    left: -1.5rem
+    width: 1.5rem
+    background: linear-gradient(to right, transparent, $primary)
+    // Specifies that the pseudo-element cannot be a target of mouse events,
+    // allowing text behind it to still be selectable/interactive
+    pointer-events: none

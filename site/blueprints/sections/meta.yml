@@ -1,0 +1,13 @@
+type: fields
+fields:
+  metaTitle:
+    label: Meta-Titel
+    type: text
+    icon: title
+    help: >
+      standardmäßig <i>Seitentitel</i> – NABU Gera-Greiz e.V.
+  metaDescription:
+    label: Meta-Beschreibung
+    type: textarea
+    buttons: false
+    icon: text

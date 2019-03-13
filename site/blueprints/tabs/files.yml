@@ -1,0 +1,9 @@
+label: Dateien
+icon: file
+sections:
+  filesContent:
+    type: files
+    headline: Dateien
+    template: file
+    layout: cards
+    size: small

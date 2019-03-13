@@ -1,0 +1,15 @@
+title: Redakteur
+description: Alle Rechte für redaktionelle Bearbeitung
+extends: users/admin
+
+permissions:
+  access:
+    settings: false
+  users: false
+  site:
+    update: false
+  user:
+    create: false
+    deleteAvatar: false
+    changeRole: false
+    delete: false
