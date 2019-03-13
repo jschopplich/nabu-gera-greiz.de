@@ -32,7 +32,7 @@ Built with [Kirby](https://getkirby.com) – a fast flat-file content management
 git clone https://github.com/jschopplich/nabu-gera-greiz.de
 ```
 
-### Step 2: Install Dependencies
+### Step 2: Install dependencies and build assets
 
 ```
 npm install && npm run build
