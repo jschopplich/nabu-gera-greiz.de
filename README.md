@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://nabu-gera-greiz.de/">
-    <img src="assets/images/logo.svg" alt="NABU Gera-Greiz e.V. Logo" width="96" height="96">
+    <img src="assets/images/logo.svg" alt="NABU Gera-Greiz e.V. Logo" width="144" height="144">
   </a>
 </p>
 
@@ -12,6 +12,8 @@
   <a href="https://nabu-gera-greiz.de/"><strong>Read current articles (German) »</strong></a>
   <br>
 </p>
+
+<br>
 
 # NABU Gera-Greiz e.V.
 
