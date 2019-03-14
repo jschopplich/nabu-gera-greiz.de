@@ -17,11 +17,11 @@ $metaDescription = $page->metaDescription()->or($site->homePage()->metaDescripti
 <meta name="publisher" content="<?= $site->metaAuthor() ?>">
 <meta name="copyright" content="<?= $site->metaAuthor() ?>">
 
+<meta property="og:title" content="<?= $metaTitle ?>">
+<meta property="og:description" content="<?= $metaDescription ?>">
 <meta property="og:url" content="<?= $page->url() ?>">
 <meta property="og:type" content="website">
-<meta property="og:title" content="<?= $metaTitle ?>">
 <meta property="og:image" content="<?= url('meta-image.jpg') ?>">
-<meta property="og:description" content="<?= $metaDescription ?>">
 <meta property="og:site_name" content="<?= $site->title() ?>">
 <meta property="article:author" content="<?= $site->metaAuthor() ?>">
 
@@ -30,9 +30,9 @@ $metaDescription = $page->metaDescription()->or($site->homePage()->metaDescripti
 <meta name="twitter:site" content="@site_account">
 <meta name="twitter:creator" content="@individual_account">
 */ ?>
-<meta name="twitter:url" content="<?= $page->url() ?>">
 <meta name="twitter:title" content="<?= $metaTitle ?>">
 <meta name="twitter:description" content="<?= $metaDescription ?>">
+<meta name="twitter:url" content="<?= $page->url() ?>">
 <meta name="twitter:image" content="<?= url('meta-image.jpg') ?>">
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
