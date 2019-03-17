@@ -4,7 +4,7 @@
       <span class="icon has-text-warning">
         <i class="fas fa-star" aria-hidden="true"></i>
       </span>
-      <strong><?= $item->title()->html() ?></strong>
+      <strong><?= page('aktuelles')->title()->html() ?></strong>
       <br>
       Die erste Adresse für aktuelle Nachrichten und Informationen
     </span>
