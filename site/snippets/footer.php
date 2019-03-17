@@ -35,7 +35,7 @@
     </div>
   </footer>
 
-<?php snippet('modal-newsletter') ?>
+<?php snippet('modals/newsletter') ?>
 
 <?= Bnomei\Fingerprint::js('assets/dist/main.min.js') ?>
 <?php e(!$page->isHomePage(), Bnomei\Fingerprint::js('assets/dist/main.prefetch.min.js')) ?>
