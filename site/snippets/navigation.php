@@ -36,9 +36,9 @@
           <div class="navbar-link"><?= $item->title()->html() ?></div>
 
           <?php if ($item->id() === 'aktuelles'): ?>
-            <?php snippet('navigation/news.php') ?>
+            <?php snippet('navigation/news') ?>
           <?php elseif ($item->id() === 'projekte'): ?>
-            <?php snippet('navigation/projects.php') ?>
+            <?php snippet('navigation/projects') ?>
           <?php else: ?>
             <div class="navbar-dropdown is-boxed">
               <?php foreach($item->children()->listed()->filterBy('template', '!=', 'article') as $subitem): ?>
