@@ -1,5 +1,5 @@
 <div class="navbar-dropdown has-more is-boxed">
-  <a class="navbar-item<?php e($item->isActive(), ' is-active') ?>" href="<?= $item->url() ?>">
+  <a class="navbar-item<?php e($page->slug() === 'aktuelles', ' is-active') ?>" href="<?= page('aktuelles')->url() ?>">
     <span>
       <span class="icon has-text-warning">
         <i class="fas fa-star" aria-hidden="true"></i>
@@ -12,7 +12,7 @@
 
   <hr class="navbar-divider">
 
-  <div class="navbar-item<?php e($page->slug() == 'archiv', ' is-active') ?>">
+  <div class="navbar-item<?php e($page->slug() === 'archiv', ' is-active') ?>">
     <span>
       <span class="icon has-text-grey-light">
         <i class="fal fa-archive" aria-hidden="true"></i>

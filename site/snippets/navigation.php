@@ -35,9 +35,9 @@
         <div class="navbar-item has-dropdown is-hoverable">
           <div class="navbar-link"><?= $item->title()->html() ?></div>
 
-          <?php if ($item->slug() == 'aktuelles'): ?>
+          <?php if ($item->id() === 'aktuelles'): ?>
             <?php snippet('navigation/news.php') ?>
-          <?php elseif ($item->slug() == 'projekte'): ?>
+          <?php elseif ($item->id() === 'projekte'): ?>
             <?php snippet('navigation/projects.php') ?>
           <?php else: ?>
             <div class="navbar-dropdown is-boxed">
