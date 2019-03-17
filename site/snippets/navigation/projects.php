@@ -8,8 +8,6 @@
       <strong><?= page('projekte/naturschutzinformation-waldhaus')->title()->html() ?></strong>
       <br>
       Die Naturschutzinformation im Naherholungsgebiet Waldhaus bei Greiz
-      <?= $page->slug() ?>
-      <?= $page->id() ?>
     </span>
   </a>
 
