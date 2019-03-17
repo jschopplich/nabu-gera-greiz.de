@@ -25,6 +25,7 @@
 /media
 /site/accounts
 /site/cache
+/site/config/redirects.yml
 /site/logs
 /site/sessions
 /site/config/.license

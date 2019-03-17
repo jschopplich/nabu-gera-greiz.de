@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3ff016bdfad95ec94f91e31c2bde5aa9",
+    "content-hash": "272371d491e1db9374304afb5972f323",
     "packages": [
         {
             "name": "bnomei/kirby3-fingerprint",
@@ -288,37 +288,6 @@
             "description": "Kirby's custom Composer installer for the Kirby CMS and for Kirby plugins",
             "homepage": "https://getkirby.com",
             "time": "2019-02-11T20:27:36+00:00"
-        },
-        {
-            "name": "hashandsalt/kirby-chopper",
-            "version": "2.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/HashandSalt/chopper.git",
-                "reference": "da49d83dc178b793e598ca73fec061f462e840e6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/HashandSalt/chopper/zipball/da49d83dc178b793e598ca73fec061f462e840e6",
-                "reference": "da49d83dc178b793e598ca73fec061f462e840e6",
-                "shasum": ""
-            },
-            "require": {
-                "getkirby/composer-installer": "^1.1"
-            },
-            "type": "kirby-plugin",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "James Steel",
-                    "email": "hello@hashandsalt.com"
-                }
-            ],
-            "description": "Kirby 3 Chopper plugin for truncating text",
-            "time": "2019-03-04T21:07:10+00:00"
         },
         {
             "name": "k-community/markdown-field",
