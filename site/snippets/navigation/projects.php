@@ -5,9 +5,11 @@
       <span class="icon has-text-grey-light">
         <i class="fas fa-home-heart" aria-hidden="true"></i>
       </span>
-      <strong><?= $item->title()->html() ?></strong>
+      <strong><?= page('projekte/naturschutzinformation-waldhaus')->title()->html() ?></strong>
       <br>
       Die Naturschutzinformation im Naherholungsgebiet Waldhaus bei Greiz
+      <?= $page->slug() ?>
+      <?= $page->id() ?>
     </span>
   </a>
 
