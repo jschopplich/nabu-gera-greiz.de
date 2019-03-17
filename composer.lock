@@ -322,23 +322,24 @@
         },
         {
             "name": "k-community/markdown-field",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sylvainjule/kirby-markdown-field.git",
-                "reference": "fe3d9df124668297422a9247d45fca8c308872c4"
+                "reference": "c25a1440cf35ec24418f6f9fc868d1ba7b868aee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sylvainjule/kirby-markdown-field/zipball/fe3d9df124668297422a9247d45fca8c308872c4",
-                "reference": "fe3d9df124668297422a9247d45fca8c308872c4",
+                "url": "https://api.github.com/repos/sylvainjule/kirby-markdown-field/zipball/c25a1440cf35ec24418f6f9fc868d1ba7b868aee",
+                "reference": "c25a1440cf35ec24418f6f9fc868d1ba7b868aee",
                 "shasum": ""
             },
+            "require": {
+                "getkirby/composer-installer": "^1.1"
+            },
             "type": "kirby-plugin",
-            "autoload": {
-                "files": [
-                    "config.php"
-                ]
+            "extra": {
+                "installer-name": "superplugin"
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -355,7 +356,7 @@
                 }
             ],
             "description": "Enhanced markdown editor for Kirby 3",
-            "time": "2019-01-16T21:38:05+00:00"
+            "time": "2019-03-17T16:48:33+00:00"
         },
         {
             "name": "league/color-extractor",
