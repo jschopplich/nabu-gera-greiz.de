@@ -14,7 +14,7 @@
 
   <div class="navbar-item<?php e($page->id() === 'archiv', ' is-active') ?>">
     <span>
-      <span class="icon has-text-grey-light">
+      <span class="icon">
         <i class="fal fa-archive" aria-hidden="true"></i>
       </span>
       <strong><?= page('archiv')->title()->html() ?></strong>

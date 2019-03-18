@@ -8,6 +8,13 @@ return [
     }
   ],
   [
+    'pattern' => 'amphibienzaun/(:any)',
+    'action'  => function ($path) {
+      $page = page('projekte/amphibienzaun/' . $path);
+      go($page ? $page->url() : 'error');
+    }
+  ],
+  [
     'pattern' => 'informationen',
     'action'  => function () {
       return go('informationen/aktiv-werden');
