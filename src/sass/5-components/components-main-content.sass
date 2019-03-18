@@ -24,7 +24,8 @@
   // Links
 
   .arrow,
-  .pdf
+  a[target=_blank],
+  a[href$=".pdf"]
     &::before
       position: relative
       display: inline-block
@@ -43,11 +44,15 @@
       color: currentColor
       font-weight: 700
 
-  .arrow::before
-    content: "\f14c"
+  .arrow,
+  a[target=_blank]
+    &::before
+      content: "\f14c"
 
-  .pdf::before
-    content: "\f1c1"
+  .pdf,
+  a[href$=".pdf"]
+    &::before
+      content: "\f1c1"
 
   // Images
 
