@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*! bulma.io v0.7.3-dev | MIT License | github.com/jgthms/bulma */
+/*! bulma.io v0.7.4 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
     transform: rotate(0deg);
@@ -36,7 +36,7 @@
   width: 0.625em;
 }
 
-.tabs:not(:last-child), .message:not(:last-child), .list:not(:last-child), .level:not(:last-child), .breadcrumb:not(:last-child), .title:not(:last-child),
+.tabs:not(:last-child), .message:not(:last-child), .level:not(:last-child), .breadcrumb:not(:last-child), .title:not(:last-child),
 .subtitle:not(:last-child), .table-container:not(:last-child), .table:not(:last-child), .notification:not(:last-child), .content:not(:last-child), .box:not(:last-child) {
   margin-bottom: 1.5rem;
 }
@@ -4407,40 +4407,6 @@ button.dropdown-item.is-active {
   }
 }
 
-.list {
-  background-color: white;
-  border-radius: 6px;
-  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-}
-
-.list-item {
-  display: block;
-  padding: 0.5em 1em;
-}
-.list-item:not(a) {
-  color: #4a4a4a;
-}
-.list-item:first-child {
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-}
-.list-item:last-child {
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-}
-.list-item:not(:last-child) {
-  border-bottom: 1px solid #dbdbdb;
-}
-.list-item.is-active {
-  background-color: #0069b3;
-  color: #fff;
-}
-
-a.list-item {
-  background-color: #f0f0f0;
-  cursor: pointer;
-}
-
 .media {
   align-items: flex-start;
   display: flex;
@@ -8754,7 +8720,8 @@ img {
   margin: 0;
 }
 .content.is-main .arrow::before,
-.content.is-main .pdf::before {
+.content.is-main a[target=_blank]::before,
+.content.is-main a[href$=".pdf"]::before {
   position: relative;
   display: inline-block;
   bottom: 1px;
@@ -8770,14 +8737,17 @@ img {
   -webkit-font-smoothing: antialiased;
 }
 .content.is-main .arrow:hover::before,
-.content.is-main .pdf:hover::before {
+.content.is-main a[target=_blank]:hover::before,
+.content.is-main a[href$=".pdf"]:hover::before {
   color: currentColor;
   font-weight: 700;
 }
-.content.is-main .arrow::before {
+.content.is-main .arrow::before,
+.content.is-main a[target=_blank]::before {
   content: "";
 }
-.content.is-main .pdf::before {
+.content.is-main .pdf::before,
+.content.is-main a[href$=".pdf"]::before {
   content: "";
 }
 .content.is-main .image-hero,
@@ -8984,6 +8954,21 @@ p.rule {
   .main-calendar .table {
     font-size: 0.75rem;
   }
+}
+
+.content.is-old-blog h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.content.is-old-blog h3 {
+  color: #7a7a7a;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 1em;
+}
+.content.is-old-blog h2 + h3 {
+  margin-top: -1.25rem;
 }
 
 .has-border-radius-small {
