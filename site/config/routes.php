@@ -2,31 +2,6 @@
 
 return [
   [
-    'pattern' => 'projekte',
-    'action'  => function () {
-      return go('projekte/naturschutzinformation-waldhaus');
-    }
-  ],
-  [
-    'pattern' => 'amphibienzaun/(:any)',
-    'action'  => function ($path) {
-      $page = page('projekte/amphibienzaun/' . $path);
-      go($page ? $page->url() : 'error');
-    }
-  ],
-  [
-    'pattern' => 'informationen',
-    'action'  => function () {
-      return go('informationen/aktiv-werden');
-    }
-  ],
-  [
-    'pattern' => 'impressum',
-    'action'  => function () {
-      return go('informationen/impressum');
-    }
-  ],
-  [
     'pattern' => 'newsletter-mailer',
     'method' => 'POST',
     'action' => function () {
