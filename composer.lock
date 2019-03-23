@@ -192,16 +192,16 @@
         },
         {
             "name": "getkirby/cms",
-            "version": "3.1.0-rc.1",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getkirby/kirby.git",
-                "reference": "c4ce18995c9a74c679dd1e2710f26ec151319624"
+                "reference": "74b593ff86f9a220343d08e3c631b128d09e76d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getkirby/kirby/zipball/c4ce18995c9a74c679dd1e2710f26ec151319624",
-                "reference": "c4ce18995c9a74c679dd1e2710f26ec151319624",
+                "url": "https://api.github.com/repos/getkirby/kirby/zipball/74b593ff86f9a220343d08e3c631b128d09e76d6",
+                "reference": "74b593ff86f9a220343d08e3c631b128d09e76d6",
                 "shasum": ""
             },
             "require": {
@@ -249,7 +249,7 @@
                 "core",
                 "kirby"
             ],
-            "time": "2019-03-12T12:19:29+00:00"
+            "time": "2019-03-19T08:43:05+00:00"
         },
         {
             "name": "getkirby/composer-installer",
@@ -295,12 +295,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sylvainjule/kirby-markdown-field.git",
-                "reference": "c25a1440cf35ec24418f6f9fc868d1ba7b868aee"
+                "reference": "268d9eb1e92929e2f793f6d9612e5205e8051c41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sylvainjule/kirby-markdown-field/zipball/c25a1440cf35ec24418f6f9fc868d1ba7b868aee",
-                "reference": "c25a1440cf35ec24418f6f9fc868d1ba7b868aee",
+                "url": "https://api.github.com/repos/sylvainjule/kirby-markdown-field/zipball/268d9eb1e92929e2f793f6d9612e5205e8051c41",
+                "reference": "268d9eb1e92929e2f793f6d9612e5205e8051c41",
                 "shasum": ""
             },
             "require": {
@@ -308,7 +308,7 @@
             },
             "type": "kirby-plugin",
             "extra": {
-                "installer-name": "superplugin"
+                "installer-name": "markdown-field"
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -325,7 +325,7 @@
                 }
             ],
             "description": "Enhanced markdown editor for Kirby 3",
-            "time": "2019-03-17T16:48:33+00:00"
+            "time": "2019-03-18T10:54:56+00:00"
         },
         {
             "name": "league/color-extractor",
@@ -811,16 +811,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.10.0",
+            "version": "v1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494"
+                "reference": "fe5e94c604826c35a32fa832f35bd036b6799609"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/c79c051f5b3a46be09205c73b80b346e4153e494",
-                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fe5e94c604826c35a32fa832f35bd036b6799609",
+                "reference": "fe5e94c604826c35a32fa832f35bd036b6799609",
                 "shasum": ""
             },
             "require": {
@@ -832,7 +832,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.9-dev"
+                    "dev-master": "1.11-dev"
                 }
             },
             "autoload": {
@@ -866,7 +866,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-09-21T13:07:52+00:00"
+            "time": "2019-02-06T07:57:58+00:00"
         },
         {
             "name": "true/punycode",
