@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "272371d491e1db9374304afb5972f323",
+    "content-hash": "672741a847ca08f1b8cd09d927c5435b",
     "packages": [
         {
             "name": "bnomei/kirby3-fingerprint",
@@ -591,16 +591,16 @@
         },
         {
             "name": "mzur/kirby-uniform",
-            "version": "v4.0.0",
+            "version": "v4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mzur/kirby-uniform.git",
-                "reference": "9181ef36167f2ad7e5c6d57fc0ea92d9c0a3b745"
+                "reference": "747c706989e46022cc33658569b558784d2119d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mzur/kirby-uniform/zipball/9181ef36167f2ad7e5c6d57fc0ea92d9c0a3b745",
-                "reference": "9181ef36167f2ad7e5c6d57fc0ea92d9c0a3b745",
+                "url": "https://api.github.com/repos/mzur/kirby-uniform/zipball/747c706989e46022cc33658569b558784d2119d5",
+                "reference": "747c706989e46022cc33658569b558784d2119d5",
                 "shasum": ""
             },
             "require": {
@@ -639,7 +639,7 @@
                 "form",
                 "kirby"
             ],
-            "time": "2019-01-15T19:41:11+00:00"
+            "time": "2019-01-22T07:49:59+00:00"
         },
         {
             "name": "omz13/kirby3-xmlsitemap",

@@ -2,12 +2,12 @@
   "minimum-stability": "beta",
   "require": {
     "php": ">=7.1.0",
-    "getkirby/cms": "^3.0",
+    "getkirby/cms": "^3.1",
     "omz13/kirby3-xmlsitemap": "^1.1",
     "distantnative/retour-for-kirby": "^1.0@beta",
     "bnomei/kirby3-fingerprint": "^2.3",
     "k-community/markdown-field": "^1.0",
-    "mzur/kirby-uniform": "4.0"
+    "mzur/kirby-uniform": "^4.0"
   },
   "config": {
     "optimize-autoloader": true
