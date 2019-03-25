@@ -1,7 +1,5 @@
 <?php
 
-setlocale(LC_TIME, 'de_DE.UTF-8', 'German_Germany', 'German');
-
 return [
 
   'debug' => true,
@@ -9,11 +7,13 @@ return [
     'extra' => true
   ],
 
+  'date.handler' => 'strftime',
+  'locale' => 'de_DE.utf-8',
+  'routes' => require __DIR__ . '/routes.php',
+
   'panel' => [
     'language' => 'de'
   ],
-
-  'routes' => require __DIR__ . '/routes.php',
 
   'thumbs' => [
     'quality' => '80'
