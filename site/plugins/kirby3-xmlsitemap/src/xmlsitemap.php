@@ -7,6 +7,7 @@ namespace omz13;
 
 use Kirby\Cms\Page;
 use Kirby\Cms\Pages;
+use Kirby\Cms\System;
 use Kirby\Exception\LogicException;
 
 use const DATE_ATOM;
@@ -31,11 +32,13 @@ use function max;
 use function md5;
 use function microtime;
 use function str_replace;
+use function strrpos;
 use function strtolower;
 use function strtotime;
+use function substr;
 use function time;
 
-define( 'XMLSITEMAP_VERSION', '1.1.5' );
+define( 'XMLSITEMAP_VERSION', '1.1.6' );
 define( 'XMLSITEMAP_CONFIGURATION_PREFIX', 'omz13.xmlsitemap' );
 
 /**
@@ -233,6 +236,11 @@ class XMLSitemap
       $r .= '<!--                x-shimHomepage = ' . json_encode( static::$optionShimH ) . " -->\n";
     }
 
+    static::addComment( $r, 'Kv = ' . kirby()->version() );
+    $system  = new System( kirby() );
+    $license = $system->license();
+    static::addComment( $r, 'Kl = ' . ( $license == false ? 'n' : 'y' ) );
+
     if ( kirby()->multilang() == true ) {
       static::addComment( $r, 'Processing as ML; number of languages = ' . kirby()->languages()->count() );
       assert( kirby()->languages()->count() > 0 );
@@ -329,7 +337,7 @@ class XMLSitemap
         if ( isset( static::$optionIUWSI ) && in_array( $p->slug(), static::$optionIUWSI, false ) ) {
           static::addComment( $r, 'including because unlisted but in includeUnlistedWhenSlugIs' );
         } else {
-          if ( isset( static::$optionIUWTI ) && in_array( $p->slug(), static::$optionIUWTI, false ) ) {
+          if ( isset( static::$optionIUWTI ) && in_array( $p->intendedTemplate(), static::$optionIUWTI, false ) ) {
             static::addComment( $r, 'including because unlisted but in includeUnlistedWhenTemplateIs' );
           } else {
             static::addComment( $r, 'excluding because unlisted' );
@@ -466,7 +474,21 @@ class XMLSitemap
   }//end getLastmod()
 
   private static function getHreflangFromLocale( string $locale ) : string {
-    return strtolower( str_replace( '_', '-', $locale ) );
+    // Normalize
+    $locale = strtolower( $locale );
+    // Clean (.whatever@whatever)
+    $x = strrpos( $locale, '.', 0 );
+    if ( $x != false ) {
+      $locale = substr( $locale, 0, -$x - 1 );
+    }
+    // More clean (just in case @whatever)
+    $y = strrpos( $locale, '@', 0 );
+    if ( $y != false ) {
+      $locale = substr( $locale, 0, -$y - 1 );
+    }
+    // Huzzah! $locale is now sanitized (which is not the same as canonicalization)
+    // Ensure hyphens not underscores
+    return str_replace( '_', '-', $locale );
   }//end getHreflangFromLocale()
 
   private static function addComment( string &$r, string $m ) : void {

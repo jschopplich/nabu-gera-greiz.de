@@ -192,16 +192,16 @@
         },
         {
             "name": "getkirby/cms",
-            "version": "3.1.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getkirby/kirby.git",
-                "reference": "74b593ff86f9a220343d08e3c631b128d09e76d6"
+                "reference": "52e21a48f32b8edf7bc0a2bd630b41b8dab5561c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getkirby/kirby/zipball/74b593ff86f9a220343d08e3c631b128d09e76d6",
-                "reference": "74b593ff86f9a220343d08e3c631b128d09e76d6",
+                "url": "https://api.github.com/repos/getkirby/kirby/zipball/52e21a48f32b8edf7bc0a2bd630b41b8dab5561c",
+                "reference": "52e21a48f32b8edf7bc0a2bd630b41b8dab5561c",
                 "shasum": ""
             },
             "require": {
@@ -249,7 +249,7 @@
                 "core",
                 "kirby"
             ],
-            "time": "2019-03-19T08:43:05+00:00"
+            "time": "2019-03-26T09:52:09+00:00"
         },
         {
             "name": "getkirby/composer-installer",
@@ -643,16 +643,16 @@
         },
         {
             "name": "omz13/kirby3-xmlsitemap",
-            "version": "1.1.5",
+            "version": "1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/omz13/kirby3-xmlsitemap.git",
-                "reference": "faa00a5deffb147c27a243788f2a213108456a5e"
+                "reference": "6a821195660bbc7448f155acbe0e212dcbf9229e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/omz13/kirby3-xmlsitemap/zipball/faa00a5deffb147c27a243788f2a213108456a5e",
-                "reference": "faa00a5deffb147c27a243788f2a213108456a5e",
+                "url": "https://api.github.com/repos/omz13/kirby3-xmlsitemap/zipball/6a821195660bbc7448f155acbe0e212dcbf9229e",
+                "reference": "6a821195660bbc7448f155acbe0e212dcbf9229e",
                 "shasum": ""
             },
             "require": {
@@ -694,7 +694,7 @@
                 "kirby3",
                 "plugin"
             ],
-            "time": "2019-02-20T21:20:14+00:00"
+            "time": "2019-03-26T02:27:24+00:00"
         },
         {
             "name": "phpmailer/phpmailer",
