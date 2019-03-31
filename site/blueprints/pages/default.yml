@@ -19,3 +19,6 @@ sidebar:
 
   files:
     extends: sections/files
+
+  navMeta:
+    extends: sections/navMeta

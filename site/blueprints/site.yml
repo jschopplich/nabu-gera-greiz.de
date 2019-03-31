@@ -34,6 +34,10 @@ tabs:
             type: pages
             status: unlisted
             info: "/{{ page.slug }}"
+          draft:
+            headline: Entwürfe
+            type: pages
+            status: draft
 
   settings:
     label: Einstellungen

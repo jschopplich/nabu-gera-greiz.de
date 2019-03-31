@@ -67,3 +67,6 @@ tabs:
 
       meta:
         extends: sections/meta
+
+      navMeta:
+        extends: sections/navMeta
