@@ -37,16 +37,25 @@
 
           <?php if ($item->id() === 'aktuelles'): ?>
             <?php snippet('navigation/news') ?>
-          <?php elseif ($item->id() === 'projekte'): ?>
-            <?php snippet('navigation/projects') ?>
           <?php else: ?>
-            <div class="navbar-dropdown is-boxed">
+            <div class="navbar-dropdown has-more is-boxed">
               <?php foreach($item->children()->listed()->filterBy('template', '!=', 'article') as $subitem): ?>
-              <a class="navbar-item<?php e($subitem->isOpen(), ' is-active') ?>" href="<?= $subitem->url() ?>"><?= $subitem->title()->html() ?></a>
+              <a class="navbar-item<?php e($subitem->isOpen(), ' is-active') ?>" href="<?= $subitem->url() ?>">
+                <span>
+                  <span class="icon has-text-primary">
+                    <i class="fal fa-<?= $subitem->navIcon() ?>" aria-hidden="true"></i>
+                  </span>
+                  <strong><?= $subitem->title()->html() ?></strong>
+                  <br>
+                  <?= $subitem->navDescription()->html() ?>
+                </span>
+              </a>
+              <?php if (!$subitem->isLast()): ?>
+                <hr class="navbar-divider">
+              <?php endif ?>
               <?php endforeach ?>
             </div>
           <?php endif ?>
-
         </div>
       <?php else: ?>
         <a class="navbar-item<?php e($item->isOpen(), ' is-active') ?>" href="<?= $item->url() ?>"><?= $item->title()->html() ?></a>
