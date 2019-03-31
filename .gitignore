@@ -20,8 +20,9 @@
 
 # Folders to ignore
 /node_modules
+/vendor
 
-/kirby
+# Kirby folders to ignore
 /media
 /site/accounts
 /site/cache
@@ -29,4 +30,3 @@
 /site/logs
 /site/sessions
 /site/config/.license
-/vendor
