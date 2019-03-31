@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "672741a847ca08f1b8cd09d927c5435b",
+    "content-hash": "fe94b42005f9d42b2b2cec6812357d69",
     "packages": [
         {
             "name": "bnomei/kirby3-fingerprint",
@@ -93,23 +93,23 @@
         },
         {
             "name": "distantnative/retour-for-kirby",
-            "version": "1.0.0-beta.5",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/distantnative/retour-for-kirby.git",
-                "reference": "fb1aff05d6fd8a25b5d1f0d749970754aee9cbd0"
+                "reference": "f1c31dfd8351e938e13642677faa8ad52ce84315"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/distantnative/retour-for-kirby/zipball/fb1aff05d6fd8a25b5d1f0d749970754aee9cbd0",
-                "reference": "fb1aff05d6fd8a25b5d1f0d749970754aee9cbd0",
+                "url": "https://api.github.com/repos/distantnative/retour-for-kirby/zipball/f1c31dfd8351e938e13642677faa8ad52ce84315",
+                "reference": "f1c31dfd8351e938e13642677faa8ad52ce84315",
                 "shasum": ""
             },
             "require": {
                 "getkirby/composer-installer": "^1.1"
             },
             "require-dev": {
-                "getkirby/cms": "^3.0.3",
+                "getkirby/cms": "^3.1.1",
                 "phpunit/phpunit": "^7"
             },
             "type": "kirby-plugin",
@@ -126,8 +126,8 @@
                     "email": "on-github@nhoffmann.com"
                 }
             ],
-            "description": "Advanced redirect management for Kirby 3",
-            "time": "2019-03-09T14:04:54+00:00"
+            "description": "Advanced redirection management and error tracking for Kirby 3",
+            "time": "2019-03-28T21:51:59+00:00"
         },
         {
             "name": "filp/whoops",
