@@ -15,7 +15,7 @@ tabs:
             parent: site.find("aktuelles")
             sortBy: date desc
             template: article
-            info: "{{ page.date.toDate('d.m.Y') }}"
+            info: "{{ page.date.toDate('%d.%m.%Y') }}"
             layout: cards
             image:
               back: white
