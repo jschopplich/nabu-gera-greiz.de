@@ -16,7 +16,7 @@
             <?php endif ?>
 
             <span class="tag has-mb-medium">
-              <time itemprop="datePublished" datetime="<?= $page->date('c') ?>"><?= strftime('%e. %B %Y', $page->date()->toDate()) ?></time>
+              <time itemprop="datePublished" datetime="<?= $page->date()->toDate('%Y-%m-%d') ?>"><?= strftime('%e. %B %Y', $page->date()->toDate()) ?></time>
             </span>
 
             <div itemprop="articleBody">
