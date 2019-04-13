@@ -1,7 +1,7 @@
 type: pages
 template: article
 sortBy: date desc
-info: "{{ page.date.toDate('d.m.Y') }}"
+info: "{{ page.date.toDate('%d.%m.%Y') }}"
 empty: Noch keine Artikel
 image:
   back: white
