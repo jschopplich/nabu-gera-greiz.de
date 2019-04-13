@@ -15,6 +15,10 @@ return [
     'language' => 'de'
   ],
 
+  'thumbs' => [
+    'quality' => '80'
+  ],
+
   // Plugins
   'omz13.xmlsitemap.includeUnlistedWhenSlugIs' => ['archiv', 'datenschutzerklaerung', 'impressum', 'korkampagne'],
   'omz13.xmlsitemap.excludeChildrenWhenTemplateIs' => ['events'],
