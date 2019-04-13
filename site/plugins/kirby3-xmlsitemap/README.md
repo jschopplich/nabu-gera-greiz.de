@@ -6,7 +6,7 @@
 
 ## Coffee, Beer, etc.
 
-A humungous amount of work went into creating this plugin. Seriously it did. Just look at the source code if you dare, because there is a lot going on in there to make _your_ life easier (even if it means that _I_ have to spend days hunched over a keyboard doing this so you don't have to!). Who knew that traversing through all the pages in a kirby 3 site and spitting out the right xml elements could be so much fun (and I use the word fun there in its alternative-reality meaning). If you run a multi-language site you should be jumping up and down with joy because it gets the sitemaps right, and trust me when I say this is not as easy to do as you might think it is. For kicks, and to stop your processor getting hammered because generating process is a bit intense, the result is cached, and writing that cache code involved a lot of coffee. I also get a dopamine hit if you start this repo. So go star it. Pretty please!
+A humungous amount of work went into creating this plugin. Seriously it did. Just look at the source code if you dare, because there is a lot going on in there to make _your_ life easier (even if it means that _I_ have to spend days hunched over a keyboard doing this so you don't have to!). Who knew that traversing through all the pages in a kirby 3 site and spitting out the right xml elements could be so much fun (and I use the word fun there in its alternative-reality meaning). If you run a multi-language site you should be jumping up and down with joy because it gets the sitemaps right, and trust me when I say this is not as easy to do as you might think it is. For kicks, and to stop your processor getting hammered because generating process is a bit intense, the result is cached, and writing that cache code involved a lot of coffee. I also get a dopamine hit if you star this repo. So go star it. Pretty please!
 
 This plugin is free but if you use it in a commercial project to show your support you are welcome (greatly encouraged) to:
 - [make a donation 🍻](https://www.paypal.me/omz13/10) or
@@ -40,6 +40,7 @@ For a kirby3 site, this plugin (_omz13/xmlsitemap_) automatically generates an x
   - Pages with a method `issunset` that returns `true` are excluded.
   - Pages with a method `isunderembargo` that returns `true` are excluded.
   - For use with "one-pagers", children of pages made using certain templates can be excluded as sub-ordinate links (c.f. `excludeChildrenWhenTemplateIs` in _Configuration_) but any _images_ in those children *will* be included and listed as normal (which is how one-pagers are expected to work).
+- A closure can be specified to return a set of pages to be included in the sitemap, c.f. `addPages` in _Configuration_.
 - For debugging purposes, the generated sitemap can include additional information as xml comments; c.f. `debugqueryvalue` in _Configuration_.
 - For debugging purposes, the cache can be bypassed and an explicitly regenerated sitemap returned; c.f. _nocache_ in _Use_
 
@@ -110,6 +111,7 @@ In your site's `site/config/config.php` the following entries prefixed with `omz
 
 - `disable` : a boolean which, if true, to disable the xmlsitemap functionality (c.f. `xmlsitemap` in _via `site.txt`_).
 - `cacheTTL` : the number of minutes that the xml-sitemap should be cached before being regenerated; if explicitly set to zero, the cache is disabled. If not specified a default of 10 minutes is assumed.
+- `hideuntranslated` : a boolean which, if true, will exclude any untranslated pages (for a multi-language site) from the sitemap (thanks to @mauricerenck for the idea).
 - `debugqueryvalue` : a string to be as the value for the query parameter `debug` to return the xml-sitemap with debugging information (as comment nodes within the xml stream). The global kirby `debug` configuration must also be true for this to work. The url must be to `/sitemap.xml?debug=debugqueryvalue` and not `/sitemap?debug=_debugqueryvalue_` (i.e. the `.xls` part is important). Be aware that the debugging information will show, if applicable, details of any pages that have been excluded (so if you are using this in production and you don't want things to leak, set `debugqueryvalue` to something random). Furthermore, the site debug flag needs to be set too (i.e. the `debug` flag in `site/config.php`).
 - `includeUnlistedWhenSlugIs` : an array of slug names whose pages are to be included if their status is unlisted.
 - `includeUnlistedWhenTemplateIs` : an array of template names whose pages are to be included if their status is unlisted.
@@ -117,8 +119,11 @@ In your site's `site/config/config.php` the following entries prefixed with `omz
 - `excludePageWhenSlugIs` : an array of slug names whose pages are to be excluded from the xml-sitemap.
 - `excludeChildrenWhenTemplateIs` : an array of templates names whose children are to be ignored (but pages associated with the template is to be included); this is used for one-pagers (where the principal page will be included and all the 'virtual' children ignored).
 - `disableImages` : a boolean which, if true, disables including data for images related to pages included in the xml-sitemap.
+- `addPages` : a closure which, if present, returns a collection of `Pages` to be added. This is how you get virtual pages into the sitemap.
 
-For example, for the [Kirby Starter Kit](https://github.com/getkirby/starterkit), the following would be applicable:
+##### Example - configuration for the Starter Kit
+
+For the [Kirby Starter Kit](https://github.com/getkirby/starterkit), the following would be applicable:
 
 ```php
 <?php
@@ -172,6 +177,26 @@ return [
 ];
 ```
 
+##### Example 2 - sample closures for `addPages`
+
+Add pages that are in a named collection:
+
+```
+'omz13.xmlsitemap.addPages' => function() {
+   return kirby()->collection('articles');
+   }
+```
+
+Add a specific page:
+
+```
+'omz13.xmlsitemap.addPages' => function() {
+  $c = new Kirby\Cms\Pages;
+  $c->add( kirby()->site()->find('blog/the-sweet-dessert') );
+  return $c;
+  }
+```
+
 #### via `content/site.txt`
 
 The plugin can be explicitly disabled in `content/site.txt` by having an entry for `xmlsitemap` and setting this to `false`. This could be achieved through the panel by adding the following into `site/blueprints/site.yml`:
@@ -205,6 +230,18 @@ fields:
 ```
 
 As pages are implicitly included within a sitemap, this mechanism should only be used when you have a reason to explicitly exclude a page when it is not possible to do otherwise (e.g. using `excludePageWhenTemplateIs`).
+
+## PageMethods
+
+### headLinkAlternates
+
+If you have a multi-language site, as well as having the sitemap include links to all the different languages, on the site itself each page needs to include  `<link rel="alternate" hreflang="" />` elements in the `<head>`.
+
+To make this easy, this plugin provides a pageMethod to do this. So, in your `<head>`, simply add:
+
+```
+<?= $page->headLinkAlternates(); ?>
+```
 
 ## Use
 

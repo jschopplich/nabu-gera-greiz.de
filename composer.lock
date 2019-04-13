@@ -4,8 +4,58 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "672741a847ca08f1b8cd09d927c5435b",
+    "content-hash": "c5db1d120179aecbed015ccd1778f1c3",
     "packages": [
+        {
+            "name": "beebmx/kirby-env",
+            "version": "1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/beebmx/kirby-env.git",
+                "reference": "1b7fdda0f4efd4db8eab74bc1a832b48382f7075"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/beebmx/kirby-env/zipball/1b7fdda0f4efd4db8eab74bc1a832b48382f7075",
+                "reference": "1b7fdda0f4efd4db8eab74bc1a832b48382f7075",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.1",
+                "vlucas/phpdotenv": "^3.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "kirby-plugin",
+            "autoload": {
+                "files": [
+                    "helpers.php"
+                ],
+                "psr-4": {
+                    "Beebmx\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fernando Gutierrez",
+                    "email": "fernando@beeb.mx"
+                }
+            ],
+            "description": "Enable env variables to Kirby 3",
+            "keywords": [
+                "dotenv",
+                "env",
+                "kirby",
+                "kirby-3",
+                "phpdotenv"
+            ],
+            "time": "2019-02-13T22:15:23+00:00"
+        },
         {
             "name": "bnomei/kirby3-fingerprint",
             "version": "2.3.1",
@@ -192,16 +242,16 @@
         },
         {
             "name": "getkirby/cms",
-            "version": "3.1.1",
+            "version": "3.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getkirby/kirby.git",
-                "reference": "52e21a48f32b8edf7bc0a2bd630b41b8dab5561c"
+                "reference": "2fe252510456bdcdcebd00f135ddba192faa9a4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getkirby/kirby/zipball/52e21a48f32b8edf7bc0a2bd630b41b8dab5561c",
-                "reference": "52e21a48f32b8edf7bc0a2bd630b41b8dab5561c",
+                "url": "https://api.github.com/repos/getkirby/kirby/zipball/2fe252510456bdcdcebd00f135ddba192faa9a4d",
+                "reference": "2fe252510456bdcdcebd00f135ddba192faa9a4d",
                 "shasum": ""
             },
             "require": {
@@ -213,7 +263,7 @@
                 "michelf/php-smartypants": "1.8.1",
                 "mustangostang/spyc": "0.6.2",
                 "php": ">=7.1.0",
-                "phpmailer/phpmailer": "6.0.6",
+                "phpmailer/phpmailer": "6.0.7",
                 "true/punycode": "2.1.1",
                 "zendframework/zend-escaper": "2.6.0"
             },
@@ -249,7 +299,7 @@
                 "core",
                 "kirby"
             ],
-            "time": "2019-03-26T09:52:09+00:00"
+            "time": "2019-04-09T12:23:02+00:00"
         },
         {
             "name": "getkirby/composer-installer",
@@ -643,16 +693,16 @@
         },
         {
             "name": "omz13/kirby3-xmlsitemap",
-            "version": "1.1.6",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/omz13/kirby3-xmlsitemap.git",
-                "reference": "6a821195660bbc7448f155acbe0e212dcbf9229e"
+                "reference": "99a9ef936536131511c5c4227c0ab47b14810537"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/omz13/kirby3-xmlsitemap/zipball/6a821195660bbc7448f155acbe0e212dcbf9229e",
-                "reference": "6a821195660bbc7448f155acbe0e212dcbf9229e",
+                "url": "https://api.github.com/repos/omz13/kirby3-xmlsitemap/zipball/99a9ef936536131511c5c4227c0ab47b14810537",
+                "reference": "99a9ef936536131511c5c4227c0ab47b14810537",
                 "shasum": ""
             },
             "require": {
@@ -694,20 +744,20 @@
                 "kirby3",
                 "plugin"
             ],
-            "time": "2019-03-26T02:27:24+00:00"
+            "time": "2019-04-13T17:50:01+00:00"
         },
         {
             "name": "phpmailer/phpmailer",
-            "version": "v6.0.6",
+            "version": "v6.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "8190d73eb5def11a43cfb020b7f36db65330698c"
+                "reference": "0c41a36d4508d470e376498c1c0c527aa36a2d59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/8190d73eb5def11a43cfb020b7f36db65330698c",
-                "reference": "8190d73eb5def11a43cfb020b7f36db65330698c",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/0c41a36d4508d470e376498c1c0c527aa36a2d59",
+                "reference": "0c41a36d4508d470e376498c1c0c527aa36a2d59",
                 "shasum": ""
             },
             "require": {
@@ -760,7 +810,57 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "time": "2018-11-16T00:41:32+00:00"
+            "time": "2019-02-01T15:04:28+00:00"
+        },
+        {
+            "name": "phpoption/phpoption",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/schmittjoh/php-option.git",
+                "reference": "94e644f7d2051a5f0fcf77d81605f152eecff0ed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/94e644f7d2051a5f0fcf77d81605f152eecff0ed",
+                "reference": "94e644f7d2051a5f0fcf77d81605f152eecff0ed",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.7.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "PhpOption\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache2"
+            ],
+            "authors": [
+                {
+                    "name": "Johannes M. Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Option Type for PHP",
+            "keywords": [
+                "language",
+                "option",
+                "php",
+                "type"
+            ],
+            "time": "2015-07-25T16:39:46+00:00"
         },
         {
             "name": "psr/log",
@@ -808,6 +908,64 @@
                 "psr-3"
             ],
             "time": "2018-11-20T15:27:04+00:00"
+        },
+        {
+            "name": "symfony/polyfill-ctype",
+            "version": "v1.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-ctype.git",
+                "reference": "82ebae02209c21113908c229e9883c419720738a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/82ebae02209c21113908c229e9883c419720738a",
+                "reference": "82ebae02209c21113908c229e9883c419720738a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-ctype": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.11-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                },
+                {
+                    "name": "Gert de Pagter",
+                    "email": "backendtea@gmail.com"
+                }
+            ],
+            "description": "Symfony polyfill for ctype functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "ctype",
+                "polyfill",
+                "portable"
+            ],
+            "time": "2019-02-06T07:57:58+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -915,6 +1073,58 @@
             "time": "2016-11-16T10:37:54+00:00"
         },
         {
+            "name": "vlucas/phpdotenv",
+            "version": "v3.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vlucas/phpdotenv.git",
+                "reference": "dbcc609971dd9b55f48b8008b553d79fd372ddde"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/dbcc609971dd9b55f48b8008b553d79fd372ddde",
+                "reference": "dbcc609971dd9b55f48b8008b553d79fd372ddde",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.4 || ^7.0",
+                "phpoption/phpoption": "^1.5",
+                "symfony/polyfill-ctype": "^1.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35 || ^5.0 || ^6.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dotenv\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Vance Lucas",
+                    "email": "vance@vancelucas.com",
+                    "homepage": "http://www.vancelucas.com"
+                }
+            ],
+            "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
+            "keywords": [
+                "dotenv",
+                "env",
+                "environment"
+            ],
+            "time": "2019-03-06T09:39:45+00:00"
+        },
+        {
             "name": "zendframework/zend-escaper",
             "version": "2.6.0",
             "source": {
@@ -962,7 +1172,7 @@
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "beta",
+    "minimum-stability": "stable",
     "stability-flags": {
         "distantnative/retour-for-kirby": 10
     },
