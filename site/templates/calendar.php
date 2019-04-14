@@ -40,7 +40,8 @@
               <tr>
                 <td>
                   <?php if ($event->eventDateOption()->value() === 'date'): ?>
-                    <?= $event->eventStarts()->toDate('%d.%m.%Y ab %H:%M') ?>
+                    <?= $event->eventStarts()->toDate('%d.%m.%Y') ?><br>
+                    ab <?= $event->eventStarts()->toDate('%H:%M') ?>
                   <?php else: ?>
                     <?= $event->eventIntervalStarts()->toDate('%d.%m') ?>–<?= $event->eventIntervalEnds()->toDate('%d.%m.%Y') ?>
                   <?php endif ?>
