@@ -40,7 +40,7 @@ return [
             $metaTitle       = $site->homePage()->metaTitle()->value();
             $metaDescription = $site->homePage()->metaDescription()->value();
         } else {
-            $metaTitle       = r($page->metaTitle()->isNotEmpty(), $page->metaTitle(), $page->title()->value() . ' — ' . $site->title()->value());
+            $metaTitle       = r($page->metaTitle()->isNotEmpty(), $page->metaTitle()->value(), $page->title()->value() . ' — ' . $site->title()->value());
             $metaDescription = r($page->metaDescription()->isNotEmpty(), $page->metaDescription()->value(), $site->homePage()->metaDescription()->value());
         }
         $metaImage = $page->metaImage()->isNotEmpty() && $page->metaImage()->toFile() ? $page->metaImage()->toFile()->resize(1200)->url() : url('meta-image.jpg');
@@ -99,7 +99,8 @@ return [
                     'contactPoint' => [
                         '@type' => 'ContactPoint',
                         'contactType' => 'office',
-                        'email' => 'vorstand@nabu-gera-greiz.de'
+                        'email' => 'vorstand@nabu-gera-greiz.de',
+                        'url' => $site->url()
                     ]
                 ]
             ]
@@ -107,7 +108,7 @@ return [
     },
 
     'pedroborges.meta-tags.templates' => function ($page, $site) {
-        $metaDescription = r($page->metaDescription()->isNotEmpty(), $page->metaDescription()->value(), $page->text()->excerpt(140));
+        $metaDescription = r($page->metaDescription()->isNotEmpty(), $page->metaDescription()->value(), $page->text()->excerpt(140)->value());
         $metaImage = $page->metaImage()->isNotEmpty() && $page->metaImage()->toFile() ? $page->metaImage()->toFile()->resize(1200)->url() : url('meta-image.jpg');
         $datePublished = $page->date()->toDate('%Y-%m-%d');
 
