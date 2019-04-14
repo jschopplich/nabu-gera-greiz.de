@@ -72,8 +72,8 @@ tabs:
                 multiple: false
                 query: site.images
                 required: true
-              metaAuthor:
-                label: Meta-Autor
+              author:
+                label: Autor
                 type: text
                 icon: user
                 required: true

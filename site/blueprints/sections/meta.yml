@@ -11,3 +11,7 @@ fields:
     type: textarea
     buttons: false
     icon: text
+  metaImages:
+    label: Meta-Bild
+    type: files
+    multiple: false

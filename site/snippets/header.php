@@ -2,7 +2,10 @@
 <html lang="de">
 <head>
 
-  <?php snippet('meta') ?>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+
+  <?= $page->metaTags() ?>
 
   <?= Bnomei\Fingerprint::css('assets/dist/main.min.css') ?>
   <?= Bnomei\Fingerprint::js('assets/dist/scrollreveal.min.js') ?>
@@ -16,9 +19,7 @@
 
   <div class="cookie_container"></div>
 
-  <header class="header <?php e($page->isHomePage(), 'is-home', 'is-default') ?>" itemscope itemtype="https://schema.org/Organization">
-    <meta itemprop="name" content="<?= $site->metaAuthor() ?>">
-    <meta itemprop="logo" content="<?= url('assets/images/logo.svg') ?>">
+  <header class="header <?php e($page->isHomePage(), 'is-home', 'is-default') ?>">
 
     <?php if ($page->isHomePage()): ?>
 
@@ -33,7 +34,7 @@
               <div class="columns is-vcentered">
                 <div class="column is-narrow">
                   <figure class="cover-hero-image image" data-scrollreveal="fromLeftIn">
-                    <img src="<?= url('assets/images/logo.svg') ?>" alt="<?= $site->metaAuthor() ?>" title="<?= $site->metaAuthor() ?>">
+                    <img src="<?= url('assets/images/logo.svg') ?>" alt="<?= $site->author() ?>" title="<?= $site->author() ?>">
                   </figure>
                 </div>
                 <div class="column has-text-centered-mobile">
@@ -67,9 +68,9 @@
           </figure>
 
           <div class="cover-logo">
-            <a href="<?= url() ?>" rel="home" itemprop="url">
+            <a href="<?= url() ?>" rel="home">
               <figure class="image">
-                <img src="<?= url('assets/images/logo.svg') ?>" alt="<?= $site->metaAuthor() ?>" title="<?= $site->metaAuthor() ?>">
+                <img src="<?= url('assets/images/logo.svg') ?>" alt="<?= $site->author() ?>" title="<?= $site->author() ?>">
               </figure>
             </a>
           </div>
