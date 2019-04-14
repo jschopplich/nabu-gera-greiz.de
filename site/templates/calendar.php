@@ -25,7 +25,12 @@
                 "name": "<?= $event->eventTitle() ?>",
                 "url": "<?= $page->url() ?>",
                 "description": "<?= $event->eventDescription() ?>",
+                <?php if ($event->eventDateOption()->value() === 'date'): ?>
                 "startDate": "<?= $event->eventStarts()->toDate('%Y-%m-%dT%H:%M') ?>",
+                <?php else: ?>
+                "startDate": "<?= $event->eventIntervalStarts()->toDate('%Y-%m-%d') ?>",
+                "endDate": "<?= $event->eventIntervalEnds()->toDate('%Y-%m-%d') ?>",
+                <?php endif ?>
                 "location": {
                   "@type": "Place",
                   "name": "<?= $event->eventLocation() ?>"
@@ -34,7 +39,11 @@
               </script>
               <tr>
                 <td>
-                  <?= $event->eventStarts()->toDate('%Y-%m-%d %H-%M') ?>
+                  <?php if ($event->eventDateOption()->value() === 'date'): ?>
+                    <?= $event->eventStarts()->toDate('%d.%m.%Y ab %H:%M') ?>
+                  <?php else: ?>
+                    <?= $event->eventIntervalStarts()->toDate('%d.%m') ?>–<?= $event->eventIntervalEnds()->toDate('%d.%m.%Y') ?>
+                  <?php endif ?>
                 </td>
                 <td>
                   <p class="title is-5 is-size-6-mobile has-text-primary"><?= $event->eventTitle() ?></p>
@@ -49,14 +58,16 @@
 
                   <?php if ($event->eventLocation()->isNotEmpty()): ?>
                     <span class="has-text-grey">Ort</span>: <?= $event->eventLocation() ?><br>
-                  <?php else: ?>
-                    <span class="is-sr-only"><?= $site->title()->html() ?></span>
                   <?php endif ?>
 
                   <?= $event->eventDescription()->kt() ?>
                 </td>
                 <td>
-                  <?= $event->eventPrice() ?>
+                  <?php if ($event->eventHasPrice()->bool()): ?>
+                    <span>kostenlos</span>
+                  <?php else: ?>
+                    <?= $event->eventPrice() ?>
+                  <?php endif ?>
                 </td>
               </tr>
               <?php endforeach ?>
