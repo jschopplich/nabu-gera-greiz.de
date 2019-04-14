@@ -37,11 +37,11 @@ return [
 
     'pedroborges.meta-tags.default' => function ($page, $site) {
         if ($page->isHomePage()) {
-            $metaTitle       = $site->homePage()->metaTitle();
-            $metaDescription = $site->homePage()->metaDescription();
+            $metaTitle       = $site->homePage()->metaTitle()->value();
+            $metaDescription = $site->homePage()->metaDescription()->value();
         } else {
-            $metaTitle       = r($page->metaTitle()->isNotEmpty(), $page->metaTitle(), $page->title() . ' — ' . $site->title());
-            $metaDescription = r($page->metaDescription()->isNotEmpty(), $page->metaDescription(), $site->homePage()->metaDescription());
+            $metaTitle       = r($page->metaTitle()->isNotEmpty(), $page->metaTitle(), $page->title()->value() . ' — ' . $site->title()->value());
+            $metaDescription = r($page->metaDescription()->isNotEmpty(), $page->metaDescription()->value(), $site->homePage()->metaDescription()->value());
         }
         $metaImage = $page->metaImage()->isNotEmpty() && $page->metaImage()->toFile() ? $page->metaImage()->toFile()->resize(1200)->url() : url('meta-image.jpg');
 
@@ -67,7 +67,7 @@ return [
             'og' => [
                 'type' => 'website',
                 'url' => $page->url(),
-                'site_name' => $site->title(),
+                'site_name' => $site->title()->value(),
                 'title' => $metaTitle,
                 'description' => $metaDescription,
                 'image' => $metaImage
@@ -83,22 +83,22 @@ return [
             'json-ld' => [
                 'WebSite' => [
                     'url' => $page->url(),
-                    'name' => $site->title(),
+                    'name' => $site->title()->value(),
                     'description' => $metaDescription,
                     'author' => [
                         '@type' => 'Person',
-                        'name' => $site->author() 
+                        'name' => $site->author()->value()
                     ]
                 ],
                 'Organization' => [
-                    'name' => $site->title(),
-                    'legalName' => $site->author(),
+                    'name' => $site->title()->value(),
+                    'legalName' => $site->author()->value(),
                     'url' => $site->url(),
                     'logo' => url('assets/images/logo.svg'),
                     'foundingDate' => '2004',
                     'contactPoint' => [
                         '@type' => 'ContactPoint',
-                        'contactType' => 'Vorstand',
+                        'contactType' => 'office',
                         'email' => 'vorstand@nabu-gera-greiz.de'
                     ]
                 ]
@@ -107,7 +107,7 @@ return [
     },
 
     'pedroborges.meta-tags.templates' => function ($page, $site) {
-        $metaDescription = r($page->metaDescription()->isNotEmpty(), $page->metaDescription(), $page->text()->excerpt(140));
+        $metaDescription = r($page->metaDescription()->isNotEmpty(), $page->metaDescription()->value(), $page->text()->excerpt(140));
         $metaImage = $page->metaImage()->isNotEmpty() && $page->metaImage()->toFile() ? $page->metaImage()->toFile()->resize(1200)->url() : url('meta-image.jpg');
         $datePublished = $page->date()->toDate('%Y-%m-%d');
 
@@ -132,16 +132,26 @@ return [
                 ],
                 'json-ld' => [
                     'BlogPosting' => [
-                        'headline' => $page->title(),
-                        'image' => $metaImage,
+                        'headline' => $page->title()->value(),
+                        'description' => $metaDescription,
+                        'mainEntityOfPage' => $page->url(),
                         'url' => $page->url(),
+                        'image' => $metaImage,
                         'author' => [
                             '@type' => 'Person',
-                            'name' => $site->author() 
+                            'name' => $site->author()->value()
+                        ],
+                        'publisher' => [
+                            '@type' => 'Organization',
+                            'name' => $site->title()->value(),
+                            'legalName' => $site->author()->value(),
+                            'url' => $site->url(),
+                            'logo' => url('assets/images/logo.svg'),
+                            'foundingDate' => '2004'
                         ],
                         'datePublished' => $datePublished,
                         'dateCreated' => $datePublished,
-                        'description' => $metaDescription
+                        'dateModified' => $datePublished,
                         //'articleBody' => $page->text()
                     ]
                 ]
