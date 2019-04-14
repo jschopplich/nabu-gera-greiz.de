@@ -63,7 +63,7 @@
                   <?= $event->eventDescription()->kt() ?>
                 </td>
                 <td>
-                  <?php if ($event->eventHasPrice()->bool()): ?>
+                  <?php if (!$event->eventHasPrice()->bool()): ?>
                     <span>kostenlos</span>
                   <?php else: ?>
                     <?= $event->eventPrice() ?>
