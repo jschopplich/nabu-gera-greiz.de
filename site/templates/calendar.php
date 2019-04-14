@@ -22,9 +22,9 @@
               {
                 "@context": "http://www.schema.org",
                 "@type": "Event",
-                "name": "<?= $event->eventTitle() ?>",
+                "name": <?= json_encode($event->eventTitle()->value(), JSON_UNESCAPED_SLASHES) ?>,
                 "url": "<?= $page->url() ?>",
-                "description": "<?= $event->eventDescription() ?>",
+                "description": <?= json_encode($event->eventDescription()->value(), JSON_UNESCAPED_SLASHES) ?>,
                 <?php if ($event->eventDateOption()->value() === 'date'): ?>
                 "startDate": "<?= $event->eventStarts()->toDate('%Y-%m-%dT%H:%M') ?>",
                 <?php else: ?>
@@ -33,7 +33,7 @@
                 <?php endif ?>
                 "location": {
                   "@type": "Place",
-                  "name": "<?= $event->eventLocation() ?>"
+                  "name": <?= json_encode($event->eventLocation()->value(), JSON_UNESCAPED_SLASHES) ?>
                 }
               }
               </script>
