@@ -10,23 +10,21 @@
 
           <?php foreach ($articles as $article): ?>
 
-          <article itemscope itemtype="https://schema.org/BlogPosting">
-            <h2 class="title is-3 has-text-weight-bold" itemprop="name headline">
-              <a href="<?= $article->url() ?>" itemprop="mainEntityOfPage url"><?= $article->title()->html() ?></a>
+          <article>
+            <h2 class="title is-3 has-text-weight-bold">
+              <a href="<?= $article->url() ?>"><?= $article->title()->html() ?></a>
             </h2>
             <?php if ($article->subtitle()->isNotEmpty()): ?>
-              <p class="subtitle is-5 has-text-grey" itemprop="description">
+              <p class="subtitle is-5 has-text-grey">
                 <?= $article->subtitle()->html() ?>
               </p>
             <?php endif ?>
 
             <span class="tag has-mb-medium">
-              <time itemprop="dateCreated pubdate datePublished" datetime="<?= $article->date('c') ?>"><?= strftime('%e. %B %Y', $article->date()->toDate()) ?></time>
+              <time datetime="<?= $article->date('c') ?>"><?= strftime('%e. %B %Y', $article->date()->toDate()) ?></time>
             </span>
 
-            <div itemprop="articleBody">
-              <?= $article->text()->kirbytext() ?>
-            </div>
+            <?= $article->text()->kirbytext() ?>
 
             <hr class="wide">
           </article>

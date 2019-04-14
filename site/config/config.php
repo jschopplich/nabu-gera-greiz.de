@@ -1,37 +1,169 @@
 <?php
 
+$base = dirname(dirname(__DIR__));
+(new \Beebmx\KirbyEnv($base))->load();
+
 return [
 
-  'debug' => true,
-  'markdown' => [
-    'extra' => true
-  ],
+    'debug' => env('KIRBY_DEBUG', false),
+    'panel' => [
+        'install' => env('KIRBY_INSTALL', false),
+        'slug' => env('KIRBY_PANEL', 'panel'),
+        'language' => 'de'
+    ],
+    'api' => env('KIRBY_API', true),
+    'cookieName' => env('KIRBY_SESSION', 'kirby_session'),
+    'thumbs' => [
+        'quality' => env('KIRBY_THUMBS_QUALITY', '90'),
+        'srcsets' => [
+            'default' => [576, 768, 992, 1200]
+        ]
+    ],
 
-  'date.handler' => 'strftime',
-  'locale' => 'de_DE.utf-8',
-  'routes' => require __DIR__ . '/routes.php',
+    'markdown' => [
+      'extra' => true
+    ],
 
-  'panel' => [
-    'language' => 'de'
-  ],
+    // Dates
 
-  'thumbs' => [
-    'quality' => '80'
-  ],
+    'date.handler' => 'strftime',
+    'locale' => 'de_DE.utf-8',
 
-  // Plugins
-  'omz13.xmlsitemap.includeUnlistedWhenSlugIs' => ['archiv', 'datenschutzerklaerung', 'impressum', 'korkampagne'],
-  'omz13.xmlsitemap.excludeChildrenWhenTemplateIs' => ['events'],
-  'community.markdown-field.font' => [
-    'family'  => 'sans-serif',
-    'scaling' => true,
-    'size'    => 'regular',
-  ],
+    // Routes
 
-  // Custom tags
-  'kirbytext.image.width' => '768',
-  'kirbytext.image-hero.width' => '768',
-  'kirbytext.image-box.width' => '768',
-  'kirbytext.image-box.width-vertical' => '480',
+    'routes' => require __DIR__ . '/routes.php',
+
+    // Meta
+
+    'pedroborges.meta-tags.default' => function ($page, $site) {
+        if ($page->isHomePage()) {
+            $metaTitle       = $site->homePage()->metaTitle();
+            $metaDescription = $site->homePage()->metaDescription();
+        } else {
+            $metaTitle       = r($page->metaTitle()->isNotEmpty(), $page->metaTitle(), $page->title() . ' — ' . $site->title());
+            $metaDescription = r($page->metaDescription()->isNotEmpty(), $page->metaDescription(), $site->homePage()->metaDescription());
+        }
+        $metaImage = $page->metaImage()->isNotEmpty() && $page->metaImage()->toFile() ? $page->metaImage()->toFile()->resize(1200)->url() : url('meta-image.jpg');
+
+        return [
+            'title' => $metaTitle,
+            'meta' => [
+                'description' => $metaDescription,
+                'robots' => 'index, follow',
+                'google-site-verification' => env('GOOGLE_SITEVERIFICATION', ''),
+                'msapplication-TileColor' => env('APP_THEMECOLOR', '#ffffff'),
+                'theme-color' => env('APP_THEMECOLOR', '#ffffff')
+            ],
+            'link' => [
+                'canonical' => $page->url(),
+                'apple-touch-icon' => ['href' => '/apple-touch-icon.png', 'sizes' => '180x180'],
+                'manifest' => '/site.webmanifest',
+                'mask-icon' => ['href' => '/safari-pinned-tab.svg', 'color' => env('APP_MASKCOLOR', '#ffffff')],
+                'icon' => [
+                    ['href' => '/favicon-32x32.png', 'sizes' => '32x32', 'type' =>'image/png'],
+                    ['href' => '/favicon-16x16.png', 'sizes' => '16x16', 'type' =>'image/png']
+                ]
+            ],
+            'og' => [
+                'type' => 'website',
+                'url' => $page->url(),
+                'site_name' => $site->title(),
+                'title' => $metaTitle,
+                'description' => $metaDescription,
+                'image' => $metaImage
+            ],
+            'twitter' => [
+                'card' => 'summary',
+                'url' => $page->url(),
+                //'site' => $site->twitter(),
+                'title' => $metaTitle,
+                'description' => $metaDescription,
+                'image' => $metaImage
+            ],
+            'json-ld' => [
+                'WebSite' => [
+                    'url' => $page->url(),
+                    'name' => $site->title(),
+                    'description' => $metaDescription,
+                    'author' => [
+                        '@type' => 'Person',
+                        'name' => $site->author() 
+                    ]
+                ],
+                'Organization' => [
+                    'name' => $site->title(),
+                    'legalName' => $site->author(),
+                    'url' => $site->url(),
+                    'logo' => url('assets/images/logo.svg'),
+                    'foundingDate' => '2004',
+                    'contactPoint' => [
+                        '@type' => 'ContactPoint',
+                        'contactType' => 'Vorstand',
+                        'email' => 'vorstand@nabu-gera-greiz.de'
+                    ]
+                ]
+            ]
+        ];
+    },
+
+    'pedroborges.meta-tags.templates' => function ($page, $site) {
+        $metaDescription = r($page->metaDescription()->isNotEmpty(), $page->metaDescription(), $page->text()->excerpt(140));
+        $metaImage = $page->metaImage()->isNotEmpty() && $page->metaImage()->toFile() ? $page->metaImage()->toFile()->resize(1200)->url() : url('meta-image.jpg');
+        $datePublished = $page->date()->toDate('%Y-%m-%d');
+
+        return [
+            'article' => [
+                'meta' => [
+                    'description' => $metaDescription,
+                ],
+                'og' => [
+                    'type' => 'article',
+                    'description' => $metaDescription,
+                    'namespace:article' => [
+                        'author' => 'Johann Schopplich',
+                        'published_time' => $datePublished,
+                        'tag' => ['tech', 'web']
+                    ],
+                    'image' => $metaImage
+                ],
+                'twitter' => [
+                    'description' => $metaDescription,
+                    'image' => $metaImage
+                ],
+                'json-ld' => [
+                    'BlogPosting' => [
+                        'headline' => $page->title(),
+                        'image' => $metaImage,
+                        'url' => $page->url(),
+                        'author' => [
+                            '@type' => 'Person',
+                            'name' => $site->author() 
+                        ],
+                        'datePublished' => $datePublished,
+                        'dateCreated' => $datePublished,
+                        'description' => $metaDescription
+                        //'articleBody' => $page->text()
+                    ]
+                ]
+            ]
+        ];
+    },
+
+    // Plugins
+
+    'omz13.xmlsitemap.includeUnlistedWhenSlugIs' => ['archiv', 'datenschutzerklaerung', 'impressum', 'korkampagne'],
+    'omz13.xmlsitemap.excludeChildrenWhenTemplateIs' => ['events'],
+    'community.markdown-field.font' => [
+      'family'  => 'sans-serif',
+      'scaling' => true,
+      'size'    => 'regular',
+    ],
+
+    // Custom tags
+
+    'kirbytext.image.width' => '768',
+    'kirbytext.image-hero.width' => '768',
+    'kirbytext.image-box.width' => '768',
+    'kirbytext.image-box.width-vertical' => '480',
 
 ];

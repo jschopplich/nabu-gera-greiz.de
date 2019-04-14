@@ -18,30 +18,44 @@
             </thead>
             <tbody>
               <?php foreach($page->calendar()->toStructure() as $event): ?>
-              <tr itemscope itemtype="http://schema.org/Event">
-                <td itemprop="startDate">
-                  <?= $event->eventDate()->kt() ?>
+              <script type='application/ld+json'> 
+              {
+                "@context": "http://www.schema.org",
+                "@type": "Event",
+                "name": "<?= $event->eventTitle() ?>",
+                "url": "<?= $page->url() ?>",
+                "description": "<?= $event->eventDescription() ?>",
+                "startDate": "<?= $event->eventStarts()->toDate('%Y-%m-%dT%H:%M') ?>",
+                "location": {
+                  "@type": "Place",
+                  "name": "<?= $event->eventLocation() ?>"
+                }
+              }
+              </script>
+              <tr>
+                <td>
+                  <?= $event->eventStarts()->toDate('%Y-%m-%d %H-%M') ?>
                 </td>
                 <td>
-                  <p class="title is-5 is-size-6-mobile has-text-primary" itemprop="name"><?= $event->eventTitle() ?></p>
+                  <p class="title is-5 is-size-6-mobile has-text-primary"><?= $event->eventTitle() ?></p>
 
                   <?php if ($event->eventReferent()->isNotEmpty()): ?>
-                    <span class="has-text-grey">Referent</span>: <span itemprop="actor"><?= $event->eventReferent() ?></span><br>
+                    <span class="has-text-grey">Referent</span>: <?= $event->eventReferent() ?><br>
                   <?php endif ?>
 
                   <?php if ($event->eventOrganizer()->isNotEmpty()): ?>
-                    <span class="has-text-grey">Veranstalter</span>: <span itemprop="organizer"><?= $event->eventOrganizer() ?></span><br>
+                    <span class="has-text-grey">Veranstalter</span>: <?= $event->eventOrganizer() ?><br>
                   <?php endif ?>
 
                   <?php if ($event->eventLocation()->isNotEmpty()): ?>
-                    <span class="has-text-grey">Ort</span>: <span itemprop="location"><?= $event->eventLocation() ?></span><br>
+                    <span class="has-text-grey">Ort</span>: <?= $event->eventLocation() ?><br>
                   <?php else: ?>
-                    <span class="is-sr-only" itemprop="location"><?= $site->title()->html() ?></span>
+                    <span class="is-sr-only"><?= $site->title()->html() ?></span>
                   <?php endif ?>
 
                   <?= $event->eventDescription()->kt() ?>
                 </td>
-                <td itemprop="price">
+                <td>
                   <?= $event->eventPrice() ?>
                 </td>
               </tr>

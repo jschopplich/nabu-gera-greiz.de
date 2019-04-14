@@ -24,15 +24,13 @@ fields:
     fields:
       eventTitle:
         label: Titel
-        type: textarea
-        buttons: false
-        width: 2/3
+        type: text
         required: true
-      eventDate:
+      eventStarts:
         label: Datum
-        type: textarea
-        buttons: false
-        width: 1/3
+        type: date
+        time: true
+        width: 1/2
         required: true
       eventReferent:
         label: Referent
