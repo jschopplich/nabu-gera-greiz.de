@@ -21,8 +21,6 @@ return [
             $tag->alt     = $tag->alt     ?? $tag->file->alt()->or(' ')->value();
             $tag->title   = $tag->title   ?? $tag->file->title()->value();
             $tag->caption = $tag->caption ?? $tag->file->caption()->value();
-            $tag->width   = $tag->width   ?? option('kirbytext.image-hero.width');
-            $tag->height  = $tag->height  ?? option('kirbytext.image-hero.height');
         } else {
             $tag->src = Url::to($tag->value);
         }
@@ -32,45 +30,54 @@ return [
                 return $img;
             }
 
-            return Html::a($tag->link === 'self' ? $tag->src : $tag->link, [$img], [
-                'rel'       => $tag->rel,
-                'class'     => $tag->linkclass,
-                'target'    => $tag->target,
-                'data-size' => $tag->link !== 'self' ? $tag->orginal->width . 'x' . $tag->orginal->height : null
-            ]);
+            if ($link = $tag->file($tag->link)) {
+                $link = $link->url();
+            } else {
+                $link = $tag->link === 'self' ? $tag->src : $tag->link;
+            }
+
+            return Html::a($link, [$img], [
+                'rel'    => $tag->rel,
+                'class'  => $tag->linkclass,
+                'target' => $tag->target
+          ]);
         };
 
         // Replace `$tag->src` by a thumb if width or height are not null
         if ($tag->file && ($tag->width || $tag->height)) {
             // Backup data
             $tag->orginal = new StdClass();
-            $tag->orginal->src    = $tag->src;
-            $tag->orginal->width  = $tag->file->width();
+            $tag->orginal->src        = $tag->src;
+            $tag->orginal->width    = $tag->file->width();
             $tag->orginal->height = $tag->file->height();
             $tag->src = $tag->file->thumb([
-                'width'  => $tag->width,
+                'width'    => $tag->width,
                 'height' => $tag->height,
             ])->url();
         } else {
             $thumb = $tag->src;
         }
 
-        $image = Html::img($tag->src, [
-            'width'  => $tag->width,
-            'height' => $tag->height,
+        if ($tag->file) {
+            // Backup data
+            $tag->orginal      = new StdClass();
+            $tag->orginal->src = $tag->src;
+            $tag->src = $tag->file->srcset('default');
+        }
+
+        $image = Html::img('', [
+            'srcset' => $tag->src,
             'class'  => $tag->imgclass,
             'title'  => $tag->title,
             'alt'    => $tag->alt ?? ' '
         ]);
 
-        $caption = $tag->text ? [Html::tag('p', [$tag->text])] : null;
-
         if ($tag->kirby()->option('kirbytext.image.figure', true) === false) {
             return $link($image);
         }
 
-        return Html::figure([$link($image)], $caption, [
-            'class' => $tag->class . ' image-hero'
+        return Html::figure([$link($image)], $tag->caption, [
+            'class' => $tag->class
         ]);
 
     }

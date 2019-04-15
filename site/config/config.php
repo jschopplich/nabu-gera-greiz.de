@@ -35,8 +35,8 @@ return [
 
     // Meta
 
-    'pedroborges.meta-tags.default' => require __DIR__ . '/meta-tags.php',
-    'pedroborges.meta-tags.templates' => require __DIR__ . '/meta-tags-templates.php',
+    'pedroborges.meta-tags.default' => require __DIR__ . '/meta.php',
+    'pedroborges.meta-tags.templates' => require __DIR__ . '/meta-templates.php',
 
     // Plugins
 
@@ -51,7 +51,7 @@ return [
     // Custom tags
 
     'kirbytext.image.width' => '768',
-    'kirbytext.image-hero.width' => '768',
+    'kirbytext.image-hero.width' => '1200',
     'kirbytext.image-box.width' => '768',
     'kirbytext.image-box.width-vertical' => '480',
 
