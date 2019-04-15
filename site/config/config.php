@@ -50,8 +50,7 @@ return [
 
     // Custom tags
 
-    'kirbytext.image.width' => '768',
-    'kirbytext.image-hero.width' => '1200',
+    'kirbytext.image-hero.width' => '768',
     'kirbytext.image-box.width' => '768',
     'kirbytext.image-box.width-vertical' => '480',
 
