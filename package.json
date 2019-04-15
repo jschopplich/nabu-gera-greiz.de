@@ -16,7 +16,6 @@
     "js-minify": "uglifyjs --compress typeofs=false --mangle --source-map \"url='main.min.js.map'\" --output assets/dist/main.min.js src/js/vendor/smooth-scroll.js src/js/vendor/bouncer.js src/js/application.js src/js/application.scrollreveal.js",
     "js-minify-prefetch": "uglifyjs --compress typeofs=false --mangle --source-map \"url='main.prefetch.min.js.map'\" --output assets/dist/main.prefetch.min.js src/js/vendor/medium-zoom.js src/js/vendor/flickity.pkgd.js src/js/application.prefetch.js",
     "js-minify-scrollreveal": "uglifyjs --compress typeofs=false --mangle --output assets/dist/scrollreveal.min.js src/js/vendor/scrollreveal.js",
-    "js-minify-enhancedux": "uglifyjs --compress typeofs=false --mangle --source-map \"url='enhancedux.min.js.map'\" --output assets/dist/enhancedux.min.js src/js/enhancedux/polyfills/intersection-observer.js src/js/enhancedux/vendor/quicklink.js src/js/enhancedux/enhancedux.invoke.js",
     "js-minify-cookieconsent": "uglifyjs --compress typeofs=false --mangle --output assets/dist/main.cookieconsent.min.js src/js/vendor/cookieconsent.js src/js/cookieconsent.js",
     "deploy": "npm run build",
     "watch": "npm-run-all --parallel watch-css watch-js",

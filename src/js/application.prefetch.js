@@ -17,7 +17,7 @@
       return Array.from(arr)
     }
   }
-  var images = [].concat(_toConsumableArray(document.querySelectorAll('.image-hero img')), _toConsumableArray(document.querySelectorAll('.image-box img')))
+  var images = [].concat(_toConsumableArray(document.querySelectorAll('.image-box img')), _toConsumableArray(document.querySelectorAll('[data-zoomable]')))
   mediumZoom(images, {
     margin: window.matchMedia('(min-width: 1024px)').matches ? 48 : 0,
     background: 'rgba(255, 255, 255, 0.85)',
