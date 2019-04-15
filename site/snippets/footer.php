@@ -47,7 +47,5 @@
 <?= css('assets/fonts/FontAwesomePro/css/light.min.css') ?>
 <script async defer src="//www.instagram.com/embed.js"></script>
 
-<?= js('assets/dist/enhancedux.min.js') ?>
-
 </body>
 </html>

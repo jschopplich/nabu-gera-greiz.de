@@ -8579,9 +8579,6 @@ img {
     padding-right: 1rem;
     white-space: normal;
   }
-  .navbar-dropdown.has-more .navbar-item .level {
-    flex-grow: 1;
-  }
 }
 
 .navbar-brand {
