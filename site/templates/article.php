@@ -20,7 +20,6 @@
             </span>
 
             <?= $page->text()->kirbytext() ?>
-            </div>
           </article>
           <?php snippet('prevnext') ?>
 
