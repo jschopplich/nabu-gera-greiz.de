@@ -13,7 +13,7 @@ Kirby::plugin('nabu-gera-greiz/nabu-kirbytags', [
   'tags' => [
     'line'       => require  __DIR__ . '/tags/line.php',
     'hr'         => require  __DIR__ . '/tags/line.php',
-    'image'      => require  __DIR__ . '/tags/thumb.php',
+    'image'      => require  __DIR__ . '/tags/image.php',
     'image-hero' => require  __DIR__ . '/tags/image-hero.php',
     'image-box'  => require  __DIR__ . '/tags/image-box.php',
 
