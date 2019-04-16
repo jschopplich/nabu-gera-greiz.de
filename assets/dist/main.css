@@ -8753,6 +8753,30 @@ img {
   box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
+.content.is-main .image-hero img,
+.content.is-main .image-box img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 6px !important;
+}
+.content.is-main .image-hero figcaption p,
+.content.is-main .image-box figcaption p {
+  font-size: 0.75rem;
+  font-style: normal;
+  text-align: left;
+  padding: 0.75rem 1.5rem;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+@media screen and (min-width: 769px), print {
+  .content.is-main .image-hero figcaption p,
+.content.is-main .image-box figcaption p {
+    padding: 0.5rem 1rem;
+  }
+}
 .content.is-main .image-hero {
   position: relative;
   right: 50%;
@@ -8779,35 +8803,11 @@ img {
     float: none !important;
   }
 }
-.content.is-main .image-hero img,
 .content.is-main .image-box img {
-  display: block;
-  margin: 0 auto;
-  border-radius: 6px !important;
   transition: transform 0.25s ease;
 }
-.content.is-main .image-hero img:hover, .content.is-main .image-hero img:hover,
-.content.is-main .image-box img:hover,
-.content.is-main .image-box img:hover {
+.content.is-main .image-box img:hover, .content.is-main .image-box img:hover {
   transform: scale(1.025);
-}
-.content.is-main .image-hero figcaption p,
-.content.is-main .image-box figcaption p {
-  font-size: 0.75rem;
-  font-style: normal;
-  text-align: left;
-  padding: 0.75rem 1.5rem;
-  overflow-wrap: break-word;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-}
-@media screen and (min-width: 769px), print {
-  .content.is-main .image-hero figcaption p,
-.content.is-main .image-box figcaption p {
-    padding: 0.5rem 1rem;
-  }
 }
 @media screen and (min-width: 769px), print {
   .content.is-main .image-box {

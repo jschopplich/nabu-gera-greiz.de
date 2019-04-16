@@ -61,6 +61,23 @@
     border-radius: $radius
     box-shadow: $shadow-box-hover
     overflow: hidden
+    img
+      display: block
+      margin: 0 auto
+      border-radius: $radius !important
+
+    figcaption p
+      font-size: $size-small
+      font-style: normal
+      text-align: left
+      padding: 0.75rem 1.5rem
+      overflow-wrap: break-word
+      word-break: break-word
+      -webkit-hyphens: auto
+      -ms-hyphens: auto
+      hyphens: auto
+      +tablet
+        padding: 0.5rem 1rem
 
   .image-hero
     position: relative
@@ -81,30 +98,11 @@
     padding: 0.25rem
     +mobile
       float: none !important
-
-  .image-hero,
-  .image-box
     img
-      display: block
-      margin: 0 auto
-      border-radius: $radius !important
       transition: transform 0.25s ease
       &:hover,
       &:hover
         transform: scale(1.025)
-
-    figcaption p
-      font-size: $size-small
-      font-style: normal
-      text-align: left
-      padding: 0.75rem 1.5rem
-      overflow-wrap: break-word
-      word-break: break-word
-      -webkit-hyphens: auto
-      -ms-hyphens: auto
-      hyphens: auto
-      +tablet
-        padding: 0.5rem 1rem
 
   +tablet
     .image-box
