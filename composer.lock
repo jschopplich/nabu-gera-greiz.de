@@ -693,16 +693,16 @@
         },
         {
             "name": "omz13/kirby3-xmlsitemap",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/omz13/kirby3-xmlsitemap.git",
-                "reference": "99a9ef936536131511c5c4227c0ab47b14810537"
+                "reference": "905940bbc171130e545423da16ec475cb7494be7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/omz13/kirby3-xmlsitemap/zipball/99a9ef936536131511c5c4227c0ab47b14810537",
-                "reference": "99a9ef936536131511c5c4227c0ab47b14810537",
+                "url": "https://api.github.com/repos/omz13/kirby3-xmlsitemap/zipball/905940bbc171130e545423da16ec475cb7494be7",
+                "reference": "905940bbc171130e545423da16ec475cb7494be7",
                 "shasum": ""
             },
             "require": {
@@ -716,8 +716,8 @@
                 "omz13/omz13-coding-standard": "dev-master",
                 "phpcompatibility/php-compatibility": "^8.2",
                 "phpmd/phpmd": "^2.6",
-                "phpstan/phpstan": "^0.10.3",
-                "phpstan/phpstan-strict-rules": "^0.10.1",
+                "phpstan/phpstan": "^0.11",
+                "phpstan/phpstan-strict-rules": "^0.11",
                 "roave/security-advisories": "dev-master"
             },
             "type": "kirby-plugin",
@@ -744,7 +744,7 @@
                 "kirby3",
                 "plugin"
             ],
-            "time": "2019-04-13T17:50:01+00:00"
+            "time": "2019-04-24T20:37:51+00:00"
         },
         {
             "name": "phpmailer/phpmailer",
@@ -954,7 +954,7 @@
                 },
                 {
                     "name": "Gert de Pagter",
-                    "email": "backendtea@gmail.com"
+                    "email": "BackEndTea@gmail.com"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
