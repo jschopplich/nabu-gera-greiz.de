@@ -25,21 +25,17 @@ return [
     ],
 
     // Dates
-
     'date.handler' => 'strftime',
     'locale' => 'de_DE.utf-8',
 
     // Routes
-
     'routes' => require __DIR__ . '/routes.php',
 
     // Meta
-
     'pedroborges.meta-tags.default' => require __DIR__ . '/meta.php',
     'pedroborges.meta-tags.templates' => require __DIR__ . '/meta-templates.php',
 
     // Plugins
-
     'omz13.xmlsitemap.includeUnlistedWhenSlugIs' => ['archiv', 'datenschutzerklaerung', 'impressum', 'korkampagne'],
     'omz13.xmlsitemap.excludeChildrenWhenTemplateIs' => ['events'],
     'community.markdown-field.font' => [
@@ -49,7 +45,6 @@ return [
     ],
 
     // Custom tags
-
     'kirbytext.image-hero.width' => '768',
     'kirbytext.image-box.width' => '768',
     'kirbytext.image-box.width-vertical' => '480',
