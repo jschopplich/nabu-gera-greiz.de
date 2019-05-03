@@ -47,11 +47,11 @@ return [
         if ($tag->file && ($tag->width || $tag->height)) {
             // Backup data
             $tag->orginal = new StdClass();
-            $tag->orginal->src        = $tag->src;
-            $tag->orginal->width    = $tag->file->width();
+            $tag->orginal->src    = $tag->src;
+            $tag->orginal->width  = $tag->file->width();
             $tag->orginal->height = $tag->file->height();
             $tag->src = $tag->file->thumb([
-                'width'    => $tag->width,
+                'width'  => $tag->width,
                 'height' => $tag->height,
             ])->url();
         } else {

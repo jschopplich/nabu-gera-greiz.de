@@ -42,7 +42,7 @@
             <a href="<?= $article->url() ?>">
               <?php if ($image = $article->images()->first()): ?>
                 <figure class="image is-3by2">
-                  <img src="<?= $image->crop(360, 240, 'center')->url() ?>" alt="$article->title()">
+                  <img src="<?= $image->crop(360, 240, 'center')->url() ?>" alt="<?= $article->title() ?>">
                 </figure>
               <?php else: ?>
                 <figure class="image is-3by2">
@@ -60,7 +60,7 @@
               <a href="<?= $article->url() ?>"><?= $article->title() ?></a>
             </p>
             <?php if ($article->subtitle()->isNotEmpty()): ?>
-              <p class="subtitle is-6 has-text-grey-light"><?= $article->subtitle() ?></p>
+              <p class="subtitle is-6 has-text-grey"><?= $article->subtitle() ?></p>
             <?php endif ?>
           </div>
 
