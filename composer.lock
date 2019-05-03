@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c5db1d120179aecbed015ccd1778f1c3",
+    "content-hash": "a30b4a8142c636ba98e506c95a727368",
     "packages": [
         {
             "name": "beebmx/kirby-env",
@@ -1178,8 +1178,6 @@
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": {
-        "php": ">=7.1.0"
-    },
+    "platform": [],
     "platform-dev": []
 }
