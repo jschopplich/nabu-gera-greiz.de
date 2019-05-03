@@ -1,6 +1,6 @@
     <section class="section is-partners container is-hidden-mobile">
       <div class="">
-        <h2 class="subtitle is-5 has-text-grey has-text-centered has-mb-xlarge">Unsere Partner</h2>
+        <h2 class="title is-5 has-text-primary  has-text-centered has-mb-xlarge">Unsere Partner</h2>
         <div class="columns is-mobile is-6 is-variable is-centered is-multiline">
           <?php
           $images = $site->partners()->toFiles();
