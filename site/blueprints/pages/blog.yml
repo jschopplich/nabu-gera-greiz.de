@@ -49,11 +49,11 @@ tabs:
         type: markdown
 
     sidebar:
-      cover:
-        extends: sections/cover
-
       files:
         extends: sections/files
+
+      cover:
+        extends: sections/cover
 
       excerpts:
         type: fields

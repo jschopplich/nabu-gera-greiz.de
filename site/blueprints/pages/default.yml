@@ -14,11 +14,11 @@ sidebar:
   pages:
     extends: sections/pages
 
-  cover:
-    extends: sections/cover
-
   files:
     extends: sections/files
+
+  cover:
+    extends: sections/cover
 
   navMeta:
     extends: sections/navMeta

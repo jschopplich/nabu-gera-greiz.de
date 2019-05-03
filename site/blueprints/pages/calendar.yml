@@ -93,11 +93,11 @@ fields:
     type: markdown
 
 sidebar:
-  cover:
-    extends: sections/cover
-
   files:
     extends: sections/files
+
+  cover:
+    extends: sections/cover
 
   meta:
     extends: sections/meta
