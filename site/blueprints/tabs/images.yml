@@ -3,7 +3,7 @@ icon: file-image
 sections:
   imagesContent:
     type: files
-    headline: Dateien
+    headline: Bilder
     template: image
     layout: cards
     size: tiny

@@ -3,15 +3,24 @@ title: Bild
 accept:
   mime: image/jpeg, image/png, image/svg+xml
 
-fields:
-  alt:
-    label: Alternativtext
-    type: text
-    width: 1/2
-  link:
-    label: Link
-    type: url
-    width: 1/2
-  caption:
-    label: Bildunterschrift
-    type: textarea
+columns:
+  - width: 1/2
+    sections:
+      content:
+        type: fields
+        fields:
+          caption:
+            label: Bildunterschrift
+            type: textarea
+            size: medium
+  - width: 1/2
+    sections:
+      meta:
+        type: fields
+        fields:
+          alt:
+            label: Alternativtext
+            type: text
+          link:
+            label: Link
+            type: url

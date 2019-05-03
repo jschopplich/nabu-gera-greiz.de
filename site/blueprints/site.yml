@@ -20,7 +20,7 @@ tabs:
             image:
               back: white
               cover: true
-            limit: 10
+            limit: 9
 
       - width: 1/2
         sections:
