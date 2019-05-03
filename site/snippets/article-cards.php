@@ -42,7 +42,7 @@
             <a href="<?= $article->url() ?>">
               <?php if ($image = $article->images()->first()): ?>
                 <figure class="image is-3by2">
-                  <img src="<?= $image->crop(768, 512, 'center')->url() ?>" alt="$article->title()">
+                  <img src="<?= $image->crop(360, 240, 'center')->url() ?>" alt="$article->title()">
                 </figure>
               <?php else: ?>
                 <figure class="image is-3by2">

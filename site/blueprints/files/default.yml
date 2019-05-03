@@ -4,4 +4,4 @@ fields:
   alt:
     label: Alternativtext
     type: text
-    help: nur für Bilddateien nötig
+    help: nur für Bilder erforderlich
