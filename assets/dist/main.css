@@ -8423,6 +8423,8 @@ img {
   .header.is-default .cover-image {
     padding-top: 15%;
   }
+}
+@media screen and (min-width: 1088px) {
   .header.is-default .cover-image img {
     border-bottom-right-radius: 10px;
   }
@@ -8434,7 +8436,7 @@ img {
   bottom: -1rem;
   left: 0;
   background-color: white;
-  border-bottom: 4px solid #0069b3;
+  border-bottom: 3px solid #0069b3;
   justify-content: center;
   align-items: center;
   padding-right: 2rem;
@@ -8449,6 +8451,7 @@ img {
   .header.is-default .cover-logo {
     bottom: 0;
     padding-left: 1.5rem;
+    border-bottom-right-radius: 2rem;
   }
 }
 .header.is-default .cover-logo .image {
