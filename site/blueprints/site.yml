@@ -46,14 +46,15 @@ tabs:
       - width: 2/3
         sections:
           settings:
-            headline: Partner
-            type: files
-            template: partner
-            min: 1
-        sections:
-          settings:
             type: fields
             fields:
+              partners:
+                label: Partner
+                type: files
+                query: site.images.filterBy('template', 'partner')
+                layout: cards
+                size: tiny
+                required: true
               footerColumns:
                 label: "Fußzeile: Spalten"
                 type: structure
@@ -70,13 +71,20 @@ tabs:
               coverImage:
                 label: Cover
                 type: files
-                multiple: false
                 query: site.images
+                multiple: false
+                layout: cards
                 required: true
               author:
                 label: Autor
                 type: text
                 icon: user
                 required: true
+          partnersImages:
+            headline: Partnerbilder
+            type: files
+            template: partner
+            min: 1
+            sortable: false
 
   images: tabs/images
