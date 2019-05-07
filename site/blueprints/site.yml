@@ -46,13 +46,14 @@ tabs:
       - width: 2/3
         sections:
           settings:
+            headline: Partner
+            type: files
+            template: partner
+            min: 1
+        sections:
+          settings:
             type: fields
             fields:
-              partners:
-                label: Partner
-                type: files
-                min: 1
-                query: site.images
               footerColumns:
                 label: "Fußzeile: Spalten"
                 type: structure
