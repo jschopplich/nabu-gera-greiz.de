@@ -3,7 +3,20 @@ title: Partner
 accept:
   mime: image/jpeg, image/png, image/svg+xml
 
-fields:
-  link:
-    label: Link
-    type: url
+columns:
+  - width: 1/2
+    sections:
+      content:
+        type: fields
+        fields:
+          alt:
+            label: Alternativtext
+            type: text
+  - width: 1/2
+    sections:
+      meta:
+        type: fields
+        fields:
+          link:
+            label: Link
+            type: url
