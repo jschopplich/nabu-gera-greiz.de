@@ -1,0 +1,12 @@
+title: Partner
+
+accept:
+  mime: image/jpeg, image/png, image/svg+xml
+
+sections:
+  meta:
+    type: fields
+    fields:
+      link:
+        label: Link
+        type: url
