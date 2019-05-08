@@ -39,9 +39,9 @@ return [
     'omz13.xmlsitemap.includeUnlistedWhenSlugIs' => ['archiv', 'datenschutzerklaerung', 'impressum', 'korkampagne'],
     'omz13.xmlsitemap.excludeChildrenWhenTemplateIs' => ['events'],
     'community.markdown-field.font' => [
-      'family'  => 'sans-serif',
-      'scaling' => true,
-      'size'    => 'regular',
+        'family'  => 'sans-serif',
+        'scaling' => true,
+        'size'    => 'regular',
     ],
 
     // Custom tags
