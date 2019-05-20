@@ -16,6 +16,8 @@ return function ($page, $site) {
             'description' => $metaDescription,
             'robots' => 'index, follow',
             'google-site-verification' => env('GOOGLE_SITEVERIFICATION', ''),
+            'apple-mobile-web-app-title' => env('APP_NAME', $site->title()->value()),
+            'application-name' => env('APP_NAME', $site->title()->value()),
             'msapplication-TileColor' => env('APP_THEMECOLOR', '#ffffff'),
             'theme-color' => env('APP_THEMECOLOR', '#ffffff')
         ],
