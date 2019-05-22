@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a30b4a8142c636ba98e506c95a727368",
+    "content-hash": "779ec88f83ab4a02d08059d3201d5849",
     "packages": [
         {
             "name": "beebmx/kirby-env",
@@ -55,52 +55,6 @@
                 "phpdotenv"
             ],
             "time": "2019-02-13T22:15:23+00:00"
-        },
-        {
-            "name": "bnomei/kirby3-fingerprint",
-            "version": "2.3.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/bnomei/kirby3-fingerprint.git",
-                "reference": "c8195b2fa51412af8b8ae85acb75bb46b3476243"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/bnomei/kirby3-fingerprint/zipball/c8195b2fa51412af8b8ae85acb75bb46b3476243",
-                "reference": "c8195b2fa51412af8b8ae85acb75bb46b3476243",
-                "shasum": ""
-            },
-            "require": {
-                "getkirby/composer-installer": "^1.1",
-                "php": ">=7.1.0"
-            },
-            "type": "kirby-plugin",
-            "autoload": {
-                "psr-4": {
-                    "Bnomei\\": "classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Bruno Meilick",
-                    "email": "b@bnomei.com"
-                }
-            ],
-            "description": "File Method and css/js helper to add cachbusting hash and optional Subresource Integrity to file",
-            "keywords": [
-                "Fingerprint",
-                "cache-buster",
-                "hash",
-                "kirby3",
-                "kirby3-cms",
-                "kirby3-plugin",
-                "subresource-integrity"
-            ],
-            "time": "2019-02-06T12:17:38+00:00"
         },
         {
             "name": "claviska/simpleimage",

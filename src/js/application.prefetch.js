@@ -1,12 +1,7 @@
+/*
 ;(function () {
 
   // Medium-like zoomable images
-  /*
-  const images = [
-    document.querySelectorAll('.content figure img'),
-    ...document.querySelectorAll('[data-zoomable]')
-  ]
-  */
   function _toConsumableArray (arr) {
     if (Array.isArray(arr)) {
       for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) {
@@ -25,6 +20,7 @@
   })
 
 })()
+*/
 
 
 window.addEventListener('load', function () {

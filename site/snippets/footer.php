@@ -37,11 +37,9 @@
 
 <?php snippet('modals/newsletter') ?>
 
-<?= Bnomei\Fingerprint::js('assets/dist/main.min.js') ?>
-<?php e(!$page->isHomePage(), Bnomei\Fingerprint::js('assets/dist/main.prefetch.min.js')) ?>
-<?= js('@auto') ?>
+<?= js('assets/build/main.min.js') ?>
+<?php e(!$page->isHomePage(), js('assets/build/main.prefetch.min.js')) ?>
 
-<?= js('assets/dist/main.cookieconsent.min.js', ['defer' => true]) ?>
 <?= css('assets/fonts/FontAwesomePro/css/fontawesome.min.css') ?>
 <?= css('assets/fonts/FontAwesomePro/css/solid.min.css') ?>
 <?= css('assets/fonts/FontAwesomePro/css/light.min.css') ?>
