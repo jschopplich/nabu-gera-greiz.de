@@ -16,7 +16,8 @@ return [
     'thumbs' => [
         'quality' => env('KIRBY_THUMBS_QUALITY', '90'),
         'srcsets' => [
-            'default' => [576, 768, 992, 1200]
+            //'default' => [640, 768, 1024, 1366, 1600, 1920]
+            'default' => [640, 768, 1024]
         ]
     ],
 
