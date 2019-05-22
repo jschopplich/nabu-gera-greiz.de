@@ -43,6 +43,7 @@ ready(function () {
 
   // Newsletter
 
+  /*
   // Bouncer standard options
   var bouncerOptions = {
     fieldClass: 'is-danger', // Applied to fields with errors
@@ -84,18 +85,39 @@ ready(function () {
     var form = event.target
     var request = new XMLHttpRequest()
     request.onload = function (event) {
-      // FIXME: Kirby returns status code 404
-      document.querySelector('.newsletter-notification').classList.remove('is-hidden')
-      /*
       if (event.target.status >= 200 && event.target.status < 300) {
         document.querySelector('.newsletter-notification').classList.remove('is-hidden')
       } else {
         console.log('The request failed with: ' + event.target.response)
       }
-      */
     }
     request.open('POST', form.action)
     request.send(new FormData(form))
   }, false)
+  */
 
 })
+
+
+window.addEventListener('load', function () {
+
+  window.cookieconsent.initialise({
+    'palette': {
+      'popup': {
+        'background': '#ffffff',
+        'text': '#363636'
+      },
+      'button': {
+        'background': '#005dad',
+        'text': '#ffffff'
+      }
+    },
+    'content': {
+      'message': 'Wir nutzen Cookies, um unsere Website fortlaufend verbessern. Wenn Sie die Website weiter nutzen, stimmen Sie dadurch der Verwendung von Cookies zu.',
+      'dismiss': 'OK',
+      'link': 'Datenschutzerklärung',
+      'href': '/datenschutzerklaerung'
+    }
+  })
+
+}, false)

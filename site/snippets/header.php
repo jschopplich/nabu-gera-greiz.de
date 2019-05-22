@@ -7,11 +7,11 @@
 
   <?= $page->metaTags() ?>
 
-  <?= Bnomei\Fingerprint::css('assets/dist/main.min.css') ?>
-  <?= Bnomei\Fingerprint::js('assets/dist/scrollreveal.min.js') ?>
+  <?= css('assets/build/main.min.css') ?>
+  <?= js('assets/build/scrollreveal.min.js') ?>
   <?= css('assets/fonts/NotoSerif/family.css') ?>
 
-  <link rel="prefetch" href="<?= url('assets/dist/main.prefetch.min.js') ?>" as="script">
+  <link rel="prefetch" href="<?= url('assets/build/main.prefetch.min.js') ?>" as="script">
   <?php snippet('analytics') ?>
 
 </head>
