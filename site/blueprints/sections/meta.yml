@@ -1,5 +1,9 @@
 type: fields
 fields:
+  metaImages:
+    label: Meta-Bild
+    type: files
+    multiple: false
   metaTitle:
     label: Meta-Titel
     type: text
@@ -11,7 +15,3 @@ fields:
     type: textarea
     buttons: false
     icon: text
-  metaImages:
-    label: Meta-Bild
-    type: files
-    multiple: false
