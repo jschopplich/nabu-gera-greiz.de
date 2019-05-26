@@ -32,6 +32,7 @@ tabs:
             headline: Veröffentlichte Artikel
             status: listed
             layout: cards
+            size: tiny
 
   content:
     label: Seite
