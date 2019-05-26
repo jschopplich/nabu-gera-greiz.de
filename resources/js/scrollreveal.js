@@ -1,4 +1,4 @@
-window.ScrollReveal = require('./vendor/scrollreveal')
+window.ScrollReveal = require('./vendor/scrollreveal').default
 
 window.sr = ScrollReveal({ duration: 750 })
 
