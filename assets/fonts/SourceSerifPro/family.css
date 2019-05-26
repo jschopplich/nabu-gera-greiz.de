@@ -3,7 +3,7 @@
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  src: url("SourceSerifPro-Regular.otf.woff2") format("woff2");
+  src: url("SourceSerifPro-Regular.ttf.woff2") format("woff2");
 }
 
 @font-face {
@@ -11,7 +11,7 @@
   font-weight: 400;
   font-style: italic;
   font-stretch: normal;
-  src: url("SourceSerifPro-It.otf.woff2") format("woff2");
+  src: url("SourceSerifPro-It.ttf.woff2") format("woff2");
 }
 
 @font-face {
@@ -19,7 +19,7 @@
   font-weight: 700;
   font-style: normal;
   font-stretch: normal;
-  src: url("SourceSerifPro-Bold.otf.woff2") format("woff2");
+  src: url("SourceSerifPro-Bold.ttf.woff2") format("woff2");
 }
 
 @font-face {
@@ -27,5 +27,5 @@
   font-weight: 700;
   font-style: italic;
   font-stretch: normal;
-  src: url("SourceSerifPro-BoldIt.otf.woff2") format("woff2");
+  src: url("SourceSerifPro-BoldIt.ttf.woff2") format("woff2");
 }
