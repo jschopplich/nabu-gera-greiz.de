@@ -21,14 +21,13 @@ $white-ter:      hsl(0, 0%, 96%)
 $white-bis:      hsl(0, 0%, 98%)
 $white:          hsl(0, 0%, 100%)
 
-$primary:        #0069b3
-$green:          hsl(141, 71%, 48%)
+$primary:        hsl(205, 100%, 35%)
+$green:          hsl(141, 71%, 43%)
 $light:          $white-qua
 $dark:           $grey-darker
 
 // Derived colors
 
-$primary-invert: $white
 $success:        $green
 
 // Invert colors
@@ -39,21 +38,30 @@ $success-invert: $green-invert
 $light-invert:   $dark
 $dark-invert:    $light
 
-// General colors
-
-$background: $white-qua
-$pagination-hover-color: $primary
-
 // Link colors
 
 $link: $primary
-$link-invert: findColorInvert($primary)
+$link-invert: $white
 $link-hover: darken($link, 10%)
+$link-focus: darken($link, 10%)
+
+// General colors
+
+$background: $white-qua
+$pagination-hover-color: $grey-darker
 
 // Typography
 
 $family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
 $family-secondary: "Source Serif Pro", Georgia, serif
+
+// $size-1: 3rem
+// $size-2: 2.5rem
+// $size-3: 2rem
+// $size-4: 1.5rem
+// $size-5: 1.25rem
+// $size-6: 1rem
+$size-7: 0.875rem
 
 // Components
 
@@ -83,4 +91,5 @@ $article-image-width: 320px
 $article-image-v-width: 220px
 
 // Lists and maps
+
 $colors: ("white": ($white, $black), "light": ($light, $light-invert), "dark": ($dark, $dark-invert), "primary": ($primary, $primary-invert), "link": ($link, $link-invert), "success": ($success, $success-invert))

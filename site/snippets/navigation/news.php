@@ -1,7 +1,7 @@
 <div class="navbar-dropdown has-more is-boxed">
   <a class="navbar-item<?php e($page->id() === 'aktuelles', ' is-active') ?>" href="<?= page('aktuelles')->url() ?>">
     <span>
-      <span class="icon has-text-warning">
+      <span class="icon has-text-success">
         <i class="fas fa-star" aria-hidden="true"></i>
       </span>
       <strong><?= page('aktuelles')->title()->html() ?></strong>
