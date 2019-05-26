@@ -12,7 +12,7 @@ if (workbox) {
   },
   {
     "url": "assets/build/scrollreveal.js",
-    "revision": "42bcf60ee9eb08a84eb011dc87fa0027"
+    "revision": "8cf32deb04da0c816e7b0e3663cb4b5f"
   }
 ])
 }

@@ -1,3 +1,4 @@
+/* global SmoothScroll */
 window.SmoothScroll = require('./vendor/smooth-scroll')
 require('./cookieconsent')
 
