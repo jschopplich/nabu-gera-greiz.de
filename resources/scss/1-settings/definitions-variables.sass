@@ -5,62 +5,82 @@ $fullhd-enabled: false
 
 // Colors
 
-$black:        hsl(0, 0%, 4%)
-$black-bis:    hsl(0, 0%, 7%)
-$black-ter:    hsl(0, 0%, 14%)
+$black:          hsl(0, 0%, 4%)
+$black-bis:      hsl(0, 0%, 7%)
+$black-ter:      hsl(0, 0%, 14%)
 
-$grey-darker:  hsl(0, 0%, 21%)
-$grey-dark:    hsl(0, 0%, 29%)
-$grey:         hsl(0, 0%, 48%)
-$grey-light:   hsl(0, 0%, 71%)
-$grey-lighter: hsl(0, 0%, 86%)
+$grey-darker:    hsl(0, 0%, 21%)
+$grey-dark:      hsl(0, 0%, 29%)
+$grey:           hsl(0, 0%, 48%)
+$grey-light:     hsl(0, 0%, 71%)
+$grey-lighter:   hsl(0, 0%, 86%)
 
-$white-qua:    hsl(0, 0%, 94%)
-$white-ter:    hsl(0, 0%, 96%)
-$white-ter:    hsl(0, 0%, 96%)
-$white-bis:    hsl(0, 0%, 98%)
-$white:        hsl(0, 0%, 100%)
+$white-qua:      hsl(0, 0%, 94%)
+$white-ter:      hsl(0, 0%, 96%)
+$white-ter:      hsl(0, 0%, 96%)
+$white-bis:      hsl(0, 0%, 98%)
+$white:          hsl(0, 0%, 100%)
 
 $primary:        #0069b3
-$primary-invert: $white
-$link:           $primary
-$link-hover:     darken($link, 10%)
+$green:          hsl(141, 71%, 48%)
+$light:          $white-qua
+$dark:           $grey-darker
 
 // Derived colors
 
-$light:                  $white-qua
-$background:             $white-qua
+$primary-invert: $white
+$success:        $green
+
+// Invert colors
+
+$primary-invert: $white
+$green-invert:   findColorInvert($green)
+$success-invert: $green-invert
+$light-invert:   $dark
+$dark-invert:    $light
+
+// General colors
+
+$background: $white-qua
 $pagination-hover-color: $primary
+
+// Link colors
+
+$link: $primary
+$link-invert: findColorInvert($primary)
+$link-hover: darken($link, 10%)
+
+// Typography
+
+$family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+$family-secondary: "Source Serif Pro", Georgia, serif
+
+// Components
+
+$radius-small: 2px
+$radius: 6px
+$radius-large: 10px
+
+$control-radius: $radius-small
+$control-radius-small: $radius-small
+
+$shadow-navbar: 0 4px 12px 0 rgba(0, 0, 0, 0.075)
+$shadow-box: 0 4px 16px 0 rgba(0, 0, 0, 0.05)
+$shadow-box-hover: 0 8px 24px 0 rgba(0, 0, 0, 0.1)
 
 // Layout
 
 $section-padding: 6rem 1.5rem
 
-// Typography
-
-$family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
-$family-secondary:  "Source Serif Pro", Georgia, serif
-$body-line-height:  1.625
-
-// Components
-
-$radius-small:         2px
-$radius:               6px
-$radius-large:         10px
-
-$control-radius:       2px
-$control-radius-small: 2px
-
-$shadow-navbar:        0 4px 12px 0 rgba(0, 0, 0, 0.075)
-$shadow-box:           0 4px 16px 0 rgba(0, 0, 0, 0.05)
-$shadow-box-hover:     0 8px 24px 0 rgba(0, 0, 0, 0.1)
-
 // Navbar
 
 $navbar-dropdown-boxed-radius: 0 0 4px 4px
-$navbar-burger-color:          #fff
+$navbar-burger-color: #fff
 
 // Templates
 
-$article-image-width:  320px
+$article-image-width: 320px
 $article-image-v-width: 220px
+
+// Lists and maps
+$colors: ("white": ($white, $black), "light": ($light, $light-invert), "dark": ($dark, $dark-invert), "primary": ($primary, $primary-invert), "link": ($link, $link-invert), "success": ($success, $success-invert))
