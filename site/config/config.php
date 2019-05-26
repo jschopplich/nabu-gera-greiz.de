@@ -13,6 +13,8 @@ return [
     ],
     'api' => env('KIRBY_API', true),
     'cookieName' => env('KIRBY_SESSION', 'kirby_session'),
+    'hooks' => require_once 'hooks.php',
+    'routes' => require_once 'routes.php',
     'thumbs' => [
         'quality' => env('KIRBY_THUMBS_QUALITY', '90'),
         'srcsets' => [
@@ -28,9 +30,6 @@ return [
     // Dates
     'date.handler' => 'strftime',
     'locale' => 'de_DE.utf-8',
-
-    // Routes
-    'routes' => require __DIR__ . '/routes.php',
 
     // Meta
     'pedroborges.meta-tags.default' => require __DIR__ . '/meta.php',
