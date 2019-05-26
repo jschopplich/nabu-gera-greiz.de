@@ -9,7 +9,7 @@
 
   <?= css('assets/build/main.css') ?>
   <?= js('assets/build/scrollreveal.js') ?>
-  <?= css('assets/fonts/NotoSerif/family.css') ?>
+  <?= css('assets/fonts/SourceSerifPro/family.css') ?>
 
   <?php snippet('analytics') ?>
 
