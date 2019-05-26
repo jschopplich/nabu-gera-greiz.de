@@ -1,3 +1,5 @@
+require('./vendor/cookieconsent')
+
 window.addEventListener('load', () => {
 
   window.cookieconsent.initialise({
