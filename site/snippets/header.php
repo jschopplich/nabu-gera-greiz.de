@@ -7,11 +7,10 @@
 
   <?= $page->metaTags() ?>
 
-  <?= css('assets/build/main.min.css') ?>
-  <?= js('assets/build/scrollreveal.min.js') ?>
+  <?= css('assets/build/main.css') ?>
+  <?= js('assets/build/scrollreveal.js') ?>
   <?= css('assets/fonts/NotoSerif/family.css') ?>
 
-  <link rel="prefetch" href="<?= url('assets/build/main.prefetch.min.js') ?>" as="script">
   <?php snippet('analytics') ?>
 
 </head>

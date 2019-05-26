@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "2.1.1",
+  "version": "2.2.0",
   "homepage": "https://nabu-gera-greiz.de",
   "author": {
     "name": "Johann Schopplich",
@@ -8,22 +8,23 @@
     "url": "https://jschopplich.com"
   },
   "scripts": {
-    "build": "npm-run-all --parallel build-css build-js && workbox injectManifest workbox-config.js",
-    "build-css": "npm-run-all --sequential css-compile css-minify",
-    "build-js": "npm-run-all --sequential js-minify*",
-    "css-compile": "sass --embed-sources src/sass/application.sass assets/build/main.css",
-    "css-minify": "cleancss --level 1 --source-map --source-map-inline-sources --output assets/build/main.min.css assets/build/main.css",
-    "js-minify": "uglifyjs --compress typeofs=false --mangle --source-map \"url='main.min.js.map'\" --output assets/build/main.min.js src/js/vendor/smooth-scroll.js src/js/vendor/cookieconsent.js src/js/application.js src/js/application.scrollreveal.js",
-    "js-minify-prefetch": "uglifyjs --compress typeofs=false --mangle --source-map \"url='main.prefetch.min.js.map'\" --output assets/build/main.prefetch.min.js src/js/vendor/flickity.pkgd.js src/js/application.prefetch.js",
-    "js-minify-scrollreveal": "uglifyjs --compress typeofs=false --mangle --output assets/build/scrollreveal.min.js src/js/vendor/scrollreveal.js"
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && workbox injectManifest workbox-config.js"
   },
   "devDependencies": {
-    "clean-css-cli": "^4.3.0",
-    "npm-run-all": "^4.1.5",
+    "cross-env": "^5.2.0",
+    "laravel-mix": "^4.0.15",
+    "resolve-url-loader": "^2.3.1",
     "sass": "^1.20.1",
-    "uglify-js": "^3.5.15"
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.6.10"
   },
   "dependencies": {
+    "flickity": "^2.2.0",
     "workbox-cli": "^4.3.1"
   }
 }
