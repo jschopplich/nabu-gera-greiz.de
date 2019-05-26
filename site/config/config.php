@@ -1,5 +1,7 @@
 <?php
 
+require_once 'helpers.php';
+
 $base = dirname(dirname(__DIR__));
 (new \Beebmx\KirbyEnv($base))->load();
 
@@ -20,6 +22,17 @@ return [
         'srcsets' => [
             //'default' => [640, 768, 1024, 1366, 1600, 1920]
             'default' => [640, 768, 1024]
+        ]
+    ],
+    'email' => [
+        'transport' => [
+            'type' => env('MAIL_DRIVER', 'mail'),
+            'host' => env('MAIL_HOST', 'smtp.server.com'),
+            'port' => env('MAIL_PORT', 465),
+            'security' => env('MAIL_ENCRYPTION', 'tls'),
+            'auth' => env('MAIL_AUTH', false),
+            'username' => env('MAIL_USERNAME', ''),
+            'password' => env('MAIL_PASSWORD', ''),
         ]
     ],
 

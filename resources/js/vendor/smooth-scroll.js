@@ -1,7 +1,7 @@
 /*!
- * smooth-scroll v15.1.2
+ * smooth-scroll v16.0.3
  * Animate scrolling to anchor links
- * (c) 2018 Chris Ferdinandi
+ * (c) 2019 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/smooth-scroll
  */
@@ -271,7 +271,7 @@
 		var speed = settings.speedAsDuration ? settings.speed : Math.abs(distance / 1000 * settings.speed);
 		if (settings.durationMax && speed > settings.durationMax) return settings.durationMax;
 		if (settings.durationMin && speed < settings.durationMin) return settings.durationMin;
-		return speed;
+		return parseInt(speed, 10);
 	};
 
 	var setHistory = function (options) {
@@ -281,7 +281,7 @@
 
 		// Get the hash to use
 		var hash = window.location.hash;
-		hash = hash ? hash : window.pageYOffset;
+		hash = hash ? hash : '';
 
 		// Set a default history
 		history.replaceState(
@@ -404,6 +404,9 @@
 		 */
 		smoothScroll.animateScroll = function (anchor, toggle, options) {
 
+			// Cancel any in progress scrolls
+			smoothScroll.cancelScroll();
+
 			// Local settings
 			var _settings = extend(settings || defaults, options || {}); // Merge user options with defaults
 
@@ -462,7 +465,7 @@
 			var loopAnimateScroll = function (timestamp) {
 				if (!start) { start = timestamp; }
 				timeLapsed += timestamp - start;
-				percentage = (timeLapsed / parseInt(speed, 10));
+				percentage = speed === 0 ? 0 : (timeLapsed / speed);
 				percentage = (percentage > 1) ? 1 : percentage;
 				position = startLocation + (distance * easingPattern(_settings, percentage));
 				window.scrollTo(0, Math.floor(position));
@@ -500,8 +503,12 @@
 			// Don't run if the user prefers reduced motion
 			if (reduceMotion(settings)) return;
 
-			// Don't run if right-click or command/control + click
-			if (event.button !== 0 || event.metaKey || event.ctrlKey) return;
+			// Don't run if event was canceled but still bubbled up
+			// By @mgreter - https://github.com/cferdinandi/smooth-scroll/pull/462/
+			if (event.defaultPrevented) return;
+
+			// Don't run if right-click or command/control + click or shift + click
+			if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey) return;
 
 			// Check if event.target has closest() method
 			// By @totegi - https://github.com/cferdinandi/smooth-scroll/pull/401/
@@ -518,7 +525,13 @@
 			var hash = escapeCharacters(toggle.hash);
 
 			// Get the anchored element
-			var anchor = settings.topOnEmptyHash && hash === '#' ? document.documentElement : document.querySelector(hash);
+			var anchor;
+			if (hash === '#') {
+				if (!settings.topOnEmptyHash) return;
+				anchor = document.documentElement;
+			} else {
+				anchor = document.querySelector(hash);
+			}
 			anchor = !anchor && hash === '#top' ? document.documentElement : anchor;
 
 			// If anchored element exists, scroll to it
@@ -547,7 +560,7 @@
 
 			// Get the anchor
 			var anchor = history.state.anchor;
-			if (anchor && anchor !== 0) {
+			if (typeof anchor === 'string' && anchor) {
 				anchor = document.querySelector(escapeCharacters(history.state.anchor));
 				if (!anchor) return;
 			}
@@ -586,7 +599,7 @@
 		 * Initialize Smooth Scroll
 		 * @param {Object} options User settings
 		 */
-		smoothScroll.init = function (options) {
+		var init = function () {
 
 			// feature test
 			if (!supports()) throw 'Smooth Scroll: This browser does not support the required JavaScript methods and browser APIs.';
@@ -613,7 +626,7 @@
 		// Initialize plugin
 		//
 
-		smoothScroll.init(options);
+		init();
 
 
 		//

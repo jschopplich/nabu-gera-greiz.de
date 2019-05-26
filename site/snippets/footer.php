@@ -37,8 +37,7 @@
 
 <?php snippet('modals/newsletter') ?>
 
-<?= js('assets/build/main.min.js') ?>
-<?php e(!$page->isHomePage(), js('assets/build/main.prefetch.min.js')) ?>
+<?= js('assets/build/main.js') ?>
 
 <?= css('assets/fonts/FontAwesomePro/css/fontawesome.min.css') ?>
 <?= css('assets/fonts/FontAwesomePro/css/solid.min.css') ?>

@@ -1,3 +1,5 @@
+window.ScrollReveal = require('./vendor/scrollreveal')
+
 window.sr = ScrollReveal({ duration: 750 })
 
 sr.reveal('[data-scrollreveal="scale"]', { scale: 0.85 })
