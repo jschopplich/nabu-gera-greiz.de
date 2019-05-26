@@ -8,7 +8,7 @@ if (workbox) {
   },
   {
     "url": "assets/build/main.js",
-    "revision": "5fee496d5806920dece34b8ab4bd75f2"
+    "revision": "cf4bb1c708a19113f0652276f8e548cd"
   },
   {
     "url": "assets/build/scrollreveal.js",
