@@ -16,23 +16,23 @@ if (workbox) {
   },
   {
     "url": "assets/fonts/SourceSerifPro/family.css",
-    "revision": "4a574e85d740f62483ff625444de9094"
+    "revision": "d3279d0d6d5977f31e40acfc49d1d60e"
   },
   {
-    "url": "assets/fonts/SourceSerifPro/SourceSerifPro-Bold.otf.woff2",
-    "revision": "38b1876e0b8a15970908814054fb2ca6"
+    "url": "assets/fonts/SourceSerifPro/SourceSerifPro-Bold.ttf.woff2",
+    "revision": "be93b6dc83bb64cc0107c90b6b7b953f"
   },
   {
-    "url": "assets/fonts/SourceSerifPro/SourceSerifPro-BoldIt.otf.woff2",
-    "revision": "dfb9fa7417fec83777f48edb8f7ace46"
+    "url": "assets/fonts/SourceSerifPro/SourceSerifPro-BoldIt.ttf.woff2",
+    "revision": "0347030446e9545f1511449423dd03b6"
   },
   {
-    "url": "assets/fonts/SourceSerifPro/SourceSerifPro-It.otf.woff2",
-    "revision": "d929519a76ad94c546de74b8202623e8"
+    "url": "assets/fonts/SourceSerifPro/SourceSerifPro-It.ttf.woff2",
+    "revision": "22499dd65afb627820dc322050ad96c5"
   },
   {
-    "url": "assets/fonts/SourceSerifPro/SourceSerifPro-Regular.otf.woff2",
-    "revision": "b809e521fcacd5df16511be15fc29cfc"
+    "url": "assets/fonts/SourceSerifPro/SourceSerifPro-Regular.ttf.woff2",
+    "revision": "f57d4f93ac6d0aff061caa1d7e75e1a1"
   }
 ])
 }
