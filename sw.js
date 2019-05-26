@@ -4,7 +4,7 @@ if (workbox) {
   workbox.precaching.precacheAndRoute([
   {
     "url": "assets/build/main.css",
-    "revision": "b4be13faf61300664c0e5579c1a91d51"
+    "revision": "06fafddb3d3861980da08a9d584fc845"
   },
   {
     "url": "assets/build/main.js",
