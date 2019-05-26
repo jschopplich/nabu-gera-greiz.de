@@ -65,7 +65,7 @@
 
     <div class="navbar-end">
       <div class="navbar-item">
-        <a class="button is-dark is-outlined" data-open-modal data-modal-id="#newsletter-modal">
+        <a class="button is-light" data-open-modal data-modal-id="#newsletter-modal">
           <span class="icon">
             <span class="fal fa-envelope" aria-hidden="true"></span>
           </span>
