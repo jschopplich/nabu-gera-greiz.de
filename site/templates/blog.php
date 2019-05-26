@@ -31,7 +31,7 @@
 
           <?php endforeach ?>
         </div>
-        <?php snippet('pagination', ['pagination' => $pagination]) ?>
+        <?php snippet('navigation/pagination', ['pagination' => $pagination]) ?>
       </div>
       <?php snippet('side') ?>
     </div>

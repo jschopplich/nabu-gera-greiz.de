@@ -2,7 +2,7 @@
   <nav class="pagination is-centered" aria-label="Seitennummerierung">
 
     <?php if ($pagination->hasPrevPage()): ?>
-      <a href="<?= $pagination->prevPageUrl() ?>" class="pagination-previous button is-dark is-outlined" rel="prev" aria-label="Vorherige Seite">
+      <a href="<?= $pagination->prevPageUrl() ?>" class="pagination-previous" rel="prev" aria-label="Vorherige Seite">
         <span aria-hidden="true">&laquo;&nbsp;</span>Vorherige Seite
       </a>
     <?php else: ?>
@@ -24,7 +24,7 @@
     </ul>
 
     <?php if ($pagination->hasNextPage()): ?>
-      <a href="<?= $pagination->nextPageUrl() ?>" class="pagination-next button is-dark is-outlined" rel="next" aria-label="Nächste Seite">
+      <a href="<?= $pagination->nextPageUrl() ?>" class="pagination-next" rel="next" aria-label="Nächste Seite">
         Nächste Seite<span aria-hidden="true">&nbsp;&raquo;</span>
       </a>
     <?php else: ?>

@@ -21,7 +21,7 @@
 
             <?= $page->text()->kirbytext() ?>
           </article>
-          <?php snippet('prevnext') ?>
+          <?php snippet('navigation/prevnext') ?>
 
         </div>
       </div>

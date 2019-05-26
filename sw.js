@@ -4,7 +4,7 @@ if (workbox) {
   workbox.precaching.precacheAndRoute([
   {
     "url": "assets/build/main.css",
-    "revision": "d7cb0b1bf022a0f770ed634ba5d61122"
+    "revision": "1ff15e6862f24273d3711de1089544db"
   },
   {
     "url": "assets/build/main.js",
@@ -16,7 +16,7 @@ if (workbox) {
   },
   {
     "url": "assets/fonts/SourceSerifPro/family.css",
-    "revision": "d3279d0d6d5977f31e40acfc49d1d60e"
+    "revision": "d1fcd45269400df65b645c2cd8e99844"
   },
   {
     "url": "assets/fonts/SourceSerifPro/SourceSerifPro-Bold.ttf.woff2",
