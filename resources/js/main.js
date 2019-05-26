@@ -1,19 +1,15 @@
-/* global SmoothScroll */
-window.SmoothScroll = require('./vendor/smooth-scroll')
-require('./cookieconsent')
+/* global sr */
 
-/*
-const images = [
-  document.querySelector('.image-box img'),
-  ...document.querySelectorAll('[data-zoomable]'),
-]
+import SmoothScroll from './vendor/smooth-scroll'
+import './cookieconsent'
 
-mediumZoom(images, {
-  margin: window.matchMedia('(min-width: 1024px)').matches ? 48 : 0,
-  background: 'rgba(255, 255, 255, 0.85)',
-  scrollOffset: 48
-})
-*/
+// Reveal elements on scroll
+
+sr.reveal('[data-scrollreveal="scale"]', { scale: 0.85 })
+sr.reveal('[data-scrollreveal="fromTopIn"]', { distance: '0.5em', origin: 'top' })
+sr.reveal('[data-scrollreveal="fromRightIn"]', { distance: '0.5em', origin: 'right' })
+sr.reveal('[data-scrollreveal="fromBottomIn"]', { distance: '0.5em', origin: 'bottom' })
+sr.reveal('[data-scrollreveal="fromLeftIn"]', { distance: '0.5em', origin: 'left' })
 
 // Navigation
 
@@ -29,6 +25,7 @@ $navbarTrigger.forEach(function (element) {
 
 // Initialize smooth scrolling experience
 
+// eslint-disable-next-line no-unused-vars
 var scroll = new SmoothScroll('[data-smoothscroll]', {
   speed: 1250
 })
@@ -44,6 +41,19 @@ $modalTrigger.forEach(function (element) {
   })
 })
 
+// Zommable images
+/*
+const images = [
+  document.querySelector('.image-box img'),
+  ...document.querySelectorAll('[data-zoomable]'),
+]
+
+mediumZoom(images, {
+  margin: window.matchMedia('(min-width: 1024px)').matches ? 48 : 0,
+  background: 'rgba(255, 255, 255, 0.85)',
+  scrollOffset: 48
+})
+*/
 
 // Carousels using Flickity
 
@@ -57,6 +67,7 @@ window.addEventListener('load', function () {
 
   const $carousels = Array.from(document.querySelectorAll('.carousel'))
   $carousels.forEach(function (element) {
+    // eslint-disable-next-line no-unused-vars
     const flkty = new Flickity(element, {
       cellAlign: 'center',
       contain: true,

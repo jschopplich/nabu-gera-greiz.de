@@ -1,4 +1,4 @@
-const Bouncer = require('./vendor/bouncer')
+import { Bouncer } from './vendor/bouncer'
 
 // Bouncer standard options
 var bouncerOptions = {
@@ -34,7 +34,8 @@ var bouncerOptions = {
   disableSubmit: true
 }
 
-const validator = new Bouncer('#newsletter-form', bouncerOptions)
+// eslint-disable-next-line no-unused-vars
+const validate = new Bouncer('#newsletter-form', bouncerOptions)
 
 // Detect successful form validation
 document.addEventListener('bouncerFormValid', event => {
