@@ -1,4 +1,4 @@
-require('./vendor/cookieconsent')
+import './vendor/cookieconsent'
 
 window.addEventListener('load', () => {
 

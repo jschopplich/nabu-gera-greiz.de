@@ -8,11 +8,11 @@ if (workbox) {
   },
   {
     "url": "assets/build/main.js",
-    "revision": "cf4bb1c708a19113f0652276f8e548cd"
+    "revision": "b3504d5c6637c5b44317bc76588b3459"
   },
   {
     "url": "assets/build/scrollreveal.js",
-    "revision": "8cf32deb04da0c816e7b0e3663cb4b5f"
+    "revision": "7b869e693f117a603a1f0faf7ce678c6"
   }
 ])
 }
