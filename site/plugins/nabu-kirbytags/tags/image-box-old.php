@@ -5,6 +5,8 @@ return [
         'alt',
         'caption',
         'class',
+        'position',
+        'layout',
         'height',
         'imgclass',
         'link',
@@ -16,12 +18,12 @@ return [
         'width'
     ],
     'html' => function ($tag) {
-        if ($tag->file = $tag->file($tag->value)) {
+        if ($tag->file = Kirby::instance()->file('images/' . $tag->value)) {
             $tag->src     = $tag->file->url();
             $tag->alt     = $tag->alt     ?? $tag->file->alt()->or(' ')->value();
             $tag->title   = $tag->title   ?? $tag->file->title()->value();
             $tag->caption = $tag->caption ?? $tag->file->caption()->value();
-            $width        = Str::contains($tag->class, 'vertical') ? option('kirbytext.image-box.width-vertical') : option('kirbytext.image-box.width');
+            $width        = Str::contains($tag->class, 'layout') ? option('kirbytext.image-box.width-vertical') : option('kirbytext.image-box.width');
             $tag->width   = $tag->width   ?? $width;
             $tag->height  = $tag->height  ?? option('kirbytext.image-box.height');
         } else {
