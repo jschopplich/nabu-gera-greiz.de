@@ -32,7 +32,7 @@ sidebar:
       date:
         label: Datum
         type: date
-        time: true
+        time: false
         default: now
         required: true
 
