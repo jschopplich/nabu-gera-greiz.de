@@ -7305,9 +7305,6 @@ img {
 .content.is-main .image-box img {
   transition: transform 0.25s ease;
 }
-.content.is-main .image-box img:hover, .content.is-main .image-box img:hover {
-  transform: scale(1.025);
-}
 @media screen and (min-width: 769px), print {
   .content.is-main .image-box {
     width: calc(320px + 0.5rem);

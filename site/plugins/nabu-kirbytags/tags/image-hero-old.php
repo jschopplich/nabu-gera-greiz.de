@@ -16,14 +16,13 @@ return [
         'width'
     ],
     'html' => function ($tag) {
-        if ($tag->file = $tag->file($tag->value)) {
+        if ($tag->file = Kirby::instance()->file('images/' . $tag->value)) {
             $tag->src     = $tag->file->url();
             $tag->alt     = $tag->alt     ?? $tag->file->alt()->or(' ')->value();
             $tag->title   = $tag->title   ?? $tag->file->title()->value();
             $tag->caption = $tag->caption ?? $tag->file->caption()->value();
-            $width        = Str::contains($tag->class, 'vertical') ? option('kirbytext.image-box.width-vertical') : option('kirbytext.image-box.width');
-            $tag->width   = $tag->width   ?? $width;
-            $tag->height  = $tag->height  ?? option('kirbytext.image-box.height');
+            $tag->width   = $tag->width   ?? option('kirbytext.image-hero.width');
+            $tag->height  = $tag->height  ?? option('kirbytext.image-hero.height');
         } else {
             $tag->src = Url::to($tag->value);
         }
@@ -64,15 +63,6 @@ return [
             'alt'    => $tag->alt ?? ' '
         ]);
 
-        $figureClass = ' image-box';
-        if (Str::contains($tag->class, 'centered')) {
-            $figureClass .= ' has-text-centered';
-        } elseif (Str::contains($tag->class, 'left')) {
-            $figureClass .= ' is-pulled-left';
-        } else {
-            $figureClass .= ' is-pulled-right';
-        }
-
         $caption = $tag->text ? [Html::tag('p', [$tag->text])] : null;
 
         if ($tag->kirby()->option('kirbytext.image.figure', true) === false) {
@@ -80,7 +70,7 @@ return [
         }
 
         return Html::figure([$link($image)], $caption, [
-            'class' => $tag->class . $figureClass
+            'class' => $tag->class . ' image-hero'
         ]);
 
     }

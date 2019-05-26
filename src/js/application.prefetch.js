@@ -26,12 +26,12 @@
 window.addEventListener('load', function () {
 
   // Touch, responsive carousels with Flickity
-  $carouselImages = Array.from(document.querySelectorAll('.carousel figure'))
+  var $carouselImages = Array.from(document.querySelectorAll('.carousel figure'))
   $carouselImages.forEach(function (element) {
     element.classList.add('carousel-cell')
   })
 
-  $carousels = Array.from(document.querySelectorAll('.carousel'))
+  var $carousels = Array.from(document.querySelectorAll('.carousel'))
   $carousels.forEach(function (element) {
     var flkty = new Flickity(element, {
       cellAlign: 'center',

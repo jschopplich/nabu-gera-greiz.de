@@ -4,11 +4,11 @@ if (workbox) {
   workbox.precaching.precacheAndRoute([
   {
     "url": "assets/build/main.min.css",
-    "revision": "b644534c333c1a5579cecf2f32c2cbde"
+    "revision": "a7c29995a0b19fb820ab2b66ee8305e1"
   },
   {
     "url": "assets/build/main.min.js",
-    "revision": "37c1cf75da425fdd692cc4d13b1af2d8"
+    "revision": "e27b8af5294b04f883fd4590511f2858"
   },
   {
     "url": "assets/build/scrollreveal.min.js",
