@@ -1,7 +1,6 @@
 import './vendor/cookieconsent'
 
 window.addEventListener('load', () => {
-
   window.cookieconsent.initialise({
     'palette': {
       'popup': {
@@ -20,5 +19,4 @@ window.addEventListener('load', () => {
       'href': '/datenschutzerklaerung'
     }
   })
-
 }, false)

@@ -4,8 +4,8 @@
   "homepage": "https://nabu-gera-greiz.de",
   "author": {
     "name": "Johann Schopplich",
-    "email": "mail@jschopplich.com",
-    "url": "https://jschopplich.com"
+    "email": "hello@johanns.design",
+    "url": "https://johanns.design"
   },
   "scripts": {
     "dev": "npm run development",
