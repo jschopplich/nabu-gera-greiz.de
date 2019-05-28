@@ -5,11 +5,8 @@
     "stylelint-order"
   ],
   "rules": {
-    "number-leading-zero": "never",
-    "at-rule-no-unknown": null,
-    "selector-list-comma-newline-after": null,
-    "no-descending-specificity": null,
-    "selector-descendant-combinator-no-non-space": null,
+    "number-leading-zero": "always",
+    "selector-list-comma-newline-after": "always",
     "selector-attribute-quotes": "always",
     "string-quotes": "double",
     "function-url-quotes": "always",
