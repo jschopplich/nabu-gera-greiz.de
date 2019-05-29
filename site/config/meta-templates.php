@@ -14,9 +14,8 @@ return function ($page, $site) {
                 'type' => 'article',
                 'description' => $metaDescription,
                 'namespace:article' => [
-                    'author' => 'Johann Schopplich',
-                    'published_time' => $datePublished,
-                    'tag' => ['tech', 'web']
+                    'author' => $site->author()->value(),
+                    'published_time' => $datePublished
                 ],
                 'image' => $metaImage
             ],
@@ -45,8 +44,7 @@ return function ($page, $site) {
                     ],
                     'datePublished' => $datePublished,
                     'dateCreated' => $datePublished,
-                    'dateModified' => $datePublished,
-                    //'articleBody' => $page->text()
+                    'dateModified' => $page->modified('%Y-%m-%d')
                 ]
             ]
         ]
