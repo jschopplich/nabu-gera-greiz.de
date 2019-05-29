@@ -41,7 +41,7 @@ return function ($page, $site) {
         'twitter' => [
             'card' => 'summary',
             'url' => $page->url(),
-            //'site' => $site->twitter(),
+            // 'site' => $site->twitter(),
             'title' => $metaTitle,
             'description' => $metaDescription,
             'image' => $metaImage
