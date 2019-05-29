@@ -5,6 +5,7 @@ const mix = require('laravel-mix')
 
 mix.options({
   autoprefixer: false,
+  processCssUrls: false
 })
 
 mix.js('resources/js/main.js', 'build')
