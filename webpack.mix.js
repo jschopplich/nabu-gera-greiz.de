@@ -27,10 +27,17 @@ for (let i = 0, l = templateCSS.length; i < l; i++) {
 }
 */
 
-mix.sourceMaps()
+// mix.sourceMaps()
 mix.disableNotifications()
 mix.setPublicPath('assets')
 mix.setResourceRoot('/assets/')
+
+if (!mix.inProduction()) {
+  mix.webpackConfig({
+    devtool: 'source-map'
+  })
+  .sourceMaps()
+}
 
 if (mix.inProduction()) {
   mix.version()
