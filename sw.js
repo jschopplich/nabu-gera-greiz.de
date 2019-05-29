@@ -8,11 +8,11 @@ if (workbox) {
   },
   {
     "url": "assets/build/main.js",
-    "revision": "b3504d5c6637c5b44317bc76588b3459"
+    "revision": "ab35f54bd56d080ecea2f55f0350df8e"
   },
   {
     "url": "assets/build/scrollreveal.js",
-    "revision": "7b869e693f117a603a1f0faf7ce678c6"
+    "revision": "98be2f314fb6e434e91eb73a5f1fe6fb"
   },
   {
     "url": "assets/fonts/SourceSerifPro/family.css",
