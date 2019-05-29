@@ -1,6 +1,6 @@
 type: fields
 fields:
-  metaImages:
+  metaImage:
     label: Meta-Bild
     type: files
     multiple: false
