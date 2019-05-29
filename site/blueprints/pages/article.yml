@@ -1,7 +1,7 @@
 title: Artikel
 preset: page
 pages: false
-num: "{{ page.date.toDate('Ymd')"
+num: "{{ page.date.toDate('%Y%m%d') }}"
 
 icon: 📄
 

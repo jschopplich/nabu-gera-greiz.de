@@ -41,7 +41,7 @@ tabs:
 
   settings:
     label: Einstellungen
-    icon: cog
+    icon: settings
     columns:
       - width: 2/3
         sections:
