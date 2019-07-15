@@ -293,16 +293,16 @@
         },
         {
             "name": "k-community/markdown-field",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sylvainjule/kirby-markdown-field.git",
-                "reference": "268d9eb1e92929e2f793f6d9612e5205e8051c41"
+                "reference": "bc59012d8720b58f8c730727ffc3452e753c72c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sylvainjule/kirby-markdown-field/zipball/268d9eb1e92929e2f793f6d9612e5205e8051c41",
-                "reference": "268d9eb1e92929e2f793f6d9612e5205e8051c41",
+                "url": "https://api.github.com/repos/sylvainjule/kirby-markdown-field/zipball/bc59012d8720b58f8c730727ffc3452e753c72c9",
+                "reference": "bc59012d8720b58f8c730727ffc3452e753c72c9",
                 "shasum": ""
             },
             "require": {
@@ -327,7 +327,7 @@
                 }
             ],
             "description": "Enhanced markdown editor for Kirby 3",
-            "time": "2019-03-18T10:54:56+00:00"
+            "time": "2019-06-21T06:23:51+00:00"
         },
         {
             "name": "league/color-extractor",
@@ -593,16 +593,16 @@
         },
         {
             "name": "mzur/kirby-uniform",
-            "version": "v4.0.1",
+            "version": "v4.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mzur/kirby-uniform.git",
-                "reference": "747c706989e46022cc33658569b558784d2119d5"
+                "reference": "2e82ae575852810e7b792462e2d09eec6e706c00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mzur/kirby-uniform/zipball/747c706989e46022cc33658569b558784d2119d5",
-                "reference": "747c706989e46022cc33658569b558784d2119d5",
+                "url": "https://api.github.com/repos/mzur/kirby-uniform/zipball/2e82ae575852810e7b792462e2d09eec6e706c00",
+                "reference": "2e82ae575852810e7b792462e2d09eec6e706c00",
                 "shasum": ""
             },
             "require": {
@@ -641,7 +641,7 @@
                 "form",
                 "kirby"
             ],
-            "time": "2019-01-22T07:49:59+00:00"
+            "time": "2019-07-15T06:11:14+00:00"
         },
         {
             "name": "omz13/kirby3-xmlsitemap",
