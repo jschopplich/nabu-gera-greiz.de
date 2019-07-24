@@ -16,7 +16,7 @@ RewriteEngine on
 #
 # RewriteBase /mysite
 
-# In some enviroments it's necessary to
+# In some environments it's necessary to
 # set the RewriteBase to:
 #
 RewriteBase /
@@ -32,7 +32,7 @@ RewriteRule ^content/(.*)\.(txt|md|mdown)$ index.php [L]
 # except for requests to plugin assets files
 RewriteRule ^site/(.*) index.php [L]
 
-# enable authentication header
+# Enable authentication header
 SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
 
 # block direct access to kirby and the panel sources
@@ -45,46 +45,38 @@ RewriteRule ^(.*) index.php [L]
 
 </IfModule>
 
-# compress text file responses
-<IfModule mod_deflate.c>
-AddOutputFilterByType DEFLATE text/plain
-AddOutputFilterByType DEFLATE text/html
-AddOutputFilterByType DEFLATE text/css
-AddOutputFilterByType DEFLATE text/javascript
-AddOutputFilterByType DEFLATE application/json
-AddOutputFilterByType DEFLATE application/javascript
-AddOutputFilterByType DEFLATE application/x-javascript
-</IfModule>
-
 # character encodings
 AddDefaultCharset utf-8
 
 <IfModule mod_mime.c>
-    AddCharset utf-8 .atom \
+    AddCharset utf-8 .appcache \
                      .bbaw \
                      .css \
-                     .geojson \
+                     .htc \
                      .ics \
                      .js \
                      .json \
-                     .jsonld \
                      .manifest \
+                     .map \
                      .markdown \
                      .md \
                      .mjs \
-                     .rdf \
-                     .rss \
                      .topojson \
                      .vtt \
-                     .webapp \
+                     .vcard \
+                     .vcf \
                      .webmanifest \
-                     .xloc \
-                     .xml
+                     .xloc
 </IfModule>
 
 # security
 <IfModule mod_headers.c>
     Header set X-Content-Type-Options "nosniff"
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header unset X-Powered-By
+    Header always unset X-Powered-By
 </IfModule>
 
 ServerSignature Off
@@ -108,7 +100,7 @@ ServerSignature Off
                                       "application/rdf+xml" \
                                       "application/rss+xml" \
                                       "application/schema+json" \
-                                      "application/vnd.geo+json" \
+                                      "application/geo+json" \
                                       "application/vnd.ms-fontobject" \
                                       "application/wasm" \
                                       "application/x-font-ttf" \
@@ -116,15 +108,12 @@ ServerSignature Off
                                       "application/x-web-app-manifest+json" \
                                       "application/xhtml+xml" \
                                       "application/xml" \
-                                      "font/collection" \
                                       "font/eot" \
                                       "font/opentype" \
                                       "font/otf" \
-                                      "font/ttf" \
                                       "image/bmp" \
                                       "image/svg+xml" \
                                       "image/vnd.microsoft.icon" \
-                                      "image/x-icon" \
                                       "text/cache-manifest" \
                                       "text/calendar" \
                                       "text/css" \
@@ -147,111 +136,9 @@ ServerSignature Off
 
 </IfModule>
 
-<IfModule mod_headers.c>
-  <FilesMatch ".(js|css|xml|gz|html)$">
-    Header append Vary: Accept-Encoding
-  </FilesMatch>
-</IfModule>
-
 # ETags
 <IfModule mod_headers.c>
     Header unset ETag
 </IfModule>
 
 FileETag None
-
-# cache expiration
-<IfModule mod_expires.c>
-
-    ExpiresActive on
-    ExpiresDefault                                      "access plus 1 month"
-
-  # CSS
-
-    ExpiresByType text/css                              "access plus 1 year"
-
-
-  # data interchange
-
-    ExpiresByType application/atom+xml                  "access plus 1 hour"
-    ExpiresByType application/rdf+xml                   "access plus 1 hour"
-    ExpiresByType application/rss+xml                   "access plus 1 hour"
-
-    ExpiresByType application/json                      "access plus 0 seconds"
-    ExpiresByType application/ld+json                   "access plus 0 seconds"
-    ExpiresByType application/schema+json               "access plus 0 seconds"
-    ExpiresByType application/vnd.geo+json              "access plus 0 seconds"
-    ExpiresByType application/xml                       "access plus 0 seconds"
-    ExpiresByType text/calendar                         "access plus 0 seconds"
-    ExpiresByType text/xml                              "access plus 0 seconds"
-
-
-  # favicon (cannot be renamed!) and cursor images
-
-    ExpiresByType image/vnd.microsoft.icon              "access plus 1 week"
-    ExpiresByType image/x-icon                          "access plus 1 week"
-
-  # HTML
-
-    ExpiresByType text/html                             "access plus 0 seconds"
-
-
-  # JavaScript
-
-    ExpiresByType application/javascript                "access plus 1 year"
-    ExpiresByType application/x-javascript              "access plus 1 year"
-    ExpiresByType text/javascript                       "access plus 1 year"
-
-
-  # manifest files
-
-    ExpiresByType application/manifest+json             "access plus 1 week"
-    ExpiresByType application/x-web-app-manifest+json   "access plus 0 seconds"
-    ExpiresByType text/cache-manifest                   "access plus 0 seconds"
-
-
-  # Markdown
-
-    ExpiresByType text/markdown                         "access plus 0 seconds"
-
-
-  # media files
-
-    ExpiresByType audio/ogg                             "access plus 1 month"
-    ExpiresByType image/bmp                             "access plus 1 month"
-    ExpiresByType image/gif                             "access plus 1 month"
-    ExpiresByType image/jpeg                            "access plus 1 month"
-    ExpiresByType image/png                             "access plus 1 month"
-    ExpiresByType image/svg+xml                         "access plus 1 month"
-    ExpiresByType image/webp                            "access plus 1 month"
-    ExpiresByType video/mp4                             "access plus 1 month"
-    ExpiresByType video/ogg                             "access plus 1 month"
-    ExpiresByType video/webm                            "access plus 1 month"
-
-
-  # WebAssembly
-
-    ExpiresByType application/wasm                      "access plus 1 year"
-
-
-  # web fonts
-
-    ExpiresByType font/collection                       "access plus 1 month"
-    ExpiresByType application/vnd.ms-fontobject         "access plus 1 month"
-    ExpiresByType font/eot                              "access plus 1 month"
-    ExpiresByType font/opentype                         "access plus 1 month"
-    ExpiresByType font/otf                              "access plus 1 month"
-    ExpiresByType application/x-font-ttf                "access plus 1 month"
-    ExpiresByType font/ttf                              "access plus 1 month"
-    ExpiresByType application/font-woff                 "access plus 1 month"
-    ExpiresByType application/x-font-woff               "access plus 1 month"
-    ExpiresByType font/woff                             "access plus 1 month"
-    ExpiresByType application/font-woff2                "access plus 1 month"
-    ExpiresByType font/woff2                            "access plus 1 month"
-
-
-  # other
-
-    ExpiresByType text/x-cross-domain-policy            "access plus 1 week"
-
-</IfModule>
