@@ -1,8 +1,8 @@
 {
   "require": {
-    "getkirby/cms": "^3.1",
+    "getkirby/cms": "^3.2",
     "omz13/kirby3-xmlsitemap": "^1.1",
-    "distantnative/retour-for-kirby": "^1.0@beta",
+    "distantnative/retour-for-kirby": "^2.0",
     "k-community/markdown-field": "^1.0",
     "mzur/kirby-uniform": "^4.0",
     "beebmx/kirby-env": "^1.0"
