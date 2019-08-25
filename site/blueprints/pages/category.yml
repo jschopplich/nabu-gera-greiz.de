@@ -14,11 +14,13 @@ columns:
         extends: sections/pages
         headline: Entwürfe
         status: draft
+        template: default
 
       unlisted:
         extends: sections/pages
         headline: Ungelistet
         status: unlisted
+        template: default
 
   - width: 1/2
     sections:
