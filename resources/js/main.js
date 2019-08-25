@@ -1,6 +1,6 @@
 /* global sr */
 
-import SmoothScroll from './vendor/smooth-scroll'
+import SmoothScroll from 'smooth-scroll'
 import './cookieconsent'
 
 // Reveal elements on scroll

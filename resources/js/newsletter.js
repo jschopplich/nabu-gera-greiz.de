@@ -1,4 +1,4 @@
-import { Bouncer } from './vendor/bouncer'
+import { Bouncer } from 'formbouncerjs'
 
 // Bouncer standard options
 var bouncerOptions = {

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "98af2e342da071d2feb388c60e93d644",
+    "content-hash": "e224b86bb184fea92075db6744e7fffd",
     "packages": [
         {
             "name": "beebmx/kirby-env",
@@ -684,9 +684,9 @@
             "authors": [
                 {
                     "name": "David Somers",
+                    "role": "Developer",
                     "email": "dsomers@omz13.com",
-                    "homepage": "https://meldingstuff.com",
-                    "role": "Developer"
+                    "homepage": "https://meldingstuff.com"
                 }
             ],
             "description": "kirby3 plugin to generate an xml-based sitemap",

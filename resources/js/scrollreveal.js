@@ -1,3 +1,3 @@
-import ScrollReveal from './vendor/scrollreveal'
+import ScrollReveal from 'scrollreveal'
 
 window.sr = ScrollReveal({ duration: 750 })
