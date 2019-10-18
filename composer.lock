@@ -97,23 +97,23 @@
         },
         {
             "name": "distantnative/retour-for-kirby",
-            "version": "2.0.0",
+            "version": "2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/distantnative/retour-for-kirby.git",
-                "reference": "4c97ec0c9bd8856ea17629df99fde6edb76cf79b"
+                "reference": "3f2e3c0aac19486c50703fbf1141674457f001e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/distantnative/retour-for-kirby/zipball/4c97ec0c9bd8856ea17629df99fde6edb76cf79b",
-                "reference": "4c97ec0c9bd8856ea17629df99fde6edb76cf79b",
+                "url": "https://api.github.com/repos/distantnative/retour-for-kirby/zipball/3f2e3c0aac19486c50703fbf1141674457f001e8",
+                "reference": "3f2e3c0aac19486c50703fbf1141674457f001e8",
                 "shasum": ""
             },
             "require": {
                 "getkirby/composer-installer": "^1.1"
             },
             "require-dev": {
-                "getkirby/cms": "^3.2.0"
+                "getkirby/cms": "^3.2.5"
             },
             "type": "kirby-plugin",
             "extra": {
@@ -130,7 +130,7 @@
                 }
             ],
             "description": "Advanced redirection management and error tracking for Kirby 3",
-            "time": "2019-08-06T09:48:39+00:00"
+            "time": "2019-10-18T17:17:38+00:00"
         },
         {
             "name": "filp/whoops",
@@ -684,9 +684,9 @@
             "authors": [
                 {
                     "name": "David Somers",
+                    "role": "Developer",
                     "email": "dsomers@omz13.com",
-                    "homepage": "https://meldingstuff.com",
-                    "role": "Developer"
+                    "homepage": "https://meldingstuff.com"
                 }
             ],
             "description": "kirby3 plugin to generate an xml-based sitemap",
