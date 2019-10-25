@@ -1,6 +1,6 @@
 root = true
 
-[*.{css,scss,js,ts,vue,json,html,php,md,yml},package.json]
+[*.{css,scss,js,ts,vue,json,html,php,md,yml}]
 indent_style = space
 indent_size = 2
 end_of_line = lf
