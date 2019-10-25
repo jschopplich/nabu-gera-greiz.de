@@ -14,8 +14,9 @@ return function ($page, $site) {
         'title' => $metaTitle,
         'meta' => [
             'description' => $metaDescription,
-            'robots' => 'index, follow',
             'google-site-verification' => env('GOOGLE_SITEVERIFICATION', ''),
+            'apple-mobile-web-app-capable' => 'yes',
+            'apple-mobile-web-app-status-bar-style' => 'default',
             'apple-mobile-web-app-title' => env('APP_NAME', $site->title()->value()),
             'application-name' => env('APP_NAME', $site->title()->value()),
             'theme-color' => env('APP_THEMECOLOR', '#ffffff')
@@ -23,7 +24,7 @@ return function ($page, $site) {
         'link' => [
             'canonical' => $page->url(),
             'apple-touch-icon' => ['href' => '/apple-touch-icon.png', 'sizes' => '180x180'],
-            'manifest' => '/site.webmanifest',
+            'manifest' => '/manifest.json',
             'mask-icon' => ['href' => '/safari-pinned-tab.svg', 'color' => env('APP_MASKCOLOR', '#ffffff')],
             'icon' => [
                 ['href' => '/favicon-32x32.png', 'sizes' => '32x32', 'type' =>'image/png'],

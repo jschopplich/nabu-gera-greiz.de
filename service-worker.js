@@ -8,15 +8,15 @@ if (workbox) {
   },
   {
     "url": "assets/build/main.js",
-    "revision": "be28790bde2acc7a8d40ece525d31e56"
+    "revision": "ebe16950685c6a0db0201a2a89f06996"
   },
   {
     "url": "assets/build/scrollreveal.js",
-    "revision": "c760f3749b085002c19bd7e29508cf26"
+    "revision": "542204709d4d6162f115b76e86e9b0b4"
   },
   {
     "url": "assets/fonts/SourceSerifPro/family.css",
-    "revision": "d3279d0d6d5977f31e40acfc49d1d60e"
+    "revision": "d1fcd45269400df65b645c2cd8e99844"
   },
   {
     "url": "assets/fonts/SourceSerifPro/SourceSerifPro-Bold.ttf.woff2",

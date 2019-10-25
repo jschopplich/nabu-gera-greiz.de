@@ -1,3 +1,0 @@
-User-agent: *
-Disallow: /assets/fonts/FontAwesomePro/
-Sitemap: https://nabu-gera-greiz.de/sitemap.xml
