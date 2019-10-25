@@ -4,6 +4,6 @@ module.exports = {
     "assets/build/*.{css,js}",
     "assets/fonts/SourceSerifPro/*.{css,woff2}"
   ],
-  "swDest": "sw.js",
-  "swSrc": "resources/sw.js"
+  "swDest": "service-worker.js",
+  "swSrc": "resources/service-worker.js"
 }

@@ -1,6 +1,0 @@
-**/*.min.js
-**/dist/
-**/vendor/
-/js/coverage/
-/sw.js
-/package.js

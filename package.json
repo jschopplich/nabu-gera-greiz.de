@@ -15,19 +15,36 @@
     "prod": "npm run production",
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && workbox injectManifest workbox-config.js"
   },
+  "dependencies": {
+    "flickity": "^2.2.1",
+    "formbouncerjs": "^1.4.6",
+    "scrollreveal": "^4.0.5",
+    "smooth-scroll": "^16.1.0"
+  },
   "devDependencies": {
     "cross-env": "^6.0.3",
     "laravel-mix": "^5.0.0",
     "resolve-url-loader": "^3.1.0",
     "sass": "^1.23.1",
     "sass-loader": "^8.0.0",
-    "vue-template-compiler": "^2.6.10"
-  },
-  "dependencies": {
-    "flickity": "^2.2.1",
-    "formbouncerjs": "^1.4.6",
-    "scrollreveal": "^4.0.5",
-    "smooth-scroll": "^16.1.0",
+    "vue-template-compiler": "^2.6.10",
     "workbox-cli": "^4.3.1"
-  }
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "standard"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "eslintIgnore": [
+    "service-worker.js"
+  ]
 }
