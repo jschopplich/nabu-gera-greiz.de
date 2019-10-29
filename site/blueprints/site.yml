@@ -51,9 +51,12 @@ tabs:
               partners:
                 label: Partner
                 type: files
+                uploads: partner
                 query: site.images.filterBy('template', 'partner')
                 layout: cards
                 size: tiny
+                image:
+                  back: white
                 required: true
               footerColumns:
                 label: "Fußzeile: Spalten"
@@ -65,7 +68,7 @@ tabs:
 
       - width: 1/3
         sections:
-          settings2:
+          cover:
             type: fields
             fields:
               coverImage:
@@ -74,17 +77,15 @@ tabs:
                 query: site.images
                 multiple: false
                 layout: cards
+                image:
+                  back: white
+                  cover: true
+                  ratio: 21/9
                 required: true
               author:
                 label: Autor
                 type: text
                 icon: user
                 required: true
-          partnersImages:
-            headline: Partnerbilder
-            type: files
-            template: partner
-            min: 1
-            sortable: false
 
   images: tabs/images
