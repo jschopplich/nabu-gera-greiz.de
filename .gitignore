@@ -23,6 +23,7 @@
 /vendor
 
 # Kirby folders to ignore
+/kirby
 /media
 /site/accounts
 /site/cache
