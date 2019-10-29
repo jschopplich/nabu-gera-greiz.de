@@ -20,7 +20,6 @@
 
 # Folders to ignore
 /node_modules
-/kirby
 /vendor
 
 # Kirby folders to ignore

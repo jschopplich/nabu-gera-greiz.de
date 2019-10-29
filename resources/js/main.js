@@ -2,6 +2,7 @@
 
 import SmoothScroll from 'smooth-scroll'
 import './cookieconsent'
+import './registerServiceWorker'
 
 // Reveal elements on scroll
 
@@ -40,20 +41,6 @@ $modalTrigger.forEach(function (element) {
     document.documentElement.classList.toggle('is-clipped')
   })
 })
-
-// Zommable images
-/*
-const images = [
-  document.querySelector('.image-box img'),
-  ...document.querySelectorAll('[data-zoomable]'),
-]
-
-mediumZoom(images, {
-  margin: window.matchMedia('(min-width: 1024px)').matches ? 48 : 0,
-  background: 'rgba(255, 255, 255, 0.85)',
-  scrollOffset: 48
-})
-*/
 
 // Carousels using Flickity
 

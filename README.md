@@ -41,4 +41,4 @@ composer install
 
 ## Copyright and license
 
-Code and documentation © 2019 by [Johann Schopplich](https://jschopplich.com). Code released under the [MIT License](https://github.com/jschopplich/nabu-gera-greiz.de/blob/master/LICENSE).
+Code and documentation © 2019 by [Johann Schopplich](https://johanns.design). Code released under the [MIT License](LICENSE).
