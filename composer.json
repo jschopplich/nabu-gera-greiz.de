@@ -1,4 +1,5 @@
 {
+  "name": "jschopplich/nabu-gera-greiz.de",
   "require": {
     "getkirby/cms": "^3.2",
     "omz13/kirby3-xmlsitemap": "^1.1",
@@ -9,5 +10,8 @@
   },
   "config": {
     "optimize-autoloader": true
+  },
+  "extra": {
+    "kirby-cms-path": false
   }
 }

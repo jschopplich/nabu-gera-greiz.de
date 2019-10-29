@@ -2,6 +2,8 @@
 
 const glob = require('glob')
 const mix = require('laravel-mix')
+const { GenerateSW } = require('workbox-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 mix.options({
   autoprefixer: false,
@@ -42,3 +44,26 @@ if (!mix.inProduction()) {
 if (mix.inProduction()) {
   mix.version()
 }
+
+mix.webpackConfig({
+  plugins: [
+    new CleanWebpackPlugin({
+      cleanStaleWebpackAssets: false,
+      protectWebpackAssets: false,
+      cleanOnceBeforeBuildPatterns: ['*.js', 'build/*']
+    }),
+    new GenerateSW({
+      swDest: 'service-worker.js',
+      clientsClaim: true,
+      skipWaiting: true,
+      cleanupOutdatedCaches: true,
+      runtimeCaching: [{
+        urlPattern: /fonts\/.*\.(?:css|woff2)$/,
+        handler: 'CacheFirst',
+        options: {
+          cacheName: 'fonts'
+        }
+      }]
+    })
+  ]
+})
