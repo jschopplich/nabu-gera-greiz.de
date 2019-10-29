@@ -23,12 +23,12 @@ return function ($page, $site) {
         ],
         'link' => [
             'canonical' => $page->url(),
-            'apple-touch-icon' => ['href' => '/apple-touch-icon.png', 'sizes' => '180x180'],
+            'apple-touch-icon' => ['href' => '/assets/images/icons/apple-touch-icon.png', 'sizes' => '180x180'],
             'manifest' => '/manifest.json',
-            'mask-icon' => ['href' => '/safari-pinned-tab.svg', 'color' => env('APP_MASKCOLOR', '#ffffff')],
+            'mask-icon' => ['href' => '/assets/images/icons/safari-pinned-tab.svg', 'color' => env('APP_MASKCOLOR', '#ffffff')],
             'icon' => [
-                ['href' => '/favicon-32x32.png', 'sizes' => '32x32', 'type' =>'image/png'],
-                ['href' => '/favicon-16x16.png', 'sizes' => '16x16', 'type' =>'image/png']
+                ['href' => '/assets/images/icons/favicon-32x32.png', 'sizes' => '32x32', 'type' =>'image/png'],
+                ['href' => '/assets/images/icons/favicon-16x16.png', 'sizes' => '16x16', 'type' =>'image/png']
             ]
         ],
         'og' => [
