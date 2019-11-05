@@ -8,24 +8,22 @@ mix.options({
   processCssUrls: false
 })
 
-mix.js('resources/js/main.js', 'build')
-mix.js('resources/js/scrollreveal.js', 'build')
+mix.js('src/js/site.js', 'js')
+mix.js('src/js/scrollreveal.js', 'js')
 
-/* Search for template-specific JavaScript files */
-const templateJS = glob.sync('./resources/js/templates/*.js')
+// Search for template-specific JavaScript files
+const templateJS = glob.sync('./src/js/templates/*.js')
 for (let i = 0, l = templateJS.length; i < l; i++) {
   mix.js(templateJS[i], 'js/templates')
 }
 
-mix.sass('resources/scss/main.sass', 'build')
+mix.sass('src/scss/site.sass', 'css')
 
-/* Search for template-specific CSS files */
-/*
-const templateCSS = glob.sync('./resources/scss/templates/*.scss')
-for (let i = 0, l = templateCSS.length; i < l; i++) {
-  mix.sass(templateCSS[i], 'css/templates')
-}
-*/
+// Search for template-specific CSS files
+// const templateCSS = glob.sync('./src/scss/templates/*.scss')
+// for (let i = 0, l = templateCSS.length; i < l; i++) {
+//   mix.sass(templateCSS[i], 'css/templates')
+// }
 
 // mix.sourceMaps()
 mix.disableNotifications()
