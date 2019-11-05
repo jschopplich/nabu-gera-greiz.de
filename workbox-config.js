@@ -1,7 +1,8 @@
 module.exports = {
   globDirectory: './assets/',
   globPatterns: [
-    'build/*.{css,js}',
+    'css/*.css',
+    'js/*.js',
     // 'js/templates/*.js',
     'fonts/SourceSerifPro/*.{css,woff2}'
   ],

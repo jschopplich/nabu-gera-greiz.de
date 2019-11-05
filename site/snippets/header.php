@@ -7,9 +7,9 @@
 
   <?= $page->metaTags() ?>
 
-  <?= css('assets/build/main.css') ?>
-  <?= js('assets/build/scrollreveal.js') ?>
+  <?= css('assets/css/site.css') ?>
   <?= css('assets/fonts/SourceSerifPro/family.css') ?>
+  <?= js('assets/js/scrollreveal.js') ?>
 
   <?php snippet('analytics') ?>
 
@@ -79,7 +79,7 @@
       </div>
 
     <?php endif ?>
-  
+
   </header>
 
   <main class="main main-<?= $page->intendedTemplate() ?>">

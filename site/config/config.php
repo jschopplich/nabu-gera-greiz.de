@@ -2,7 +2,7 @@
 
 require_once 'helpers.php';
 
-$base = dirname(dirname(__DIR__));
+$base = dirname(__DIR__, 2);
 (new \Beebmx\KirbyEnv($base))->load();
 
 return [
@@ -13,14 +13,14 @@ return [
         'slug' => env('KIRBY_PANEL', 'panel'),
         'language' => 'de'
     ],
-    'api' => env('KIRBY_API', true),
-    'cookieName' => env('KIRBY_SESSION', 'kirby_session'),
+
     'hooks' => require_once 'hooks.php',
     'routes' => require_once 'routes.php',
+
     'thumbs' => [
         'quality' => env('KIRBY_THUMBS_QUALITY', '90'),
         'srcsets' => [
-            //'default' => [640, 768, 1024, 1366, 1600, 1920]
+            // 'default' => [640, 768, 1024, 1366, 1600, 1920]
             'default' => [640, 768, 1024]
         ]
     ],
@@ -36,13 +36,13 @@ return [
         ]
     ],
 
+    // Format a local time/date according to locale settings
+    'date.handler' => 'strftime',
+    'locale' => 'de_DE.utf-8',
+
     'markdown' => [
       'extra' => true
     ],
-
-    // Dates
-    'date.handler' => 'strftime',
-    'locale' => 'de_DE.utf-8',
 
     // Meta
     'pedroborges.meta-tags.default' => require __DIR__ . '/meta.php',
