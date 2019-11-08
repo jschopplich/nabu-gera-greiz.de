@@ -8,13 +8,12 @@ use Kirby\Toolkit\F;
 class Log
 {
 
-    public static $file;
-
     /**
      * Connect to database on initialization
      */
     public function __construct()
     {
+        $this->setup();
         $this->connect();
     }
 
@@ -24,7 +23,7 @@ class Log
      * @param array $props
      * @return void
      */
-    public function add(array $props)
+    public function add(array $props): void
     {
         Db::insert('records', [
             'date'     => $props['date'] ?? date('Y-m-d H:i:s'),
@@ -40,25 +39,21 @@ class Log
      *
      * @return void
      */
-    public function close()
+    public function close(): void
     {
         Db::$connection = null;
     }
 
     /**
-     * Installs sqlite file, if needed, and connects to it
+     * Connects database
      *
      * @return void
      */
-    protected function connect()
+    protected function connect(): void
     {
-        if (file_exists(self::$file) === false) {
-            F::copy(dirname(__DIR__) . '/retour.sqlite', self::$file);
-        }
-
         Db::connect([
-            'type'=> 'sqlite',
-            'database' => self::$file
+            'type'     => 'sqlite',
+            'database' => Retour::root('logs')
         ]);
     }
 
@@ -67,10 +62,10 @@ class Log
      *
      * @return void
      */
-    public function flush()
+    public function flush(): void
     {
-        Db::query('DELETE FROM records;');
-        Db::query('DELETE FROM sqlite_sequence WHERE name="records";');
+        Db::execute('DELETE FROM records;');
+        Db::execute('DELETE FROM sqlite_sequence WHERE name="records";');
     }
 
     /**
@@ -144,9 +139,9 @@ class Log
         ')->toArray();
     }
 
-    public function limit()
+    public function limit(): void
     {
-        $limit  = option('distantnative.retour.deleteAfter', false);
+        $limit = option('distantnative.retour.deleteAfter');
 
         if ($limit) {
             $time   = strtotime('-' . $limit . ' month');
@@ -176,4 +171,14 @@ class Log
         );
     }
 
+    public function setup(): void
+    {
+        $file = Retour::root('logs');
+        if (F::exists($file) === false) {
+            F::copy(
+                Retour::root('assets') . '/retour.sqlite',
+                $file
+            );
+        }
+    }
 }
