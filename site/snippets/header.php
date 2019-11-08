@@ -7,9 +7,9 @@
 
   <?= $page->metaTags() ?>
 
-  <?= css('assets/css/site.css') ?>
+  <?= mix('/css/site.css') ?>
+  <?= mix('/js/scrollreveal.js') ?>
   <?= css('assets/fonts/SourceSerifPro/family.css') ?>
-  <?= js('assets/js/scrollreveal.js') ?>
 
   <?php snippet('analytics') ?>
 

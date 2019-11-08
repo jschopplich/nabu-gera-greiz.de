@@ -14,18 +14,18 @@ return function ($page, $site) {
         'title' => $metaTitle,
         'meta' => [
             'description' => $metaDescription,
-            'google-site-verification' => env('GOOGLE_SITEVERIFICATION', ''),
+            'google-site-verification' => env('SITE_GOOGLE_VERIFICATION', ''),
             'apple-mobile-web-app-capable' => 'yes',
             'apple-mobile-web-app-status-bar-style' => 'default',
             'apple-mobile-web-app-title' => env('APP_NAME', $site->title()->value()),
             'application-name' => env('APP_NAME', $site->title()->value()),
-            'theme-color' => env('APP_THEMECOLOR', '#ffffff')
+            'theme-color' => env('SITE_THEMECOLOR', '#ffffff')
         ],
         'link' => [
             'canonical' => $page->url(),
             'apple-touch-icon' => ['href' => '/assets/images/icons/apple-touch-icon.png', 'sizes' => '180x180'],
             'manifest' => '/manifest.json',
-            'mask-icon' => ['href' => '/assets/images/icons/safari-pinned-tab.svg', 'color' => env('APP_MASKCOLOR', '#ffffff')],
+            'mask-icon' => ['href' => '/assets/images/icons/safari-pinned-tab.svg', 'color' => env('SITE_MASKCOLOR', '#ffffff')],
             'icon' => [
                 ['href' => '/assets/images/icons/favicon-32x32.png', 'sizes' => '32x32', 'type' =>'image/png'],
                 ['href' => '/assets/images/icons/favicon-16x16.png', 'sizes' => '16x16', 'type' =>'image/png']
