@@ -25,17 +25,10 @@ mix.sass('src/scss/site.sass', 'css')
 //   mix.sass(templateCSS[i], 'css/templates')
 // }
 
-// mix.sourceMaps()
+mix.sourceMaps()
 mix.disableNotifications()
 mix.setPublicPath('assets')
 mix.setResourceRoot('/assets/')
-
-if (!mix.inProduction()) {
-  mix.webpackConfig({
-    devtool: 'source-map'
-  })
-  .sourceMaps()
-}
 
 if (mix.inProduction()) {
   mix.version()
