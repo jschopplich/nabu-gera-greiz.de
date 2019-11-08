@@ -6,20 +6,31 @@ use Kirby\Http\Header;
 
 class Retour
 {
-
-    /**
-     * Return system info
-     *
-     * @return array
-     */
     public static function info(): array
     {
-        $plugin = kirby()->plugin('distantnative/retour');
-
         return [
-            'version'     => $plugin ? $plugin->version() : '-',
             'headers'     => Header::$codes,
-            'deleteAfter' => option('distantnative.retour.deleteAfter', false)
+            'logs'        => option('distantnative.retour.logs'),
+            'deleteAfter' => option('distantnative.retour.deleteAfter')
         ];
     }
+
+    public static function root(string $type = 'root'): ?string
+    {
+        $root  = dirname(__DIR__, 2);
+        $src   = $root . '/src';
+        $roots = [
+            'assets'       => $src . '/assets',
+
+            'redirects'    => option('distantnative.retour.config'),
+            'logs'         => option('distantnative.retour.database'),
+
+            'config'       => $config = $src . '/config',
+            'migrations'   => $config . '/migrations',
+            'translations' => $config . '/translations'
+        ];
+
+        return $roots[$type] ?? $root;
+    }
+
 }
