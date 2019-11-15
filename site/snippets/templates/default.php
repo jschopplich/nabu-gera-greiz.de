@@ -8,6 +8,8 @@
 
       </div>
     </div>
+
     <?php snippet('side') ?>
+
   </div>
 </div>
