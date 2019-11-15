@@ -1,4 +1,4 @@
-<nav class="navbar is-spaced<?php e($page->isHomePage(), ' is-home') ?>" aria-label="Navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+<nav class="navbar is-spaced<?php e($page->isHomePage(), ' is-home') ?>" aria-label="Navigation">
 
   <div class="navbar-brand">
     <div class="navbar-brand-tabs tabs is-hidden-desktop">

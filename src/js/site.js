@@ -2,7 +2,6 @@
 
 import SmoothScroll from 'smooth-scroll'
 import './cookieconsent'
-import './registerServiceWorker'
 
 // Reveal elements on scroll
 

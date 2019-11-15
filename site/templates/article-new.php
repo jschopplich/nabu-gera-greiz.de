@@ -19,7 +19,7 @@
               <time datetime="<?= $page->date()->toDate('%Y-%m-%d') ?>"><?= strftime('%e. %B %Y', $page->date()->toDate()) ?></time>
             </span>
 
-            <?= $page->text()->kirbytext() ?>
+            <?= $page->text()->blocks() ?>
           </article>
 
           <?php snippet('navigation/prevnext') ?>
