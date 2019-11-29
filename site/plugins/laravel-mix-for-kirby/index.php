@@ -60,7 +60,7 @@ if (!function_exists('mix')) {
         if ($isAuto) {
             if ($path === '@autocss') {
                 $type = 'css';
-            } else if($path === '@autojs') {
+            } else if ($path === '@autojs') {
                 $type = 'js';
             } else {
                 if (option('debug')) {
