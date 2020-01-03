@@ -1,28 +1,8 @@
-# Numerous always-ignore extensions
-*.diff
-*.err
-*.log
-*.orig
-*.rej
-*.swo
-*.swp
-*.vi
-*.zip
-*~
-
-# OS folders and files
-._*
-.cache
 .DS_Store
-.idea
-.project
-.settings
-
-# Folders to ignore
-/node_modules
+node_modules/
 /vendor
 
-# Kirby folders to ignore
+# Kirby-related directories and files
 /kirby
 /media
 /site/accounts

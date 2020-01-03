@@ -97,27 +97,26 @@
         },
         {
             "name": "distantnative/retour-for-kirby",
-            "version": "2.1.0",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/distantnative/retour-for-kirby.git",
-                "reference": "eca5a222681c998c71b99aae85213341adfb0927"
+                "reference": "ae09a2e9bb1e28a3da23b969d0729a1ac856fd61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/distantnative/retour-for-kirby/zipball/eca5a222681c998c71b99aae85213341adfb0927",
-                "reference": "eca5a222681c998c71b99aae85213341adfb0927",
+                "url": "https://api.github.com/repos/distantnative/retour-for-kirby/zipball/ae09a2e9bb1e28a3da23b969d0729a1ac856fd61",
+                "reference": "ae09a2e9bb1e28a3da23b969d0729a1ac856fd61",
                 "shasum": ""
             },
             "require": {
                 "getkirby/composer-installer": "^1.1"
             },
-            "require-dev": {
-                "getkirby/cms": "^3.3.0"
-            },
             "type": "kirby-plugin",
-            "extra": {
-                "kirby-cms-path": false
+            "autoload": {
+                "psr-4": {
+                    "distantnative\\Retour\\": "src/models/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -129,8 +128,16 @@
                     "email": "on-github@nhoffmann.com"
                 }
             ],
-            "description": "Advanced redirection management and error tracking for Kirby 3",
-            "time": "2019-11-07T15:40:11+00:00"
+            "description": "Redirects and error tracking for Kirby",
+            "keywords": [
+                "errors",
+                "kirby3",
+                "kirby3-cms",
+                "kirby3-plugin",
+                "redirects",
+                "routing"
+            ],
+            "time": "2019-12-30T15:09:22+00:00"
         },
         {
             "name": "filp/whoops",
@@ -195,16 +202,16 @@
         },
         {
             "name": "getkirby/cms",
-            "version": "3.3.1",
+            "version": "3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getkirby/kirby.git",
-                "reference": "785e941e41dfbfaa4fe8d43a7c130302bde4539a"
+                "reference": "6bd14bc8099d6c9dbe67ef0582b8c0a2d4c0888c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getkirby/kirby/zipball/785e941e41dfbfaa4fe8d43a7c130302bde4539a",
-                "reference": "785e941e41dfbfaa4fe8d43a7c130302bde4539a",
+                "url": "https://api.github.com/repos/getkirby/kirby/zipball/6bd14bc8099d6c9dbe67ef0582b8c0a2d4c0888c",
+                "reference": "6bd14bc8099d6c9dbe67ef0582b8c0a2d4c0888c",
                 "shasum": ""
             },
             "require": {
@@ -250,7 +257,7 @@
                 "core",
                 "kirby"
             ],
-            "time": "2019-11-26T09:55:04+00:00"
+            "time": "2019-12-17T09:21:54+00:00"
         },
         {
             "name": "getkirby/composer-installer",
@@ -292,16 +299,16 @@
         },
         {
             "name": "k-community/markdown-field",
-            "version": "1.0.4",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sylvainjule/kirby-markdown-field.git",
-                "reference": "58a34352f34a93b8cfc004c843caefd603617193"
+                "reference": "0d252244d1d849c19328ce61f6668a32b8ac11b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sylvainjule/kirby-markdown-field/zipball/58a34352f34a93b8cfc004c843caefd603617193",
-                "reference": "58a34352f34a93b8cfc004c843caefd603617193",
+                "url": "https://api.github.com/repos/sylvainjule/kirby-markdown-field/zipball/0d252244d1d849c19328ce61f6668a32b8ac11b1",
+                "reference": "0d252244d1d849c19328ce61f6668a32b8ac11b1",
                 "shasum": ""
             },
             "require": {
@@ -326,7 +333,7 @@
                 }
             ],
             "description": "Enhanced markdown editor for Kirby 3",
-            "time": "2019-11-21T18:38:35+00:00"
+            "time": "2019-12-05T11:29:55+00:00"
         },
         {
             "name": "league/color-extractor",
@@ -765,33 +772,34 @@
         },
         {
             "name": "phpoption/phpoption",
-            "version": "1.5.2",
+            "version": "1.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/php-option.git",
-                "reference": "2ba2586380f8d2b44ad1b9feb61c371020b27793"
+                "reference": "77f7c4d2e65413aff5b5a8cc8b3caf7a28d81959"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/2ba2586380f8d2b44ad1b9feb61c371020b27793",
-                "reference": "2ba2586380f8d2b44ad1b9feb61c371020b27793",
+                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/77f7c4d2e65413aff5b5a8cc8b3caf7a28d81959",
+                "reference": "77f7c4d2e65413aff5b5a8cc8b3caf7a28d81959",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": "^5.5.9 || ^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.7|^5.0"
+                "bamarni/composer-bin-plugin": "^1.3",
+                "phpunit/phpunit": "^4.8.35 || ^5.0 || ^6.0 || ^7.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.5-dev"
+                    "dev-master": "1.7-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "PhpOption\\": "src/"
+                "psr-4": {
+                    "PhpOption\\": "src/PhpOption/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -802,6 +810,10 @@
                 {
                     "name": "Johannes M. Schmitt",
                     "email": "schmittjoh@gmail.com"
+                },
+                {
+                    "name": "Graham Campbell",
+                    "email": "graham@alt-three.com"
                 }
             ],
             "description": "Option Type for PHP",
@@ -811,7 +823,7 @@
                 "php",
                 "type"
             ],
-            "time": "2019-11-06T22:27:00+00:00"
+            "time": "2019-12-15T19:35:24+00:00"
         },
         {
             "name": "psr/log",
@@ -862,7 +874,7 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.13.0",
+            "version": "v1.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
@@ -920,7 +932,7 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.13.0",
+            "version": "v1.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
@@ -1123,6 +1135,7 @@
                 "escaper",
                 "zf"
             ],
+            "abandoned": "laminas/laminas-escaper",
             "time": "2018-04-25T15:48:53+00:00"
         }
     ],
