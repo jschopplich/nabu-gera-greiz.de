@@ -6,8 +6,6 @@ permissions:
   access:
     settings: false
   users: false
-  site:
-    update: false
   user:
     create: false
     deleteAvatar: false
