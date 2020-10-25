@@ -3,20 +3,19 @@
 <head>
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <?= $page->metaTags() ?>
 
-  <?= mix('/css/site.css') ?>
-  <?= mix('/js/scrollreveal.js') ?>
-  <?= css('assets/fonts/SourceSerifPro/family.css') ?>
+  <?= css([
+    'assets/css/main.css',
+    'assets/fonts/SourceSerifPro/family.css'
+  ]) ?>
 
   <?php snippet('analytics') ?>
 
 </head>
 <body>
-
-  <div class="cookie_container"></div>
 
   <header class="header <?php e($page->isHomePage(), 'is-home', 'is-default') ?>">
 
@@ -39,7 +38,7 @@
                 <div class="column has-text-centered-mobile">
                   <h1 class="title is-2 has-text-weight-bold has-text-white">Weil unsere Heimatnatur zu bewahren ist.</h1>
                   <h2 class="subtitle is-4 has-text-white">Wir setzen uns für den Erhalt der Natur im Landkreis Greiz und Gera ein.</h2>
-                  <a href="#aktuelles" class="button is-primary is-medium" role="button" data-smoothscroll>Aktuelle Beiträge</a>
+                  <a href="#aktuelles" class="button is-primary is-medium" role="button">Aktuelle Beiträge</a>
                 </div>
               </div>
             </div>

@@ -5,23 +5,22 @@ namespace distantnative\Retour;
 use Kirby\Http\Router;
 
 return [
-    'route:after' => function ($route, $path, $method, $result) {
-        if (empty($result) === true) {
+    'route:after' => function ($route, $path, $method, $result, $final) {
+        if ($final === true && empty($result) === true) {
 
-            // If logging enable, initialiye model
-            if (option('distantnative.retour.logs') === true) {
-                $log = new Log;
+            // skip ignored paths
+            if (in_array($path, option('distantnative.retour.ignore')) === true) {
+                return $result;
             }
 
             try {
-                $routes = Redirects::routes($log ?? false);
+                $routes = Redirects::routes();
                 $router = new Router($routes);
                 return $router->call($path, $method);
-
             } catch (\Throwable $e) {
+                // If logging enable, initialize model and add record
                 if (option('distantnative.retour.logs') === true) {
-                    $log->add(['path' => $path]);
-                    $log->close();
+                    (new Log)->add(['path' => $path]);
                 }
             }
         }

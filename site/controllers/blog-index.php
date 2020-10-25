@@ -4,7 +4,6 @@ return function ($page) {
 
   $perpage  = $page->perPage()->int();
   $articles = $page->children()->listed()->filterBy('template', 'article');
-  // Hinzufügen von Artikeln aus der Projektseite zur Naturschutzinformation
   $articles->add(page('projekte/naturschutzinformation-waldhaus')->children()->listed()->filterBy('template', 'article'));
 
   $collection = $articles->sortBy(function ($subpage) {

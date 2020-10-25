@@ -2,9 +2,7 @@
       <div class="">
         <h2 class="title is-5 has-text-primary  has-text-centered has-mb-xlarge">Unsere Partner</h2>
         <div class="columns is-mobile is-6 is-variable is-centered is-multiline">
-          <?php
-          $images = $site->partners()->toFiles();
-          foreach($images as $image): ?>
+          <?php foreach($site->partners()->toFiles() as $image): ?>
             <div class="column is-narrow">
               <a class="partner-link" href="<?= $image->link() ?>" target="_blank" rel="noopener noreferrer">
                 <figure class="partner-image image">
@@ -37,12 +35,11 @@
 
 <?php snippet('modals/newsletter') ?>
 
-<?= mix('/js/site.js') ?>
+<?= js('assets/js/main.js') ?>
 
 <?= css('assets/fonts/FontAwesomePro/css/fontawesome.min.css') ?>
 <?= css('assets/fonts/FontAwesomePro/css/solid.min.css') ?>
 <?= css('assets/fonts/FontAwesomePro/css/light.min.css') ?>
-<script async defer src="//www.instagram.com/embed.js"></script>
 
 </body>
 </html>

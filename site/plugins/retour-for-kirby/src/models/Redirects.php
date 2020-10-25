@@ -2,7 +2,6 @@
 
 namespace distantnative\Retour;
 
-use Kirby\Cms\App;
 use Kirby\Cms\Response;
 use Kirby\Data\Data;
 use Kirby\Http\Header;
@@ -10,8 +9,6 @@ use Kirby\Http\Url;
 
 class Redirects
 {
-
-    public static $file;
 
     /**
      * Get all redirects from file
@@ -31,16 +28,20 @@ class Redirects
     /**
      * Read all redirects and combine them with records data
      *
+     * @param string $from
+     * @param string $to
+     *
      * @return array
      */
-    public static function list(): array
+    public static function list(string $from, string $to): array
     {
-        $redirects = self::read();
+        $redirects = static::read();
 
+        // If logging is enabled, add log data for redirects
         if (option('distantnative.retour.logs') === true) {
             $log = new Log;
-            $redirects = array_map(function ($r) use ($log) {
-                return $log->forRedirect($r);
+            $redirects = array_map(function ($redirect) use ($log, $from, $to) {
+                return $log->forRedirect($redirect, $from, $to);
             }, $redirects);
         }
 
@@ -50,30 +51,32 @@ class Redirects
     /**
      * Get routes config for all redirects
      *
-     * @param Log|bool $log
      * @return array
      */
-    public static function routes($log): array
+    public static function routes(): array
     {
-        // no routes for disabled redirects
-        $data = array_filter(self::read(), function ($redirect) {
+        // Get all redirects
+        $data = static::read();
+
+        // Filter: no routes for disabled redirects
+        $data = array_filter($data, function ($redirect) {
             return $redirect['status'] !== 'disabled';
         });
 
-        return array_map(function ($redirect) use ($log) {
+        // create route array for each redirect
+        $data = array_map(function ($redirect) {
             return [
                 'pattern' => $redirect['from'],
-                'action'  => function (...$parameters) use ($redirect, $log) {
-                    $code = (int)$redirect['status'];
+                'action'  => function (...$parameters) use ($redirect) {
+                    $code = (int) $redirect['status'];
                     $to   = $redirect['to'];
 
                     // Create log record
-                    if ($log !== false) {
-                        $log->add([
+                    if (option('distantnative.retour.logs') === true) {
+                        (new Log)->add([
                             'path' => Url::path(),
                             'redirect' => $redirect['from']
                         ]);
-                        $log->close();
                     }
 
                     // Set the right response code
@@ -105,12 +108,15 @@ class Redirects
                 }
             ];
         }, $data);
+
+        return $data;
     }
 
     /**
      * Update redirects in file
      *
      * @param array $data
+     *
      * @return bool
      */
     public static function write(array $data = []): bool

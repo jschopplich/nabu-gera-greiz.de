@@ -1,14 +1,16 @@
 {
-  "name": "jschopplich/nabu-gera-greiz.de",
   "require": {
     "getkirby/cms": "^3.0",
-    "beebmx/kirby-env": "^1.0",
+    "johannschopplich/kirby-extended": "^1.0",
+    "kirbyzone/sitemapper": "^1.2",
     "distantnative/retour-for-kirby": "^2.0",
-    "omz13/kirby3-xmlsitemap": "^1.1",
-    "k-community/markdown-field": "^1.0",
-    "mzur/kirby-uniform": "^4.0"
+    "k-community/markdown-field": "^1.0"
   },
   "config": {
+    "sort-packages": true,
     "optimize-autoloader": true
+  },
+  "extra": {
+    "kirby-cms-path": false
   }
 }

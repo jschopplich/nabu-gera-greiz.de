@@ -69,9 +69,11 @@
       <?php endforeach ?>
     </div>
 
-    <div class="has-text-centered has-mt-large">
-      <a href="<?= page('aktuelles')->url() ?>" class="button is-primary is-outlined is-medium" role="button">Alle Beiträge</a>
-    </div>
+    <?php if ($news = page('aktuelles')): ?>
+      <div class="has-text-centered has-mt-large">
+        <a href="<?= $news->url() ?>" class="button is-primary is-outlined is-medium" role="button">Alle Beiträge</a>
+      </div>
+    <?php endif ?>
 
   <?php else: ?>
     <p>Keine neuen Artikel.</p>

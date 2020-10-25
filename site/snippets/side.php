@@ -1,47 +1,53 @@
 <div class="column is-narrow section has-pl-xlarge is-hidden-mobile">
   <div class="content is-side">
 
-    <div class="link-shape">
-      <a href="<?= page('informationen/aktiv-werden')->url() ?>">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-          <defs>
-            <pattern id="image-4a5abb48-b0c9-4dd0-aea3-159106ddc04d" patternUnits="userSpaceOnUse" height="100" width="100">
-              <image x="0" y="0" width="150" height="100" href="/assets/images/sidebar/wechselkroete-fokus-natur-proehl_thumb.jpg"></image>
-            </pattern>
-          </defs>
-          <path d="M100,49.827A50,50,0,1,0,49.827,100v0H100V49.827Z" fill="url(#image-4a5abb48-b0c9-4dd0-aea3-159106ddc04d)"/>
-        </svg>
-        <p>Aktiv werden</p>
-      </a>
-    </div>
+    <?php if ($p = page('informationen/aktiv-werden')): ?>
+      <div class="link-shape">
+        <a href="<?= $p->url() ?>">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <defs>
+              <pattern id="image-4a5abb48-b0c9-4dd0-aea3-159106ddc04d" patternUnits="userSpaceOnUse" height="100" width="100">
+                <image x="0" y="0" width="150" height="100" href="/assets/images/sidebar/wechselkroete-fokus-natur-proehl_thumb.jpg"></image>
+              </pattern>
+            </defs>
+            <path d="M100,49.827A50,50,0,1,0,49.827,100v0H100V49.827Z" fill="url(#image-4a5abb48-b0c9-4dd0-aea3-159106ddc04d)"/>
+          </svg>
+          <p>Aktiv werden</p>
+        </a>
+      </div>
+    <?php endif ?>
 
-    <div class="link-shape">
-      <a href="<?= page('informationen/spenden')->url() ?>">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-          <defs>
-            <pattern id="image-d12caa5f-a025-4e37-bd61-11a3d41d2338" patternUnits="userSpaceOnUse" height="100" width="100">
-              <image x="-35" y="0" width="150" height="100" href="/assets/images/sidebar/eisvogel-pixabay-pexels_cc0_thumb.jpg"></image>
-            </pattern>
-          </defs>
-          <path d="M100,49.827A50,50,0,1,0,49.827,100v0H100V49.827Z" fill="url(#image-d12caa5f-a025-4e37-bd61-11a3d41d2338)"/>
-        </svg>
-        <p>Spenden</p>
-      </a>
-    </div>
+    <?php if ($p = page('informationen/spenden')): ?>
+      <div class="link-shape">
+        <a href="<?= $p->url() ?>">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <defs>
+              <pattern id="image-d12caa5f-a025-4e37-bd61-11a3d41d2338" patternUnits="userSpaceOnUse" height="100" width="100">
+                <image x="-35" y="0" width="150" height="100" href="/assets/images/sidebar/eisvogel-pixabay-pexels_cc0_thumb.jpg"></image>
+              </pattern>
+            </defs>
+            <path d="M100,49.827A50,50,0,1,0,49.827,100v0H100V49.827Z" fill="url(#image-d12caa5f-a025-4e37-bd61-11a3d41d2338)"/>
+          </svg>
+          <p>Spenden</p>
+        </a>
+      </div>
+    <?php endif ?>
 
-    <div class="link-shape">
-      <a href="<?= page('korkampagne')->url() ?>">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-          <defs>
-            <pattern id="image-103d1cab-1cd0-4d12-b328-492283a9deb4" patternUnits="userSpaceOnUse" height="100" width="100">
-              <image x="-50" y="0" width="150" height="100" href="/assets/images/sidebar/naturkorken-nabu-helge-may.jpg"></image>
-            </pattern>
-          </defs>
-          <path d="M100,49.827A50,50,0,1,0,49.827,100v0H100V49.827Z" fill="url(#image-103d1cab-1cd0-4d12-b328-492283a9deb4)"/>
-        </svg>
-        <p>KORKampagne</p>
-      </a>
-    </div>
+    <?php if ($p = page('korkampagne')): ?>
+      <div class="link-shape">
+        <a href="<?= $p->url() ?>">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <defs>
+              <pattern id="image-103d1cab-1cd0-4d12-b328-492283a9deb4" patternUnits="userSpaceOnUse" height="100" width="100">
+                <image x="-50" y="0" width="150" height="100" href="/assets/images/sidebar/naturkorken-nabu-helge-may.jpg"></image>
+              </pattern>
+            </defs>
+            <path d="M100,49.827A50,50,0,1,0,49.827,100v0H100V49.827Z" fill="url(#image-103d1cab-1cd0-4d12-b328-492283a9deb4)"/>
+          </svg>
+          <p>KORKampagne</p>
+        </a>
+      </div>
+    <?php endif ?>
 
     <h4 class="title has-text-weight-bold has-text-grey has-mt-xlarge">Kontakt</h4>
     <p><b>NABU-Kreisverband<br>Gera-Greiz e.V.</b><br>

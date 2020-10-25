@@ -1,13 +1,28 @@
 .DS_Store
+/.env
+package-lock.json
+composer.lock
 node_modules/
-/vendor
 
-# Kirby-related directories and files
-/kirby
-/media
-/site/accounts
-/site/cache
-/site/config/redirects.yml
-/site/logs
-/site/sessions
+# Kirby
+.lock
+/public/media/*
+!/public/media/index.html
+/storage/accounts/*
+!/storage/accounts/.gitkeep
+/storage/cache/*
+!/storage/cache/.gitkeep
+/storage/content/*
+!/storage/content/.gitkeep
+/storage/sessions/*
+!/storage/sessions/.gitkeep
 /site/config/.license
+
+# Build assets
+/public/assets/css/
+/public/assets/js/
+
+# Site-specific
+/site/config/.retour
+/site/config/redirects.yml
+/storage/logs/
