@@ -43,6 +43,10 @@
                 }
             ],
             "description": "A PHP class that makes working with images as simple as possible.",
+            "support": {
+                "issues": "https://github.com/claviska/SimpleImage/issues",
+                "source": "https://github.com/claviska/SimpleImage/tree/master"
+            },
             "time": "2019-09-26T01:22:02+00:00"
         },
         {
@@ -87,6 +91,10 @@
                 "redirects",
                 "routing"
             ],
+            "support": {
+                "issues": "https://github.com/distantnative/retour-for-kirby/issues",
+                "source": "https://github.com/distantnative/retour-for-kirby/tree/master"
+            },
             "funding": [
                 {
                     "url": "https://paypal.me/distantnative",
@@ -154,6 +162,10 @@
                 "throwable",
                 "whoops"
             ],
+            "support": {
+                "issues": "https://github.com/filp/whoops/issues",
+                "source": "https://github.com/filp/whoops/tree/2.7.2"
+            },
             "time": "2020-05-05T12:28:07+00:00"
         },
         {
@@ -213,6 +225,12 @@
                 "core",
                 "kirby"
             ],
+            "support": {
+                "email": "support@getkirby.com",
+                "forum": "https://forum.getkirby.com",
+                "issues": "https://github.com/getkirby/kirby/issues",
+                "source": "https://github.com/getkirby/kirby"
+            },
             "time": "2020-10-06T07:38:40+00:00"
         },
         {
@@ -251,6 +269,10 @@
             ],
             "description": "Kirby's custom Composer installer for the Kirby CMS and for Kirby plugins",
             "homepage": "https://getkirby.com",
+            "support": {
+                "issues": "https://github.com/getkirby/composer-installer/issues",
+                "source": "https://github.com/getkirby/composer-installer/tree/1.2.0"
+            },
             "time": "2020-09-13T14:43:34+00:00"
         },
         {
@@ -303,6 +325,10 @@
                 "Result-Type",
                 "result"
             ],
+            "support": {
+                "issues": "https://github.com/GrahamCampbell/Result-Type/issues",
+                "source": "https://github.com/GrahamCampbell/Result-Type/tree/v1.0.1"
+            },
             "funding": [
                 {
                     "url": "https://github.com/GrahamCampbell",
@@ -317,23 +343,22 @@
         },
         {
             "name": "johannschopplich/kirby-extended",
-            "version": "v1.0.12",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johannschopplich/kirby-extended.git",
-                "reference": "a0eb111339b9c2bbacc39ca9352aac7f57b4e838"
+                "reference": "4ad146ff29e79b80a184ed3aa43bac6d8037b68f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johannschopplich/kirby-extended/zipball/a0eb111339b9c2bbacc39ca9352aac7f57b4e838",
-                "reference": "a0eb111339b9c2bbacc39ca9352aac7f57b4e838",
+                "url": "https://api.github.com/repos/johannschopplich/kirby-extended/zipball/4ad146ff29e79b80a184ed3aa43bac6d8037b68f",
+                "reference": "4ad146ff29e79b80a184ed3aa43bac6d8037b68f",
                 "shasum": ""
             },
             "require": {
                 "getkirby/composer-installer": "^1.1",
                 "php": ">=7.4.0",
                 "phpoption/phpoption": "^1.7",
-                "spatie/schema-org": "^2.14",
                 "vlucas/phpdotenv": "^5.0"
             },
             "require-dev": {
@@ -373,7 +398,11 @@
                 "meta-tags",
                 "seo"
             ],
-            "time": "2020-09-18T09:22:23+00:00"
+            "support": {
+                "issues": "https://github.com/johannschopplich/kirby-extended/issues",
+                "source": "https://github.com/johannschopplich/kirby-extended/tree/v1.1.0"
+            },
+            "time": "2020-11-02T17:07:53+00:00"
         },
         {
             "name": "k-community/markdown-field",
@@ -411,6 +440,10 @@
                 }
             ],
             "description": "Enhanced markdown editor for Kirby 3",
+            "support": {
+                "issues": "https://github.com/sylvainjule/kirby-markdown-field/issues",
+                "source": "https://github.com/sylvainjule/kirby-markdown-field/tree/1.0.6"
+            },
             "time": "2020-03-28T11:24:15+00:00"
         },
         {
@@ -444,6 +477,11 @@
             ],
             "description": "Cre8iv Click's Automatic Sitemap Generator Plugin for Kirby",
             "homepage": "https://gitlab.com/cre8ivclick/sitemapper",
+            "support": {
+                "issues": "https://gitlab.com/cre8ivclick/sitemapper/issues",
+                "source": "https://gitlab.com/cre8ivclick/sitemapper",
+                "wiki": "https://gitlab.com/cre8ivclick/sitemapper/wikis/home"
+            },
             "time": "2019-12-11T16:53:40+00:00"
         },
         {
@@ -493,6 +531,14 @@
                 "escaper",
                 "laminas"
             ],
+            "support": {
+                "chat": "https://laminas.dev/chat",
+                "docs": "https://docs.laminas.dev/laminas-escaper/",
+                "forum": "https://discourse.laminas.dev",
+                "issues": "https://github.com/laminas/laminas-escaper/issues",
+                "rss": "https://github.com/laminas/laminas-escaper/releases.atom",
+                "source": "https://github.com/laminas/laminas-escaper"
+            },
             "time": "2019-12-31T16:43:30+00:00"
         },
         {
@@ -541,6 +587,12 @@
                 "laminas",
                 "zf"
             ],
+            "support": {
+                "forum": "https://discourse.laminas.dev/",
+                "issues": "https://github.com/laminas/laminas-zendframework-bridge/issues",
+                "rss": "https://github.com/laminas/laminas-zendframework-bridge/releases.atom",
+                "source": "https://github.com/laminas/laminas-zendframework-bridge"
+            },
             "funding": [
                 {
                     "url": "https://funding.communitybridge.org/projects/laminas-project",
@@ -601,6 +653,10 @@
                 "image",
                 "palette"
             ],
+            "support": {
+                "issues": "https://github.com/thephpleague/color-extractor/issues",
+                "source": "https://github.com/thephpleague/color-extractor/tree/master"
+            },
             "time": "2016-12-15T09:30:02+00:00"
         },
         {
@@ -651,6 +707,10 @@
                 "typographer",
                 "typography"
             ],
+            "support": {
+                "issues": "https://github.com/michelf/php-smartypants/issues",
+                "source": "https://github.com/michelf/php-smartypants/tree/1.8.1"
+            },
             "time": "2016-12-13T01:01:17+00:00"
         },
         {
@@ -763,6 +823,10 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
+            "support": {
+                "issues": "https://github.com/PHPMailer/PHPMailer/issues",
+                "source": "https://github.com/PHPMailer/PHPMailer/tree/master"
+            },
             "funding": [
                 {
                     "url": "https://github.com/synchro",
@@ -824,6 +888,10 @@
                 "php",
                 "type"
             ],
+            "support": {
+                "issues": "https://github.com/schmittjoh/php-option/issues",
+                "source": "https://github.com/schmittjoh/php-option/tree/1.7.5"
+            },
             "funding": [
                 {
                     "url": "https://github.com/GrahamCampbell",
@@ -881,92 +949,27 @@
                 "psr",
                 "psr-3"
             ],
+            "support": {
+                "source": "https://github.com/php-fig/log/tree/1.1.3"
+            },
             "time": "2020-03-23T09:12:05+00:00"
         },
         {
-            "name": "spatie/schema-org",
-            "version": "2.16.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/schema-org.git",
-                "reference": "31f1fd54584d98b50026ecb17fe7067384ec209a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/schema-org/zipball/31f1fd54584d98b50026ecb17fe7067384ec209a",
-                "reference": "31f1fd54584d98b50026ecb17fe7067384ec209a",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "php": "^7.3"
-            },
-            "require-dev": {
-                "graham-campbell/analyzer": "^2.3",
-                "league/flysystem": "^1.0",
-                "phpunit/phpunit": "^8.0",
-                "symfony/console": "^3.2",
-                "tightenco/collect": "^7.25",
-                "twig/twig": "^1.28"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Spatie\\SchemaOrg\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sebastian De Deyne",
-                    "email": "sebastian@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Tom Witkowski",
-                    "email": "dev.gummibeer@gmail.com",
-                    "homepage": "https://gummibeer.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A fluent builder Schema.org types and ld+json generator",
-            "homepage": "https://github.com/spatie/schema-org",
-            "keywords": [
-                "schema-org",
-                "spatie"
-            ],
-            "funding": [
-                {
-                    "url": "https://spatie.be/open-source/support-us",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/spatie",
-                    "type": "github"
-                }
-            ],
-            "time": "2020-08-27T16:55:28+00:00"
-        },
-        {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.18.1",
+            "version": "v1.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "1c302646f6efc070cd46856e600e5e0684d6b454"
+                "reference": "f4ba089a5b6366e453971d3aad5fe8e897b37f41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/1c302646f6efc070cd46856e600e5e0684d6b454",
-                "reference": "1c302646f6efc070cd46856e600e5e0684d6b454",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/f4ba089a5b6366e453971d3aad5fe8e897b37f41",
+                "reference": "f4ba089a5b6366e453971d3aad5fe8e897b37f41",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=7.1"
             },
             "suggest": {
                 "ext-ctype": "For best performance"
@@ -974,7 +977,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.18-dev"
+                    "dev-main": "1.20-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -1011,6 +1014,9 @@
                 "polyfill",
                 "portable"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.20.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -1025,24 +1031,24 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-14T12:35:20+00:00"
+            "time": "2020-10-23T14:02:19+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.18.1",
+            "version": "v1.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "a6977d63bf9a0ad4c65cd352709e230876f9904a"
+                "reference": "39d483bdf39be819deabf04ec872eb0b2410b531"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/a6977d63bf9a0ad4c65cd352709e230876f9904a",
-                "reference": "a6977d63bf9a0ad4c65cd352709e230876f9904a",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/39d483bdf39be819deabf04ec872eb0b2410b531",
+                "reference": "39d483bdf39be819deabf04ec872eb0b2410b531",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=7.1"
             },
             "suggest": {
                 "ext-mbstring": "For best performance"
@@ -1050,7 +1056,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.18-dev"
+                    "dev-main": "1.20-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -1088,6 +1094,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.20.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -1102,29 +1111,29 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-14T12:35:20+00:00"
+            "time": "2020-10-23T14:02:19+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.18.1",
+            "version": "v1.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "d87d5766cbf48d72388a9f6b85f280c8ad51f981"
+                "reference": "e70aa8b064c5b72d3df2abd5ab1e90464ad009de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/d87d5766cbf48d72388a9f6b85f280c8ad51f981",
-                "reference": "d87d5766cbf48d72388a9f6b85f280c8ad51f981",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/e70aa8b064c5b72d3df2abd5ab1e90464ad009de",
+                "reference": "e70aa8b064c5b72d3df2abd5ab1e90464ad009de",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.0.8"
+                "php": ">=7.1"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.18-dev"
+                    "dev-main": "1.20-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -1168,6 +1177,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.20.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -1182,7 +1194,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-14T12:35:20+00:00"
+            "time": "2020-10-23T14:02:19+00:00"
         },
         {
             "name": "true/punycode",
@@ -1228,6 +1240,10 @@
                 "idna",
                 "punycode"
             ],
+            "support": {
+                "issues": "https://github.com/true/php-punycode/issues",
+                "source": "https://github.com/true/php-punycode/tree/master"
+            },
             "time": "2016-11-16T10:37:54+00:00"
         },
         {
@@ -1294,6 +1310,10 @@
                 "env",
                 "environment"
             ],
+            "support": {
+                "issues": "https://github.com/vlucas/phpdotenv/issues",
+                "source": "https://github.com/vlucas/phpdotenv/tree/v5.2.0"
+            },
             "funding": [
                 {
                     "url": "https://github.com/GrahamCampbell",
@@ -1315,5 +1335,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }

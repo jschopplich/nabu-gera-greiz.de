@@ -5,6 +5,7 @@ import crypto from 'crypto'
 
 const inputDir = 'public/assets'
 const inputFiles = fg.sync(`${inputDir}/{css,js}/**/*.{css,js}`)
+const hashedFilenameRegExp = /[.-]\w{8}\./
 
 /**
  * Returns a 8-digit hash for a given file
@@ -25,7 +26,7 @@ for (const filePath of inputFiles) {
   let filename = path.basename(filePath)
 
   // Make sure file hasn't be renamed already or is a lazy rollup import
-  if (/[.-]\w{8}\./g.test(filename)) continue
+  if (hashedFilenameRegExp.test(filename)) continue
 
   filename = filename.substring(0, filename.indexOf(extension))
   const hash = createHash(filePath)
