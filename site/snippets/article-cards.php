@@ -5,7 +5,7 @@
 
     <div class="is-hidden-tablet">
       <?php foreach ($articles as $article): ?>
-      <div class="media box" data-scrollreveal="scale">
+      <div class="media box" data-animere="slideInUp">
         <div class="media-left">
           <a href="<?= $article->url() ?>">
             <?php if ($image = $article->images()->first()): ?>
@@ -35,7 +35,7 @@
 
     <div class="columns is-centered is-multiline is-hidden-mobile">
       <?php foreach ($articles as $article): ?>
-      <div class="column is-4" data-scrollreveal="scale">
+      <div class="column is-4" data-animere="fadeIn">
         <div class="card">
 
           <div class="card-image">

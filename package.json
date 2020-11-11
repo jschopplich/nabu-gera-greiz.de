@@ -1,4 +1,5 @@
 {
+  "name": "nabu-gera-greiz.de",
   "type": "module",
   "scripts": {
     "clean": "rimraf public/assets/{css,js} && rimraf storage/cache/*",
@@ -54,6 +55,5 @@
     "last 2 KaiOS versions",
     "last 2 Samsung versions",
     "last 2 UCAndroid versions"
-  ],
-  "name": "nabu-gera-greiz.de"
+  ]
 }

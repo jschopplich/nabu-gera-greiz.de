@@ -9,10 +9,17 @@
 
   <?= css([
     'assets/css/main.css',
-    'assets/fonts/SourceSerifPro/family.css'
+    'assets/fonts/SourceSerifPro/family.css',
+    'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'
   ]) ?>
 
-  <?php snippet('analytics') ?>
+  <script src="https://www.googletagmanager.com/gtag/js?id=UA-134185590-1" async></script>
+  <script>
+    window.dataLayer = window.dataLayer || []
+    function gtag () { dataLayer.push(arguments) }
+    gtag('js', new Date())
+    gtag('config', 'UA-134185590-1', { anonymize_ip: true, storage: 'none' })
+  </script>
 
 </head>
 <body>
@@ -31,7 +38,7 @@
             <div class="cover-hero"<?php e($page->isHomePage(), ' style="background-image: url(' . $image->resize(960)->url() . ');"') ?>>
               <div class="columns is-vcentered">
                 <div class="column is-narrow">
-                  <figure class="cover-hero-image image" data-scrollreveal="fromLeftIn">
+                  <figure class="cover-hero-image image" data-animere="fadeInLeft">
                     <img src="<?= url('assets/images/logo.svg') ?>" alt="<?= $site->author() ?>" title="<?= $site->author() ?>">
                   </figure>
                 </div>
