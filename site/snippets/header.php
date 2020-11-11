@@ -25,10 +25,10 @@
 <body>
 
   <header class="header <?php e($page->isHomePage(), 'is-home', 'is-default') ?>">
+    <div class="container">
 
-    <?php if ($page->isHomePage()): ?>
+      <?php if ($page->isHomePage()): ?>
 
-      <div class="container">
         <div class="cover">
           <?php if ($image = $page->heroImage()->toFile()): ?>
             <figure class="cover-image image is-16by9 is-hidden-mobile">
@@ -53,39 +53,39 @@
 
           <?php snippet('navigation') ?>
         </div>
-      </div>
 
-    <?php else: ?>
+      <?php else: ?>
 
-      <div class="container">
         <div class="cover">
           <figure class="cover-image image is-16by9">
             <?php
             if ($page->coverImage()->isNotEmpty() && $page->coverImage()->toFile()) {
               $image = $page->coverImage()->toFile();
-            } elseif ($page->template() === 'article' && $page->parent()->coverImage()->isNotEmpty() && $page->parent()->coverImage()->toFile()) {
+            } elseif ($page->intendedTemplate()->name() === 'article' && $page->parent()->coverImage()->isNotEmpty() && $page->parent()->coverImage()->toFile()) {
               $image = $page->parent()->coverImage()->toFile();
             } else {
               $image = $site->coverImage()->toFile();
             }
+
+            $caption = $image->caption()->or($image->alt())->html();
             ?>
-            <img src="<?= $image->crop(960, 144, 'right')->url() ?>" title="<?= $image->caption()->or($image->alt())->html() ?>" alt="<?= $image->caption()->or($image->alt())->html() ?>">
+            <img src="<?= $image->crop(960, 144, 'right')->url() ?>" title="<?= $caption ?>" alt="<?= $caption ?>">
           </figure>
 
           <div class="cover-logo">
             <a href="<?= url() ?>" rel="home">
               <figure class="image">
-                <img src="<?= url('assets/images/logo.svg') ?>" alt="<?= $site->author() ?>" title="<?= $site->author() ?>">
+                <img src="<?= url('assets/images/logo.svg') ?>" alt="<?= $site->author() ?>">
               </figure>
             </a>
           </div>
         </div>
 
         <?php snippet('navigation') ?>
-      </div>
 
-    <?php endif ?>
+      <?php endif ?>
 
+    </div>
   </header>
 
   <main class="main main-<?= $page->intendedTemplate() ?>">

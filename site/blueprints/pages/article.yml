@@ -1,6 +1,8 @@
 title: Artikel
+
 preset: page
 pages: false
+
 num: "{{ page.date.toDate('%Y%m%d') }}"
 
 icon: 📄
@@ -26,7 +28,7 @@ fields:
     type: markdown
 
 sidebar:
-  meta1:
+  date:
     type: fields
     fields:
       date:
@@ -36,8 +38,5 @@ sidebar:
         default: now
         required: true
 
-  files:
-    extends: sections/files
-
-  meta2:
-    extends: sections/meta
+  files: sections/files
+  meta: sections/meta

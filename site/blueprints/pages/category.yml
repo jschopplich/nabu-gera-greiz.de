@@ -3,8 +3,8 @@ title: Kategorie
 icon: 📖
 
 options:
-  url: false
-  status: false
+  changeSlug: false
+  changeStatus: false
   delete: false
 
 columns:

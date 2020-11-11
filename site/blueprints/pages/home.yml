@@ -1,23 +1,22 @@
 title: Willkommen
+
 preset: page
 pages: false
 
 icon: 🏠
 
 options:
-  url: false
-  status: false
+  changeSlug: false
+  changeStatus: false
   delete: false
 
 fields:
   intro:
     label: Intro
     type: text
-
   textBeforeListing:
     label: Text vor Newsfeed
     type: markdown
-
   textAfterListing:
     label: Text nach Newsfeed
     type: markdown
@@ -40,8 +39,5 @@ sidebar:
         min: 1
         max: 12
 
-  files:
-    extends: sections/files
-
-  meta:
-    extends: sections/meta
+  files: sections/files
+  meta: sections/meta

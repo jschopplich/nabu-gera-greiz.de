@@ -1,4 +1,5 @@
 title: Veranstaltungen
+
 preset: page
 pages: false
 
@@ -8,18 +9,16 @@ fields:
   intro:
     label: Intro
     type: text
-
   textBeforeCalendar:
     label: Text vor Kalender
     type: markdown
-
   calendar:
     label: Kalender
     type: structure
     columns:
-      eventStarts: 
+      eventStarts:
         width: 1/2
-      eventTitle: 
+      eventTitle:
         width: 1/2
     fields:
       eventTitle:
@@ -87,17 +86,11 @@ fields:
         width: 1/2
         when:
           eventHasPrice: true
-
   textAfterCalendar:
     label: Text nach Kalender
     type: markdown
 
 sidebar:
-  files:
-    extends: sections/files
-
-  cover:
-    extends: sections/cover
-
-  meta:
-    extends: sections/meta
+  files: sections/files
+  cover: sections/cover
+  meta: sections/meta

@@ -5,20 +5,12 @@ fields:
   intro:
     label: Intro
     type: text
-
   text:
     label: Text
     type: markdown
 
 sidebar:
-  pages:
-    extends: sections/pages
-
-  files:
-    extends: sections/files
-
-  cover:
-    extends: sections/cover
-
-  navMeta:
-    extends: sections/navMeta
+  pages: sections/pages
+  files: sections/files
+  cover: sections/cover
+  navMeta: sections/navMeta

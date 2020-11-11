@@ -3,12 +3,12 @@ title: Blog
 icon: 📝
 
 options:
-  url: false
-  status: false
+  changeSlug: false
+  changeStatus: false
+  duplicate: false
   delete: false
 
 tabs:
-
   articles:
     label: Artikel
     icon: draft
@@ -44,17 +44,13 @@ tabs:
       intro:
         label: Intro
         type: text
-
       text:
         label: Text
         type: markdown
 
     sidebar:
-      files:
-        extends: sections/files
-
-      cover:
-        extends: sections/cover
+      files: sections/files
+      cover: sections/cover
 
       excerpts:
         type: fields
@@ -66,8 +62,5 @@ tabs:
             min: 1
             max: 20
 
-      meta:
-        extends: sections/meta
-
-      navMeta:
-        extends: sections/navMeta
+      meta: sections/meta
+      navMeta: sections/navMeta

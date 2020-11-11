@@ -45,10 +45,6 @@ return [
         'templates' => require __DIR__ . '/meta-templates.php',
     ],
 
-    'cre8ivclick.sitemapper' => [
-        'title' => 'Sitemap'
-    ],
-
     'distantnative.retour' => [
         'config' => $base . '/site/config/redirects.yml',
         'database' => $base . '/storage/logs/retour.sqlite'
@@ -63,5 +59,9 @@ return [
     'kirbytext.image-hero.width' => '768',
     'kirbytext.image-box.width' => '768',
     'kirbytext.image-box.width-vertical' => '480',
+
+    'cre8ivclick.sitemapper' => [
+        'title' => 'Sitemap'
+    ]
 
 ];

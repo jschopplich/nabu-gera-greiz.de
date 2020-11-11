@@ -1,7 +1,7 @@
 title: Partner
 
 accept:
-  mime: image/jpeg, image/png, image/svg+xml
+  mime: image/*
 
 columns:
   - width: 1/2
@@ -10,8 +10,9 @@ columns:
         type: fields
         fields:
           alt:
-            label: Alternativtext
+            label: Alternativer Text
             type: text
+
   - width: 1/2
     sections:
       meta:

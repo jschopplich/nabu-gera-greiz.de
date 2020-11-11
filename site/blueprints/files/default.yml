@@ -2,6 +2,6 @@ title: Datei
 
 fields:
   alt:
-    label: Alternativtext
+    label: Alternativer Text
     type: text
     help: nur für Bilder erforderlich

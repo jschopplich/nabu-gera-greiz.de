@@ -1,7 +1,6 @@
 title: Seite
 
 tabs:
-
   pages:
     label: Dashboard
     icon: dashboard
@@ -12,7 +11,7 @@ tabs:
             type: pages
             headline: Aktuelles
             status: all
-            parent: site.find("aktuelles")
+            parent: kirby.page("aktuelles")
             sortBy: date desc
             template: article
             info: "{{ page.date.toDate('%d.%m.%Y') }}"
@@ -52,7 +51,7 @@ tabs:
                 label: Partner
                 type: files
                 uploads: partner
-                query: site.images.filterBy('template', 'partner')
+                query: site.files.filterBy('template', 'partner')
                 layout: cards
                 size: tiny
                 image:

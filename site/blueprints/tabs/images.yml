@@ -1,7 +1,7 @@
 label: Bilder
-icon: file-image
+icon: image
 sections:
-  imagesContent:
+  imagesTab:
     type: files
     headline: Bilder
     template: image

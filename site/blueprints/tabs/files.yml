@@ -1,7 +1,7 @@
 label: Dateien
-icon: file
+icon: import
 sections:
-  filesContent:
+  filesTab:
     type: files
     headline: Dateien
     template: file
