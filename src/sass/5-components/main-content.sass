@@ -10,7 +10,6 @@
   // Lines
 
   hr
-    height: 1px
     clear: both
     &.short
       background-color: $primary
@@ -24,36 +23,30 @@
 
   // Links
 
-  .arrow,
-  a[target=_blank],
-  a[href$=".pdf"]
-    &::before
-      position: relative
-      display: inline-block
-      bottom: 1px
-      color: $text
-      font-family: "Font Awesome 5 Pro"
-      font-weight: 300
-      font-style: normal
-      font-variant: normal
-      font-size: 85%
-      margin-left: 1px
-      margin-right: 0.3em
-      text-rendering: auto
-      -webkit-font-smoothing: antialiased
-    &:hover::before
-      color: currentColor
-      font-weight: 700
+  .arrow::after,
+  a[target="_blank"]::after,
+  a[href$=".pdf"]::before
+    display: none
+    font-family: "Font Awesome 5 Pro"
+    font-weight: 300
+
+  .arrow::after,
+  a[target="_blank"]:not(.pdf)::after
+    content: "\f08e"
+
+  a[href$=".pdf"]::before
+    content: "\f1c1"
 
   .arrow,
-  a[target=_blank]
-    &::before
-      content: "\f14c"
+  a[target="_blank"]:not(.pdf)
+    > svg
+      margin-left: 0.25em
+      margin-right: 0.125em
 
-  .pdf,
   a[href$=".pdf"]
-    &::before
-      content: "\f1c1"
+    > svg
+      margin-left: 0.125em
+      margin-right: 0.25em
 
   // Images
 
@@ -73,9 +66,7 @@
       text-align: left
       padding: 0.75rem 1.5rem
       overflow-wrap: break-word
-      word-break: break-word
       -webkit-hyphens: auto
-      -ms-hyphens: auto
       hyphens: auto
       +tablet
         padding: 0.5rem 1rem
@@ -94,15 +85,13 @@
     +mobile
       float: none !important
     img
-      transition: transform 0.25s ease
-      // &:hover
-        // transform: scale(1.025)
+      transition: transform 250ms ease
 
   +tablet
     .image-box
-      width: calc(#{$article-image-width} + 0.5rem)
+      width: calc(320px + 0.5rem)
       &.vertical
-        width: calc(#{$article-image-v-width} + 0.5rem)
+        width: calc(220px + 0.5rem)
       &.has-text-centered
         margin-right: auto
         margin-left: auto

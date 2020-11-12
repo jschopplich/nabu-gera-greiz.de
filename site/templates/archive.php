@@ -1,5 +1,3 @@
-<?php snippet('header') ?>
+<?php
 
-  <?php snippet('templates/default') ?>
-
-<?php snippet('footer') ?>
+require __DIR__ . '/default.php';

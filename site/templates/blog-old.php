@@ -1,19 +1,20 @@
 <?php snippet('header') ?>
 
-  <div class="container">
-    <div class="columns is-marginless has-pb-xlarge">
-      <div class="column section has-pt-xlarge has-pt-xxlarge-tablet has-pr-xlarge-tablet">
-        <div class="content is-main is-old-blog">
+<div class="container">
+  <div class="columns is-marginless pt-6 pb-6">
 
-          <?php snippet('intro') ?>
-          <?= $page->text()->kirbytext() ?>
-
-        </div>
+    <div class="column pr-6">
+      <div class="content is-main is-old-blog">
+        <?php snippet('intro') ?>
+        <?= $page->text()->kirbytext() ?>
       </div>
-
-      <?php snippet('side') ?>
-
     </div>
+
+    <div class="column is-narrow pl-6 is-hidden-mobile">
+      <?php snippet('side') ?>
+    </div>
+
   </div>
+</div>
 
 <?php snippet('footer') ?>

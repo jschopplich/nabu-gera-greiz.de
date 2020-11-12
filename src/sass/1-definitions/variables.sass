@@ -7,36 +7,39 @@ $fullhd-enabled: false
 
 $black:          hsl(0, 0%, 4%)
 $black-bis:      hsl(0, 0%, 7%)
-$black-ter:      hsl(0, 0%, 14%)
+$black-ter:      hsl(0, 0%, 10%)
 
 $grey-darker:    hsl(0, 0%, 21%)
 $grey-dark:      hsl(0, 0%, 29%)
 $grey:           hsl(0, 0%, 48%)
 $grey-light:     hsl(0, 0%, 71%)
 $grey-lighter:   hsl(0, 0%, 86%)
+$grey-lightest:  hsl(0, 0%, 93%)
 
-$white-qua:      hsl(0, 0%, 94%)
-$white-ter:      hsl(0, 0%, 96%)
 $white-ter:      hsl(0, 0%, 96%)
 $white-bis:      hsl(0, 0%, 98%)
 $white:          hsl(0, 0%, 100%)
 
 $primary:        hsl(205, 100%, 35%)
-$green:          hsl(141, 71%, 48%)
-$light:          $white-qua
-$dark:           $grey-darker
+$green:          hsl(141, 70%, 48%)
 
 // Derived colors
 
+$light:          $white-ter
+$dark:           $grey-darker
 $success:        $green
 
 // Invert colors
 
-$primary-invert: $white
-$green-invert:   findColorInvert($green)
-$success-invert: $green-invert
-$light-invert:   $dark
-$dark-invert:    $light
+$success: $green
+$primary-invert: findColorInvert($primary)
+$primary-light: findLightColor($primary)
+$primary-dark: findDarkColor($primary)
+$success-invert: findColorInvert($success)
+$success-light: findLightColor($success)
+$success-dark: findDarkColor($success)
+$light-invert: findColorInvert($light)
+$dark-invert: findColorInvert($dark)
 
 // Link colors
 
@@ -45,15 +48,10 @@ $link-invert: $white
 $link-hover: darken($link, 10%)
 $link-focus: darken($link, 10%)
 
-// General colors
-
-$background: $white-qua
-$pagination-hover-color: $grey-darker
-
 // Typography
 
-$family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
-$family-secondary: "Source Serif Pro", Georgia, serif
+$family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+$family-secondary: "Literata", Georgia, serif
 
 // $size-1: 3rem
 // $size-2: 2.5rem
@@ -65,31 +63,21 @@ $size-7: 0.875rem
 
 // Components
 
-$radius-small: 2px
 $radius: 6px
 $radius-large: 10px
 
-$control-radius: $radius-small
-$control-radius-small: $radius-small
+$control-radius: $radius
+$control-radius-small: $radius
 
 $shadow-navbar: 0 4px 12px 0 rgba(0, 0, 0, 0.075)
 $shadow-box: 0 4px 16px 0 rgba(0, 0, 0, 0.05)
 $shadow-box-hover: 0 8px 24px 0 rgba(0, 0, 0, 0.1)
-
-// Layout
-
-$section-padding: 6rem 1.5rem
 
 // Navbar
 
 $navbar-dropdown-boxed-radius: 0 0 4px 4px
 $navbar-burger-color: #fff
 
-// Templates
-
-$article-image-width: 320px
-$article-image-v-width: 220px
-
 // Lists and maps
 
-$colors: ("white": ($white, $black), "light": ($light, $light-invert), "dark": ($dark, $dark-invert), "primary": ($primary, $primary-invert), "success": ($success, $success-invert))
+$colors: ("white": ($white, $black), "light": ($light, $light-invert), "dark": ($dark, $dark-invert), "primary": ($primary, $primary-invert, $primary-light, $primary-dark), "success": ($success, $success-invert, $success-light, $success-dark))

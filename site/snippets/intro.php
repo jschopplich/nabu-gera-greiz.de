@@ -1,4 +1,4 @@
-<h1 class="title is-3 has-text-weight-bold">
+<h1 class="title is-2 has-text-weight-bold">
   <?= $page->intro()->or($page->title())->html() ?>
 </h1>
-<hr class="has-mt-large has-mb-xlarge">
+<hr class="mt-5 mb-6">

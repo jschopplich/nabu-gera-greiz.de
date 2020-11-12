@@ -7,9 +7,11 @@
 
   <?= $page->metaTags() ?>
 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <?= css([
     'assets/css/main.css',
     'assets/fonts/SourceSerifPro/family.css',
+    'https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,700;1,400;1,700&display=swap',
     'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'
   ]) ?>
 
@@ -32,7 +34,7 @@
         <div class="cover">
           <?php if ($image = $page->heroImage()->toFile()): ?>
             <figure class="cover-image image is-16by9 is-hidden-mobile">
-              <img class="has-ratio" src="<?= $image->resize(960)->url() ?>" title="<?= $image->caption()->or($image->alt())->html() ?>" alt="<?= $image->caption()->or($image->alt())->html() ?>">
+              <img class="has-ratio" src="<?= $image->resize(960)->url() ?>" alt="<?= $image->caption()->or($image->alt())->html() ?>">
             </figure>
 
             <div class="cover-hero"<?php e($page->isHomePage(), ' style="background-image: url(' . $image->resize(960)->url() . ');"') ?>>

@@ -1,6 +1,6 @@
     <section class="section is-partners container is-hidden-mobile">
       <div class="">
-        <h2 class="title is-5 has-text-primary  has-text-centered has-mb-xlarge">Unsere Partner</h2>
+        <h2 class="title is-5 has-text-primary  has-text-centered mb-6">Unsere Partner</h2>
         <div class="columns is-mobile is-6 is-variable is-centered is-multiline">
           <?php foreach($site->partners()->toFiles() as $image): ?>
             <div class="column is-narrow">
@@ -37,9 +37,11 @@
 
 <?= js('assets/js/main.js') ?>
 
-<?= css('assets/fonts/FontAwesomePro/css/fontawesome.min.css') ?>
-<?= css('assets/fonts/FontAwesomePro/css/solid.min.css') ?>
-<?= css('assets/fonts/FontAwesomePro/css/light.min.css') ?>
+<?= js([
+  'assets/fonts/FontAwesomePro/js/fontawesome.min.js',
+  'assets/fonts/FontAwesomePro/js/solid.min.js',
+  'assets/fonts/FontAwesomePro/js/light.min.js'
+], ['defer' => true, 'data-search-pseudo-elements' => true]) ?>
 
 </body>
 </html>
