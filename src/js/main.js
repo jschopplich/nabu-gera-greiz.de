@@ -4,7 +4,10 @@ import Animere from 'animere'
 const animere = new Animere()
 
 // Handle navigation
-for (const link of document.querySelectorAll('.navbar-link, [data-navbar-toggle]')) {
+for (const link of [
+  ...document.querySelectorAll('.navbar-burger'),
+  ...document.querySelectorAll('.navbar-link')
+]) {
   link.addEventListener('click', () => {
     document.querySelector('.navbar-burger').classList.toggle('is-active')
     document.querySelector('.navbar-menu').classList.toggle('is-active')

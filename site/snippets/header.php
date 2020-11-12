@@ -90,4 +90,4 @@
     </div>
   </header>
 
-  <main class="main main-<?= $page->intendedTemplate() ?>">
+  <main class="main main-<?= $page->intendedTemplate()->name() ?>">

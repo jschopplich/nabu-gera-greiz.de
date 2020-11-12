@@ -1,19 +1,13 @@
 <?php snippet('header') ?>
 
-<div class="container">
-  <div class="columns is-marginless pt-6 pb-6">
-
-    <div class="column pr-6">
-      <div class="content is-main">
-        <?php snippet('intro') ?>
-        <?= $page->text()->kirbytext() ?>
-      </div>
+<div class="section">
+  <div class="container is-main">
+    <div class="content is-main">
+      <?php snippet('intro') ?>
+      <?= $page->text()->kirbytext() ?>
     </div>
 
-    <div class="column is-narrow pl-6 is-hidden-mobile">
-      <?php snippet('side') ?>
-    </div>
-
+    <?php snippet('side') ?>
   </div>
 </div>
 

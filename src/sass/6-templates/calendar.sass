@@ -1,6 +1,11 @@
-.calendar-table
-  td p
-    font-family: $family-primary !important
+.main-calendar
+  .container.is-main
+    grid-template-columns: 1fr
 
-  td:last-child
-    max-width: 25%
+.calendar-table
+  td
+    p
+      font-family: inherit !important
+
+    &:last-child
+      width: 25%

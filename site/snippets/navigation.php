@@ -13,7 +13,7 @@
           <a href="<?= page('veranstaltungen')->url() ?>"><?= page('veranstaltungen')->title() ?></a>
         </li>
         <li>
-          <a data-navbar-toggle>Projekte</a>
+          <a href="#" data-navbar-toggle>Projekte</a>
         </li>
       </ul>
     </div>

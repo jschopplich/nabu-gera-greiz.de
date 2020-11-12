@@ -1,17 +1,15 @@
     <section class="section is-partners container is-hidden-mobile">
-      <div class="">
-        <h2 class="title is-5 has-text-primary  has-text-centered mb-6">Unsere Partner</h2>
-        <div class="columns is-mobile is-6 is-variable is-centered is-multiline">
-          <?php foreach($site->partners()->toFiles() as $image): ?>
-            <div class="column is-narrow">
-              <a class="partner-link" href="<?= $image->link() ?>" target="_blank" rel="noopener noreferrer">
-                <figure class="partner-image image">
-                  <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>">
-                </figure>
-              </a>
-            </div>
-          <?php endforeach ?>
-        </div>
+      <h2 class="title is-3 has-text-primary has-text-centered mb-6">Unsere Partner</h2>
+      <div class="columns is-mobile is-6 is-variable is-centered is-multiline">
+        <?php foreach($site->partners()->toFiles() as $image): ?>
+          <div class="column is-narrow">
+            <a class="partner-link" href="<?= $image->link() ?>" target="_blank" rel="noopener noreferrer">
+              <figure class="partner-image image">
+                <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>">
+              </figure>
+            </a>
+          </div>
+        <?php endforeach ?>
       </div>
     </section>
 
@@ -19,17 +17,15 @@
 
   <footer class="footer">
     <div class="container">
-
       <div class="columns">
         <?php foreach ($site->footerColumns()->toStructure() as $column): ?>
-        <div class="column">
-          <div class="content is-inverted">
-            <?= $column->text()->kt() ?>
+          <div class="column">
+            <div class="content is-inverted">
+              <?= $column->text()->kt() ?>
+            </div>
           </div>
-        </div>
         <?php endforeach ?>
       </div>
-
     </div>
   </footer>
 

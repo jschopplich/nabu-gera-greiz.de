@@ -1,13 +1,15 @@
 <?php snippet('header') ?>
 
-<section class="section is-home container pt-6">
-  <div class="content is-main">
-    <h2 class="title is-3 has-text-weight-bold mb-5"><?= $page->intro()->html() ?></h2>
-    <?= $page->textBeforeListing()->kt() ?>
+<div class="section is-home pt-6">
+  <div class="container">
+    <section class="content is-main">
+      <h2 class="title is-3 has-text-weight-bold mb-5"><?= $page->intro()->html() ?></h2>
+      <?= $page->textBeforeListing()->kt() ?>
+    </section>
   </div>
-</section>
+</div>
 
-<section class="section is-article-cards has-background-white-bis">
+<div class="section is-article-cards has-background-white-bis">
   <div class="container">
     <h2 id="aktuelles" class="title is-3 has-text-weight-bold has-text-centered mb-5">
       Aktuelle Beiträge
@@ -45,7 +47,7 @@
 
     <div class="columns is-centered is-multiline is-hidden-mobile">
       <?php foreach ($articles as $article): ?>
-        <div class="column is-4" data-animere="fadeIn">
+        <div class="column is-4">
           <div class="card">
 
             <div class="card-image">
@@ -83,12 +85,14 @@
       </a>
     </div>
   </div>
-</section>
+</div>
 
-<section class="section is-home container">
-  <div class="content is-main">
-    <?= $page->textAfterListing()->kt() ?>
+<div class="section is-home">
+  <div class="container">
+    <section class="content is-main">
+      <?= $page->textAfterListing()->kt() ?>
+    </section>
   </div>
-</section>
+</div>
 
 <?php snippet('footer') ?>
