@@ -1,7 +1,7 @@
 <?php snippet('header') ?>
 
 <div class="section">
-  <div class="container is-main">
+  <div class="content-wrapper container">
     <div class="content is-main">
       <article class="mb-6">
         <h1 class="title is-3 has-text-weight-bold">

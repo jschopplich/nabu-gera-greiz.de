@@ -9,7 +9,7 @@
   ?>
   <?php foreach ($data as $item): ?>
     <?php if ($p = page($item['page'])): ?>
-      <div class="link-shape">
+      <div class="link-shape mb-5">
         <a href="<?= $p->url() ?>">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
             <defs>
@@ -26,13 +26,17 @@
   <?php endforeach ?>
 
   <h4 class="title has-text-weight-bold has-text-grey mt-6">Kontakt</h4>
-  <p><b>NABU-Kreisverband<br>Gera-Greiz e.V.</b><br>
-  c/o Ingo Eckardt<br>
-  Franz-Philipp-Straße 9<br>
-  07937 Zeulenroda-Triebes<br>
-  <a href="mailto:&#x76;&#111;&#114;&#115;&#x74;&#97;&#110;&#100;&#64;&#x6e;&#x61;&#x62;&#117;&#x2d;&#x67;&#101;&#x72;&#x61;&#45;&#103;&#x72;&#x65;&#105;&#x7a;&#46;&#x64;&#x65;">&#x76;&#x6f;&#x72;&#115;&#116;&#x61;&#x6e;&#x64;&#64;&#x6e;&#x61;&#x62;&#117;&#x2d;&#103;&#x65;&#114;&#x61;&#x2d;&#x67;&#114;&#101;&#x69;&#x7a;&#46;&#x64;&#101;</a></p>
+  <p>
+    <b>NABU-Kreisverband<br>Gera-Greiz e.V.</b><br>
+    c/o Ingo Eckardt<br>
+    Franz-Philipp-Straße 9<br>
+    07937 Zeulenroda-Triebes<br>
+    <a href="mailto:&#x76;&#111;&#114;&#115;&#x74;&#97;&#110;&#100;&#64;&#x6e;&#x61;&#x62;&#117;&#x2d;&#x67;&#101;&#x72;&#x61;&#45;&#103;&#x72;&#x65;&#105;&#x7a;&#46;&#x64;&#x65;">&#x76;&#x6f;&#x72;&#115;&#116;&#x61;&#x6e;&#x64;&#64;&#x6e;&#x61;&#x62;&#117;&#x2d;&#103;&#x65;&#114;&#x61;&#x2d;&#x67;&#114;&#101;&#x69;&#x7a;&#46;&#x64;&#101;</a>
+  </p>
 
+  <?php /*
   <h4 class="title has-text-weight-bold has-text-grey mt-6">Termine</h4>
   <script src="https://www.nabu.de/modules/termindb/aktuelle_termine_ohne_kalender.html?js=true&termine_anzahl=5&termine_plz_von=07545&termine_plz_bis=07990"></script>
+  */ ?>
 
 </div>

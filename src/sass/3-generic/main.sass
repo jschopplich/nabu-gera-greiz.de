@@ -1,10 +1,7 @@
-.container.is-main
+.content-wrapper
   display: grid
   grid-template-columns: 1fr
   gap: 6rem
-  +mobile
-    .content.is-side
-      display: none
   +tablet
     grid-template-columns: 1fr auto
 
@@ -117,12 +114,14 @@
 // Sidebar
 
 .content.is-side
+  +mobile
+    display: none
+
   p
     font-size: $size-small
 
   .link-shape
     max-width: 10rem
-    margin-bottom: 1.5rem
     text-align: right
     a
       display: block

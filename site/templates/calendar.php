@@ -7,7 +7,7 @@ use Kirby\Data\Json;
 <?php snippet('header') ?>
 
 <div class="section">
-  <div class="container is-main">
+  <div class="content-wrapper container">
     <div class="content is-main">
 
       <?php snippet('intro') ?>
