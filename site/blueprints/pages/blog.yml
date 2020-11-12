@@ -38,7 +38,7 @@ tabs:
     label: Inhalt
     icon: page
     columns:
-      - width: 1/3
+      - width: 2/3
         sections:
           main:
             type: fields
@@ -60,7 +60,7 @@ tabs:
                 label: Text
                 type: markdown
 
-      - width: 2/3
+      - width: 1/3
         sections:
           cover: sections/cover
           excerpts:
