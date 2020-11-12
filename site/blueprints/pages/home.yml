@@ -13,7 +13,7 @@ tabs:
     label: Inhalt
     icon: document
     columns:
-      - width: 1/2
+      - width: 1/3
         sections:
           main:
             type: fields
@@ -28,7 +28,7 @@ tabs:
                 label: Text nach Newsfeed
                 type: markdown
 
-      - width: 1/2
+      - width: 2/3
         sections:
           sidebar:
             type: fields
