@@ -5,41 +5,40 @@
 
     <div class="is-hidden-tablet">
       <?php foreach ($articles as $article): ?>
-      <div class="media box" data-animere="slideInUp">
-        <div class="media-left">
-          <a href="<?= $article->url() ?>">
-            <?php if ($image = $article->images()->first()): ?>
-              <figure class="image is-96x96">
-                <img class="has-border-radius" src="<?= $image->crop(96, 96, 'center')->url() ?>" alt="">
-              </figure>
-            <?php else: ?>
-              <span class="icon is-large has-text-white-ter">
-                <span class="fas fa-2x fa-newspaper" aria-hidden="true"></span>
-              </span>
-            <?php endif ?>
-          </a>
-        </div>
+        <div class="media box" data-animere="slideInUp">
+          <div class="media-left">
+            <a href="<?= $article->url() ?>">
+              <?php if ($image = $article->images()->first()): ?>
+                <figure class="image is-96x96">
+                  <img class="has-border-radius" src="<?= $image->crop(96, 96, 'center')->url() ?>" alt="">
+                </figure>
+              <?php else: ?>
+                <span class="icon is-large has-text-white-ter">
+                  <span class="fas fa-2x fa-newspaper" aria-hidden="true"></span>
+                </span>
+              <?php endif ?>
+            </a>
+          </div>
 
-        <div class="media-content">
-          <span class="tag has-mb-small"><?= strftime('%e. %B %Y', $article->date()->toDate()) ?></span>
-          <p class="title is-5">
-            <a href="<?= $article->url() ?>"><?= $article->title() ?></a>
-          </p>
-          <?php if ($article->subtitle()->isNotEmpty()): ?>
-            <p class="subtitle is-6 has-text-grey-light"><?= $article->subtitle() ?></p>
-          <?php endif ?>
+          <div class="media-content">
+            <span class="tag has-mb-small"><?= $article->date()->toDate('%e. %B %Y') ?></span>
+            <p class="title is-5">
+              <a href="<?= $article->url() ?>"><?= $article->title() ?></a>
+            </p>
+            <?php if ($article->subtitle()->isNotEmpty()): ?>
+              <p class="subtitle is-6 has-text-grey-light"><?= $article->subtitle() ?></p>
+            <?php endif ?>
+          </div>
         </div>
-      </div>
       <?php endforeach ?>
     </div>
 
     <div class="columns is-centered is-multiline is-hidden-mobile">
       <?php foreach ($articles as $article): ?>
-      <div class="column is-4" data-animere="fadeIn">
-        <div class="card">
+        <div class="column is-4" data-animere="fadeIn">
+          <div class="card">
 
-          <div class="card-image">
-            <a href="<?= $article->url() ?>">
+            <div class="card-image">
               <?php if ($image = $article->images()->first()): ?>
                 <figure class="image is-3by2">
                   <img src="<?= $image->crop(360, 240, 'center')->url() ?>" alt="<?= $article->title() ?>">
@@ -51,21 +50,20 @@
                   </span>
                 </figure>
               <?php endif ?>
-            </a>
-          </div>
+            </div>
 
-          <div class="card-content">
-            <span class="tag has-mb-normal"><?= strftime('%e. %B %Y', $article->date()->toDate()) ?></span>
-            <p class="title is-4 is-hyphenated">
-              <a href="<?= $article->url() ?>"><?= $article->title() ?></a>
-            </p>
-            <?php if ($article->subtitle()->isNotEmpty()): ?>
-              <p class="subtitle is-6 has-text-grey"><?= $article->subtitle() ?></p>
-            <?php endif ?>
-          </div>
+            <div class="card-content">
+              <span class="tag has-mb-normal"><?= strftime('%e. %B %Y', $article->date()->toDate()) ?></span>
+              <p class="title is-4 is-hyphenated">
+                <a class="stretched-link" href="<?= $article->url() ?>"><?= $article->title() ?></a>
+              </p>
+              <?php if ($article->subtitle()->isNotEmpty()): ?>
+                <p class="subtitle is-6 has-text-grey"><?= $article->subtitle() ?></p>
+              <?php endif ?>
+            </div>
 
+          </div>
         </div>
-      </div>
       <?php endforeach ?>
     </div>
 
