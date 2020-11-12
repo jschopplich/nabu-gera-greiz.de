@@ -4,6 +4,3 @@ sections:
   filesTab:
     type: files
     headline: Dateien
-    template: file
-    layout: cards
-    size: small

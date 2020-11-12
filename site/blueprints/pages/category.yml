@@ -11,13 +11,13 @@ columns:
   - width: 1/2
     sections:
       drafts:
-        extends: sections/pages
+        type: pages
         headline: Entwürfe
         status: draft
         template: default
 
       unlisted:
-        extends: sections/pages
+        type: pages
         headline: Ungelistet
         status: unlisted
         template: default
@@ -25,7 +25,6 @@ columns:
   - width: 1/2
     sections:
       listed:
-        extends: sections/pages
+        type: pages
         headline: Veröffentlicht
         status: listed
-        layout: cards

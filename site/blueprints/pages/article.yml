@@ -1,11 +1,8 @@
 title: Artikel
 
-preset: page
-pages: false
-
 num: "{{ page.date.toDate('%Y%m%d') }}"
 
-icon: 📄
+icon: 📝
 
 status:
   draft:
@@ -18,25 +15,38 @@ status:
     label: Veröffentlicht
     text: Der Artikel ist öffentlich sichtbar
 
-fields:
-  subtitle:
-    label: Untertitel
-    type: text
+tabs:
+  page:
+    label: Inhalt
+    icon: page
+    columns:
+      - width: 1/2
+        sections:
+          main:
+            type: fields
+            fields:
+              subtitle:
+                label: Untertitel
+                type: text
+              text:
+                label: Text
+                type: markdown
 
-  text:
-    label: Text
-    type: markdown
+      - width: 1/2
+        sections:
+          sidebar:
+            type: fields
+            fields:
+              date:
+                type: fields
+                fields:
+                  date:
+                    label: Datum
+                    type: date
+                    time: false
+                    default: now
+                    required: true
 
-sidebar:
-  date:
-    type: fields
-    fields:
-      date:
-        label: Datum
-        type: date
-        time: false
-        default: now
-        required: true
+          meta: sections/meta
 
-  files: sections/files
-  meta: sections/meta
+  files: tabs/files

@@ -39,7 +39,7 @@
               <div class="columns is-vcentered">
                 <div class="column is-narrow">
                   <figure class="cover-hero-image image" data-animere="fadeInLeft">
-                    <img src="<?= url('assets/images/logo.svg') ?>" alt="<?= $site->author() ?>" title="<?= $site->author() ?>">
+                    <img src="<?= url('assets/img/logo.svg') ?>" alt="<?= $site->author() ?>" title="<?= $site->author() ?>">
                   </figure>
                 </div>
                 <div class="column has-text-centered-mobile">
@@ -75,7 +75,7 @@
           <div class="cover-logo">
             <a href="<?= url() ?>" rel="home">
               <figure class="image">
-                <img src="<?= url('assets/images/logo.svg') ?>" alt="<?= $site->author() ?>">
+                <img src="<?= url('assets/img/logo.svg') ?>" alt="<?= $site->author() ?>">
               </figure>
             </a>
           </div>

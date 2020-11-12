@@ -1,14 +1,10 @@
 <?php
 
-return function ($page) {
+return function ($kirby, $page) {
+    $perpage  = $page->perPage()->int() ?? 6;
+    $articles = $kirby->collection('articles');
 
-  $perpage  = $page->perPage()->int();
-  $articles = page('aktuelles')->children()->listed()->filterBy('template', 'article')->sortBy(function ($subpage) {
-    return $subpage->date()->toDate();
-  }, 'desc')->paginate(($perpage >= 1) ? $perpage : 6);
-
-  return [
-    'articles' => $articles
-  ];
-
+    return [
+        'articles' => $articles->paginate($perpage)
+    ];
 };

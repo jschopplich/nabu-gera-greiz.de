@@ -1,15 +1,16 @@
 <?php
 
 return function ($page) {
+    $perpage  = $page->perPage()->int() ?? 6;
+    $articles = $page
+        ->children()
+        ->listed()
+        ->filterBy('template', 'article')
+        ->sortBy(fn($child) => $child->date()->toDate(), 'desc')
+        ->paginate($perpage);
 
-  $perpage  = $page->perPage()->int();
-  $articles = $page->children()->listed()->filterBy('template', 'article')->sortBy(function ($subpage) {
-    return $subpage->date()->toDate();
-  }, 'desc')->paginate(($perpage >= 1) ? $perpage : 6);
-
-  return [
-    'articles'   => $articles,
-    'pagination' => $articles->pagination()
-  ];
-
+    return [
+        'articles'   => $articles,
+        'pagination' => $articles->pagination()
+    ];
 };

@@ -1,16 +1,39 @@
 title: Seite
-preset: page
 
-fields:
-  intro:
-    label: Intro
-    type: text
-  text:
-    label: Text
-    type: markdown
+icon: 📄
 
-sidebar:
-  pages: sections/pages
-  files: sections/files
-  cover: sections/cover
-  navMeta: sections/navMeta
+tabs:
+  page:
+    label: Inhalt
+    icon: page
+    columns:
+      - width: 1/2
+        sections:
+          main:
+            type: fields
+            fields:
+              navIcon:
+                label: Menü-Icon
+                type: text
+                icon: smile
+                width: 1/2
+              navDescription:
+                label: Menü-Beschreibung
+                type: textarea
+                buttons: false
+                icon: quote
+                width: 1/2
+              intro:
+                label: Intro
+                type: text
+              text:
+                label: Text
+                type: markdown
+
+      - width: 1/2
+        sections:
+          sidebar:
+            pages: sections/pages
+            cover: sections/cover
+
+  files: tabs/files

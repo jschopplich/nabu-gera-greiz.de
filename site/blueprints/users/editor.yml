@@ -1,6 +1,6 @@
 title: Redakteur
-description: Alle Rechte für redaktionelle Bearbeitung
-extends: users/admin
+
+description: Hat Zugriff auf alle Artikel und Seiten.
 
 permissions:
   access:
@@ -11,3 +11,7 @@ permissions:
     deleteAvatar: false
     changeRole: false
     delete: false
+
+sections:
+  info:
+    text: Es müssen keine Nutzerinformationen bearbeitet werden.

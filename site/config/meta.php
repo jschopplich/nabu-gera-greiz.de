@@ -1,31 +1,29 @@
 <?php
 
 return function ($page, $site) {
-    if ($page->isHomePage()) {
-        $metaTitle       = $site->homePage()->metaTitle()->value();
-        $metaDescription = $site->homePage()->metaDescription()->value();
-    } else {
-        $metaTitle       = r($page->metaTitle()->isNotEmpty(), $page->metaTitle()->value(), $page->title()->value() . ' — ' . $site->title()->value());
-        $metaDescription = r($page->metaDescription()->isNotEmpty(), $page->metaDescription()->value(), $site->homePage()->metaDescription()->value());
-    }
-    $metaImage = $page->metaImage()->isNotEmpty() && $page->metaImage()->toFile() ? $page->metaImage()->toFile()->resize(1280)->url() : url('assets/images/meta-image.jpg');
+    $metaTitle = $page->metaTitle()->or($page->title() . ' – ' . $site->title())->value();
+    $metaDescription = $page->metaDescription()->or($site->metaDescription())->value();
+    $metaImage = (function () use ($page, $site) {
+        $file = $page->metaImage()->toFile() ?? $site->metaImage()->toFile();
+        return $file ? $file->resize(1280)->url() : '/assets/img/meta-image.jpg';
+    })();
 
     return [
         'title' => $metaTitle,
         'meta' => [
             'description' => $metaDescription,
+            'theme-color' => '#ffffff',
             'apple-mobile-web-app-capable' => 'yes',
             'apple-mobile-web-app-status-bar-style' => 'default',
-            'apple-mobile-web-app-title' => env('APP_NAME', $site->title()->value()),
-            'theme-color' => '#ffffff'
+            'apple-mobile-web-app-title' => $site->title()->value()
         ],
         'link' => [
             'canonical' => $page->url(),
-            'apple-touch-icon' => ['href' => '/assets/images/icons/apple-touch-icon.png', 'sizes' => '180x180'],
             'manifest' => '/manifest.json',
+            'apple-touch-icon' => ['href' => '/assets/img/icons/apple-touch-icon.png', 'sizes' => '180x180'],
             'icon' => [
-                ['href' => '/assets/images/icons/favicon-32x32.png', 'sizes' => '32x32', 'type' =>'image/png'],
-                ['href' => '/assets/images/icons/favicon-16x16.png', 'sizes' => '16x16', 'type' =>'image/png']
+                ['href' => '/assets/img/icons/favicon-32x32.png', 'sizes' => '32x32', 'type' =>'image/png'],
+                ['href' => '/assets/img/icons/favicon-16x16.png', 'sizes' => '16x16', 'type' =>'image/png']
             ]
         ],
         'og' => [
@@ -36,7 +34,7 @@ return function ($page, $site) {
             'image' => $metaImage
         ],
         'twitter' => [
-            'card' => 'summary',
+            'card' => 'summary_large_image',
             'url' => $page->url(),
             'title' => $metaTitle,
             'description' => $metaDescription,
@@ -56,7 +54,7 @@ return function ($page, $site) {
                 'name' => $site->title()->value(),
                 'legalName' => $site->author()->value(),
                 'url' => $site->url(),
-                'logo' => url('assets/images/logo.svg'),
+                'logo' => url('assets/img/logo.svg'),
                 'foundingDate' => '2004',
                 'contactPoint' => [
                     '@type' => 'ContactPoint',

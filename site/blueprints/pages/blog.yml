@@ -1,6 +1,6 @@
 title: Blog
 
-icon: 📝
+icon: 📚
 
 options:
   changeSlug: false
@@ -11,7 +11,7 @@ options:
 tabs:
   articles:
     label: Artikel
-    icon: draft
+    icon: book
     columns:
       - width: 1/2
         sections:
@@ -35,32 +35,47 @@ tabs:
             size: tiny
 
   content:
-    label: Seite
+    label: Inhalt
     icon: page
-    preset: page
-    pages: false
+    columns:
+      - width: 1/2
+        sections:
+          main:
+            type: fields
+            fields:
+              navIcon:
+                label: Menü-Icon
+                type: text
+                icon: smile
+                width: 1/2
+              navDescription:
+                label: Menü-Beschreibung
+                type: textarea
+                buttons: false
+                icon: quote
+                width: 1/2
+              intro:
+                label: Intro
+                type: text
+              text:
+                label: Text
+                type: markdown
 
-    fields:
-      intro:
-        label: Intro
-        type: text
-      text:
-        label: Text
-        type: markdown
+      - width: 1/2
+        sections:
 
     sidebar:
-      files: sections/files
       cover: sections/cover
-
       excerpts:
         type: fields
         fields:
           perPage:
-            label: Artikelauszüge
+            label: Anzahl Artikel
             type: number
             default: 4
             min: 1
             max: 20
-
       meta: sections/meta
       navMeta: sections/navMeta
+
+  files: tabs/files

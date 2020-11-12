@@ -1,7 +1,7 @@
 type: fields
 fields:
   coverImage:
-    label: Cover
+    label: Kopfzeilenbild
     type: files
+    query: site.files.filterBy('template', 'image')
     multiple: false
-    query: site.images

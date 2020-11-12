@@ -1,96 +1,104 @@
 title: Veranstaltungen
 
-preset: page
-pages: false
-
 icon: 📅
 
-fields:
-  intro:
-    label: Intro
-    type: text
-  textBeforeCalendar:
-    label: Text vor Kalender
-    type: markdown
-  calendar:
-    label: Kalender
-    type: structure
+tabs:
+  page:
+    label: Inhalt
+    icon: document
     columns:
-      eventStarts:
-        width: 1/2
-      eventTitle:
-        width: 1/2
-    fields:
-      eventTitle:
-        label: Titel
-        type: text
-        required: true
-      eventDateOption:
-        label: Auswahl des Datumsformats
-        type: radio
-        columns: 2
-        options:
-          date: Nur ein Tag
-          interval: Zeitintervall
-        default: date
-      eventStarts:
-        label: Datum
-        type: date
-        time: true
-        when:
-          eventDateOption: date
-      eventIntervalStarts:
-        label: Startdatum
-        type: date
-        width: 1/2
-        when:
-          eventDateOption: interval
-      eventIntervalEnds:
-        label: Enddatum
-        type: date
-        width: 1/2
-        when:
-          eventDateOption: interval
-      eventOrganizer:
-        label: Veranstalter
-        type: textarea
-        buttons: false
-        width: 1/2
-      eventReferent:
-        label: Referent
-        type: textarea
-        buttons: false
-        width: 1/2
-      eventLocation:
-        label: Veranstaltungsort
-        type: textarea
-        buttons: false
-        width: 1/2
-        required: true
-      eventDescription:
-        label: Weitere Beschreibung
-        type: textarea
-        buttons: false
-        width: 1/2
-      eventHasPrice:
-        label: Eintritt/Beitrag
-        type: toggle
-        text:
-          - kostenlos
-          - kostenpflichtig
-        width: 1/2
-      eventPrice:
-        label: Preis
-        type: textarea
-        buttons: false
-        width: 1/2
-        when:
-          eventHasPrice: true
-  textAfterCalendar:
-    label: Text nach Kalender
-    type: markdown
+      - width: 1/2
+        sections:
+          main:
+            type: fields
+            fields:
+              intro:
+                label: Intro
+                type: text
+              textBeforeCalendar:
+                label: Text vor Kalender
+                type: markdown
+              calendar:
+                label: Kalender
+                type: structure
+                columns:
+                  eventStarts:
+                    width: 1/2
+                  eventTitle:
+                    width: 1/2
+                fields:
+                  eventTitle:
+                    label: Titel
+                    type: text
+                    required: true
+                  eventDateOption:
+                    label: Auswahl des Datumsformats
+                    type: radio
+                    columns: 2
+                    options:
+                      date: Nur ein Tag
+                      interval: Zeitintervall
+                    default: date
+                  eventStarts:
+                    label: Datum
+                    type: date
+                    time: true
+                    when:
+                      eventDateOption: date
+                  eventIntervalStarts:
+                    label: Startdatum
+                    type: date
+                    width: 1/2
+                    when:
+                      eventDateOption: interval
+                  eventIntervalEnds:
+                    label: Enddatum
+                    type: date
+                    width: 1/2
+                    when:
+                      eventDateOption: interval
+                  eventOrganizer:
+                    label: Veranstalter
+                    type: textarea
+                    buttons: false
+                    width: 1/2
+                  eventReferent:
+                    label: Referent
+                    type: textarea
+                    buttons: false
+                    width: 1/2
+                  eventLocation:
+                    label: Veranstaltungsort
+                    type: textarea
+                    buttons: false
+                    width: 1/2
+                    required: true
+                  eventDescription:
+                    label: Weitere Beschreibung
+                    type: textarea
+                    buttons: false
+                    width: 1/2
+                  eventHasPrice:
+                    label: Eintritt/Beitrag
+                    type: toggle
+                    text:
+                      - kostenlos
+                      - kostenpflichtig
+                    width: 1/2
+                  eventPrice:
+                    label: Preis
+                    type: textarea
+                    buttons: false
+                    width: 1/2
+                    when:
+                      eventHasPrice: true
+              textAfterCalendar:
+                label: Text nach Kalender
+                type: markdown
 
-sidebar:
-  files: sections/files
-  cover: sections/cover
-  meta: sections/meta
+      - width: 1/2
+        sections:
+          cover: sections/cover
+          meta: sections/meta
+
+  files: tabs/files
