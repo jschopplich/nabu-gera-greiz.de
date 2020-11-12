@@ -10,10 +10,10 @@ tabs:
           blog:
             type: pages
             headline: Aktuelles
-            status: all
-            parent: kirby.page("aktuelles")
-            sortBy: date desc
+            parent: kirby.page('aktuelles')
             template: article
+            status: all
+            sortBy: date desc
             info: "{{ page.date.toDate('%d.%m.%Y') }}"
             layout: cards
             image:
@@ -84,10 +84,11 @@ tabs:
                 type: text
                 icon: user
                 required: true
-              meta:
-                extends: sections/meta
-                fields:
-                  metaImage:
-                    query: site.files.filterBy('template', 'image')
+
+          meta:
+            extends: sections/meta
+            fields:
+              metaImage:
+                query: site.files.filterBy('template', 'image')
 
   images: tabs/images

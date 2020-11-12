@@ -32,8 +32,7 @@ tabs:
 
       - width: 1/2
         sections:
-          sidebar:
-            pages: sections/pages
-            cover: sections/cover
+          pages: sections/pages
+          cover: sections/cover
 
   files: tabs/files

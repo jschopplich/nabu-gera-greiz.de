@@ -7,3 +7,5 @@ sections:
     template: image
     layout: cards
     size: tiny
+    image:
+      back: white
