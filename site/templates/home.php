@@ -3,7 +3,7 @@
 <div class="section is-home pt-6">
   <div class="container">
     <section class="content is-main">
-      <h2 class="title is-3 has-text-weight-bold mb-5"><?= $page->intro()->html() ?></h2>
+      <h2 class="title is-1 has-text-weight-bold"><?= $page->intro()->html() ?></h2>
       <?= $page->textBeforeListing()->kt() ?>
     </section>
   </div>
