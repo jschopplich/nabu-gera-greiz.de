@@ -3,37 +3,30 @@
     padding-right: 0.75rem
     padding-left: 0.75rem
 
-.section.is-article-cards
+.section.is-article-list
   .media
     position: relative
     align-items: center
     & + .media
       border-top: 0
 
-    .media-left
-      .image, .icon
-        margin-left: 0
-        margin-right: 1rem
-      .icon
-        width: 96px
+  .media-left
+    .icon
+      width: 96px
+    .image
+      img
+        border-radius: $radius
 
-    .media-content
-      overflow-x: unset
+  .media-content
+    overflow-x: unset
 
   .card
     @extend %box
     position: relative
-    transition: transform 150ms ease-in-out
-    &:hover,
-    &:focus
+    transition: box-shadow 150ms ease-in-out, transform 150ms ease-in-out
+    &:hover
       transform: translateY(-2px)
 
   .card-image
     img
       border-radius: $radius-large $radius-large 0 0
-
-  .card-icon
-    padding: 3rem
-
-    svg
-      width: 100%
