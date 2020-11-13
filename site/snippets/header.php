@@ -36,7 +36,7 @@
               <img class="has-ratio" src="<?= $image->resize(960)->url() ?>" alt="<?= $image->caption()->or($image->alt())->html() ?>">
             </figure>
 
-            <div class="section cover-hero"<?php e($page->isHomePage(), ' style="background-image: url(' . $image->resize(960)->url() . ');"') ?>>
+            <div class="section cover-hero"<?php e($page->isHomePage(), ' style="--cover: url(' . $image->resize(960)->url() . ');"') ?>>
               <div class="columns is-vcentered">
                 <div class="column is-narrow">
                   <figure class="cover-hero-image image" data-animere="fadeInLeft">

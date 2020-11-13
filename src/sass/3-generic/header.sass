@@ -63,23 +63,23 @@
 .header.is-home
   +desktop
     margin-top: 3rem
+
   > .container
     box-shadow: $shadow-navbar
+
+  > .container,
+  .cover-image img
+    +desktop
+      border-radius: $radius-large
 
   .cover
     +mobile
       // Compensate navbar height visually
       padding-top: 3.25rem
 
-  .cover-image
-    img
-      +desktop
-        border-radius: $radius-large
-
   .cover-hero
     +mobile
-      background-position: center
-      background-repeat: no-repeat
+      background: var(--cover) center no-repeat
       background-size: cover
     +tablet
       position: absolute
