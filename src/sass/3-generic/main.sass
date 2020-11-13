@@ -63,10 +63,12 @@
   .image-box
     border-radius: $radius
     box-shadow: $shadow-box
+    padding: 0.25rem
+
     img
       display: block
       margin: 0 auto
-      border-radius: $radius !important
+      border-radius: $radius
 
     figcaption p
       font-size: $size-small !important
@@ -80,20 +82,16 @@
         padding: 0.5rem 1rem
 
   .image-hero
+    margin-left: -1.5rem
     margin-right: -1.5rem
-    margin-right: -1.5rem
-    padding: 0.25rem
-    +tablet
-      margin-right: -2rem
+    +desktop
       margin-left: -2rem
+      margin-right: -2rem
 
   .image-box
-    padding: 0.25rem
     +mobile
       float: none !important
-
-  +tablet
-    .image-box
+    +tablet
       width: calc(320px + 0.5rem)
       &.vertical
         width: calc(220px + 0.5rem)
