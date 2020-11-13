@@ -44,8 +44,8 @@
                   </figure>
                 </div>
                 <div class="column has-text-centered-mobile">
-                  <h1 class="title is-1 has-text-weight-bold has-text-white">Weil unsere Heimatnatur zu bewahren ist.</h1>
-                  <h2 class="subtitle is-3 has-text-white">Wir setzen uns für den Erhalt der Natur im Landkreis Greiz und Gera ein.</h2>
+                  <h1 class="title is-1 is-size-3-mobile has-text-weight-bold has-text-white">Weil unsere Heimatnatur zu bewahren ist.</h1>
+                  <h2 class="subtitle is-3 is-size-5-mobile has-text-white">Wir setzen uns für den Erhalt der Natur im Landkreis Greiz und Gera ein.</h2>
                   <a href="#aktuelles" class="button is-primary is-medium" role="button">Aktuelle Beiträge</a>
                 </div>
               </div>

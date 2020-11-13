@@ -3,7 +3,7 @@
 <div class="section is-home pt-6">
   <div class="container">
     <section class="content is-main">
-      <h2 class="title is-1 has-text-weight-bold"><?= $page->intro()->html() ?></h2>
+      <h2 class="title is-1 is-size-2-mobile has-text-weight-bold"><?= $page->intro()->html() ?></h2>
       <?= $page->textBeforeListing()->kt() ?>
     </section>
   </div>
@@ -11,7 +11,7 @@
 
 <div class="section is-article-list has-background-white-bis">
   <div class="container">
-    <h2 id="aktuelles" class="title is-3 has-text-weight-bold has-text-centered mb-6">
+    <h2 id="aktuelles" class="title is-3 is-size-4-mobile has-text-weight-bold has-text-centered mb-6">
       Aktuelle Beiträge
     </h2>
 
