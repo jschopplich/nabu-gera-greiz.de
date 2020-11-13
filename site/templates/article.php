@@ -4,11 +4,11 @@
   <div class="content-wrapper container">
     <div class="content is-main">
       <article class="mb-6">
-        <h1 class="title is-3 has-text-weight-bold">
+        <h1 class="title is-2 has-text-weight-bold">
           <?= $page->title()->html() ?>
         </h1>
         <?php if ($page->subtitle()->isNotEmpty()): ?>
-          <p class="subtitle is-5 has-text-grey">
+          <p class="subtitle is-4 has-text-grey">
             <?= $page->subtitle()->html() ?>
           </p>
         <?php endif ?>
@@ -22,7 +22,7 @@
       <?php snippet('prevnext') ?>
     </div>
 
-    <?php snippet('side') ?>
+    <?php snippet('sidebar') ?>
   </div>
 </div>
 

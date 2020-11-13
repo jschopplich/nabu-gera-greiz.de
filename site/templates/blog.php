@@ -39,7 +39,7 @@
       <?php snippet('pagination', ['pagination' => $pagination]) ?>
     </div>
 
-    <?php snippet('side') ?>
+    <?php snippet('sidebar') ?>
   </div>
 </div>
 

@@ -7,7 +7,7 @@
       <?= $page->text()->kirbytext() ?>
     </div>
 
-    <?php snippet('side') ?>
+    <?php snippet('sidebar') ?>
   </div>
 </div>
 

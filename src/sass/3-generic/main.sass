@@ -3,7 +3,7 @@
   grid-template-columns: 1fr
   gap: 6rem
   +tablet
-    grid-template-columns: 1fr auto
+    grid-template-columns: 1fr 10rem
 
 // Content
 
@@ -117,11 +117,7 @@
   +mobile
     display: none
 
-  p
-    font-size: $size-small
-
   .link-shape
-    max-width: 10rem
     text-align: right
     a
       display: block
@@ -134,9 +130,9 @@
       font-weight: 300
       color: $link
       background-color: $white
-      padding: 0.25em 0.5em
       border-top-left-radius: $radius
       border-bottom-left-radius: $radius
+      padding: 0.25em 0.5em
     a:focus p,
     a:hover p
       color: $white
