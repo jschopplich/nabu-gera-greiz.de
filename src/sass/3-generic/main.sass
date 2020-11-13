@@ -13,8 +13,10 @@
 
   p:not(.title):not(.subtitle),
   li
-    font-size: 1.125rem
     font-family: $family-secondary
+    line-height: calc(1ex / 0.32)
+    +tablet
+      font-size: 1.125rem
 
   // Lines
 
@@ -59,6 +61,12 @@
 
   // Images
 
+  figure
+    margin-left: 0
+    margin-right: 0
+    img
+      border-radius: $radius
+
   .image-hero,
   .image-box
     border-radius: $radius
@@ -68,18 +76,18 @@
     img
       display: block
       margin: 0 auto
-      border-radius: $radius
 
     figcaption p
       font-size: $size-small !important
       font-style: normal
       text-align: left
-      padding: 0.75rem 1.5rem
+      padding: 0.5rem
       overflow-wrap: break-word
       -webkit-hyphens: auto
       hyphens: auto
       +tablet
-        padding: 0.5rem 1rem
+        padding-left: 1rem
+        padding-right: 1rem
 
   .image-hero
     margin-left: -1.5rem
