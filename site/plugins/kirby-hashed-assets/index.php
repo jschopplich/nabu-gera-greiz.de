@@ -2,36 +2,40 @@
 
 use Kirby\Cms\App as Kirby;
 use Kirby\Cms\Url;
+use Kirby\Data\Json;
+use Kirby\Toolkit\F;
 use Kirby\Toolkit\Str;
 
 $handleAsset = function ($kirby, $url, $options, $extension) {
-    // Bail if URL is absolute and points to a foreign host
-    if (Url::isAbsolute($url) && !Str::startsWith($url, Url::stripPath())) {
+    // Bail if URL is absolute
+    if (Url::isAbsolute($url)) {
         return $url;
     }
 
-    $relativeUrl = Url::path($url);
+    $absolutePath = Url::path($url, true);
     $isAuto = $url === '@template';
+    $manifestPath = $kirby->root() . '/assets/manifest.json';
+    static $manifest = [];
 
-    // Add `*` pattern before extension to matching zero or more characters
-    $relativeUrl = Str::replace($relativeUrl, ".{$extension}", ".*{$extension}");
+    // Get the manifest contents
+    if (empty($manifest) && F::exists($manifestPath)) {
+        $manifest = Json::decode(F::read($manifestPath));
+    }
 
+    // Build path to template asset
     if ($isAuto) {
-        $relativeUrl = 'assets/' . $extension . '/templates/' . $kirby->site()->page()->template()->name() . '.*' . $extension;
+        $absolutePath = '/assets/' . $extension . '/templates/' . $kirby->site()->page()->template()->name() . '.' . $extension;
     }
 
-    // Try to find the file if glob pattern is used
-    $fileMatch = glob($kirby->root() . '/' . $relativeUrl);
-
-    // Make sure only one match was found
-    if (count($fileMatch) > 1 && option('debug')) {
-        throw new Exception("Multiple matches found. Make sure only one {$extension} file matches {$relativeUrl}.");
-    }
-
-    // Make sure the file was found
-    if (!empty($fileMatch)) {
-        $filePath = Str::ltrim($fileMatch[0], $kirby->root());
+    // Check if the unhashed file exists before looking it up in the manifest
+    if (F::exists($kirby->root() . $absolutePath)) {
+        $filePath = Str::ltrim($kirby->root() . $absolutePath, $kirby->root());
         return $filePath;
+    }
+
+    // Check if the manifest contains the given file
+    if (array_key_exists($absolutePath, $manifest)) {
+        return $manifest[$absolutePath];
     }
 
     return $url;

@@ -7,7 +7,7 @@
     "css:minify": "cleancss --output public/assets/css/main.css public/assets/css/main.css",
     "js:main": "rollup --config",
     "assets:hash": "node scripts/hashBuildAssets.js",
-    "dev": "npm run clean && concurrently \"npm run css:main -- --embed-source-map --watch\" \"npm run js:main -- --watch\"",
+    "dev": "concurrently \"npm run css:main -- --embed-source-map --watch\" \"npm run js:main -- --watch\"",
     "build": "npm run clean && npm run css:main -- --no-source-map && npm run css:minify && npm run js:main && npm run assets:hash",
     "test": "echo \"No test specified\"",
     "lint": "eslint \"src/js/**/*.js\""

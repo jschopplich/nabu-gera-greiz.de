@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <?= css([
     'assets/css/main.css',
-    'assets/fonts/SourceSerifPro/family.css',
     'https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,700;1,400;1,700&display=swap',
     'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'
   ]) ?>

@@ -3,8 +3,10 @@ import fs from 'fs'
 import fg from 'fast-glob'
 import crypto from 'crypto'
 
-const inputDir = 'public/assets'
+const rootDir = 'public'
+const inputDir = `${rootDir}/assets`
 const inputFiles = fg.sync(`${inputDir}/{css,js}/**/*.{css,js}`)
+const manifest = {}
 const hashedFilenameRegExp = /[.-]\w{8}\./
 
 /**
@@ -23,13 +25,17 @@ function createHash (path) {
 for (const filePath of inputFiles) {
   const dirname = path.dirname(filePath)
   const extension = path.extname(filePath)
-  let filename = path.basename(filePath)
+  const filename = path.basename(filePath)
 
   // Make sure file hasn't be renamed already or is a lazy rollup import
   if (hashedFilenameRegExp.test(filename)) continue
 
-  filename = filename.substring(0, filename.indexOf(extension))
   const hash = createHash(filePath)
-  const newFilePath = `${dirname}/${filename}.${hash}${extension}`
+  const newFilename = `${filename.substring(0, filename.indexOf(extension))}.${hash}${extension}`
+  const newFilePath = `${dirname}/${newFilename}`
   fs.renameSync(filePath, newFilePath)
+
+  manifest[filePath.slice(rootDir.length)] = newFilePath.slice(rootDir.length)
 }
+
+fs.writeFileSync(`${inputDir}/manifest.json`, JSON.stringify(manifest, null, 2))
