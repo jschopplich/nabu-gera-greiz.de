@@ -58,7 +58,7 @@
       +desktop
         width: 114px
 
-// Header for index page
+// Header for homepage
 
 .header.is-home
   +desktop
@@ -68,6 +68,7 @@
 
   .cover
     +mobile
+      // Compensate navbar height visually
       padding-top: 3.25rem
 
   .cover-image
@@ -77,27 +78,22 @@
 
   .cover-hero
     +mobile
-      padding: 4rem 1.5rem
       background-position: center
       background-repeat: no-repeat
       background-size: cover
     +tablet
       position: absolute
       top: 50%
-      left: 2rem
-      right: 25%
-      transform: translateY(-50%)
-      background-size: 0
-
-    .title,
-    .subtitle
-      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5)
+      left: 1.5rem
+      right: 1.5rem
+      transform: translateY(-25%)
+      background: unset
 
   .cover-hero-image
     width: 10rem
     height: 10rem
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%
     background-color: #fff
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%
     +mobile
       margin: 0 auto
     +desktop
@@ -108,3 +104,7 @@
       padding: 1.5rem
       +desktop
         padding: 2rem
+
+  .title,
+  .subtitle
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5)
