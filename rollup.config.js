@@ -34,7 +34,6 @@ const createOutput = path => {
     input: `${inputDir}/${path}`,
     output: {
       dir: isTemplate ? `${outputDir}/${templateDir}` : outputDir,
-      entryFileNames: production ? '[name].[hash].js' : '[name].js',
       format: 'es',
       sourcemap
     },
