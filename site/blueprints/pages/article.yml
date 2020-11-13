@@ -38,14 +38,11 @@ tabs:
             type: fields
             fields:
               date:
-                type: fields
-                fields:
-                  date:
-                    label: Datum
-                    type: date
-                    time: false
-                    default: now
-                    required: true
+                label: Datum
+                type: date
+                time: false
+                default: now
+                required: true
 
           meta: sections/meta
 
