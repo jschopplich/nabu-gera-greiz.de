@@ -33,15 +33,15 @@
   position: absolute
   background: hsla(0, 0%, 100%, 0.75)
   border: none
-  color: #333
+  color: $text
 
   &:hover
     background: white
     cursor: pointer
 
   &:focus
-    outline: none
-    box-shadow: 0 0 0 5px #1199ff
+    outline: 5px auto Highlight
+    outline: 5px auto -webkit-focus-ring-color
 
   &:active
     opacity: 0.6
@@ -52,13 +52,13 @@
     pointer-events: none
 
 .flickity-button-icon
-  fill: #333
+  fill: $text
 
 .flickity-prev-next-button
   top: 50%
-  width: 44px
-  height: 44px
-  border-radius: 50%
+  width: 2rem
+  height: 6rem
+  border-radius: $radius
   transform: translateY(-50%)
 
   &.previous
@@ -74,11 +74,8 @@
     height: 60%
 
 .flickity-page-dots
-  position: absolute
-  width: 100%
-  bottom: -25px
   padding: 0
-  margin: 0
+  margin: 0 !important
   list-style: none
   text-align: center
   line-height: 1
@@ -88,7 +85,7 @@
     width: 10px
     height: 10px
     margin: 0 8px
-    background: #333
+    background: $text
     border-radius: 50%
     opacity: 0.25
     cursor: pointer

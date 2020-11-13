@@ -1,8 +1,19 @@
 <?php
 
+load([
+    'KirbyExtended\\BlurryPlaceholder' => 'classes/KirbyExtended/BlurryPlaceholder.php',
+    'KirbyExtended\\BlurryPlaceholderHelpers' => 'classes/KirbyExtended/BlurryPlaceholderHelpers.php'
+], __DIR__);
+
 use Kirby\Cms\App as Kirby;
+use KirbyExtended\BlurryPlaceholder;
 
 Kirby::plugin('nabu-gera-greiz/kirby-tags', [
+    'fileMethods' => [
+        'placeholder' => fn() => BlurryPlaceholder::image($this),
+        'placeholderUri' => fn() => BlurryPlaceholder::uri($this)
+    ],
+
     'hooks' => [
         'kirbytags:before' => function ($text) {
             $text = str_replace('\(', '[[', str_replace('\)', ']]', $text));
@@ -18,17 +29,16 @@ Kirby::plugin('nabu-gera-greiz/kirby-tags', [
             return str_replace(']]', ')', str_replace('[[', '(', $text));
         }
     ],
-
     'tags' => [
-        'line'           => require __DIR__ . '/tags/line.php',
         'hr'             => require __DIR__ . '/tags/line.php',
+        'line'           => require __DIR__ . '/tags/line.php',
         'image'          => require __DIR__ . '/tags/image.php',
         'image-hero'     => require __DIR__ . '/tags/image-hero.php',
+        'image-hero-old' => require __DIR__ . '/tags/image-hero.php',
         'image-box'      => require __DIR__ . '/tags/image-box.php',
-        'image-hero-old' => require __DIR__ . '/tags/image-hero-old.php',
-        'image-box-old'  => require __DIR__ . '/tags/image-box-old.php',
+        'image-box-old'  => require __DIR__ . '/tags/image-box.php',
 
         // Not used anymore
-        'pdf' => require_once __DIR__ . '/tags/pdf.php'
+        'pdf' => require __DIR__ . '/tags/pdf.php'
     ]
 ]);

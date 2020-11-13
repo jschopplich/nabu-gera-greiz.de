@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'html' => function($tag) {
+    'html' => function ($tag) {
         return '<hr class="' . $tag->value . '">';
     }
 ];

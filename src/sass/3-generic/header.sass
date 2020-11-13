@@ -63,7 +63,7 @@
 
 .header.is-home
   +desktop
-    margin-top: 3rem
+    padding-top: 3rem
 
   > .container
     box-shadow: $shadow-navbar
@@ -73,9 +73,9 @@
     +desktop
       border-radius: $radius-large
 
+  // Compensate navbar height visually
   .cover
-    +mobile
-      // Compensate navbar height visually
+    +touch
       padding-top: 3.25rem
 
   .cover-hero

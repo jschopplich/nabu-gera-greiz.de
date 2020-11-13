@@ -56,9 +56,13 @@ return [
         'size'    => 'regular',
     ],
 
-    'kirbytext.image-hero.width' => '768',
-    'kirbytext.image-box.width' => '768',
-    'kirbytext.image-box.width-vertical' => '480',
+    'kirbytext.image-hero' => [
+        'width' => '768'
+    ],
+    'kirbytext.image-box' => [
+        'width' => '768',
+        'width-vertical' => '480'
+    ],
 
     'cre8ivclick.sitemapper' => [
         'title' => 'Sitemap'

@@ -1,4 +1,8 @@
 import Animere from 'animere'
+import { useLazyload } from './hooks/useLazyload'
+
+const lazyloading = useLazyload()
+lazyloading.observe()
 
 // eslint-disable-next-line no-unused-vars
 const animere = new Animere()

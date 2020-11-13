@@ -42,14 +42,14 @@
     font-weight: 300
 
   .arrow::after,
-  a[target="_blank"]:not(.pdf)::after
+  a[target="_blank"]:not([href$=".pdf"])::after
     content: "\f08e"
 
   a[href$=".pdf"]::before
     content: "\f1c1"
 
   .arrow,
-  a[target="_blank"]:not(.pdf)
+  a[target="_blank"]:not([href$=".pdf"])
     > svg
       margin-left: 0.25em
       margin-right: 0.125em
@@ -66,39 +66,39 @@
     margin-right: 0
     img
       border-radius: $radius
+    figcaption
+      font-style: normal
+
+  .image-hero,
+  .image-box,
+  .carousel
+    +mobile
+      margin-left: -1.5rem
+      margin-right: -1.5rem
 
   .image-hero,
   .image-box
     border-radius: $radius
     box-shadow: $shadow-box
     padding: 0.25rem
-
     img
       display: block
       margin: 0 auto
-
     figcaption p
       font-size: $size-small !important
-      font-style: normal
-      text-align: left
+      line-height: calc(1ex / 0.38) !important
       padding: 0.5rem
+      text-align: left
       overflow-wrap: break-word
       -webkit-hyphens: auto
       hyphens: auto
-      +tablet
-        padding-left: 1rem
-        padding-right: 1rem
 
   .image-hero
-    margin-left: -1.5rem
-    margin-right: -1.5rem
     +desktop
       margin-left: -2rem
       margin-right: -2rem
 
   .image-box
-    +mobile
-      float: none !important
     +tablet
       width: calc(320px + 0.5rem)
       &.vertical
@@ -106,12 +106,27 @@
       &.has-text-centered
         margin-right: auto
         margin-left: auto
-      &.is-pulled-right
+      &.is-floating-right
         margin-top: 0
         margin-left: 1.5em
-      &.is-pulled-left
+        float: right
+      &.is-floating-left
         margin-top: 0
         margin-right: 1.5em
+        float: left
+
+  // Flickity
+
+  .carousel
+    margin-bottom: 2em
+
+  .carousel-cell
+    top: 50%
+    width: 75%
+    margin: 0 1em 0 0 !important
+    transform: translateY(-50%)
+    img
+      border-radius: $radius
 
 // Sidebar
 

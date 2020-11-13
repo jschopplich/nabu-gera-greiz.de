@@ -1,5 +1,9 @@
 <?php
 
+use Kirby\Cms\Html;
+use Kirby\Cms\Url;
+use Kirby\Toolkit\A;
+
 return [
     'attr' => [
         'alt',
@@ -11,7 +15,6 @@ return [
         'linkclass',
         'rel',
         'target',
-        'text',
         'title',
         'width'
     ],
@@ -40,45 +43,42 @@ return [
                 'rel'    => $tag->rel,
                 'class'  => $tag->linkclass,
                 'target' => $tag->target
-          ]);
+            ]);
         };
 
-        // Replace `$tag->src` by a thumb if width or height are not null
-        if ($tag->file && ($tag->width || $tag->height)) {
-            // Backup data
-            $tag->orginal = new StdClass();
-            $tag->orginal->src    = $tag->src;
-            $tag->orginal->width  = $tag->file->width();
-            $tag->orginal->height = $tag->file->height();
-            $tag->src = $tag->file->thumb([
-                'width'  => $tag->width,
-                'height' => $tag->height,
-            ])->url();
-        } else {
-            $thumb = $tag->src;
-        }
-
-        if ($tag->file) {
-            // Backup data
-            $tag->orginal      = new StdClass();
-            $tag->orginal->src = $tag->src;
-            $tag->src = $tag->file->srcset('default');
-        }
-
-        $image = Html::img('', [
-            'srcset' => $tag->src,
+        $imageAttr = [
+            'width'  => $tag->width,
+            'height' => $tag->height,
             'class'  => $tag->imgclass,
             'title'  => $tag->title,
             'alt'    => $tag->alt ?? ' '
-        ]);
+        ];
+
+        if ($tag->file !== null) {
+            $dataUri = $tag->file->placeholderUri();
+            $useSrcset = $tag->kirby()->option('kirbytext.image.srcset', false);
+
+            $image = Html::img($dataUri, A::merge($imageAttr, [
+                'data-src' => !$useSrcset ? $tag->src : null,
+                'data-srcset' => $useSrcset ? $tag->file->srcset() : null,
+                'data-sizes' => $useSrcset ? 'auto' : null,
+                'data-lazyload' => 'true',
+            ]));
+        } else {
+            $image = Html::img($tag->src, $imageAttr);
+        }
 
         if ($tag->kirby()->option('kirbytext.image.figure', true) === false) {
             return $link($image);
         }
 
+        // render KirbyText in caption
+        if ($tag->caption) {
+            $tag->caption = [$tag->kirby()->kirbytext($tag->caption, [], true)];
+        }
+
         return Html::figure([$link($image)], $tag->caption, [
             'class' => $tag->class
         ]);
-
     }
 ];
