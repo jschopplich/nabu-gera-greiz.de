@@ -15,6 +15,7 @@ return [
         'linkclass',
         'rel',
         'target',
+        'text',
         'title',
         'width'
     ],
@@ -73,8 +74,9 @@ return [
         }
 
         // render KirbyText in caption
-        if ($tag->caption) {
-            $tag->caption = [$tag->kirby()->kirbytext($tag->caption, [], true)];
+        if ($tag->caption || $tag->text) {
+            // $tag->caption = [$tag->kirby()->kirbytext($tag->caption ?? $tag->text, [], true)];
+            $tag->caption = [Html::tag('p', [$tag->caption ?? $tag->text])];
         }
 
         return Html::figure([$link($image)], $tag->caption, [
