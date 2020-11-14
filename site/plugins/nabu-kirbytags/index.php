@@ -31,13 +31,14 @@ Kirby::plugin('nabu-gera-greiz/kirby-tags', [
     ],
 
     'tags' => [
-        'hr'             => require __DIR__ . '/tags/line.php',
-        'line'           => require __DIR__ . '/tags/line.php',
         'image'          => require __DIR__ . '/tags/image.php',
         'image-hero'     => require __DIR__ . '/tags/image-hero.php',
         'image-hero-old' => require __DIR__ . '/tags/image-hero.php',
         'image-box'      => require __DIR__ . '/tags/image-box.php',
         'image-box-old'  => require __DIR__ . '/tags/image-box.php',
+        'hr'             => require __DIR__ . '/tags/line.php',
+        'line'           => require __DIR__ . '/tags/line.php',
+        'link'           => require __DIR__ . '/tags/link.php',
 
         // Not used anymore
         'pdf' => require __DIR__ . '/tags/pdf.php'
