@@ -9,7 +9,7 @@ return [
     'html' => function ($tag) {
         $tag->file = kirby()->file('documents/' . $tag->value);
 
-        if (empty($tag->text) === true) {
+        if (empty($tag->text)) {
             $tag->text = str_replace('_', '\_', $tag->file->filename());
         }
 

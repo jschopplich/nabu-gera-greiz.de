@@ -2,7 +2,7 @@
 
 <div class="section">
   <div class="content-wrapper container">
-    <div class="content is-main is-old-blog">
+    <div class="content is-main is-old-format">
       <?php snippet('intro') ?>
       <?= $page->text()->kirbytext() ?>
     </div>

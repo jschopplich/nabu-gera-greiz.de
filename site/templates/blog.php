@@ -13,26 +13,27 @@
         <?php endif ?>
 
         <?php foreach ($articles as $article): ?>
-
           <article>
-            <h2 class="title is-3 has-text-weight-bold">
-              <a href="<?= $article->url() ?>"><?= $article->title()->html() ?></a>
-            </h2>
-            <?php if ($article->subtitle()->isNotEmpty()): ?>
-              <p class="subtitle is-5 has-text-grey">
-                <?= $article->subtitle()->html() ?>
-              </p>
-            <?php endif ?>
+            <div class="mb-5">
+              <h2 class="title is-3 is-size-4-mobile has-text-weight-bold">
+                <a href="<?= $article->url() ?>"><?= $article->title()->html() ?></a>
+              </h2>
 
-            <span class="tag mb-4">
-              <time datetime="<?= $article->date('c') ?>"><?= strftime('%e. %B %Y', $article->date()->toDate()) ?></time>
-            </span>
+              <?php if ($article->subtitle()->isNotEmpty()): ?>
+                <p class="subtitle is-5 is-size-6-mobile has-text-grey">
+                  <?= $article->subtitle()->html() ?>
+                </p>
+              <?php endif ?>
+
+              <span class="tag">
+                <time datetime="<?= $article->date('c') ?>"><?= strftime('%e. %B %Y', $article->date()->toDate()) ?></time>
+              </span>
+            </div>
 
             <?= $article->text()->kirbytext() ?>
 
             <hr class="wide">
           </article>
-
         <?php endforeach ?>
       </div>
 

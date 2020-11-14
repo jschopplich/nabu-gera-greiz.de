@@ -29,6 +29,7 @@ Kirby::plugin('nabu-gera-greiz/kirby-tags', [
             return str_replace(']]', ')', str_replace('[[', '(', $text));
         }
     ],
+
     'tags' => [
         'hr'             => require __DIR__ . '/tags/line.php',
         'line'           => require __DIR__ . '/tags/line.php',
