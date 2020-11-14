@@ -1,18 +1,9 @@
-title: Partner
+title: Partnerlogo
 
 accept:
   mime: image/*
 
 columns:
-  - width: 1/2
-    sections:
-      content:
-        type: fields
-        fields:
-          alt:
-            label: Alternativer Text
-            type: text
-
   - width: 1/2
     sections:
       meta:
@@ -21,3 +12,12 @@ columns:
           link:
             label: Link
             type: url
+
+  - width: 1/2
+    sections:
+      content:
+        type: fields
+        fields:
+          alt:
+            label: Alternativer Text
+            type: text

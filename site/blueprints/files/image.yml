@@ -12,7 +12,6 @@ columns:
           caption:
             label: Bildunterschrift
             type: textarea
-            size: medium
 
   - width: 1/2
     sections:

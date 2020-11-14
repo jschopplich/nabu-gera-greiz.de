@@ -14,13 +14,17 @@ columns:
         type: pages
         headline: Entwürfe
         status: draft
-        template: default
+        templates:
+          - default
+          - blog
 
       unlisted:
         type: pages
         headline: Ungelistet
         status: unlisted
-        template: default
+        templates:
+          - default
+          - blog
 
   - width: 2/3
     sections:
