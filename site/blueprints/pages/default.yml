@@ -16,12 +16,11 @@ tabs:
                 label: Menü-Icon
                 type: text
                 icon: smile
-                width: 1/2
+                width: 1/3
               navDescription:
                 label: Menü-Beschreibung
-                type: textarea
-                buttons: false
-                width: 1/2
+                type: text
+                width: 2/3
               intro:
                 label: Intro
                 type: text
