@@ -2,6 +2,14 @@ title: Seite
 
 icon: 🔖
 
+status:
+  draft:
+    label: Entwurf
+    text: Die Sete ist im Entwurfsmodus und nur für angemeldete Benutzer sichtbar
+  unlisted:
+    label: Veröffentlicht
+    text: Die Seite ist öffentlich sichtbar
+
 columns:
   - width: 2/3
     sections:
