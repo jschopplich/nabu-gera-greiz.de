@@ -52,7 +52,6 @@ tabs:
             type: pages
             headline: Veröffentlichte Seiten
             status: unlisted
-            template: topic
             layout: cards
             image: icon
 

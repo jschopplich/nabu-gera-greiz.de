@@ -96,7 +96,7 @@
             </div>
           </div>
         <?php else: ?>
-          <a class="navbar-item<?php e($child->isOpen(), ' is-active') ?>" href="<?= $child->url() ?>">
+          <a href="<?= $child->url() ?>" class="navbar-item<?php e($child->isActive(), ' is-active') ?>">
             <?= $child->title()->html() ?>
           </a>
         <?php endif ?>
