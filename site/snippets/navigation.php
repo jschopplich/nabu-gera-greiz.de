@@ -31,13 +31,69 @@
       <?php foreach ($pages->listed() as $child): ?>
         <?php if ($child->hasListedChildren()): ?>
           <div class="navbar-item has-dropdown is-hoverable">
-            <div class="navbar-link"><?= $child->title()->html() ?></div>
+            <div class="navbar-link">
+              <?= $child->title()->html() ?>
+            </div>
 
-            <?php if ($child->id() === 'aktuelles'): ?>
-              <?php snippet('navigation/articles', compact('child')) ?>
-            <?php else: ?>
-              <?php snippet('navigation/pages', compact('child')) ?>
-            <?php endif ?>
+            <?php
+            $isNewspage = $child->id() === 'aktuelles';
+            ?>
+            <div class="navbar-dropdown has-more is-boxed">
+              <?php foreach ($child->children()->listed()->filterBy('template', '!=', 'article') as $subchild): ?>
+                <a
+                  href="<?= $subchild->url() ?>"
+                  class="navbar-item<?php e($subchild->isOpen(), ' is-active') ?>"
+                  <?php e($subchild->isActive(), 'aria-current="page"') ?>
+                >
+                  <div>
+                    <span class="icon has-text-primary">
+                      <span class="fal fa-<?= $subchild->navIcon() ?>" aria-hidden="true"></span>
+                    </span>
+                    <p><strong><?= $subchild->title()->html() ?></strong></p>
+                    <p><?= $subchild->navDescription()->html() ?></p>
+                  </div>
+                </a>
+
+                <?php if ($isNewspage): ?>
+                  <hr class="navbar-divider">
+                <?php endif ?>
+
+                <?php
+                $more = $isNewspage
+                  ? $subchild->children()->unlisted()->filterBy('template', 'in', ['blog', 'blog-old'])
+                  : $subchild->children()->unlisted()->filterBy('template', 'topic');
+                if ($more->count()):
+                ?>
+                  <div class="navbar-item">
+                    <div>
+                      <?php if ($isNewspage): ?>
+                        <span class="icon">
+                          <span class="fal fa-archive" aria-hidden="true"></span>
+                        </span>
+                        <p><strong><?= $archive->title()->html() ?></strong></p>
+                        <p>Unsere Artikelarchiv — zurück bis 2008</p>
+                      <?php endif ?>
+
+                      <nav class="breadcrumb has-bullet-separator is-small<?php e($isNewspage, ' mt-4') ?>">
+                        <ul>
+                          <?php foreach ($more as $item): ?>
+                            <li<?php e($item->isActive(), ' class="is-active"') ?>>
+                              <a href="<?= $item->url() ?>"<?php e($item->isActive(), ' aria-current="page"') ?>>
+                                <?= $item->title() ?>
+                              </a>
+                            </li>
+                          <?php endforeach ?>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                <?php endif ?>
+
+                <?php if (!$subchild->isLast()): ?>
+                  <hr class="navbar-divider">
+                <?php endif ?>
+              <?php endforeach ?>
+            </div>
           </div>
         <?php else: ?>
           <a class="navbar-item<?php e($child->isOpen(), ' is-active') ?>" href="<?= $child->url() ?>">
