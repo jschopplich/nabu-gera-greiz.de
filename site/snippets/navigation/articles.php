@@ -20,7 +20,7 @@
         <p><strong><?= $archive->title()->html() ?></strong></p>
         <p>Unsere Artikelarchiv — zurück bis 2008</p>
 
-        <nav class="breadcrumb has-bullet-separator is-small mt-3">
+        <nav class="breadcrumb has-bullet-separator is-small mt-4">
           <ul>
             <?php foreach($archive->children()->listed() as $item): ?>
               <li>

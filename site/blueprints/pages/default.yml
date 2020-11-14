@@ -12,15 +12,6 @@ tabs:
           main:
             type: fields
             fields:
-              navIcon:
-                label: Menü-Icon
-                type: text
-                icon: smile
-                width: 1/3
-              navDescription:
-                label: Menü-Beschreibung
-                type: text
-                width: 2/3
               intro:
                 label: Intro
                 type: text
@@ -32,5 +23,16 @@ tabs:
         sections:
           pages: sections/pages
           cover: sections/cover
+          icons:
+            type: fields
+            fields:
+              navIcon:
+                label: Menü-Icon
+                type: text
+                icon: smile
+              navDescription:
+                label: Menü-Beschreibung
+                type: textarea
+                buttons: false
 
   files: tabs/files
