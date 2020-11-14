@@ -3,20 +3,13 @@
   <div class="navbar-brand">
     <div class="navbar-brand-tabs tabs is-hidden-desktop">
       <ul>
-        <?php foreach ([
-          'home',
-          'aktuelles',
-          'veranstaltungen'
-        ] as $pageId): ?>
+        <?php foreach (['home', 'aktuelles', 'veranstaltungen'] as $pageId): ?>
           <?php if ($p = page($pageId)): ?>
             <li<?= attr(['class' => $p->isActive() ? 'is-active' : null], ' ') ?>>
               <a href="<?= $p->url() ?>"><?= $p->title() ?></a>
             </li>
           <?php endif ?>
         <?php endforeach ?>
-        <li>
-          <a href="#" data-navbar-toggle>Projekte</a>
-        </li>
       </ul>
     </div>
 

@@ -34,28 +34,26 @@
         border-bottom-right-radius: $radius-large
 
   .cover-logo
-    display: flex
     position: absolute
     top: 0
-    bottom: -1rem
+    bottom: 0
     left: 0
-    background-color: $white
-    border-bottom: 3px solid $primary
+    display: flex
     justify-content: center
     align-items: center
-    padding-right: 2rem
-    padding-left: 2rem
+    background-color: $white
+    border-bottom: 3px solid $primary
+    padding-right: 1.5rem
+    padding-left: 1.5rem
     +mobile
+      bottom: -1rem
       box-shadow: $shadow-navbar
     +desktop
-      bottom: 0
-      padding-left: 1.5rem
       border-bottom-right-radius: 2rem
+      padding-right: 2rem
 
     .image
-      width: 72px
-      +tablet
-        width: 96px
+      width: 96px
       +desktop
         width: 114px
 
