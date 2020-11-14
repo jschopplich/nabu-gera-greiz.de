@@ -28,6 +28,5 @@ columns:
         type: pages
         headline: Veröffentlicht
         status: listed
-        template: default
         layout: cards
         image: icon
