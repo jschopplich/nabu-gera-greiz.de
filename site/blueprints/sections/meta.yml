@@ -3,7 +3,8 @@ fields:
   metaImage:
     label: Meta-Bild
     type: files
-    query: page.files.filterBy('template', 'image')
+    # query: page.files.filterBy('template', 'image')
+    query: page.images
     uploads: image
     multiple: false
   metaTitle:

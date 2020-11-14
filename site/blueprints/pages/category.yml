@@ -8,7 +8,7 @@ options:
   delete: false
 
 columns:
-  - width: 1/2
+  - width: 1/3
     sections:
       drafts:
         type: pages
@@ -22,9 +22,11 @@ columns:
         status: unlisted
         template: default
 
-  - width: 1/2
+  - width: 2/3
     sections:
       listed:
         type: pages
         headline: Veröffentlicht
         status: listed
+        layout: cards
+        image: icon

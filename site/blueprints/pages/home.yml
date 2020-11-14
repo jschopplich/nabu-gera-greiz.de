@@ -36,7 +36,8 @@ tabs:
               heroImage:
                 label: Hintergrundbild
                 type: files
-                query: page.files.filterBy('template', 'image')
+                # query: page.files.filterBy('template', 'image')
+                query: page.images
                 multiple: false
                 layout: cards
                 required: true

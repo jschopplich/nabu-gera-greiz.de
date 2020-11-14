@@ -13,7 +13,7 @@ tabs:
     label: Artikel
     icon: book
     columns:
-      - width: 1/2
+      - width: 1/3
         sections:
           drafts:
             extends: sections/articles
@@ -25,7 +25,7 @@ tabs:
             headline: Artikel in Überprüfung
             status: unlisted
 
-      - width: 1/2
+      - width: 2/3
         sections:
           listed:
             extends: sections/articles
@@ -33,6 +33,33 @@ tabs:
             status: listed
             layout: cards
             size: tiny
+
+  pages:
+    label: Unterseiten
+    icon: map
+    columns:
+      - width: 1/3
+        sections:
+          drafts:
+            type: pages
+            headline: Entwürfe
+            status: draft
+            template: default
+
+          unlisted:
+            type: pages
+            headline: Ungelistet
+            status: unlisted
+            template: default
+
+      - width: 2/3
+        sections:
+          listed:
+            type: pages
+            headline: Veröffentlicht
+            status: listed
+            layout: cards
+            image: icon
 
   content:
     label: Inhalt

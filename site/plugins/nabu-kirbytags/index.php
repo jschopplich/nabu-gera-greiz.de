@@ -16,17 +16,22 @@ Kirby::plugin('nabu-gera-greiz/kirby-tags', [
 
     'hooks' => [
         'kirbytags:before' => function ($text) {
-            $text = str_replace('\(', '[[', str_replace('\)', ']]', $text));
+            $text = str_replace('\(', '[[', $text);
+            $text = str_replace('\)', ']]', $text);
 
-            $text = preg_replace_callback('!\(carousel(…|\.{3})\)(.*?)\((…|\.{3})carousel\)!is', function ($match) {
-                return '<div class="carousel">' . $match[2] . '</div>';
-            }, $text);
+            $text = preg_replace_callback(
+                '!\(carousel(…|\.{3})\)(.*?)\((…|\.{3})carousel\)!is',
+                fn($match) => '<div class="carousel">' . $match[2] . '</div>',
+                $text
+            );
 
             return $text;
         },
 
         'kirbytags:after' => function ($text) {
-            return str_replace(']]', ')', str_replace('[[', '(', $text));
+            $text = str_replace('[[', '(', $text);
+            $text = str_replace(']]', ')', $text);
+            return $text;
         }
     ],
 

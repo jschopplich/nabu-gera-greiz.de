@@ -1,22 +1,25 @@
-<nav class="navbar is-spaced<?php e($page->isHomePage(), ' is-home') ?>" aria-label="Navigation">
+<nav class="navbar is-spaced<?php e($page->isHomePage(), ' is-home') ?>">
 
   <div class="navbar-brand">
     <div class="navbar-brand-tabs tabs is-hidden-desktop">
       <ul>
-        <li class="<?php e($page->isHomePage(), 'is-active') ?>">
-          <a href="<?= page('home')->url() ?>">Start</a>
-        </li>
-        <li class="<?php e($page->id() === 'aktuelles', 'is-active') ?>">
-          <a href="<?= page('aktuelles')->url() ?>"><?= page('aktuelles')->title() ?></a>
-        </li>
-        <li class="<?php e($page->id() === 'veranstaltungen', 'is-active') ?>">
-          <a href="<?= page('veranstaltungen')->url() ?>"><?= page('veranstaltungen')->title() ?></a>
-        </li>
+        <?php foreach ([
+          'home',
+          'aktuelles',
+          'veranstaltungen'
+        ] as $pageId): ?>
+          <?php if ($p = page($pageId)): ?>
+            <li<?= attr(['class' => $p->isActive() ? 'is-active' : null], ' ') ?>>
+              <a href="<?= $p->url() ?>"><?= $p->title() ?></a>
+            </li>
+          <?php endif ?>
+        <?php endforeach ?>
         <li>
           <a href="#" data-navbar-toggle>Projekte</a>
         </li>
       </ul>
     </div>
+
     <div class="navbar-burger burger" data-target="navbar">
       <span></span>
       <span></span>
@@ -24,42 +27,28 @@
     </div>
   </div>
 
-  <div id="navbar" class="navbar-menu">
+  <div class="navbar-menu">
     <div class="navbar-start">
       <?php if (!$page->isHomePage()): ?>
-        <a class="navbar-item<?php e($page->isHomePage(), ' is-active') ?>" href="<?= Url::home() ?>">Startseite</a>
+        <a class="navbar-item<?php e($page->isHomePage(), ' is-active') ?>" href="<?= url() ?>">
+          Startseite
+        </a>
       <?php endif ?>
 
-      <?php foreach($pages->listed() as $item): ?>
-        <?php if ($item->hasListedChildren()): ?>
+      <?php foreach ($pages->listed() as $child): ?>
+        <?php if ($child->hasListedChildren()): ?>
           <div class="navbar-item has-dropdown is-hoverable">
-            <div class="navbar-link"><?= $item->title()->html() ?></div>
+            <div class="navbar-link"><?= $child->title()->html() ?></div>
 
-            <?php if ($item->id() === 'aktuelles'): ?>
-              <?php snippet('navigation/news') ?>
+            <?php if ($child->id() === 'aktuelles'): ?>
+              <?php snippet('navigation/articles', compact('child')) ?>
             <?php else: ?>
-              <div class="navbar-dropdown has-more is-boxed">
-                <?php foreach($item->children()->listed()->filterBy('template', '!=', 'article') as $subitem): ?>
-                  <a class="navbar-item<?php e($subitem->isOpen(), ' is-active') ?>" href="<?= $subitem->url() ?>">
-                    <span>
-                      <span class="icon has-text-primary">
-                        <span class="fal fa-<?= $subitem->navIcon() ?>" aria-hidden="true"></span>
-                      </span>
-                      <strong><?= $subitem->title()->html() ?></strong>
-                      <br>
-                      <?= $subitem->navDescription()->html() ?>
-                    </span>
-                  </a>
-                  <?php if (!$subitem->isLast()): ?>
-                    <hr class="navbar-divider">
-                  <?php endif ?>
-                <?php endforeach ?>
-              </div>
+              <?php snippet('navigation/pages', compact('child')) ?>
             <?php endif ?>
           </div>
         <?php else: ?>
-          <a class="navbar-item<?php e($item->isOpen(), ' is-active') ?>" href="<?= $item->url() ?>">
-            <?= $item->title()->html() ?>
+          <a class="navbar-item<?php e($child->isOpen(), ' is-active') ?>" href="<?= $child->url() ?>">
+            <?= $child->title()->html() ?>
           </a>
         <?php endif ?>
       <?php endforeach ?>

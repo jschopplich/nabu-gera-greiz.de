@@ -28,15 +28,18 @@ tabs:
             type: pages
             status: listed
             info: "/{{ page.slug }}"
+            image: icon
           unlisted:
             headline: Ungelistete Seiten
             type: pages
             status: unlisted
             info: "/{{ page.slug }}"
+            image: icon
           draft:
             headline: Entwürfe
             type: pages
             status: draft
+            image: icon
 
   settings:
     label: Einstellungen
