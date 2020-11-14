@@ -22,7 +22,7 @@
 
         <nav class="breadcrumb has-bullet-separator is-small mt-4">
           <ul>
-            <?php foreach($archive->children()->listed() as $item): ?>
+            <?php foreach ($archive->children()->listed() as $item): ?>
               <li>
                 <a href="<?= $item->url() ?>">
                   <?= $item->title() ?>

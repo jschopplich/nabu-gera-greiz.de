@@ -17,7 +17,7 @@ tabs:
         sections:
           articleDrafts:
             extends: sections/articles
-            headline: Entwürfe
+            headline: Artikelentwürfe
             status: draft
 
           unlistedArticles:
@@ -40,25 +40,19 @@ tabs:
     columns:
       - width: 1/3
         sections:
-          pageDrafts:
+          topicDrafts:
             type: pages
             headline: Entwürfe
             status: draft
-            template: default
-
-          unlistedPages:
-            type: pages
-            headline: Ungelistet
-            status: unlisted
-            template: default
+            template: topic
 
       - width: 2/3
         sections:
-          listedPages:
+          unlistedTopics:
             type: pages
-            headline: Veröffentlicht
-            status: listed
-            template: default
+            headline: Veröffentlichte Seiten
+            status: unlisted
+            template: topic
             layout: cards
             image: icon
 

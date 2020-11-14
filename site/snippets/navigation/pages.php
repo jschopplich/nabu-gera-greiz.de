@@ -12,7 +12,7 @@
 
     <div class="navbar-item<?php e($subchild->isOpen(), ' is-active') ?>" href="<?= $subchild->url() ?>">
       <div>
-        <?php $more = $subchild->children()->listed()->filterBy('template', 'default') ?>
+        <?php $more = $subchild->children()->unlisted()->filterBy('template', 'topic') ?>
         <?php if ($more->count()): ?>
           <nav class="breadcrumb has-bullet-separator is-small">
             <ul>
