@@ -51,7 +51,10 @@ tabs:
           unlistedTopics:
             type: pages
             headline: Veröffentlichte Seiten
-            status: unlisted
+            status: published
+            template:
+              - archive
+              - topic
             layout: cards
             image: icon
 
