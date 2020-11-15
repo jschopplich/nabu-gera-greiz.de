@@ -1,9 +1,3 @@
-<?php
-
-use Kirby\Data\Json;
-
-?>
-
 <?php snippet('header') ?>
 
 <div class="section">
@@ -43,7 +37,7 @@ use Kirby\Data\Json;
                 ]
               ];
               ?>
-              <script type="application/ld+json"><?= Json::encode($schema) ?></script>
+              <script type="application/ld+json"><?= \Kirby\Data\Json::encode($schema) ?></script>
 
               <tr>
                 <th>

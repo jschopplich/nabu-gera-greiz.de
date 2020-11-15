@@ -130,27 +130,23 @@
 
 // Sidebar
 
-.content.is-side
-  +mobile
-    display: none
-
-  .link-shape
-    text-align: right
-    a
-      display: block
-      position: relative
-    p
-      position: absolute
-      bottom: 1em
-      right: 0
-      font-size: $size-6
-      font-weight: 300
-      color: $link
-      background-color: $white
-      border-top-left-radius: $radius
-      border-bottom-left-radius: $radius
-      padding: 0.25em 0.5em
-    a:focus p,
-    a:hover p
-      color: $white
-      background-color: $link
+.link-shape
+  text-align: right
+  a
+    display: block
+    position: relative
+  p
+    position: absolute
+    bottom: 1em
+    right: 0
+    font-size: $size-6
+    font-weight: 300
+    color: $link
+    background-color: $white
+    border-top-left-radius: $radius
+    border-bottom-left-radius: $radius
+    padding: 0.25em 0.5em
+  a:focus p,
+  a:hover p
+    color: $white
+    background-color: $link

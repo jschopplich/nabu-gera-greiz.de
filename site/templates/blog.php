@@ -3,7 +3,7 @@
 <div class="section">
   <div class="content-wrapper container">
     <div class="pagination-wrapper">
-      <div class="content is-main">
+      <div>
         <?php snippet('intro') ?>
 
         <?php if ($page->text()->isNotEmpty()): ?>
@@ -13,7 +13,7 @@
         <?php endif ?>
 
         <?php foreach ($articles as $article): ?>
-          <article>
+          <article class="content is-main">
             <div class="mb-5">
               <h2 class="title is-3 is-size-4-mobile has-text-weight-bold">
                 <a href="<?= $article->url() ?>"><?= $article->title()->html() ?></a>

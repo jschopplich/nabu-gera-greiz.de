@@ -1,4 +1,4 @@
-<div class="content is-side is-small">
+<div class="content is-small is-hidden-mobile">
 
   <?php
   $data = [

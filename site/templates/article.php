@@ -2,8 +2,8 @@
 
 <div class="section">
   <div class="content-wrapper container">
-    <div class="content is-main">
-      <article class="mb-6">
+    <div>
+      <article class="content is-main mb-6">
         <div class="mb-5">
           <?php snippet('intro') ?>
 
