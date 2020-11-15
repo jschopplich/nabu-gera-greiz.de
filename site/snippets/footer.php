@@ -1,21 +1,23 @@
-    <section class="section is-partners container is-hidden-mobile">
-      <h2 class="title is-3 has-text-primary has-text-centered mb-6">Unsere Partner</h2>
-      <div class="columns is-mobile is-6 is-variable is-centered is-multiline">
-        <?php foreach($site->partners()->toFiles() as $image): ?>
-          <div class="column is-narrow">
-            <a class="partner-link" href="<?= $image->link() ?>" target="_blank" rel="noopener noreferrer">
-              <figure class="partner-image image">
-                <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>">
-              </figure>
-            </a>
-          </div>
-        <?php endforeach ?>
+    <div class="section is-hidden-mobile">
+      <div class="container">
+        <h2 class="title is-4 is-partners has-text-primary mb-6">Unsere Partner</h2>
+        <div class="columns is-mobile is-6 is-variable">
+          <?php foreach ($site->partners()->toFiles() as $image): ?>
+            <div class="column">
+              <a class="partner-link" href="<?= $image->link() ?>" target="_blank" rel="noopener noreferrer">
+                <figure class="partner-image image">
+                  <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>">
+                </figure>
+              </a>
+            </div>
+          <?php endforeach ?>
+        </div>
       </div>
-    </section>
+    </div>
 
   </main>
 
-  <footer class="footer">
+  <footer class="footer has-background-primary">
     <div class="container">
       <div class="columns">
         <?php foreach ($site->footerColumns()->toStructure() as $column): ?>

@@ -1,20 +1,20 @@
-.section.is-partners
-  border-top: 2px solid $white-ter
+.title.is-partners
+  display: flex
+  align-items: center
+  &::after
+    content: ""
+    height: 2px
+    background-color: currentColor
+    flex-grow: 1
+    margin-left: 1rem
 
 .partner-link
   display: block
   transition: transform 150ms ease-in-out
-  &:hover,
-  &:focus
+  &:hover
     transform: scale(1.1)
 
 .partner-image
   img
     height: 72px
     border-radius: $radius
-
-.footer
-  background-color: $primary
-  color: $white
-  strong
-    color: white

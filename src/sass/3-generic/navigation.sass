@@ -13,9 +13,9 @@
 
 // Styling to default pages
 
-.header.is-default
-  .navbar.is-spaced
-    +desktop
++desktop
+  .header.is-default
+    .navbar.is-spaced
       padding-right: 0
       padding-left: 0
 
@@ -71,10 +71,32 @@
     align-items: center
     border-bottom: 2px solid transparent
     padding: 0.5em 1em
-    &:hover,
     &:focus,
+    &:hover,
     &.is-active
       border-bottom-color: $white
 
   a
     color: $white
+    margin-bottom: -2px
+
+// Pagination
+
+.pagination-previous:active,
+.pagination-next:active,
+.pagination-link:active
+  box-shadow: none
+
+.pagination-divider
+  position: relative
+  align-self: stretch
+  margin-left: 0.5rem
+  margin-right: 0.5rem
+  &::after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 2px
+    height: calc(100% + 5rem)
+    background-color: $primary

@@ -43,8 +43,8 @@ $primary-dark: findDarkColor($primary)
 $success-invert: findColorInvert($success)
 $success-light: findLightColor($success)
 $success-dark: findDarkColor($success)
-$light-invert: findColorInvert($light)
-$dark-invert: findColorInvert($dark)
+$light-invert: $dark
+$dark-invert: $light
 
 // Link colors
 
@@ -79,15 +79,13 @@ $box-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0
 $section-padding: 3rem 1.5rem
 $footer-padding: $section-padding
 
-// Lists and maps
-
-$colors: ("white": ($white, $black), "light": ($light, $light-invert), "dark": ($dark, $dark-invert), "primary": ($primary, $primary-invert, $primary-light, $primary-dark), "success": ($success, $success-invert, $success-light, $success-dark))
-
-// Navbar
-
 $navbar-dropdown-boxed-radius: 0 0 4px 4px
 $navbar-burger-color: #fff
 $navbar-colors: null
+
+// Lists and maps
+
+$colors: ("white": ($white, $black), "light": ($light, $light-invert), "dark": ($dark, $dark-invert), "primary": ($primary, $primary-invert, $primary-light, $primary-dark), "success": ($success, $success-invert, $success-light, $success-dark))
 
 // Helpers
 
