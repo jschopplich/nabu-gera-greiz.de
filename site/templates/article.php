@@ -8,13 +8,13 @@
           <?php snippet('intro') ?>
 
           <?php if ($page->subtitle()->isNotEmpty()): ?>
-            <p class="subtitle is-4 is-size-5-mobile has-text-grey">
+            <p class="subtitle is-4-tablet has-text-grey">
               <?= $page->subtitle()->html() ?>
             </p>
           <?php endif ?>
 
           <span class="tag">
-            <time datetime="<?= $page->date()->toDate('%Y-%m-%d') ?>"><?= $page->date()->toDate('%e. %B %Y') ?></time>
+            <time datetime="<?= $page->date()->toDate('%F') ?>"><?= $page->date()->toDate('%e. %B %Y') ?></time>
           </span>
         </div>
 

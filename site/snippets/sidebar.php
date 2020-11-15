@@ -3,7 +3,7 @@
   <?php
   $data = [
     ['page' => 'informationen/aktiv-werden', 'image' => 'wechselkroete-fokus-natur-proehl_thumb.jpg', 'label' => 'Aktiv werden', 'x' => '0', 'y' => '0'],
-    ['page' => 'informationen/spenden', 'image' => 'eisvogel-pixabay-pexels_cc0_thumb.jpg', 'label' => 'Aktiv werden', 'x' => '-35', 'y' => '0'],
+    ['page' => 'informationen/spenden', 'image' => 'eisvogel-pixabay-pexels_cc0_thumb.jpg', 'label' => 'Spenden', 'x' => '-35', 'y' => '0'],
     ['page' => 'korkampagne', 'image' => 'naturkorken-nabu-helge-may.jpg', 'label' => 'KORKampagne', 'x' => '-50', 'y' => '0']
   ];
   ?>

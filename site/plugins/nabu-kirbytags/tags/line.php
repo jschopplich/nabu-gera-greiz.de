@@ -2,6 +2,6 @@
 
 return [
     'html' => function ($tag) {
-        return '<hr class="' . $tag->value . '">';
+        return '<hr class="' . $tag->value . ' is-' . $tag->value . '">';
     }
 ];

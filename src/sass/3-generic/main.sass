@@ -8,10 +8,10 @@
 // Content
 
 .content.is-main
-  h3:not(.title):not(.subtitle)
+  h3:not([class])
     color: $grey
 
-  p:not(.title):not(.subtitle),
+  p:not([class]),
   li
     font-family: $family-secondary
     line-height: calc(1ex / 0.32)
@@ -22,13 +22,13 @@
 
   hr
     clear: both
-    &.short
+    &.is-short
       background-color: $primary
       width: 6rem
-    &.wide
+    &.is-wide
       margin-top: 1.5rem
       margin-bottom: 3rem
-    &.invisible
+    &.is-invisible
       background-color: transparent
       margin: 0
 
@@ -127,26 +127,3 @@
     transform: translateY(-50%)
     img
       border-radius: $radius
-
-// Sidebar
-
-.link-shape
-  text-align: right
-  a
-    display: block
-    position: relative
-  p
-    position: absolute
-    bottom: 1em
-    right: 0
-    font-size: $size-6
-    font-weight: 300
-    color: $link
-    background-color: $white
-    border-top-left-radius: $radius
-    border-bottom-left-radius: $radius
-    padding: 0.25em 0.5em
-  a:focus p,
-  a:hover p
-    color: $white
-    background-color: $link
