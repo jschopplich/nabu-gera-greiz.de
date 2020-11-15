@@ -8,7 +8,7 @@
           <?php snippet('intro') ?>
 
           <?php if ($page->subtitle()->isNotEmpty()): ?>
-            <p class="subtitle is-4-tablet has-text-grey">
+            <p class="subtitle is-size-4-tablet has-text-grey">
               <?= $page->subtitle()->html() ?>
             </p>
           <?php endif ?>
