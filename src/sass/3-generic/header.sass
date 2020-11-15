@@ -16,14 +16,12 @@
     flex-direction: column
 
   .navbar
-    order: 1
-    +desktop
-      order: 2
+    +touch
+      order: 1
 
   .cover
-    order: 2
-    +desktop
-      order: 1
+    +touch
+      order: 2
 
   .cover-image
     padding-top: 20%
@@ -45,7 +43,7 @@
     border-bottom: 3px solid $primary
     padding-right: 1.5rem
     padding-left: 1.5rem
-    +mobile
+    +touch
       bottom: -1rem
       box-shadow: $box-shadow-small
     +desktop
