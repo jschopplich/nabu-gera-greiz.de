@@ -39,7 +39,7 @@
             <div class="section cover-hero"<?php e($page->isHomePage(), ' style="--cover: url(' . $image->resize(960)->url() . ');"') ?>>
               <div class="columns is-vcentered">
                 <div class="column is-narrow">
-                  <figure class="cover-hero-image image" data-animere="flipInX">
+                  <figure class="cover-hero-image image" data-animere="fadeInLeft">
                     <img src="<?= url('assets/img/logo.svg') ?>" alt="<?= $site->author() ?>" title="<?= $site->author() ?>">
                   </figure>
                 </div>

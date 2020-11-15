@@ -9,7 +9,7 @@
 // Standard header for all pages
 
 .header.is-default
-  box-shadow: $shadow-navbar
+  box-shadow: $box-shadow-small
 
   > .container
     display: flex
@@ -47,7 +47,7 @@
     padding-left: 1.5rem
     +mobile
       bottom: -1rem
-      box-shadow: $shadow-navbar
+      box-shadow: $box-shadow-small
     +desktop
       border-bottom-right-radius: 2rem
       padding-right: 2rem
@@ -64,7 +64,7 @@
     padding-top: 3rem
 
   > .container
-    box-shadow: $shadow-navbar
+    box-shadow: $box-shadow-small
 
   > .container,
   .cover-image img
@@ -74,7 +74,7 @@
   // Compensate navbar height visually
   .cover
     +touch
-      padding-top: 3.25rem
+      padding-top: $navbar-height
 
   .cover-hero
     +mobile

@@ -1,7 +1,7 @@
 <nav class="navbar is-spaced<?php e($page->isHomePage(), ' is-home') ?>">
 
   <div class="navbar-brand">
-    <div class="navbar-brand-tabs tabs is-hidden-desktop">
+    <div class="navbar-tabs is-hidden-desktop">
       <ul>
         <?php foreach (['home', 'aktuelles', 'veranstaltungen'] as $pageId): ?>
           <?php if ($p = page($pageId)): ?>
