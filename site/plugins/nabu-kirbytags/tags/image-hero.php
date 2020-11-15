@@ -72,7 +72,7 @@ return [
             $image = Html::img($tag->src, $imageAttr);
         }
 
-        $tag->class .= ($tag->class ? ' ' : '') . 'image-hero';
+        $tag->class = trim($tag->class . ' image-hero', ' ');
 
         if ($tag->kirby()->option('kirbytext.image.figure', true) === false) {
             return $link($image);

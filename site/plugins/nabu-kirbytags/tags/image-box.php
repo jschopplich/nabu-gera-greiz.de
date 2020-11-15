@@ -75,7 +75,8 @@ return [
             $image = Html::img($tag->src, $imageAttr);
         }
 
-        $tag->class .= ($tag->class ? ' ' : '') . 'image-box';
+        $tag->class = trim($tag->class . ' image-box', ' ');
+
         if (Str::contains($tag->class, 'centered')) {
             $tag->class .= ' has-text-centered';
         } elseif (Str::contains($tag->class, 'left')) {

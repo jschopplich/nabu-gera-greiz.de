@@ -25,33 +25,39 @@ $green:          hsl(141, 70%, 48%)
 
 // Derived colors
 
+$light:          $white-ter
+$dark:           $black-ter
+$success:        $green
+
 $text:           $grey-darker
 $text-invert:    findColorInvert($text)
 $text-light:     $grey
 $text-strong:    $black-ter
 
-$light:          $white-ter
-$dark:           $black-ter
-$success:        $green
-
 // Invert colors
 
-$success: $green
 $primary-invert: findColorInvert($primary)
 $primary-light: findLightColor($primary)
 $primary-dark: findDarkColor($primary)
 $success-invert: findColorInvert($success)
 $success-light: findLightColor($success)
 $success-dark: findDarkColor($success)
-$light-invert: $dark
-$dark-invert: $light
+$light-invert: $text
+$dark-invert: $white
 
 // Link colors
 
 $link: $primary
 $link-invert: $white
-$link-hover: darken($link, 10%)
-$link-focus: darken($link, 10%)
+
+$link-hover: $text
+$link-hover-border: $grey-light
+
+$link-focus: $text
+$link-focus-border: $primary
+
+$link-active: $text
+$link-active-border: $text
 
 // Typography
 

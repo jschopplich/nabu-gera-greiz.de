@@ -27,6 +27,7 @@
   right: 0
   left: 0
   background-color: hsla(0, 0%, 100%, 0.9)
+  box-shadow: $box-shadow
 
 // Additional dropdown styles for wider content
 
@@ -79,24 +80,3 @@
   a
     color: $white
     margin-bottom: -2px
-
-// Pagination
-
-.pagination-previous:active,
-.pagination-next:active,
-.pagination-link:active
-  box-shadow: none
-
-.pagination-divider
-  position: relative
-  align-self: stretch
-  margin-left: 0.5rem
-  margin-right: 0.5rem
-  &::after
-    content: ""
-    position: absolute
-    top: 0
-    left: 0
-    width: 2px
-    height: calc(100% + 5rem)
-    background-color: $primary

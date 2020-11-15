@@ -1,0 +1,66 @@
+.pagination
+  @extend %block
+  margin: -0.25rem
+
+.pagination,
+.pagination-list
+  align-items: center
+  display: flex
+  justify-content: center
+  text-align: center
+
+.pagination-previous,
+.pagination-next
+  padding-left: 0.75em
+  padding-right: 0.75em
+  white-space: nowrap
+
+.pagination-previous,
+.pagination-next,
+.pagination-link,
+.pagination-ellipsis
+  margin: 0.25rem
+
+.pagination-list
+  flex-wrap: wrap
+
++mobile
+  .pagination
+    flex-wrap: wrap
+    margin-left: -1rem
+    margin-right: -1rem
+  .pagination-previous,
+  .pagination-next
+    flex-grow: 1
+    flex-shrink: 1
+  .pagination-list
+    li
+      flex-grow: 1
+      flex-shrink: 1
+
++tablet
+  .pagination-list
+    flex-grow: 1
+    flex-shrink: 1
+    justify-content: flex-start
+    order: 1
+  .pagination-previous
+    order: 2
+  .pagination-next
+    order: 3
+  .pagination
+    justify-content: space-between
+
+.pagination-divider
+  position: relative
+  align-self: stretch
+  margin-left: 0.5rem
+  margin-right: 0.5rem
+  &::after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 2px
+    height: calc(100% + 5rem)
+    background-color: $primary
