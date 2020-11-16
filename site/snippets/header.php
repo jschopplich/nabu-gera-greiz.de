@@ -33,14 +33,22 @@
         <div class="cover">
           <?php if ($image = $page->heroImage()->toFile()): ?>
             <figure class="cover-image image is-16by9 is-hidden-mobile">
-              <img class="has-ratio" src="<?= $image->resize(960)->url() ?>" alt="<?= $image->caption()->or($image->alt())->html() ?>">
+              <img
+                class="has-ratio"
+                <?php if ($image->width() > 1920): ?>
+                  srcset="<?= $image->srcset([960, 1920]) ?>"
+                <?php else: ?>
+                  src="<?= $image->resize(960)->url() ?>"
+                <?php endif ?>
+                alt="<?= $image->caption()->or($image->alt())->html() ?>"
+              >
             </figure>
 
             <div class="section cover-hero"<?php e($page->isHomePage(), ' style="--cover: url(' . $image->resize(960)->url() . ');"') ?>>
               <div class="columns is-vcentered">
                 <div class="column is-narrow">
                   <figure class="cover-hero-image image" data-animere="fadeInLeft">
-                    <img src="<?= url('assets/img/logo.svg') ?>" alt="<?= $site->author() ?>" title="<?= $site->author() ?>">
+                    <img src="<?= asset('assets/img/logo.svg')->url() ?>" alt="Logo des <?= $site->author() ?>">
                   </figure>
                 </div>
                 <div class="column has-text-centered-mobile">
@@ -67,16 +75,14 @@
             } else {
               $image = $site->coverImage()->toFile();
             }
-
-            $caption = $image->caption()->or($image->alt())->html();
             ?>
-            <img src="<?= $image->crop(960, 144, 'right')->url() ?>" title="<?= $caption ?>" alt="<?= $caption ?>">
+            <img src="<?= $image->crop(960, 144, 'right')->url() ?>" alt="<?= $image->caption()->or($image->alt())->html() ?>">
           </figure>
 
           <div class="cover-logo">
             <a href="<?= url() ?>" aria-label="Zur Startseite">
               <figure class="image">
-                <img src="<?= url('assets/img/logo.svg') ?>" alt="<?= $site->author() ?>">
+                <img src="<?= asset('assets/img/logo.svg')->url() ?>" alt="<?= $site->author() ?>">
               </figure>
             </a>
           </div>
