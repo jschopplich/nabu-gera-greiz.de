@@ -18,6 +18,7 @@
     <?php endif ?>
   <?php endforeach ?>
 
+  <hr class="is-wide">
   <div class="content is-sidebar is-small">
     <?= $site->sidebarText()->kt() ?>
   </div>
