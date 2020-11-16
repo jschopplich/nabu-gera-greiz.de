@@ -1,0 +1,4 @@
+$flex-wrap-values: nowrap, wrap, wrap-reverse
+@each $value in $flex-wrap-values
+  .is-flex-wrap-#{$value}
+    flex-wrap: $value !important
