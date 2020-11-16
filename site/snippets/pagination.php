@@ -16,7 +16,7 @@
         <li>
           <a
             href="<?= $pagination->pageUrl($r) ?>"
-            class="pagination-link button<?php e($pagination->page() === $r, ' is-primary is-current', ' is-text') ?>"
+            class="pagination-link button<?php e($pagination->page() === $r, ' is-primary is-current', ' is-light') ?>"
             aria-label="Seite <?php $r ?>"
             <?php e($pagination->page() === $r, 'aria-current="page"') ?>
           >
