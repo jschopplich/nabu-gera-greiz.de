@@ -74,7 +74,7 @@ tabs:
                     type: text
               sidebarText:
                 label: Text
-                type: kirbytext
+                type: textarea
               headline02:
                 label: Fußzeile
                 type: headline
