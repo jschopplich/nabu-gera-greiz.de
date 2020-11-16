@@ -32,7 +32,7 @@
 
             <?= $article->text()->kirbytext() ?>
 
-            <hr class="wide">
+            <hr class="is-wide">
           </article>
         <?php endforeach ?>
       </div>

@@ -50,6 +50,31 @@ tabs:
           settings:
             type: fields
             fields:
+              headline01:
+                label: Seitenspalte
+                type: headline
+              sidebarLinks:
+                label: Link in Seitenleiste
+                type: structure
+                fields:
+                  linkPage:
+                    label: Seite
+                    type: pages
+                    multiple: false
+                  linkImage:
+                    label: Bild
+                    type: files
+                    multiple: false
+                    uploads: image
+                    query: site.files.filterBy('template', 'image')
+                    image:
+                      back: white
+                  linkLabel:
+                    label: Titel
+                    type: text
+              headline02:
+                label: Fußzeile
+                type: headline
               partners:
                 label: Partnerbilder
                 type: files
@@ -59,7 +84,7 @@ tabs:
                   back: white
                 required: true
               footerColumns:
-                label: Fußzeilenspalten
+                label: Spalten
                 type: structure
                 fields:
                   text:

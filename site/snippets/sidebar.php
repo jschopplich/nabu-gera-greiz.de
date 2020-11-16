@@ -1,26 +1,18 @@
 <div class="content is-small is-hidden-mobile">
 
-  <?php
-  $data = [
-    ['page' => 'informationen/aktiv-werden', 'image' => 'wechselkroete-fokus-natur-proehl_thumb.jpg', 'label' => 'Aktiv werden', 'x' => '0', 'y' => '0'],
-    ['page' => 'informationen/spenden', 'image' => 'eisvogel-pixabay-pexels_cc0_thumb.jpg', 'label' => 'Spenden', 'x' => '-35', 'y' => '0'],
-    ['page' => 'korkampagne', 'image' => 'naturkorken-nabu-helge-may.jpg', 'label' => 'KORKampagne', 'x' => '-50', 'y' => '0']
-  ];
-  ?>
-
-  <?php foreach ($data as $item): ?>
-    <?php if ($p = page($item['page'])): ?>
+  <?php foreach ($site->sidebarLinks()->toStructure() as $item): ?>
+    <?php if (($p = page($item->linkPage()->toPage())) && ($image = $item->linkImage()->toFile())): ?>
       <div class="link-shape mb-5">
         <a href="<?= $p->url() ?>">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
             <defs>
-              <pattern id="<?= $item['page'] ?>" patternUnits="userSpaceOnUse" height="100" width="100">
-                <image x="<?= $item['x'] ?>" y="<?= $item['y'] ?>" width="150" height="100" href="/assets/img/sidebar/<?= $item['image'] ?>"></image>
+              <pattern id="<?= $p->slug() ?>" patternUnits="userSpaceOnUse" height="100" width="100">
+                <image x="0" y="0" width="100" height="100" href="<?= $image->crop(320, 320)->url() ?>"></image>
               </pattern>
             </defs>
-            <path d="M100,49.827A50,50,0,1,0,49.827,100v0H100V49.827Z" fill="url(#<?= $item['page'] ?>)"/>
+            <path d="M100,49.827A50,50,0,1,0,49.827,100v0H100V49.827Z" fill="url(#<?= $p->slug() ?>)"/>
           </svg>
-          <p><?= $item['label'] ?></p>
+          <p><?= $item->linkLabel()->html() ?></p>
         </a>
       </div>
     <?php endif ?>
