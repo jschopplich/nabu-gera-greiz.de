@@ -9,7 +9,7 @@ Kirby::plugin('kirby/columns', [
                 $columns        = preg_split('!(\n|\r\n)\+{4}\s+(\n|\r\n)!', $matches[2]);
                 $html           = [];
                 $classItem      = $this->option('kirby.columns.item', 'column');
-                $classContainer = $this->option('kirby.columns.container', 'columns');
+                $classContainer = $this->option('kirby.columns.container', 'columns is-variable is-6');
 
                 foreach ($columns as $column) {
                     $html[] = '<div class="' . $classItem . '">' . $this->kirbytext($column, $data) . '</div>';
