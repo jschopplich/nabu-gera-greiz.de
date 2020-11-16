@@ -27,10 +27,6 @@ return [
             $tag->alt     = $tag->alt     ?? $tag->file->alt()->or(' ')->value();
             $tag->title   = $tag->title   ?? $tag->file->title()->value();
             $tag->caption = $tag->caption ?? $tag->file->caption()->value();
-            $tag->width   = $tag->width   ??
-                (Str::contains($tag->class, 'vertical') || Str::contains($tag->class, 'layout')
-                    ? option('kirbytext.image-box.width-vertical')
-                    : option('kirbytext.image-box.width'));
         } else {
             $tag->src = Url::to($tag->value);
         }

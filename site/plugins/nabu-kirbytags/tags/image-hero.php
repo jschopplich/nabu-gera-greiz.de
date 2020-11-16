@@ -27,7 +27,6 @@ return [
             $tag->alt     = $tag->alt     ?? $tag->file->alt()->or(' ')->value();
             $tag->title   = $tag->title   ?? $tag->file->title()->value();
             $tag->caption = $tag->caption ?? $tag->file->caption()->value();
-            $tag->width   = $tag->width   ?? option('kirbytext.image-hero.width');
         } else {
             $tag->src = Url::to($tag->value);
         }
