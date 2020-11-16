@@ -30,6 +30,8 @@ tabs:
                 label: Menü-Icon
                 type: text
                 icon: smile
+                help: >
+                  Iconnamen können auf <a href="https://fontawesome.com/icons?d=gallery">fontawesome.com</a> gefunden werden
               navDescription:
                 label: Menü-Beschreibung
                 type: textarea

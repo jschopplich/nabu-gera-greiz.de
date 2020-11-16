@@ -72,6 +72,8 @@ tabs:
                 type: text
                 icon: smile
                 width: 1/3
+                help: >
+                  Iconnamen können auf <a href="https://fontawesome.com/icons?d=gallery">fontawesome.com</a> gefunden werden
               navDescription:
                 label: Menü-Beschreibung
                 type: text
