@@ -3,17 +3,17 @@
   <div class="navbar-brand">
     <div class="navbar-tabs is-hidden-desktop">
       <ul>
-        <?php foreach (['home', 'aktuelles', 'veranstaltungen'] as $pageId): ?>
-          <?php if ($p = page($pageId)): ?>
-            <li<?= attr(['class' => $p->isActive() ? 'is-active' : null], ' ') ?>>
-              <a href="<?= $p->url() ?>"><?= $p->title() ?></a>
-            </li>
-          <?php endif ?>
+        <?php foreach ($site->navigationTabs()->toPages() as $pageId): ?>
+          <li<?= attr(['class' => $p->isActive() ? 'is-active' : null], ' ') ?>>
+            <a href="<?= $p->url() ?>">
+              <?= $p->title() ?>
+            </a>
+          </li>
         <?php endforeach ?>
       </ul>
     </div>
 
-    <div class="navbar-burger burger" data-target="navbar">
+    <div class="navbar-burger burger">
       <span></span>
       <span></span>
       <span></span>
@@ -46,8 +46,8 @@
                   <?php e($child->isActive(), 'aria-current="page"') ?>
                 >
                   <div>
-                    <span class="icon has-text-primary">
-                      <span class="fal fa-<?= $child->navIcon() ?>" aria-hidden="true"></span>
+                    <span class="icon has-text-primary" aria-hidden="true">
+                      <span class="fal fa-<?= $child->navIcon() ?>"></span>
                     </span>
                     <p><strong><?= $child->title()->html() ?></strong></p>
                     <p><?= $child->navDescription()->html() ?></p>
@@ -67,8 +67,8 @@
                   <?php e($grandchild->isActive(), 'aria-current="page"') ?>
                 >
                   <div>
-                    <span class="icon has-text-primary">
-                      <span class="fal fa-<?= $grandchild->navIcon() ?>" aria-hidden="true"></span>
+                    <span class="icon has-text-primary" aria-hidden="true">
+                      <span class="fal fa-<?= $grandchild->navIcon() ?>"></span>
                     </span>
                     <p><strong><?= $grandchild->title()->html() ?></strong></p>
                     <p><?= $grandchild->navDescription()->html() ?></p>

@@ -51,6 +51,12 @@ tabs:
             type: fields
             fields:
               headline01:
+                label: Navigation
+                type: headline
+              navigationTabs:
+                label: Links (mobil)
+                type: pages
+              headline02:
                 label: Seitenspalte
                 type: headline
               sidebarLinks:
@@ -75,7 +81,7 @@ tabs:
               sidebarText:
                 label: Text
                 type: textarea
-              headline02:
+              headline03:
                 label: Fußzeile
                 type: headline
               partners:
