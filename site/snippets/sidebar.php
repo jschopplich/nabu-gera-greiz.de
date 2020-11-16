@@ -1,4 +1,4 @@
-<div class="content is-small is-hidden-mobile">
+<div class="is-hidden-mobile">
 
   <?php foreach ($site->sidebarLinks()->toStructure() as $item): ?>
     <?php if (($p = page($item->linkPage()->toPage())) && ($image = $item->linkImage()->toFile())): ?>
@@ -18,13 +18,8 @@
     <?php endif ?>
   <?php endforeach ?>
 
-  <h2 class="title has-text-weight-bold has-text-grey">Kontakt</h2>
-  <p>
-    <b>NABU-Kreisverband<br>Gera-Greiz e.V.</b><br>
-    c/o Ingo Eckardt<br>
-    Franz-Philipp-Straße 9<br>
-    07937 Zeulenroda-Triebes<br>
-    <a href="mailto:&#x76;&#111;&#114;&#115;&#x74;&#97;&#110;&#100;&#64;&#x6e;&#x61;&#x62;&#117;&#x2d;&#x67;&#101;&#x72;&#x61;&#45;&#103;&#x72;&#x65;&#105;&#x7a;&#46;&#x64;&#x65;">&#x76;&#x6f;&#x72;&#115;&#116;&#x61;&#x6e;&#x64;&#64;&#x6e;&#x61;&#x62;&#117;&#x2d;&#103;&#x65;&#114;&#x61;&#x2d;&#x67;&#114;&#101;&#x69;&#x7a;&#46;&#x64;&#101;</a>
-  </p>
+  <div class="content is-sidebar is-small">
+    <?= $site->sidebarText()->kt() ?>
+  </div>
 
 </div>

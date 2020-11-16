@@ -54,7 +54,7 @@ tabs:
                 label: Seitenspalte
                 type: headline
               sidebarLinks:
-                label: Link in Seitenleiste
+                label: Links
                 type: structure
                 fields:
                   linkPage:
@@ -72,6 +72,9 @@ tabs:
                   linkLabel:
                     label: Titel
                     type: text
+              sidebarText:
+                label: Text
+                type: kirbytext
               headline02:
                 label: Fußzeile
                 type: headline

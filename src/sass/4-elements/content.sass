@@ -1,27 +1,24 @@
 .content
-  p,
-  li
-    a
-      &:focus,
-      &:hover
-        text-decoration: underline
-        text-decoration-skip-ink: auto
+  a
+    text-decoration-skip-ink: auto
+    &:focus,
+    &:hover
+      text-decoration: underline
 
   &.is-inverted
+    color: $white
+
     h1,
     h2,
     h3,
     h4,
     h5,
     h6,
-    p,
     strong
       color: $white
 
-    p,
-    li
-      a
-        color: $white
-        &:focus,
-        &:hover
-          color: $white
+    a
+      text-decoration: underline
+      &:focus,
+      &:hover
+        color: darken($white, 10%)
