@@ -1,7 +1,7 @@
 <?php
 
 return function ($page, $site) {
-    $metaDescription = r($page->metaDescription()->isNotEmpty(), $page->metaDescription()->value(), $page->text()->excerpt(140)->value());
+    $metaDescription = $page->metaDescription()->or($page->text()->excerpt(140))->value();
     $datePublished = $page->date()->toDate('%Y-%m-%d');
 
     return [
