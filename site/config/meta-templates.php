@@ -2,7 +2,6 @@
 
 return function ($page, $site) {
     $metaDescription = r($page->metaDescription()->isNotEmpty(), $page->metaDescription()->value(), $page->text()->excerpt(140)->value());
-    $metaImage = $page->metaImage()->isNotEmpty() && $page->metaImage()->toFile() ? $page->metaImage()->toFile()->resize(1280)->url() : url('assets/img/meta-image.jpg');
     $datePublished = $page->date()->toDate('%Y-%m-%d');
 
     return [
@@ -16,12 +15,10 @@ return function ($page, $site) {
                 'namespace:article' => [
                     'author' => $site->author()->value(),
                     'published_time' => $datePublished
-                ],
-                'image' => $metaImage
+                ]
             ],
             'twitter' => [
-                'description' => $metaDescription,
-                'image' => $metaImage
+                'description' => $metaDescription
             ],
             'json-ld' => [
                 'BlogPosting' => [
@@ -29,7 +26,6 @@ return function ($page, $site) {
                     'description' => $metaDescription,
                     'mainEntityOfPage' => $page->url(),
                     'url' => $page->url(),
-                    'image' => $metaImage,
                     'author' => [
                         '@type' => 'Person',
                         'name' => $site->author()->value()
