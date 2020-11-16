@@ -4,8 +4,8 @@
         <div class="columns is-mobile is-6 is-variable">
           <?php foreach ($site->partners()->toFiles() as $image): ?>
             <div class="column">
-              <a class="partner-image image" href="<?= $image->link() ?>" target="_blank" rel="noopener">
-                <img src="<?= $image->url() ?>" title="<?= $image->alt() ?>" alt="<?= $image->alt() ?>">
+              <a href="<?= $image->link() ?>" class="partner-image image" target="_blank" rel="noopener">
+                <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>">
               </a>
             </div>
           <?php endforeach ?>

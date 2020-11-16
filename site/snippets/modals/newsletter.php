@@ -1,7 +1,7 @@
-<div class="modal" id="newsletter-modal">
+<div id="newsletter-modal" class="modal">
   <div class="modal-background" data-close-modal data-modal-id="#newsletter-modal"></div>
   <div class="modal-content">
-    <div class="box">
+    <div class="box py-6">
 
       <p class="has-text-centered">
         <a class="button is-primary" href="mailto:&#110;&#101;&#119;&#115;&#108;&#101;&#x74;&#x74;&#101;&#114;&#64;&#110;&#97;&#x62;&#x75;&#45;&#x67;&#x65;&#x72;&#97;&#45;&#x67;&#114;&#101;&#x69;&#122;&#46;&#100;&#x65;&#x3f;&#x73;&#x75;&#x62;&#x6a;&#101;&#x63;&#x74;&#61;&#69;&#105;&#x6e;&#x74;&#114;&#x61;&#103;&#101;&#x6e;&#x26;&#98;&#111;&#x64;&#x79;&#x3d;&#37;&#48;&#65;&#78;&#97;&#x6d;&#101;&#x3d;&#x25;&#x30;&#65;&#86;&#x6f;&#114;&#110;&#97;&#109;&#x65;&#61;&#37;&#48;&#65;&#x41;&#110;&#x72;&#101;&#100;&#101;&#61;&#37;&#x30;&#65;&#84;&#105;&#116;&#x65;&#108;&#61;">Eintragen</a>

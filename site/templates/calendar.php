@@ -18,12 +18,12 @@
           </tr>
         </thead>
         <tbody>
-          <?php foreach ($events as $event): ?>
-            <script type="application/ld+json"><?= $event['serializedSchema'] ?></script>
+          <?php foreach ($events as [
+            'structure' => $event,
+            'serializedSchema' => $serializedSchema
+          ]): ?>
+            <script type="application/ld+json"><?= $serializedSchema ?></script>
 
-            <?php
-            $event = $event['structure']
-            ?>
             <tr>
               <th>
                 <?php if ($event->eventDateOption()->value() === 'date'): ?>
@@ -55,7 +55,7 @@
                 <?= $event->eventDescription()->kt() ?>
               </td>
               <td class="is-hidden-mobile">
-                <?php if (!$event->eventHasPrice()->bool()): ?>
+                <?php if (!$event->eventHasPrice()->toBool()): ?>
                   <span>kostenlos</span>
                 <?php else: ?>
                   <?= $event->eventPrice() ?>

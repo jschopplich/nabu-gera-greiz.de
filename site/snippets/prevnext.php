@@ -3,31 +3,31 @@
 
     <?php if ($page->hasPrevListed()): ?>
     <a href="<?= $page->prevListed()->url() ?>"
-      class="pagination-previous button is-light"
+      class="pagination-previous button is-text"
       title="<?= $page->prevListed()->title()->html() ?>"
     >
     <?php else: ?>
-    <a class="pagination-previous button is-light" disabled tabindex="-1" aria-disabled="true">
+    <button class="pagination-previous button is-text" disabled aria-disabled="true">
     <?php endif ?>
       <span class="mr-2 fas fa-arrow-left" aria-hidden="true"></span>
-      <span class="is-hidden-tablet">Zurück</span>
+      <span class="is-hidden-tablet" aria-hidden="true">Vorheriger</span>
       <span class="is-hidden-mobile">Vorheriger Artikel</span>
-    </a>
+    </<?php e($page->hasPrevListed(), 'a', 'button') ?>>
 
     <div class="pagination-divider is-hidden-tablet"></div>
 
     <?php if ($page->hasNextListed() ): ?>
     <a href="<?= $page->nextListed()->url() ?>"
-      class="pagination-next button is-light"
+      class="pagination-next button is-text"
       title="<?= $page->nextListed()->title()->html() ?>"
     >
     <?php else: ?>
-    <a class="pagination-next button is-light" disabled tabindex="-1" aria-disabled="true">
+    <button class="pagination-next button is-text" disabled aria-disabled="true">
     <?php endif ?>
-      <span class="is-hidden-tablet">Weiter</span>
       <span class="is-hidden-mobile">Nächster Artikel</span>
+      <span class="is-hidden-tablet" aria-hidden="true">Nächster</span>
       <span class="ml-2 fas fa-arrow-right" aria-hidden="true"></span>
-    </a>
+    </<?php e($page->hasPrevListed(), 'a', 'button') ?>>
 
   </nav>
 <?php endif ?>

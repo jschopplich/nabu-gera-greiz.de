@@ -4,7 +4,7 @@
     <?php if ($pagination->hasPrevPage()): ?>
       <a
         href="<?= $pagination->prevPageUrl() ?>"
-        class="pagination-previous button is-light"
+        class="pagination-previous button is-text"
       >
         <span class="mr-2 fas fa-arrow-left" aria-hidden="true"></span>
         Vorherige Seite
@@ -16,7 +16,7 @@
         <li>
           <a
             href="<?= $pagination->pageUrl($r) ?>"
-            class="pagination-link button<?php e($pagination->page() === $r, ' is-primary is-current', ' is-light') ?>"
+            class="pagination-link button<?php e($pagination->page() === $r, ' is-primary is-current', ' is-text') ?>"
             aria-label="Seite <?php $r ?>"
             <?php e($pagination->page() === $r, 'aria-current="page"') ?>
           >
@@ -29,7 +29,7 @@
     <?php if ($pagination->hasNextPage()): ?>
       <a
         href="<?= $pagination->nextPageUrl() ?>"
-        class="pagination-next button is-light"
+        class="pagination-next button is-text"
       >
         Nächste Seite
         <span class="ml-2 fas fa-arrow-right" aria-hidden="true"></span>
