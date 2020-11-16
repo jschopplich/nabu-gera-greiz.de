@@ -4,7 +4,7 @@
     <div class="navbar-tabs is-hidden-desktop">
       <ul>
         <?php foreach ($site->navigationTabs()->toPages() as $tab): ?>
-          <li<?= attr(['class' => $p->isActive() ? 'is-active' : null], ' ') ?>>
+          <li<?= attr(['class' => $tab->isActive() ? 'is-active' : null], ' ') ?>>
             <a href="<?= $tab->url() ?>">
               <?= $tab->title() ?>
             </a>
