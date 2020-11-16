@@ -32,7 +32,7 @@ return [
     'thumbs' => [
         'quality' => '80',
         'srcsets' => [
-            'default' => [640, 768, 1024]
+            'default' => [360, 720, 1024]
         ]
     ],
 
@@ -56,6 +56,9 @@ return [
         'size'    => 'regular',
     ],
 
+    'kirbytext.image' => [
+        'srcset' => true
+    ],
     'kirbytext.image-hero' => [
         'width' => '768'
     ],
