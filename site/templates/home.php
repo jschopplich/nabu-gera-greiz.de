@@ -11,7 +11,7 @@
 
 <div class="section has-background-white-bis">
   <div class="container">
-    <h2 id="aktuelles" class="title is-3 is-size-4-mobile has-text-weight-bold has-text-centered mb-6">
+    <h2 id="aktuelles" class="title is-3 has-text-weight-bold has-text-centered mb-6">
       Aktuelle Beiträge
     </h2>
 
