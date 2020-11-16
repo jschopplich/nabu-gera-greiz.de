@@ -15,7 +15,7 @@
         <?php foreach ($articles as $article): ?>
           <article class="content is-main">
             <div class="mb-5">
-              <h2 class="is-size-2-tablet has-text-weight-bold">
+              <h2 class="title is-size-2-tablet has-text-weight-bold">
                 <a href="<?= $article->url() ?>"><?= $article->title()->html() ?></a>
               </h2>
 
