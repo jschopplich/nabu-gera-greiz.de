@@ -3,10 +3,10 @@
   <div class="navbar-brand">
     <div class="navbar-tabs is-hidden-desktop">
       <ul>
-        <?php foreach ($site->navigationTabs()->toPages() as $pageId): ?>
+        <?php foreach ($site->navigationTabs()->toPages() as $tab): ?>
           <li<?= attr(['class' => $p->isActive() ? 'is-active' : null], ' ') ?>>
-            <a href="<?= $p->url() ?>">
-              <?= $p->title() ?>
+            <a href="<?= $tab->url() ?>">
+              <?= $tab->title() ?>
             </a>
           </li>
         <?php endforeach ?>
