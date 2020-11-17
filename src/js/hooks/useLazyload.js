@@ -6,10 +6,11 @@ const load = element => {
   if (newSrc) element.src = newSrc
 
   const newSrcset = element.dataset.srcset
+  const newSizes = element.dataset.sizes
   if (newSrcset) {
     element.srcset = newSrcset
-    if (element.dataset.sizes === 'auto') {
-      element.sizes = `${element.offsetWidth}px`
+    if (newSizes) {
+      element.sizes = newSizes === 'auto' ? `${element.offsetWidth}px` : newSizes
     }
   }
 
