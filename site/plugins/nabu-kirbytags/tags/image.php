@@ -62,7 +62,7 @@ return [
             $image = Html::img($dataUri, A::merge($imageAttr, [
                 'data-src' => !$useSrcset ? $tag->src : null,
                 'data-srcset' => $useSrcset ? $tag->file->srcset() : null,
-                'data-sizes' => $useSrcset ? 'auto' : null,
+                // 'data-sizes' => $useSrcset ? 'auto' : null,
                 'data-lazyload' => 'true',
             ]));
         } else {
