@@ -56,7 +56,7 @@ class HtmlTruncator {
 
         list($inner, $remaining, $options) = static::truncateInner($doc, $node, $length, $options);
 
-        if (0 === mb_strlen($inner)) {
+        if (mb_strlen($inner) === 0) {
             return [in_array(mb_strtolower($node->nodeName), static::$selfClosingTags)
                 ? $doc->saveXML($node)
                 : '', $length - $remaining, $options
@@ -81,7 +81,7 @@ class HtmlTruncator {
             if ($childNode->nodeType === XML_ELEMENT_NODE) {
                 list($text, $nb, $options) = static::truncateNode($doc, $childNode, $remaining, $options);
             } elseif ($childNode->nodeType === XML_TEXT_NODE) {
-                list($text, $nb, $options) = static::truncateText($childNode, $remaining, $options);
+                list($text, $nb, $options) = static::truncateText($doc, $childNode, $remaining, $options);
             } else {
                 $text = '';
                 $nb = 0;
@@ -103,7 +103,7 @@ class HtmlTruncator {
         return [$inner, $remaining, $options];
     }
 
-    protected static function truncateText($node, $length, $options) {
+    protected static function truncateText($doc, $node, $length, $options) {
         $xhtml = $node->ownerDocument->saveXML($node);
         preg_match_all('/\s*\S+/', $xhtml, $words);
         $words = $words[0];
