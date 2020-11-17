@@ -10,8 +10,10 @@ if (!(PHP_VERSION_ID >= 70400)) {
 
 $missingExtensions = array();
 extension_loaded('ctype') || $missingExtensions[] = 'ctype';
+extension_loaded('dom') || $missingExtensions[] = 'dom';
 extension_loaded('filter') || $missingExtensions[] = 'filter';
 extension_loaded('gd') || $missingExtensions[] = 'gd';
+extension_loaded('libxml') || $missingExtensions[] = 'libxml';
 extension_loaded('mbstring') || $missingExtensions[] = 'mbstring';
 extension_loaded('pcre') || $missingExtensions[] = 'pcre';
 

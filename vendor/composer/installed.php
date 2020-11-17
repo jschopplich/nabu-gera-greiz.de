@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '7ab2564ec48845e765614532638397c0c2a52b4e',
+    'reference' => '1fa76729d0e2ce01e7eb30ece3d24ff077a35054',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '7ab2564ec48845e765614532638397c0c2a52b4e',
+      'reference' => '1fa76729d0e2ce01e7eb30ece3d24ff077a35054',
     ),
     'claviska/simpleimage' => 
     array (
@@ -127,6 +127,15 @@
       array (
       ),
       'reference' => '837086ec60f50c84c611c613963e4ad2e2aec806',
+    ),
+    'masterminds/html5' => 
+    array (
+      'pretty_version' => '2.7.4',
+      'version' => '2.7.4.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '9227822783c75406cfe400984b2f095cdf03d417',
     ),
     'matthecat/colorextractor' => 
     array (

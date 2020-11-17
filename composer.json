@@ -4,7 +4,8 @@
     "johannschopplich/kirby-extended": "^1.0",
     "distantnative/retour-for-kirby": "^2.0",
     "kirbyzone/sitemapper": "^1.2",
-    "k-community/markdown-field": "^1.0"
+    "k-community/markdown-field": "^1.0",
+    "masterminds/html5": "^2.7"
   },
   "config": {
     "optimize-autoloader": true

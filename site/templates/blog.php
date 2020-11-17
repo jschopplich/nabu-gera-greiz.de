@@ -30,7 +30,12 @@
               </span>
             </div>
 
-            <?= $article->text()->kirbytext() ?>
+            <?= $article->text()->ktExcerpt(60) ?>
+
+            <a href="<?= $article->url() ?>" class="button is-primary is-outlined">
+              Weiterlesen
+              <span class="ml-2 fas fa-arrow-right" aria-hidden="true"></span>
+            </a>
 
             <hr class="is-wide">
           </article>
