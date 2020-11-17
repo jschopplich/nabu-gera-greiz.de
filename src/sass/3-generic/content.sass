@@ -1,14 +1,11 @@
 .content.is-main
+  font-family: $family-secondary
+  line-height: calc(1ex / 0.32)
+  +tablet
+    font-size: 1.125rem
+
   h3:not([class])
     color: $grey
-
-  p:not([class]),
-  blockquote,
-  li
-    font-family: $family-secondary
-    line-height: calc(1ex / 0.32)
-    +tablet
-      font-size: 1.125rem
 
   figure
     margin-left: 0
@@ -16,12 +13,22 @@
     img
       border-radius: $radius
     figcaption
-      p
-        font-size: $size-small !important
-        line-height: calc(1ex / 0.38) !important
+      font-size: $size-small
+      line-height: calc(1ex / 0.38)
 
   hr
     clear: both
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .title,
+  .subtitle,
+  .tag
+    font-family: $family-primary
 
   // Links
 
@@ -102,19 +109,23 @@
   // Flickity
 
   .nabu-carousel
+    // Reuse bottom margin if figure elements
     margin-bottom: 2em
-    &:not(.flickity-enabled)
-      figure
-        width: 75%
-        margin-left: auto
-        margin-right: auto
-        &:not(:last-child)
-          display: none
+    // Avoid content jumping
+    &:not(.flickity-enabled) > *
+      width: 75%
+      margin-left: auto
+      margin-right: auto
+      &:not(:last-child)
+        display: none
+    .flickity-prev-next-button
+      +mobile
+        display: none
 
   .nabu-carousel-cell
     top: 50%
     width: 75%
-    margin: 0 0.5em !important
+    margin: 0 0.25em !important
     transform: translateY(-50%)
     img
       border-radius: $radius

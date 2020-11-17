@@ -1,6 +1,6 @@
     <div class="section is-hidden-mobile">
       <div class="container">
-        <h2 class="title is-4 is-partners has-text-primary mb-6">Unsere Partner</h2>
+        <h2 class="title is-4 has-divider-right has-text-primary mb-6">Unsere Partner</h2>
         <div class="columns is-mobile is-6 is-variable">
           <?php foreach ($site->partners()->toFiles() as $image): ?>
             <div class="column">
