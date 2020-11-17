@@ -1,4 +1,12 @@
 .content.is-main
+  figure
+    margin-left: 0
+    margin-right: 0
+    img
+      border-radius: $radius
+    figcaption
+      font-style: normal
+
   h3:not([class])
     color: $grey
 
@@ -8,8 +16,6 @@
     line-height: calc(1ex / 0.32)
     +tablet
       font-size: 1.125rem
-
-  // Lines
 
   hr
     clear: both
@@ -41,80 +47,69 @@
       margin-left: 0.125em
       margin-right: 0.25em
 
-  // Images
+  // Image containers
 
-  figure
-    margin-left: 0
-    margin-right: 0
+  .nabu-image-hero,
+  .nabu-image-box
+    border-radius: $radius
+    box-shadow: $box-shadow
+    padding: 0.25rem
+    img
+      display: block
+      margin: 0 auto
+    figcaption p
+      font-size: $size-small !important
+      line-height: calc(1ex / 0.38) !important
+      padding: 0.5rem
+      text-align: left
+      overflow-wrap: break-word
+      -webkit-hyphens: auto
+      hyphens: auto
+
+  +mobile
+    .nabu-image-hero,
+    .nabu-image-box,
+    .nabu-carousel
+      margin-left: -1.5rem
+      margin-right: -1.5rem
+
+  +tablet
+    .nabu-image-box
+      width: calc(320px + 0.5rem)
+      &.vertical
+        width: calc(220px + 0.5rem)
+      &.has-text-centered
+        margin-right: auto
+        margin-left: auto
+      &.is-floating-right
+        margin-top: 0
+        margin-left: 1.5em
+        float: right
+      &.is-floating-left
+        margin-top: 0
+        margin-right: 1.5em
+        float: left
+
+  +desktop
+    .nabu-image-hero,
+    .nabu-carousel
+      margin-left: -1.5em
+      margin-right: -1.5em
+
+  // Flickity
+
+  .nabu-carousel
+    margin-bottom: 2em
+    &:not(.flickity-enabled)
+      figure
+        width: 75%
+        &:not(:last-child)
+          display: none
+
+  .nabu-carousel-cell
+    top: 50%
+    width: 75%
+    margin: 0 0.5em !important
+    transform: translateY(-50%)
     img
       border-radius: $radius
-    figcaption
-      font-style: normal
-
-// Image containers
-
-.nabu-image-hero,
-.nabu-image-box
-  border-radius: $radius
-  box-shadow: $box-shadow
-  padding: 0.25rem
-  img
-    display: block
-    margin: 0 auto
-  figcaption p
-    font-size: $size-small !important
-    line-height: calc(1ex / 0.38) !important
-    padding: 0.5rem
-    text-align: left
-    overflow-wrap: break-word
-    -webkit-hyphens: auto
-    hyphens: auto
-
-+mobile
-  .nabu-image-hero,
-  .nabu-image-box,
-  .nabu-carousel
-    margin-left: -1.5rem
-    margin-right: -1.5rem
-
-+tablet
-  .nabu-image-box
-    width: calc(320px + 0.5rem)
-    &.vertical
-      width: calc(220px + 0.5rem)
-    &.has-text-centered
-      margin-right: auto
-      margin-left: auto
-    &.is-floating-right
-      margin-top: 0
-      margin-left: 1.5em
-      float: right
-    &.is-floating-left
-      margin-top: 0
-      margin-right: 1.5em
-      float: left
-
-+desktop
-  .nabu-image-hero,
-  .nabu-carousel
-    margin-left: -1.5em
-    margin-right: -1.5em
-
-// Flickity
-
-.nabu-carousel
-  margin-bottom: 2em
-  &:not(.flickity-enabled)
-    figure
-      :last-child
-        width: 75%
-      &:not(:last-child)
-        display: none
-
-.nabu-carousel-cell
-  top: 50%
-  width: 75%
-  margin: 0 0.5em !important
-  transform: translateY(-50%)
-  img
-    border-radius: $radius
