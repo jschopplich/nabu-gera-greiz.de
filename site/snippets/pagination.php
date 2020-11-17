@@ -4,7 +4,7 @@
     <?php if ($pagination->hasPrevPage()): ?>
       <a
         href="<?= $pagination->prevPageUrl() ?>"
-        class="pagination-previous button is-text"
+        class="pagination-previous button is-text is-hidden-mobile"
       >
         <span class="mr-2 fas fa-arrow-left" aria-hidden="true"></span>
         Vorherige Seite
@@ -29,7 +29,7 @@
     <?php if ($pagination->hasNextPage()): ?>
       <a
         href="<?= $pagination->nextPageUrl() ?>"
-        class="pagination-next button is-text"
+        class="pagination-next button is-text is-hidden-mobile"
       >
         Nächste Seite
         <span class="ml-2 fas fa-arrow-right" aria-hidden="true"></span>
