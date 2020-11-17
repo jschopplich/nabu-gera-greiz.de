@@ -1,12 +1,4 @@
 .content.is-main
-  figure
-    margin-left: 0
-    margin-right: 0
-    img
-      border-radius: $radius
-    figcaption
-      font-style: normal
-
   h3:not([class])
     color: $grey
 
@@ -16,6 +8,16 @@
     line-height: calc(1ex / 0.32)
     +tablet
       font-size: 1.125rem
+
+  figure
+    margin-left: 0
+    margin-right: 0
+    img
+      border-radius: $radius
+    figcaption
+      p
+        font-size: $size-small
+        line-height: calc(1ex / 0.38)
 
   hr
     clear: both
@@ -56,11 +58,10 @@
     padding: 0.25rem
     img
       display: block
+      width: 100% // Otherwise `sizes` attribute would limit width
       margin-left: auto
       margin-right: auto
     figcaption p
-      font-size: $size-small !important
-      line-height: calc(1ex / 0.38) !important
       padding: 0.5rem
       text-align: left
       overflow-wrap: break-word
@@ -77,7 +78,7 @@
   +tablet
     .nabu-image-box
       width: calc(320px + 0.5rem)
-      &.vertical
+      &.is-vertical
         width: calc(220px + 0.5rem)
       &.has-text-centered
         margin-left: auto

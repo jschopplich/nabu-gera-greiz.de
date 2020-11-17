@@ -72,6 +72,9 @@ return [
         }
 
         $tag->class = trim($tag->class . ' nabu-image-box', ' ');
+        if (Str::contains($tag->class, 'vertical')) {
+            $tag->class .= ' is-vertical';
+        }
 
         if (Str::contains($tag->class, 'centered')) {
             $tag->class .= ' has-text-centered';
