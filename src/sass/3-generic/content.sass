@@ -56,7 +56,8 @@
     padding: 0.25rem
     img
       display: block
-      margin: 0 auto
+      margin-left: auto
+      margin-right: auto
     figcaption p
       font-size: $size-small !important
       line-height: calc(1ex / 0.38) !important
@@ -79,8 +80,8 @@
       &.vertical
         width: calc(220px + 0.5rem)
       &.has-text-centered
-        margin-right: auto
         margin-left: auto
+        margin-right: auto
       &.is-floating-right
         margin-top: 0
         margin-left: 1.5em
@@ -103,6 +104,8 @@
     &:not(.flickity-enabled)
       figure
         width: 75%
+        margin-left: auto
+        margin-right: auto
         &:not(:last-child)
           display: none
 
