@@ -28,7 +28,7 @@ for (const link of document.querySelectorAll('[data-open-modal], [data-close-mod
 }
 
 // Initialize carousels
-window.addEventListener('load', async () => {
+(async () => {
   const carousels = Array.from(document.querySelectorAll('.carousel'))
   if (carousels.length === 0) return
 
@@ -47,4 +47,4 @@ window.addEventListener('load', async () => {
       autoPlay: 3600
     })
   }
-})
+})()
