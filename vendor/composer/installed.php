@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '1fa76729d0e2ce01e7eb30ece3d24ff077a35054',
+    'reference' => 'd006fddb6481c6606d0218a16ded95db130d5e6e',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '1fa76729d0e2ce01e7eb30ece3d24ff077a35054',
+      'reference' => 'd006fddb6481c6606d0218a16ded95db130d5e6e',
     ),
     'claviska/simpleimage' => 
     array (
@@ -189,6 +189,15 @@
       ),
       'reference' => '0f73288fd15629204f9d42b7055f72dacbe811fc',
     ),
+    'symfony/css-selector' => 
+    array (
+      'pretty_version' => 'v5.1.8',
+      'version' => '5.1.8.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '6cbebda22ffc0d4bb8fea0c1311c2ca54c4c8fa0',
+    ),
     'symfony/polyfill-ctype' => 
     array (
       'pretty_version' => 'v1.20.0',
@@ -233,6 +242,24 @@
       array (
       ),
       'reference' => 'fba64139db67123c7a57072e5f8d3db10d160b66',
+    ),
+    'voku/html-min' => 
+    array (
+      'pretty_version' => '4.4.8',
+      'version' => '4.4.8.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '4f700584abd70b308b7d06b8e4cfcc31711faaf9',
+    ),
+    'voku/simple_html_dom' => 
+    array (
+      'pretty_version' => '4.7.27',
+      'version' => '4.7.27.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '3b3c4bb83ea7b341d91a878aea210d6d96591f49',
     ),
     'zendframework/zend-escaper' => 
     array (

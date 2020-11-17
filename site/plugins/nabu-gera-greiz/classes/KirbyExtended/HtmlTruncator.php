@@ -4,7 +4,8 @@ namespace KirbyExtended;
 
 use Masterminds\HTML5;
 
-class HtmlTruncator {
+class HtmlTruncator
+{
     public static array $defaultOptions = [
         'ellipsis' => '…',
         'lengthInChars' => false
@@ -32,7 +33,8 @@ class HtmlTruncator {
      * @param string|array $options
      * @return string
      */
-    public static function truncate(string $html, int $length, $options = []): string {
+    public static function truncate(string $html, int $length, $options = []): string
+    {
         if (is_string($options)) $options = ['ellipsis' => $options];
         $options = array_merge(static::$defaultOptions, $options);
 
@@ -49,7 +51,8 @@ class HtmlTruncator {
         return $text;
     }
 
-    protected static function truncateNode($doc, $node, $length, $options) {
+    protected static function truncateNode($doc, $node, $length, $options)
+    {
         if ($length === 0 && !static::ellipsable($node)) {
             return ['', 1, $options];
         }
@@ -73,7 +76,8 @@ class HtmlTruncator {
         return [$doc->saveXML($node), $length - $remaining, $options];
     }
 
-    protected static function truncateInner($doc, $node, $length, $options) {
+    protected static function truncateInner($doc, $node, $length, $options)
+    {
         $inner = '';
         $remaining = $length;
 
@@ -103,7 +107,8 @@ class HtmlTruncator {
         return [$inner, $remaining, $options];
     }
 
-    protected static function truncateText($doc, $node, $length, $options) {
+    protected static function truncateText($doc, $node, $length, $options)
+    {
         $xhtml = $node->ownerDocument->saveXML($node);
         preg_match_all('/\s*\S+/', $xhtml, $words);
         $words = $words[0];
@@ -136,11 +141,13 @@ class HtmlTruncator {
         return [implode('', array_slice($words, 0, $length)), $count, $options];
     }
 
-    protected static function ellipsable($node) {
+    protected static function ellipsable($node)
+    {
         return in_array(mb_strtolower($node->nodeName), static::$ellipsableTags);
     }
 
-    protected static function utf8ForXml(string $string) {
+    protected static function utf8ForXml(string $string)
+    {
         return preg_replace('/[^\x{0009}\x{000a}\x{000d}\x{0020}-\x{D7FF}\x{E000}-\x{FFFD}]+/u', ' ', $string);
     }
 }

@@ -16,6 +16,7 @@ extension_loaded('gd') || $missingExtensions[] = 'gd';
 extension_loaded('libxml') || $missingExtensions[] = 'libxml';
 extension_loaded('mbstring') || $missingExtensions[] = 'mbstring';
 extension_loaded('pcre') || $missingExtensions[] = 'pcre';
+extension_loaded('simplexml') || $missingExtensions[] = 'simplexml';
 
 if ($missingExtensions) {
     $issues[] = 'Your Composer dependencies require the following PHP extensions to be installed: ' . implode(', ', $missingExtensions);
