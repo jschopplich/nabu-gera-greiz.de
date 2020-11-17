@@ -4,7 +4,7 @@
   <div class="content-wrapper container">
     <div class="content is-main">
       <?php snippet('intro') ?>
-      <?= $page->text()->kirbytext() ?>
+      <?= $page->text()->kt() ?>
     </div>
 
     <?php snippet('sidebar') ?>

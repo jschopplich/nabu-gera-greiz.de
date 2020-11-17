@@ -9,8 +9,5 @@ return function ($page) {
         ->sortBy(fn($child) => $child->date()->toDate(), 'desc')
         ->paginate($perpage);
 
-    return [
-        'articles'   => $articles,
-        'pagination' => $articles->pagination()
-    ];
+    return compact('articles');
 };

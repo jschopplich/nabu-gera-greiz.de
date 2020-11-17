@@ -42,7 +42,7 @@
         <?php endforeach ?>
       </div>
 
-      <?php snippet('pagination', ['pagination' => $pagination]) ?>
+      <?php snippet('pagination', ['pagination' => $articles->pagination()]) ?>
     </div>
 
     <?php snippet('sidebar') ?>

@@ -4,7 +4,7 @@
   <div class="content-wrapper container">
     <div>
       <article class="content is-main mb-6">
-        <div class="mb-5">
+        <div class="mb-6">
           <?php snippet('intro') ?>
 
           <?php if ($page->subtitle()->isNotEmpty()): ?>
