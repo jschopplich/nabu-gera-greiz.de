@@ -30,7 +30,7 @@ Kirby::plugin('nabu-gera-greiz/kirby-tags', [
 
             $text = preg_replace_callback(
                 '!\(carousel(…|\.{3})\)(.*?)\((…|\.{3})carousel\)!is',
-                fn($match) => '<div class="carousel">' . $match[2] . '</div>',
+                fn($match) => '<div class="nabu-carousel">' . $match[2] . '</div>',
                 $text
             );
 

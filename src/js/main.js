@@ -29,16 +29,16 @@ for (const link of document.querySelectorAll('[data-open-modal], [data-close-mod
 
 // Initialize carousels
 (async () => {
-  const carousels = Array.from(document.querySelectorAll('.carousel'))
+  const carousels = Array.from(document.querySelectorAll('.nabu-carousel'))
   if (carousels.length === 0) return
 
   const { default: Flickity } = await import('flickity')
 
-  for (const figure of document.querySelectorAll('.carousel figure')) {
-    figure.classList.add('carousel-cell')
+  for (const figure of document.querySelectorAll('.nabu-carousel figure')) {
+    figure.classList.add('nabu-carousel-cell')
   }
 
-  for (const carousel of document.querySelectorAll('.carousel')) {
+  for (const carousel of carousels) {
     // eslint-disable-next-line no-unused-vars
     const flickity = new Flickity(carousel, {
       cellAlign: 'center',
