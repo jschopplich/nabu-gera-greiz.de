@@ -34,26 +34,24 @@
   // Links
 
   .arrow::after,
-  a[target="_blank"]::after,
-  a[href$=".pdf"]::before
+  [target="_blank"]::after,
+  [href$=".pdf"]::before
     display: none
     font-family: "Font Awesome 5 Pro"
     font-weight: 300
 
-  .arrow::after,
-  a[target="_blank"]:not([href$=".pdf"])::after
-    content: "\f08e"
-
-  a[href$=".pdf"]::before
-    content: "\f1c1"
-
   .arrow,
-  a[target="_blank"]:not([href$=".pdf"])
-    > svg
-      margin-left: 0.25em
-      margin-right: 0.125em
+  [target="_blank"]
+    &:not([href$=".pdf"])
+      &::after
+        content: "\f08e"
+      > svg
+        margin-left: 0.25em
+        margin-right: 0.125em
 
-  a[href$=".pdf"]
+  [href$=".pdf"]
+    &::before
+      content: "\f1c1"
     > svg
       margin-left: 0.125em
       margin-right: 0.25em
