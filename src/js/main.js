@@ -8,15 +8,12 @@ lazyloading.observe()
 const animere = new Animere()
 
 // Handle navigation
-for (const link of [
-  ...document.querySelectorAll('.navbar-burger'),
-  ...document.querySelectorAll('.navbar-link')
-]) {
-  link.addEventListener('click', () => {
-    document.querySelector('.navbar-burger').classList.toggle('is-active')
-    document.querySelector('.navbar-menu').classList.toggle('is-active')
-  })
-}
+const navbarBurger = document.querySelector('.navbar-burger')
+const navbarMenu = document.querySelector('.navbar-menu')
+navbarBurger.addEventListener('click', () => {
+  navbarBurger.classList.toggle('is-active')
+  navbarMenu.classList.toggle('is-active')
+})
 
 // Handle modals
 for (const link of document.querySelectorAll('[data-open-modal], [data-close-modal]')) {

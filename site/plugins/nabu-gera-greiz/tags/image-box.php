@@ -18,7 +18,12 @@ return [
         'target',
         'text',
         'title',
-        'width'
+        'width',
+
+        // Deprecated, but keep them, otherwise
+        // they are parsed as text
+        'position',
+        'layout'
     ],
     'html' => function ($tag) {
         // Handle images from archive
