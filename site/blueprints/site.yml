@@ -39,6 +39,10 @@ tabs:
             headline: Entwürfe
             type: pages
             status: draft
+            create:
+              - default
+              - category
+              - blog
             image: icon
 
   settings:
