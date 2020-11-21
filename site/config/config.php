@@ -40,6 +40,10 @@ return [
       'extra' => true
     ],
 
+    'kirbytext.image' => [
+        'srcset' => true
+    ],
+
     'kirby-extended.meta-tags' => [
         'default' => require __DIR__ . '/meta.php',
         'templates' => require __DIR__ . '/meta-templates.php',
@@ -54,10 +58,6 @@ return [
         'family'  => 'sans-serif',
         'scaling' => true,
         'size'    => 'regular',
-    ],
-
-    'kirbytext.image' => [
-        'srcset' => true
     ],
 
     'cre8ivclick.sitemapper' => [
