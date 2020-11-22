@@ -19,15 +19,13 @@ return [
     [
         'pattern' => '(:all)/archiv/(:num)',
         'action'  => function ($all, $num) {
-            $page = page($all);
-
-            if (empty($num) || !$page) {
-                go($all);
+            if ($page = page($all . '/archiv/' . $num)) {
+                return $page;
             }
 
             return Page::factory([
                 'slug' => $num,
-                'parent' => $page,
+                'parent' => page($all),
                 'template' => 'blog-archive',
                 'model' => 'virtual',
                 'content' => [
