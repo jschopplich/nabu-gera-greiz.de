@@ -44,7 +44,9 @@
         <?php endif ?>
       </div>
 
-      <?php snippet('pagination', ['pagination' => $articles->pagination()]) ?>
+      <?php if (!$page->hideArticles()->toBool()): ?>
+        <?php snippet('pagination', ['pagination' => $articles->pagination()]) ?>
+      <?php endif ?>
     </div>
 
     <?php snippet('sidebar') ?>
