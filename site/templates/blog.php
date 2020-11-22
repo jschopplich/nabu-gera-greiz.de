@@ -14,7 +14,7 @@
 
         <?php if (!$page->hideArticles()->toBool()): ?>
           <?php foreach ($articles as $article): ?>
-            <article class="content is-main">
+            <article class="content is-main is-clearfix">
               <div class="mb-5">
                 <h2 class="title is-size-2-tablet has-text-weight-bold">
                   <a href="<?= $article->url() ?>"><?= $article->title()->html() ?></a>

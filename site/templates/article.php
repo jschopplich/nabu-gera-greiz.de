@@ -3,7 +3,7 @@
 <div class="section">
   <div class="content-wrapper container">
     <div>
-      <article class="content is-main mb-6">
+      <article class="content is-main mb-6 is-clearfix">
         <div class="mb-6">
           <?php snippet('intro') ?>
 
