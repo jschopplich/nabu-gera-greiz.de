@@ -1,5 +1,11 @@
-<nav class="navbar is-spaced<?php e($page->isHomePage(), ' is-home') ?>">
+<?php
 
+use Kirby\Http\Url;
+use Kirby\Toolkit\Str;
+
+?>
+
+<nav class="navbar is-spaced<?php e($page->isHomePage(), ' is-home') ?>">
   <div class="navbar-brand">
     <div class="navbar-tabs is-hidden-desktop">
       <ul>
@@ -35,11 +41,8 @@
               <?= $child->title()->html() ?>
             </div>
 
-            <?php
-            $isNewspage = $child->id() === 'aktuelles';
-            ?>
             <div class="navbar-dropdown has-more is-boxed">
-              <?php if ($isNewspage): ?>
+              <?php if ($child->id() === 'aktuelles'): ?>
                 <a
                   href="<?= $child->url() ?>"
                   class="navbar-item<?php e($child->isActive(), ' is-active') ?>"
@@ -59,7 +62,7 @@
 
               <?php foreach ($child->children()->listed()->filterBy('template', '!=', 'article') as $grandchild): ?>
                 <?php
-                $tag = $isNewspage ? 'div' : 'a';
+                $tag = $child->id() === 'aktuelles' ? 'div' : 'a';
                 ?>
                 <<?= $tag ?>
                   class="navbar-item<?php e($grandchild->isActive(), ' is-active') ?>"
@@ -76,20 +79,39 @@
                 </<?= $tag ?>>
 
                 <?php
-                $more = $grandchild->children()->filterBy('template', 'in', ['topic', 'blog', 'blog-old']);
+                $grandgrandchilden = $grandchild->children()->filterBy('template', 'in', ['topic', 'blog', 'blog-old']);
+                $articleDates = $grandchild->children()->listed()->filterBy('template', 'article')->pluck('date');
+                $lastYear = null;
                 ?>
-                <?php if ($more->count()): ?>
+                <?php if ($grandgrandchilden->count() || count($articleDates)): ?>
                   <div class="navbar-item">
                     <div>
                       <nav class="breadcrumb has-bullet-separator is-small">
                         <ul>
-                          <?php foreach ($more as $item): ?>
+                          <?php foreach ($grandgrandchilden as $item): ?>
                             <li<?php e($item->isActive(), ' class="is-active"') ?>>
                               <a href="<?= $item->url() ?>"<?php e($item->isActive(), ' aria-current="page"') ?>>
                                 <?= $item->title() ?>
                               </a>
                             </li>
                           <?php endforeach ?>
+
+                          <?php if ($grandchild->showArchive()->toBool()): ?>
+                            <?php foreach ($articleDates as $date): ?>
+                              <?php
+                              $year = strftime('%Y', strtotime($date));
+                              if ($year === $lastYear) continue;
+                              $lastYear = $year;
+                              $url = $grandchild->url() . '/archiv/' . $year;
+                              $isActive = Str::startsWith(Url::current(), $url)
+                              ?>
+                              <li<?php e($isActive, ' class="is-active"') ?>>
+                                <a href="<?= $url ?>"<?php e($isActive, ' aria-current="page"') ?>>
+                                  Archiv <?= $year ?>
+                                </a>
+                              </li>
+                            <?php endforeach ?>
+                          <?php endif ?>
                         </ul>
                       </nav>
                     </div>

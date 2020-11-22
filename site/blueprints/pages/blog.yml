@@ -22,7 +22,7 @@ tabs:
 
           unlistedArticles:
             extends: sections/articles
-            headline: Artikel in Überprüfung
+            headline: Ungelistete Artikel
             status: unlisted
 
       - width: 2/3
@@ -97,6 +97,20 @@ tabs:
                 default: 6
                 min: 1
                 max: 20
+              hideArticles:
+                label: Artikel verstecken?
+                type: toggle
+                text:
+                  - Nein
+                  - Ja
+              showArchive:
+                label: Archiv in Navigation anzeigen?
+                type: toggle
+                text:
+                  - Nein
+                  - Ja
+                default: false
+                help: Das Archiv wird automatisch nach Jahren generiert.
           meta: sections/meta
 
   files: tabs/files
