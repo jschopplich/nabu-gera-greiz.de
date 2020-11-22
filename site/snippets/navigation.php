@@ -103,32 +103,22 @@ use Kirby\Toolkit\Str;
                 $articleDates = $grandchild->children()->listed()->filterBy('template', 'article')->pluck('date');
                 $archiveYears = array_unique(array_map(fn($i) => substr($i, 0, 4), $articleDates));
                 ?>
-                <?php if (count($archiveYears)): ?>
+                <?php if ($grandchild->showArchive()->toBool() && count($archiveYears)): ?>
                   <div class="navbar-item">
                     <div>
                       <nav class="breadcrumb has-bullet-separator is-small">
                         <ul>
-                          <?php foreach ($grandgrandchilden as $item): ?>
-                            <li<?php e($item->isActive(), ' class="is-active"') ?>>
-                              <a href="<?= $item->url() ?>"<?php e($item->isActive(), ' aria-current="page"') ?>>
-                                <?= $item->title() ?>
+                          <?php foreach ($archiveYears as $year): ?>
+                            <?php
+                            $url = $grandchild->url() . '/archiv/' . $year;
+                            $isActive = Str::startsWith(Url::current(), $url)
+                            ?>
+                            <li<?php e($isActive, ' class="is-active"') ?>>
+                              <a href="<?= $url ?>"<?php e($isActive, ' aria-current="page"') ?>>
+                                Archiv <?= $year ?>
                               </a>
                             </li>
                           <?php endforeach ?>
-
-                          <?php if ($grandchild->showArchive()->toBool()): ?>
-                            <?php foreach ($archiveYears as $year): ?>
-                              <?php
-                              $url = $grandchild->url() . '/archiv/' . $year;
-                              $isActive = Str::startsWith(Url::current(), $url)
-                              ?>
-                              <li<?php e($isActive, ' class="is-active"') ?>>
-                                <a href="<?= $url ?>"<?php e($isActive, ' aria-current="page"') ?>>
-                                  Archiv <?= $year ?>
-                                </a>
-                              </li>
-                            <?php endforeach ?>
-                          <?php endif ?>
                         </ul>
                       </nav>
                     </div>
