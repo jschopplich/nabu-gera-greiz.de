@@ -80,10 +80,30 @@ use Kirby\Toolkit\Str;
 
                 <?php
                 $grandgrandchilden = $grandchild->children()->filterBy('template', 'in', ['topic', 'blog', 'blog-old']);
-                $articleDates = $grandchild->children()->listed()->filterBy('template', 'article')->pluck('date');
-                $lastYear = null;
                 ?>
-                <?php if ($grandgrandchilden->count() || count($articleDates)): ?>
+                <?php if ($grandgrandchilden->count()): ?>
+                  <div class="navbar-item">
+                    <div>
+                      <nav class="breadcrumb has-bullet-separator is-small">
+                        <ul>
+                          <?php foreach ($grandgrandchilden as $item): ?>
+                            <li<?php e($item->isActive(), ' class="is-active"') ?>>
+                              <a href="<?= $item->url() ?>"<?php e($item->isActive(), ' aria-current="page"') ?>>
+                                <?= $item->title() ?>
+                              </a>
+                            </li>
+                          <?php endforeach ?>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                <?php endif ?>
+
+                <?php
+                $articleDates = $grandchild->children()->listed()->filterBy('template', 'article')->pluck('date');
+                $archiveYears = array_unique(array_map(fn($i) => substr($i, 0, 4), $articleDates));
+                ?>
+                <?php if (count($archiveYears)): ?>
                   <div class="navbar-item">
                     <div>
                       <nav class="breadcrumb has-bullet-separator is-small">
@@ -97,11 +117,8 @@ use Kirby\Toolkit\Str;
                           <?php endforeach ?>
 
                           <?php if ($grandchild->showArchive()->toBool()): ?>
-                            <?php foreach ($articleDates as $date): ?>
+                            <?php foreach ($archiveYears as $year): ?>
                               <?php
-                              $year = strftime('%Y', strtotime($date));
-                              if ($year === $lastYear) continue;
-                              $lastYear = $year;
                               $url = $grandchild->url() . '/archiv/' . $year;
                               $isActive = Str::startsWith(Url::current(), $url)
                               ?>

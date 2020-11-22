@@ -109,7 +109,6 @@ tabs:
                 text:
                   - Nein
                   - Ja
-                default: false
                 help: Das Archiv wird automatisch nach Jahren generiert.
           meta: sections/meta
 
