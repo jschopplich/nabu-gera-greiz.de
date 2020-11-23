@@ -54,7 +54,7 @@
                   </a>
 
                   <?php
-                  $grandgrandchilden = $grandchild->children()->filterBy('template', 'in', ['topic', 'blog']);
+                  $grandgrandchilden = $grandchild->children()->filterBy('template', 'in', ['default', 'blog']);
                   ?>
                   <?php if ($grandgrandchilden->count()): ?>
                     <div class="navbar-item">

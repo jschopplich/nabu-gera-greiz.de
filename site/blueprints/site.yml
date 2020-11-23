@@ -17,8 +17,8 @@ tabs:
             info: "{{ page.date.toDate('%d.%m.%Y') }}"
             layout: cards
             image:
-              back: white
               cover: true
+              back: white
             limit: 9
 
       - width: 1/2

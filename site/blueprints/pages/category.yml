@@ -2,10 +2,6 @@ title: Kategorie
 
 icon: 📖
 
-options:
-  changeSlug: false
-  delete: false
-
 columns:
   - width: 1/3
     sections:
@@ -32,4 +28,6 @@ columns:
         headline: Veröffentlicht
         status: listed
         layout: cards
-        image: icon
+        image:
+          cover: true
+          back: white

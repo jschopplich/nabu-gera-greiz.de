@@ -9,14 +9,17 @@ tabs:
     columns:
       - width: 1/1
         sections:
-          topics:
+          children:
             type: pages
             headline: Unterseiten
             status: all
             template:
-              - topic
+              - default
+              - blog
             layout: cards
-            image: icon
+            image:
+              cover: true
+              back: white
 
       - width: 1/3
         sections:
@@ -53,7 +56,7 @@ tabs:
                 icon: smile
                 width: 1/3
                 help: >
-                  Iconnamen können auf <a href="https://fontawesome.com/icons?d=gallery">fontawesome.com</a> gefunden werden
+                  Namen für Icons können auf <a href="https://fontawesome.com/icons?d=gallery">fontawesome.com</a> gefunden werden.
               navDescription:
                 label: Menü-Beschreibung
                 type: text
