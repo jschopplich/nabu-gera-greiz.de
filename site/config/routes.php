@@ -17,20 +17,33 @@ return [
         }
     ],
     [
+        // Redirect articles from former news archive blogs
+        // Now they are all located under `aktuelles`,
+        // since virtual pages are used for the yearly archives
+        'pattern' => 'aktuelles/archiv/(:num)/(:any)',
+        'action'  => function ($year, $article) {
+            if ($page = page("aktuelles/{$article}")) {
+                go($page->url(), 301);
+            }
+
+            go("aktuelles/archiv/{$year}");
+        }
+    ],
+    [
         'pattern' => '(:all)/archiv/(:num)',
-        'action'  => function ($all, $num) {
-            if ($page = page($all . '/archiv/' . $num)) {
+        'action'  => function ($all, $year) {
+            if ($page = page($all . '/archiv/' . $year)) {
                 return $page;
             }
 
             return Page::factory([
-                'slug' => $num,
+                'slug' => $year,
                 'parent' => page($all),
                 'template' => 'blog-archive',
                 'model' => 'virtual',
                 'content' => [
-                    'title' => 'Archiv ' . $num,
-                    'virtualYear' => $num
+                    'title' => "Archiv {$year}",
+                    'virtualYear' => $year
                 ]
             ]);
         }
