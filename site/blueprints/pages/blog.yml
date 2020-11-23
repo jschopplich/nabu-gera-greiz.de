@@ -2,12 +2,6 @@ title: Blog
 
 icon: 📚
 
-options:
-  changeSlug: false
-  changeStatus: false
-  duplicate: false
-  delete: false
-
 tabs:
   overview:
     label: Artikel & Unterseiten
