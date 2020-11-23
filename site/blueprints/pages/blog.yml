@@ -31,8 +31,7 @@ tabs:
             extends: sections/articles
             headline: Veröffentlichte Artikel
             status: listed
-            layout: cards
-            size: tiny
+            limit: 30
 
   pages:
     label: Unterseiten
