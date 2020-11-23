@@ -1,10 +1,10 @@
 <?php
 
 return function ($kirby, $page) {
-    $perpage  = $page->perPage()->int();
+    $count    = $page->perPage()->int();
     $articles = $kirby
                 ->collection('articles')
-                ->paginate($perpage);
+                ->paginate($count);
 
     return compact('articles');
 };
