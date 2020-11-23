@@ -5,6 +5,7 @@ use Kirby\Toolkit\Str;
 
 $articleDates = $data->children()->listed()->filterBy('template', 'article')->pluck('date');
 $archiveYears = array_unique(array_map(fn($i) => substr($i, 0, 4), $articleDates));
+rsort($archiveYears);
 
 ?>
 <?php if ($data->showArchive()->toBool() && count($archiveYears)): ?>
