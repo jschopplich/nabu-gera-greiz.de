@@ -1,7 +1,7 @@
 <?php
 
 return function ($kirby, $page) {
-    $count    = $page->perPage()->int();
+    $count = $page->perPage()->int();
 
     if ($page->id() === 'aktuelles') {
         $articles = $kirby

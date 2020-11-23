@@ -26,8 +26,7 @@ return [
         'layout'
     ],
     'html' => function ($tag) {
-        // Handle images from archive
-        if ($tag->file = $tag->kirby()->file('images/' . $tag->value) ?? $tag->file($tag->value)) {
+        if ($tag->file = $tag->file($tag->value)) {
             $tag->src     = $tag->file->url();
             $tag->alt     = $tag->alt     ?? $tag->file->alt()->or(' ')->value();
             $tag->title   = $tag->title   ?? $tag->file->title()->value();
