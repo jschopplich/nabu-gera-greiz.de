@@ -35,7 +35,9 @@
 
   .arrow::after,
   [target="_blank"]::after,
-  [href$=".pdf"]::before
+  [href$=".pdf"]::before,
+  [href$=".doc"]::before,
+  [href$=".docx"]::before
     display: none
     font-family: "Font Awesome 5 Pro"
     font-weight: 300
@@ -49,12 +51,19 @@
         margin-left: 0.25em
         margin-right: 0.125em
 
-  [href$=".pdf"]
-    &::before
-      content: "\f1c1"
+  [href$=".pdf"],
+  [href$=".doc"],
+  [href$=".docx"]
     > svg
       margin-left: 0.125em
       margin-right: 0.25em
+
+  [href$=".pdf"]::before
+    content: "\f1c1"
+
+  [href$=".doc"]::before,
+  [href$=".docx"]::before
+    content: "\f1c2"
 
   figure
     [href$=".pdf"]
