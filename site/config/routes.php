@@ -32,9 +32,8 @@ return [
     [
         'pattern' => '(:all)/archiv/(:num)',
         'action'  => function ($all, $year) {
-            if ($page = page($all . '/archiv/' . $year)) {
-                return $page;
-            }
+            // Locale setting is not inherited from global configuration
+            setlocale(LC_TIME, 'de_DE.UTF-8');
 
             return Page::factory([
                 'slug' => $year,
