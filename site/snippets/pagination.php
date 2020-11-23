@@ -12,7 +12,7 @@
     <?php endif ?>
 
     <ul class="pagination-list">
-      <?php foreach ($pagination->range(10) as $r): ?>
+      <?php foreach ($pagination->range(5) as $r): ?>
         <li>
           <a
             href="<?= $pagination->pageUrl($r) ?>"
