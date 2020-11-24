@@ -74,7 +74,10 @@
                     </div>
                   <?php endif ?>
 
-                  <?php snippet('navigation/archive', ['data' => $grandchild, 'titlePrefix' => 'Archiv']) ?>
+                  <?php snippet('navigation/archive', [
+                    'data' => $grandchild,
+                    'titlePrefix' => 'Archiv'
+                  ]) ?>
 
                   <?php if (!$grandchild->isLast()): ?>
                     <hr class="navbar-divider">

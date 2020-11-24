@@ -24,4 +24,8 @@
   </div>
 </div>
 
-<?php snippet('navigation/archive', ['data' => $data, 'titlePrefix' => '']) ?>
+<?php snippet('navigation/archive', [
+  'data' => $data,
+  'titlePrefix' => '',
+  'breadcrumbSeperator' => 'has-arrow-separator'
+]) ?>
