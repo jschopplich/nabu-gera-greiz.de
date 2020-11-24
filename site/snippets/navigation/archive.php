@@ -4,7 +4,11 @@ use Kirby\Http\Url;
 use Kirby\Toolkit\Str;
 
 $articleDates = $data->children()->listed()->filterBy('template', 'article')->pluck('date');
-$archiveYears = array_unique(array_map(fn($i) => substr($i, 0, 4), $articleDates));
+// Grab only year from date of format `2020-11-25`
+$archiveYears = array_unique(array_map(fn ($i) => substr($i, 0, 4), $articleDates));
+// Remove current year
+$archiveYears = array_filter($archiveYears, fn ($i) => $i !== date('Y'));
+// Sort array descending
 rsort($archiveYears);
 
 ?>
