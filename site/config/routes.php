@@ -51,15 +51,21 @@ return [
         }
     ],
     [
-        // Try to find old documents or images and redirect
+        // Try to find old documents or images from
+        // older archive setup and redirect
         'pattern' => [
             'content/documents/(:num)/(:any)',
             'content/images/(:num)/(:any)',
             'documents/(:num)/(:any)',
             'images/(:num)/(:any)'
         ],
-        'action' => function ($year, $filename) {
-            $filename = Str::slug($filename);
+        'action' => function ($year, $any) {
+            [
+                'filename' => $filename,
+                'extension' => $extension
+            ] = pathinfo($any);
+
+            $filename = Str::slug($filename) . '.' . $extension;
             if ($file = site()->index()->files()->findBy('filename', $filename)) {
                 go($file->url(), 301);
             }
