@@ -45,11 +45,11 @@ Kirby::plugin('nabu-gera-greiz/kirby-tags', [
     ],
 
     'tags' => [
-        'image'          => require __DIR__ . '/tags/image.php',
-        'image-hero'     => require __DIR__ . '/tags/image-hero.php',
-        'image-box'      => require __DIR__ . '/tags/image-box.php',
-        'hr'             => require __DIR__ . '/tags/line.php',
-        'line'           => require __DIR__ . '/tags/line.php',
-        'link'           => require __DIR__ . '/tags/link.php'
+        'image'      => require __DIR__ . '/tags/image.php',
+        'image-hero' => require __DIR__ . '/tags/image-hero.php',
+        'image-box'  => require __DIR__ . '/tags/image-box.php',
+        'hr'         => require __DIR__ . '/tags/line.php',
+        'line'       => require __DIR__ . '/tags/line.php',
+        'video'      => require __DIR__ . '/tags/video.php'
     ]
 ]);
