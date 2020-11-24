@@ -1,6 +1,7 @@
 <?php
 
 use Kirby\Cms\Page;
+use Kirby\Toolkit\Str;
 
 return [
     [
@@ -17,9 +18,10 @@ return [
         }
     ],
     [
-        // Redirect articles from former news archive blogs
-        // Now they are all located under `aktuelles`,
-        // since virtual pages are used for the yearly archives
+        // Redirect articles from former archive blogs located under `aktuelles`,
+        // since now all articles are located under `aktuelles` and archives
+        // are just virtual pages
+        // e.g. `aktuelles/archiv/2018/name-of-the-article` -> `aktuelles/name-of-the-article`
         'pattern' => 'aktuelles/archiv/(:num)/(:any)',
         'action'  => function ($year, $article) {
             if ($page = page("aktuelles/{$article}")) {
@@ -30,6 +32,7 @@ return [
         }
     ],
     [
+        // Virtual pages for blog archives
         'pattern' => '(:all)/archiv/(:num)',
         'action'  => function ($all, $year) {
             // Locale setting is not inherited from global configuration
@@ -45,6 +48,23 @@ return [
                     'virtualYear' => $year
                 ]
             ]);
+        }
+    ],
+    [
+        // Try to find old documents or images and redirect
+        'pattern' => [
+            'content/documents/(:num)/(:any)',
+            'content/images/(:num)/(:any)',
+            'documents/(:num)/(:any)',
+            'images/(:num)/(:any)'
+        ],
+        'action' => function ($year, $filename) {
+            $filename = Str::slug($filename);
+            if ($file = site()->index()->files()->findBy('filename', $filename)) {
+                go($file->url(), 301);
+            }
+
+            $this->next();
         }
     ]
 ];
