@@ -18,12 +18,14 @@ return [
         }
     ],
     [
-        // Redirect articles from former archive blogs located under `aktuelles`,
-        // since now all articles are located under `aktuelles` and archives
-        // are just virtual pages
+        // Redirect articles from archive blogs, since now all articles are
+        // located under `aktuelles` and archives are just virtual pages
         // e.g. `aktuelles/archiv/2018/name-of-the-article` -> `aktuelles/name-of-the-article`
-        'pattern' => 'aktuelles/archiv/(:num)/(:any)',
-        'action'  => function ($year, $article) {
+        'pattern' => [
+            'aktuelles/archiv/(:num)/(:any)',
+            'archiv/(:num)/(:any)'
+        ],
+        'action' => function ($year, $article) {
             if ($page = page("aktuelles/{$article}")) {
                 go($page->url(), 301);
             }
@@ -34,7 +36,7 @@ return [
     [
         // Virtual pages for blog archives
         'pattern' => '(:all)/archiv/(:num)',
-        'action'  => function ($all, $year) {
+        'action' => function ($all, $year) {
             // Locale setting is not inherited from global configuration
             setlocale(LC_TIME, 'de_DE.UTF-8');
 
