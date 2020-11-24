@@ -40,8 +40,18 @@ return [
       'extra' => true
     ],
 
-    'kirbytext.image' => [
-        'srcset' => true
+    'kirbytext' => [
+        'image' => [
+            'srcset' => true
+        ],
+        'video' => [
+            'class' => 'image is-16by9',
+            'iframe' => [
+                'class' => 'has-ratio',
+                'width' => '560',
+                'height' => '315'
+            ]
+        ]
     ],
 
     'kirby-extended.meta-tags' => [
@@ -54,10 +64,12 @@ return [
         'database' => $base . '/storage/logs/retour.sqlite'
     ],
 
-    'community.markdown-field.font' => [
-        'family'  => 'sans-serif',
-        'scaling' => true,
-        'size'    => 'regular',
+    'community.markdown-field' => [
+        'font' => [
+            'family' => 'sans-serif',
+            'scaling' => true,
+            'size' => 'regular',
+        ]
     ],
 
     'cre8ivclick.sitemapper' => [
