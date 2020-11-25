@@ -1,20 +1,20 @@
 <?php
 
 return function ($kirby, $page) {
-    $count = $page->perPage()->int();
+    $collection = $page
+        ->children()
+        ->listed()
+        ->filterBy('template', 'article');
 
-    if ($page->id() === 'aktuelles') {
-        $articles = $kirby
-            ->collection('articles')
-            ->paginate($count);
-    } else {
-        $articles = $page
-            ->children()
-            ->listed()
-            ->filterBy('template', 'article')
-            ->sortBy(fn($child) => $child->date()->toDate(), 'desc')
-            ->paginate($count);
+    if ($pages = $page->associatedBlogs()->toPages()) {
+        foreach ($pages as $blog) {
+            $collection->add($blog->children()->listed()->filterBy('template', 'article'));
+        }
     }
 
-    return compact('articles');
+    $collection = $collection
+        ->sortBy(fn($child) => $child->date()->toDate(), 'desc')
+        ->paginate($page->perPage()->int());
+
+    return ['articles' => $collection];
 };

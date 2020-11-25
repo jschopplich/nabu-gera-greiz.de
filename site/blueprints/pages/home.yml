@@ -42,7 +42,7 @@ tabs:
                 layout: cards
                 required: true
               perPage:
-                label: Anzahl Artikel
+                label: Artikel pro Seite
                 type: number
                 default: 6
                 min: 1

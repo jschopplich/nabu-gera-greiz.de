@@ -47,20 +47,9 @@ tabs:
     columns:
       - width: 2/3
         sections:
-          main:
+          content:
             type: fields
             fields:
-              navIcon:
-                label: Menü-Icon
-                type: text
-                icon: smile
-                width: 1/3
-                help: >
-                  Namen für Icons können auf <a href="https://fontawesome.com/icons?d=gallery">fontawesome.com</a> gefunden werden.
-              navDescription:
-                label: Menü-Beschreibung
-                type: text
-                width: 2/3
               intro:
                 label: Intro
                 type: text
@@ -70,29 +59,63 @@ tabs:
 
       - width: 1/3
         sections:
+          files: sections/files
+
+  settings:
+    label: Einstellungen
+    icon: settings
+    columns:
+      - width: 2/3
+        sections:
           cover: sections/cover
-          excerpts:
+          icons: sections/nav-icons
+          settings:
             type: fields
             fields:
+              associatedBlogs:
+                label: Artikel von anderen Blogs einbeziehen
+                type: pages
+                query: site.index.filterBy('template', 'blog')
+                subpages: false
+                help: >
+                  Artikel der ausgewählte Blogs werden zur Artikellsite dieses Blogs hinzugefügt,
+                  wenn man die Seite aufruft.
+              hideArticles:
+                label: Nur Text anzeigen?
+                type: toggle
+                text:
+                  - Nein
+                  - Ja
+                help: >
+                  Wenn bejaht, wird keine Artikelliste auf dieser Seite angezeigt.
+                  Es empfiehlt sich dann, die Archive anzuzeigen.
+                width: 1/2
+              showArchive:
+                label: Archive im Menü anzeigen?
+                type: toggle
+                text:
+                  - Nein
+                  - Ja
+                help: >
+                  Die Archivseiten werden nach Veröffentlichungsjahr der Artikel generiert
+                  und als Unterseiten im Menü dargestellt.
+                width: 1/2
               perPage:
-                label: Anzahl Artikel
+                label: Artikel pro Seite
                 type: number
                 default: 6
                 min: 1
                 max: 20
-              hideArticles:
-                label: Nur Text statt Artikelliste anzeigen?
-                type: toggle
-                text:
-                  - Nein
-                  - Ja
-              showArchive:
-                label: Archiv in Navigation anzeigen?
-                type: toggle
-                text:
-                  - Nein
-                  - Ja
-                help: Das Archiv wird automatisch nach Jahren generiert.
-          meta: sections/meta
+                when:
+                  hideArticles: false
+                width: 1/2
 
-  files: tabs/files
+      - width: 1/3
+        sections:
+          metaInfo:
+            type: info
+            headline: Hinweis
+            text: >
+              Die folgenden drei Felder beginnend mit „Meta“ sind nur für Suchmaschinenoptimierung relevant.
+            theme: none
+          meta: sections/meta
