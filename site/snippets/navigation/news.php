@@ -25,7 +25,5 @@
 </div>
 
 <?php snippet('navigation/archive', [
-  'data' => $data,
-  'titlePrefix' => '',
-  'breadcrumbSeperator' => 'has-arrow-separator'
+  'data' => $data
 ]) ?>

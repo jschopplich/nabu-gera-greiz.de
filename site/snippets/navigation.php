@@ -76,7 +76,7 @@
 
                   <?php snippet('navigation/archive', [
                     'data' => $grandchild,
-                    'titlePrefix' => 'Archiv'
+                    // 'titlePrefix' => 'Archiv'
                   ]) ?>
 
                   <?php if (!$grandchild->isLast()): ?>

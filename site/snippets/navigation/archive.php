@@ -15,7 +15,7 @@ rsort($archiveYears);
 <?php if ($data->showArchive()->toBool() && count($archiveYears)): ?>
   <div class="navbar-item">
     <div>
-      <nav class="breadcrumb <?= $breadcrumbSeperator ?? 'has-bullet-separator' ?> is-small">
+      <nav class="breadcrumb has-arrow-separator is-small">
         <ul>
           <?php foreach ($archiveYears as $year): ?>
             <?php
@@ -24,7 +24,7 @@ rsort($archiveYears);
             ?>
             <li<?php e($isActive, ' class="is-active"') ?>>
               <a href="<?= $url ?>"<?php e($isActive, ' aria-current="page"') ?>>
-                <?= $titlePrefix ?> <?= $year ?>
+                <?= $titlePrefix ?? '' ?> <?= $year ?>
               </a>
             </li>
           <?php endforeach ?>
