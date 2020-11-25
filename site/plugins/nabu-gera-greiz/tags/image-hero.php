@@ -18,12 +18,7 @@ return [
         'target',
         'text',
         'title',
-        'width',
-
-        // Deprecated, but keep them, otherwise
-        // they are parsed as text
-        'position',
-        'layout'
+        'width'
     ],
     'html' => function ($tag) {
         if ($tag->file = $tag->file($tag->value)) {
