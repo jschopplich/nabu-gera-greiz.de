@@ -18,7 +18,7 @@ $grandgrandchilden = $grandchild->children()->filterBy('template', 'in', ['defau
 <?php if ($grandgrandchilden->count()): ?>
   <div class="navbar-item">
     <div>
-      <nav class="breadcrumb has-bullet-separator is-small">
+      <nav>
         <ul>
           <?php foreach ($grandgrandchilden as $item): ?>
             <li<?php e($item->isActive(), ' class="is-active"') ?>>
@@ -33,7 +33,4 @@ $grandgrandchilden = $grandchild->children()->filterBy('template', 'in', ['defau
   </div>
 <?php endif ?>
 
-<?php snippet('navigation/archive', [
-  'data' => $grandchild,
-  // 'titlePrefix' => 'Archiv'
-]) ?>
+<?php snippet('navigation/archive', ['data' => $grandchild]) ?>

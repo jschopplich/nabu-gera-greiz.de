@@ -18,7 +18,7 @@ rsort($archiveYears);
       <nav class="breadcrumb has-arrow-separator is-small">
         <ul>
           <li>
-            <span class="pr-3">Archiv:</span>
+            <span class="pr-2">Archiv:</span>
           </li>
           <?php foreach ($archiveYears as $year): ?>
             <?php
@@ -27,7 +27,7 @@ rsort($archiveYears);
             ?>
             <li<?php e($isActive, ' class="is-active"') ?>>
               <a href="<?= $url ?>"<?php e($isActive, ' aria-current="page"') ?>>
-                <?= $titlePrefix ?? '' ?> <?= $year ?>
+                <?= $year ?>
               </a>
             </li>
           <?php endforeach ?>

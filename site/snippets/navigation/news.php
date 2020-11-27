@@ -24,6 +24,4 @@
   </div>
 </div>
 
-<?php snippet('navigation/archive', [
-  'data' => $data
-]) ?>
+<?php snippet('navigation/archive', compact('data')) ?>
