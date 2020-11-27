@@ -19,8 +19,8 @@
     <span class="icon has-text-primary" aria-hidden="true">
       <span class="fal fa-archive"></span>
     </span>
-    <p><strong>Aktuelles</strong></p>
-    <p>Unsere Artikelarchiv — zurück bis 2009:</p>
+    <p><strong>Archiv</strong></p>
+    <p>Alle unsere Artikel — zurück bis 2009:</p>
   </div>
 </div>
 

@@ -17,6 +17,9 @@ rsort($archiveYears);
     <div>
       <nav class="breadcrumb has-arrow-separator is-small">
         <ul>
+          <li>
+            <span class="pr-3">Archiv:</span>
+          </li>
           <?php foreach ($archiveYears as $year): ?>
             <?php
             $url = $data->url() . '/archiv/' . $year;
