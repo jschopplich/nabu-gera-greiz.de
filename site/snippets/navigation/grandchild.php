@@ -18,7 +18,7 @@ $grandgrandchilden = $grandchild->children()->filterBy('template', 'in', ['defau
 <?php if ($grandgrandchilden->count()): ?>
   <div class="navbar-item">
     <div>
-      <nav>
+      <nav class="navbar-list">
         <ul>
           <?php foreach ($grandgrandchilden as $item): ?>
             <li<?php e($item->isActive(), ' class="is-active"') ?>>

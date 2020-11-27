@@ -18,7 +18,7 @@ rsort($archiveYears);
       <nav class="breadcrumb has-arrow-separator is-small">
         <ul>
           <li>
-            <span class="pr-2">Archiv:</span>
+            <span class="has-text-grey" style="padding-right: .75em;">Archiv</span>
           </li>
           <?php foreach ($archiveYears as $year): ?>
             <?php
