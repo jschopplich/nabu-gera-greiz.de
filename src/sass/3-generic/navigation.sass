@@ -13,7 +13,7 @@
 
 .navbar
   .breadcrumb,
-  .navbar-list // Not part of Bulma by default
+  .navbar-list // Reuse breadcrumb styles for custom list
     a
       color: $text
       &:hover
@@ -40,6 +40,10 @@
       padding-left: 0
 
 // Add mega menu variant
+
+.navbar-list
+  a
+    font-weight: 600
 
 +desktop
   .navbar-item.is-expanded
