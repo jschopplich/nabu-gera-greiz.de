@@ -56,7 +56,7 @@
                     <?= $site->homePage()->headerTitle()->html() ?>
                   </h1>
                   <p class="subtitle is-3 is-size-5-mobile has-text-white">
-                    <?= $site->homePage()->headerSubitle()->html() ?>
+                    <?= $site->homePage()->headerSubtitle()->html() ?>
                   </p>
                   <a href="#aktuelles" class="button is-primary is-medium" role="button">
                     Aktuelle Beiträge
