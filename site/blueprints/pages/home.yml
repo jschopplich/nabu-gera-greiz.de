@@ -18,6 +18,16 @@ tabs:
           main:
             type: fields
             fields:
+              headerTitle:
+                label: Leitüberschrift
+                type: textarea
+                buttons: false
+                width: 1/2
+              headerSubtitle:
+                label: Leittext
+                type: textarea
+                buttons: false
+                width: 1/2
               intro:
                 label: Intro
                 type: text
