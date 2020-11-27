@@ -49,7 +49,10 @@
                         <div class="column is-4">
                           <?php snippet('navigation/grandchild', compact('grandchild')) ?>
                         </div>
-                        <?php if (($grandchild->indexOf() + 1) % 3 === 0): ?>
+                        <?php if (
+                          ($grandchild->indexOf() + 1) % 3 === 0 &&
+                          $grandchildren->count() !== $grandchild->indexOf() + 1
+                        ): ?>
                           <div class="column is-full">
                             <hr class="navbar-divider">
                           </div>

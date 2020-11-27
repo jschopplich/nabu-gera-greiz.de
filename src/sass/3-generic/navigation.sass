@@ -1,10 +1,19 @@
 // Cosmetic changes
 
-.navbar //.is-spaced
+.navbar.is-spaced
   .navbar-dropdown
     .navbar-item
       border-radius: 0
 
+.navbar-link:not(.is-arrowless)::after
+  width: 0.5em
+  height: 0.5em
+  margin-top: -0.25em
+  border-radius: unset
+
+// Navbar variants based on template
+
+.navbar
   &.is-home
     position: absolute
     top: 0
@@ -17,12 +26,6 @@
     &.is-default
       padding-right: 0
       padding-left: 0
-
-.navbar-link:not(.is-arrowless)::after
-  width: 0.5em
-  height: 0.5em
-  margin-top: -0.25em
-  border-radius: unset
 
 // Add mega menu variant
 
