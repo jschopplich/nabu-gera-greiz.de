@@ -1,6 +1,6 @@
 // Cosmetic changes
 
-.navbar.is-spaced
+.navbar //.is-spaced
   .navbar-dropdown
     .navbar-item
       border-radius: 0
@@ -11,17 +11,9 @@
   margin-top: -0.25em
   border-radius: unset
 
-// Styling to default pages
+// Styling to templates
 
-+desktop
-  .header.is-default
-    .navbar.is-spaced
-      padding-right: 0
-      padding-left: 0
-
-// Styling for homepage
-
-.navbar.is-home
+  .navbar.is-home
   position: absolute
   top: 0
   right: 0
@@ -29,9 +21,26 @@
   background-color: hsla(0, 0%, 100%, 0.9)
   box-shadow: $box-shadow
 
++desktop
+  .header.is-default
+    .navbar //.is-spaced
+      padding-right: 0
+      padding-left: 0
+
+// Add mega menu variant
+
++desktop
+  .navbar-item.is-expanded
+    position: static
+
+    .navbar-dropdown
+      top: calc(100% - 1.5rem + (-5px)) // 4px + 1px to account for added border
+      border-top: 1px solid rgba(10,10,10,.1)
+      box-shadow: 0 8px 8px rgba(10,10,10,.1)
+
 // Additional dropdown styles for wider content
 
-.navbar-dropdown.has-more
+.navbar-dropdown.has-icon
   .navbar-item
     padding-left: 2.5rem
 

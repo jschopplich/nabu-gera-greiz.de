@@ -29,60 +29,42 @@
 
       <?php foreach ($pages->listed() as $child): ?>
         <?php if ($child->hasListedChildren()): ?>
-          <div class="navbar-item has-dropdown is-hoverable">
+          <?php
+          $grandchildren = $child->children()->listed()->filterBy('template', '!=', 'article');
+          $isExpanded = $grandchildren->count() > 4;
+          ?>
+          <div class="navbar-item has-dropdown is-hoverable<?php e($isExpanded, ' is-expanded') ?>">
             <div class="navbar-link">
               <?= $child->title()->html() ?>
             </div>
 
-            <div class="navbar-dropdown has-more is-boxed">
+            <div class="navbar-dropdown has-icon">
               <?php if ($child->id() === 'aktuelles'): ?>
                 <?php snippet('navigation/news', ['data' => $child]) ?>
               <?php else: ?>
-                <?php foreach ($child->children()->listed()->filterBy('template', '!=', 'article') as $grandchild): ?>
-                  <a
-                    class="navbar-item<?php e($grandchild->isActive(), ' is-active') ?>"
-                    href="<?= $grandchild->url() ?>"
-                    <?php e($grandchild->isActive(), 'aria-current="page"') ?>
-                  >
-                    <div>
-                      <span class="icon has-text-primary" aria-hidden="true">
-                        <span class="fal fa-<?= $grandchild->navIcon() ?>"></span>
-                      </span>
-                      <p><strong><?= $grandchild->title()->html() ?></strong></p>
-                      <p><?= $grandchild->navDescription()->html() ?></p>
+                <?php if ($isExpanded): ?>
+                  <div class="container">
+                    <div class="columns is-multiline is-gapless">
+                      <?php foreach ($grandchildren as $grandchild): ?>
+                        <div class="column is-4">
+                          <?php snippet('navigation/grandchild', compact('grandchild')) ?>
+                        </div>
+                        <?php if (($grandchild->indexOf() + 1) % 3 === 0): ?>
+                          <div class="column is-full">
+                            <hr class="navbar-divider">
+                          </div>
+                        <?php endif ?>
+                      <?php endforeach ?>
                     </div>
-                  </a>
-
-                  <?php
-                  $grandgrandchilden = $grandchild->children()->filterBy('template', 'in', ['default', 'blog']);
-                  ?>
-                  <?php if ($grandgrandchilden->count()): ?>
-                    <div class="navbar-item">
-                      <div>
-                        <nav class="breadcrumb has-bullet-separator is-small">
-                          <ul>
-                            <?php foreach ($grandgrandchilden as $item): ?>
-                              <li<?php e($item->isActive(), ' class="is-active"') ?>>
-                                <a href="<?= $item->url() ?>"<?php e($item->isActive(), ' aria-current="page"') ?>>
-                                  <?= $item->title() ?>
-                                </a>
-                              </li>
-                            <?php endforeach ?>
-                          </ul>
-                        </nav>
-                      </div>
-                    </div>
-                  <?php endif ?>
-
-                  <?php snippet('navigation/archive', [
-                    'data' => $grandchild,
-                    // 'titlePrefix' => 'Archiv'
-                  ]) ?>
-
-                  <?php if (!$grandchild->isLast()): ?>
-                    <hr class="navbar-divider">
-                  <?php endif ?>
-                <?php endforeach ?>
+                  </div>
+                <?php else: ?>
+                  <?php foreach ($grandchildren as $grandchild): ?>
+                    <?php snippet('navigation/grandchild', compact('grandchild')) ?>
+                    <?php if (!$grandchild->isLast()): ?>
+                      <hr class="navbar-divider">
+                    <?php endif ?>
+                  <?php endforeach ?>
+                <?php endif ?>
               <?php endif ?>
             </div>
           </div>
