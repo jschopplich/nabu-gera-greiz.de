@@ -5,27 +5,24 @@
     .navbar-item
       border-radius: 0
 
+  &.is-home
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    background-color: hsla(0, 0%, 100%, 0.9)
+    box-shadow: $box-shadow
+
+  +desktop
+    &.is-default
+      padding-right: 0
+      padding-left: 0
+
 .navbar-link:not(.is-arrowless)::after
   width: 0.5em
   height: 0.5em
   margin-top: -0.25em
   border-radius: unset
-
-// Styling to templates
-
-  .navbar.is-home
-  position: absolute
-  top: 0
-  right: 0
-  left: 0
-  background-color: hsla(0, 0%, 100%, 0.9)
-  box-shadow: $box-shadow
-
-+desktop
-  .header.is-default
-    .navbar //.is-spaced
-      padding-right: 0
-      padding-left: 0
 
 // Add mega menu variant
 
@@ -34,9 +31,7 @@
     position: static
 
     .navbar-dropdown
-      top: calc(100% - 1.5rem + (-5px)) // 4px + 1px to account for added border
-      border-top: 1px solid rgba(10,10,10,.1)
-      box-shadow: 0 8px 8px rgba(10,10,10,.1)
+      top: calc(100% - 1.5rem + (-4px))
 
 // Additional dropdown styles for wider content
 
