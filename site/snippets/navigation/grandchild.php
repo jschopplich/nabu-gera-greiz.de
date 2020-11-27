@@ -23,7 +23,7 @@ $grandgrandchilden = $grandchild->children()->filterBy('template', 'in', ['defau
           <?php foreach ($grandgrandchilden as $item): ?>
             <li<?php e($item->isActive(), ' class="is-active"') ?>>
               <a href="<?= $item->url() ?>"<?php e($item->isActive(), ' aria-current="page"') ?>>
-                <?= $item->title() ?>
+                <strong><?= $item->title() ?></strong>
               </a>
             </li>
           <?php endforeach ?>
