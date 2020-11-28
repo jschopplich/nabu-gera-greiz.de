@@ -88,7 +88,7 @@ tabs:
                   - Ja
                 help: >
                   Wenn bejaht, wird keine Artikelliste auf dieser Seite angezeigt.
-                  Es empfiehlt sich dann, die Archive anzuzeigen.
+                  Es empfiehlt sich entsprechend, Archive im Menü anzuzeigen.
                 width: 1/2
               showArchive:
                 label: Archive im Menü anzeigen?
@@ -97,8 +97,8 @@ tabs:
                   - Nein
                   - Ja
                 help: >
-                  Die Archivseiten werden nach Veröffentlichungsjahr der Artikel generiert
-                  und als Unterseiten im Menü dargestellt.
+                  Archivunterseiten werden nach Veröffentlichungsjahr der Artikel im Menü dargestellt.
+                  Auf dieser Seite werden dann nur noch Artikel diesen Jahres angezeigt.
                 width: 1/2
               perPage:
                 label: Artikel pro Seite

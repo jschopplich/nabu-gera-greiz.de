@@ -1,14 +1,12 @@
 <?php
 
-use Kirby\Toolkit\Str;
-
 return function ($page) {
     $articles = $page
         ->parent()
         ->children()
         ->listed()
         ->filterBy('template', 'article')
-        ->filter(fn($child) => Str::startsWith($child->date(), $page->virtualYear()))
+        ->filter(fn($child) => $child->date()->toDate('%Y') === $page->virtualYear())
         ->sortBy(fn($child) => $child->date()->toDate(), 'desc')
         ->paginate(12);
 

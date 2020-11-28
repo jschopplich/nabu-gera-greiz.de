@@ -1,10 +1,13 @@
 <?php
 
-return function ($kirby, $page) {
+return function ($page) {
     $collection = $page
         ->children()
         ->listed()
-        ->filterBy('template', 'article');
+        ->filterBy('template', 'article')
+        ->when($page->showArchive()->toBool(), function () {
+            return $this->filterBy('date', 'date >', date('Y') . '-01-15');
+        });
 
     if ($pages = $page->associatedBlogs()->toPages()) {
         foreach ($pages as $blog) {
