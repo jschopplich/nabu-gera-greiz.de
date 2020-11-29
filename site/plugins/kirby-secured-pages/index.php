@@ -6,7 +6,7 @@ use Kirby\Cms\App as Kirby;
 use Kirby\Cms\Page;
 
 load([
-    'KirbyExtended\SecuredPages\SecuredPages' => 'src/SecuredPages.php'
+    'KirbyExtended\SecuredPages\SecuredPages' => 'classes/KirbyExtended/SecuredPages.php'
 ], __DIR__);
 
 Kirby::plugin('kirby-extended/secured-pages', [
