@@ -122,7 +122,8 @@
   // Flickity
 
   .nabu-carousel
-    // Reuse bottom margin of figure elements
+    // Adapt margin of figure elements
+    margin-top: 2em
     margin-bottom: 2em
     // Avoid content jumping
     &:not(.flickity-enabled) > *
@@ -130,9 +131,6 @@
       margin-left: auto
       margin-right: auto
       &:not(:last-child)
-        display: none
-    .flickity-prev-next-button
-      +mobile
         display: none
 
   .nabu-carousel-cell
@@ -144,5 +142,5 @@
       border-radius: $radius
     &:not(.is-selected)
       img
-        opacity: 0.25
+        opacity: 0.5
         filter: blur(1px)
