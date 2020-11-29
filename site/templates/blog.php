@@ -12,7 +12,7 @@
           </div>
         <?php endif ?>
 
-        <?php if (!$page->hideArticles()->toBool()): ?>
+        <?php if ($page->intendedTemplate()->name() === 'blog' && $page->hideArticles()->toBool() === false): ?>
           <?php foreach ($articles as $article): ?>
             <article class="content is-main is-clearfix">
               <div class="mb-5">
