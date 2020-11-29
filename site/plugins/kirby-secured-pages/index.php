@@ -11,15 +11,14 @@ load([
 
 Kirby::plugin('kirby-extended/secured-pages', [
     'hooks' => [
-        'route:after' => function ($route, $path, $method, $result) {
+        'route:after' => function ($route, $path, $method, $result, $final) {
             if (
                 $route->env() === 'site' &&
-                SecuredPages::blockAccess($result)
+                SecuredPages::isBlocked($result)
             ) {
-                $url = url('/geschuetzt', [
+                go(url('geschuetzt', [
                     'query' => ['redirect' => $path]
-                ]);
-                go($url);
+                ]));
             }
         }
     ],

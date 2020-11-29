@@ -28,6 +28,8 @@
         </div>
       </form>
     </div>
+
+    <?php snippet('sidebar') ?>
   </div>
 </div>
 

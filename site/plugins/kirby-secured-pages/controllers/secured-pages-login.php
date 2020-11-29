@@ -10,8 +10,7 @@ return function ($kirby) {
             return ['error' => 'Der CSRF-Token ist nicht korrket'];
         }
 
-        $protectedPageId = get('redirect');
-        $protectedPage = page($protectedPageId);
+        $protectedPage = SecuredPages::findProtectedPage(get('redirect'));
         if (!$protectedPage) {
             return ['error' => 'Die geschütze Seite existiert nicht'];
         }
@@ -20,8 +19,8 @@ return function ($kirby) {
             return ['error' => 'Das Passwort ist nicht korrekt'];
         }
 
-        kirby()->session()->set("securedPages.access.{$protectedPageId}", true);
-        go($protectedPageId);
+        kirby()->session()->set("securedPages.access.{$protectedPage->id()}", true);
+        go(get('redirect'));
     }
 
     return compact('error');

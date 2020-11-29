@@ -5,7 +5,7 @@ use Kirby\Cms\Page;
 
 class SecuredPages
 {
-    public static function blockAccess(?Page $page): bool
+    public static function isBlocked(?Page $page): bool
     {
         if (!$page) {
             return false;
@@ -16,14 +16,14 @@ class SecuredPages
             return false;
         }
 
-        if (kirby()->session()->get("securedPages.access.{$page->id()}", false)) {
+        if (kirby()->session()->get("securedPages.access.{$protectedPage->id()}", false)) {
             return false;
         }
 
         return true;
     }
 
-    private static function findProtectedPage(Page $page): ?Page
+    public static function findProtectedPage(Page $page): ?Page
     {
         if ($page->securedPageEnabled()->toBool()) {
             return $page;
