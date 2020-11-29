@@ -22,12 +22,14 @@ $white:          hsl(0, 0%, 100%)
 
 $primary:        hsl(205, 100%, 35%)
 $green:          hsl(141, 70%, 48%)
+$red:            hsl(348, 86%, 61%)
 
 // Derived colors
 
 $light:          $white-ter
 $dark:           $black-ter
 $success:        $green
+$danger:         $red
 
 $text:           $grey-darker
 $text-invert:    findColorInvert($text)
@@ -42,6 +44,9 @@ $primary-dark: findDarkColor($primary)
 $success-invert: findColorInvert($success)
 $success-light: findLightColor($success)
 $success-dark: findDarkColor($success)
+$danger-invert: findColorInvert($danger)
+$danger-light: findLightColor($danger)
+$danger-dark: findDarkColor($danger)
 $light-invert: $text
 $dark-invert: $white
 
@@ -91,7 +96,7 @@ $navbar-colors: null
 
 // Lists and maps
 
-$colors: ("white": ($white, $black), "light": ($light, $light-invert), "dark": ($dark, $dark-invert), "primary": ($primary, $primary-invert, $primary-light, $primary-dark), "success": ($success, $success-invert, $success-light, $success-dark))
+$colors: ("white": ($white, $black), "light": ($light, $light-invert), "dark": ($dark, $dark-invert), "primary": ($primary, $primary-invert, $primary-light, $primary-dark), "success": ($success, $success-invert, $success-light, $success-dark), "danger": ($danger, $danger-invert, $danger-light, $danger-dark))
 
 // Helpers
 

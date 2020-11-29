@@ -12,12 +12,8 @@ class ComposerStaticInit35c729715e5b8e8d90d52a62b250a1d0
         '04c6c5c2f7095ccf6c481d3e53e1776f' => __DIR__ . '/..' . '/mustangostang/spyc/Spyc.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
-        'e862d9fce5eaa28c798b151ac7fc8bc6' => __DIR__ . '/..' . '/mzur/kirby-flash/src/helpers.php',
         'f864ae44e8154e5ff6f4eec32f46d37f' => __DIR__ . '/..' . '/getkirby/cms/config/setup.php',
-        '316f57472eecfe71b6733d9d2acbcae9' => __DIR__ . '/..' . '/mzur/kirby-form/src/helpers.php',
         '7f15a39b34659ec7c61fd4bc2f79c539' => __DIR__ . '/../..' . '/site/plugins/kirby-extended/helpers.php',
-        '513c89d6408d266be7db63374b5a5cc9' => __DIR__ . '/..' . '/mzur/kirby-uniform/config.php',
-        '1f7ddc2baab73fdd75a4663f7a275bb1' => __DIR__ . '/..' . '/mzur/kirby-uniform/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -33,10 +29,6 @@ class ComposerStaticInit35c729715e5b8e8d90d52a62b250a1d0
         'W' => 
         array (
             'Whoops\\' => 7,
-        ),
-        'U' => 
-        array (
-            'Uniform\\' => 8,
         ),
         'T' => 
         array (
@@ -69,10 +61,6 @@ class ComposerStaticInit35c729715e5b8e8d90d52a62b250a1d0
             'Kirby\\' => 6,
             'KirbyExtended\\' => 14,
         ),
-        'J' => 
-        array (
-            'Jevets\\Kirby\\' => 13,
-        ),
         'G' => 
         array (
             'GrahamCampbell\\ResultType\\' => 26,
@@ -99,10 +87,6 @@ class ComposerStaticInit35c729715e5b8e8d90d52a62b250a1d0
         'Whoops\\' => 
         array (
             0 => __DIR__ . '/..' . '/filp/whoops/src/Whoops',
-        ),
-        'Uniform\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/mzur/kirby-uniform/src',
         ),
         'TrueBV\\' => 
         array (
@@ -156,11 +140,6 @@ class ComposerStaticInit35c729715e5b8e8d90d52a62b250a1d0
         'KirbyExtended\\' => 
         array (
             0 => __DIR__ . '/../..' . '/site/plugins/kirby-extended/classes/KirbyExtended',
-        ),
-        'Jevets\\Kirby\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/mzur/kirby-flash/src',
-            1 => __DIR__ . '/..' . '/mzur/kirby-form/src',
         ),
         'GrahamCampbell\\ResultType\\' => 
         array (
@@ -240,11 +219,6 @@ class ComposerStaticInit35c729715e5b8e8d90d52a62b250a1d0
         'GrahamCampbell\\ResultType\\Error' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Error.php',
         'GrahamCampbell\\ResultType\\Result' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Result.php',
         'GrahamCampbell\\ResultType\\Success' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Success.php',
-        'Jevets\\Kirby\\Exceptions\\TokenMismatchException' => __DIR__ . '/..' . '/mzur/kirby-form/src/Exceptions/TokenMismatchException.php',
-        'Jevets\\Kirby\\Flash' => __DIR__ . '/..' . '/mzur/kirby-flash/src/Flash.php',
-        'Jevets\\Kirby\\Form' => __DIR__ . '/..' . '/mzur/kirby-form/src/Form.php',
-        'Jevets\\Kirby\\FormInterface' => __DIR__ . '/..' . '/mzur/kirby-form/src/FormInterface.php',
-        'Jevets\\Kirby\\Validator' => __DIR__ . '/..' . '/mzur/kirby-form/src/Validator.php',
         'KirbyExtended\\Env' => __DIR__ . '/../..' . '/site/plugins/kirby-extended/classes/KirbyExtended/Env.php',
         'KirbyExtended\\EnvAdapter' => __DIR__ . '/../..' . '/site/plugins/kirby-extended/classes/KirbyExtended/EnvAdapter.php',
         'KirbyExtended\\HigherOrderTapProxy' => __DIR__ . '/../..' . '/site/plugins/kirby-extended/classes/KirbyExtended/HigherOrderTapProxy.php',
@@ -567,23 +541,6 @@ class ComposerStaticInit35c729715e5b8e8d90d52a62b250a1d0
         'TrueBV\\Exception\\OutOfBoundsException' => __DIR__ . '/..' . '/true/punycode/src/Exception/OutOfBoundsException.php',
         'TrueBV\\Punycode' => __DIR__ . '/..' . '/true/punycode/src/Punycode.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
-        'Uniform\\Actions\\Action' => __DIR__ . '/..' . '/mzur/kirby-uniform/src/Actions/Action.php',
-        'Uniform\\Actions\\DumpAction' => __DIR__ . '/..' . '/mzur/kirby-uniform/src/Actions/DumpAction.php',
-        'Uniform\\Actions\\EmailAction' => __DIR__ . '/..' . '/mzur/kirby-uniform/src/Actions/EmailAction.php',
-        'Uniform\\Actions\\EmailSelectAction' => __DIR__ . '/..' . '/mzur/kirby-uniform/src/Actions/EmailSelectAction.php',
-        'Uniform\\Actions\\LogAction' => __DIR__ . '/..' . '/mzur/kirby-uniform/src/Actions/LogAction.php',
-        'Uniform\\Actions\\LoginAction' => __DIR__ . '/..' . '/mzur/kirby-uniform/src/Actions/LoginAction.php',
-        'Uniform\\Actions\\SessionStoreAction' => __DIR__ . '/..' . '/mzur/kirby-uniform/src/Actions/SessionStoreAction.php',
-        'Uniform\\Actions\\UploadAction' => __DIR__ . '/..' . '/mzur/kirby-uniform/src/Actions/UploadAction.php',
-        'Uniform\\Actions\\WebhookAction' => __DIR__ . '/..' . '/mzur/kirby-uniform/src/Actions/WebhookAction.php',
-        'Uniform\\Exceptions\\Exception' => __DIR__ . '/..' . '/mzur/kirby-uniform/src/Exceptions/Exception.php',
-        'Uniform\\Exceptions\\PerformerException' => __DIR__ . '/..' . '/mzur/kirby-uniform/src/Exceptions/PerformerException.php',
-        'Uniform\\Form' => __DIR__ . '/..' . '/mzur/kirby-uniform/src/Form.php',
-        'Uniform\\Guards\\CalcGuard' => __DIR__ . '/..' . '/mzur/kirby-uniform/src/Guards/CalcGuard.php',
-        'Uniform\\Guards\\Guard' => __DIR__ . '/..' . '/mzur/kirby-uniform/src/Guards/Guard.php',
-        'Uniform\\Guards\\HoneypotGuard' => __DIR__ . '/..' . '/mzur/kirby-uniform/src/Guards/HoneypotGuard.php',
-        'Uniform\\Performer' => __DIR__ . '/..' . '/mzur/kirby-uniform/src/Performer.php',
-        'Uniform\\PerformerInterface' => __DIR__ . '/..' . '/mzur/kirby-uniform/src/PerformerInterface.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
         'Whoops\\Exception\\ErrorException' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/ErrorException.php',
         'Whoops\\Exception\\Formatter' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/Formatter.php',

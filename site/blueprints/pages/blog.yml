@@ -115,7 +115,7 @@ tabs:
           access:
             type: fields
             fields:
-              security: fields/kerli81.securedpages.pageconfiguration
+              security: fields/extended.secured-pages
           metaInfo:
             type: info
             headline: Hinweis
