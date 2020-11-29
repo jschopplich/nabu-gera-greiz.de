@@ -71,8 +71,6 @@ return [
             if ($file = site()->index()->files()->findBy('filename', $filename)) {
                 go($file->url(), 301);
             }
-
-            $this->next();
         }
     ]
 ];
