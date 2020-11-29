@@ -112,6 +112,10 @@ tabs:
 
       - width: 1/3
         sections:
+          access:
+            type: fields
+            fields:
+              security: fields/kerli81.securedpages.pageconfiguration
           metaInfo:
             type: info
             headline: Hinweis

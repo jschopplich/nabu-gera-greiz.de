@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'd006fddb6481c6606d0218a16ded95db130d5e6e',
+    'reference' => 'cad7ab793425fab9c0000a6233c19270cb064d33',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'd006fddb6481c6606d0218a16ded95db130d5e6e',
+      'reference' => 'cad7ab793425fab9c0000a6233c19270cb064d33',
     ),
     'claviska/simpleimage' => 
     array (
@@ -161,6 +161,33 @@
       array (
       ),
       'reference' => '4627c838b16550b666d15aeae1e5289dd5b77da0',
+    ),
+    'mzur/kirby-flash' => 
+    array (
+      'pretty_version' => 'v2.0.0',
+      'version' => '2.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'a48131bad4a5178a883223f2f83a6a59d8f5cc6a',
+    ),
+    'mzur/kirby-form' => 
+    array (
+      'pretty_version' => 'v2.1.0',
+      'version' => '2.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '0f435c116da3c9200ba7226165f894d7acf265c1',
+    ),
+    'mzur/kirby-uniform' => 
+    array (
+      'pretty_version' => 'v4.2.0',
+      'version' => '4.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '293d814cd62de349579986adfd50892104db3696',
     ),
     'phpmailer/phpmailer' => 
     array (

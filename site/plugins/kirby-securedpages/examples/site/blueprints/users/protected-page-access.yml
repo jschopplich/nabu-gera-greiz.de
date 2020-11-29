@@ -1,0 +1,9 @@
+title: Frontend
+
+description:
+  en: User role for accessing protected pages
+  de: Benutzerrolle für Zugriff auf geschütze Seiten
+
+permissions:
+  access:
+    panel: false

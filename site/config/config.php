@@ -74,6 +74,13 @@ return [
 
     'cre8ivclick.sitemapper' => [
         'title' => 'Sitemap'
+    ],
+
+    'kerli81.securedpages' => [
+        'loginform.username.name' => 'Nutzername',
+        'loginform.username.error' => 'Bitte Nutzername eingeben',
+        'loginform.password.name' => 'Passwort',
+        'loginform.password.error' => 'Bitte Passwort eingeben'
     ]
 
 ];

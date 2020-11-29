@@ -1,0 +1,7 @@
+title: Frontend
+
+description: Kann geschützte Seiten öffnen.
+
+permissions:
+  access:
+    panel: false

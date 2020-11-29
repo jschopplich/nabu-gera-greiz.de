@@ -11,6 +11,10 @@ return array(
     '04c6c5c2f7095ccf6c481d3e53e1776f' => $vendorDir . '/mustangostang/spyc/Spyc.php',
     '320cde22f66dd4f5d3fd621d3e88b98f' => $vendorDir . '/symfony/polyfill-ctype/bootstrap.php',
     'a4a119a56e50fbb293281d9a48007e0e' => $vendorDir . '/symfony/polyfill-php80/bootstrap.php',
+    'e862d9fce5eaa28c798b151ac7fc8bc6' => $vendorDir . '/mzur/kirby-flash/src/helpers.php',
     'f864ae44e8154e5ff6f4eec32f46d37f' => $vendorDir . '/getkirby/cms/config/setup.php',
+    '316f57472eecfe71b6733d9d2acbcae9' => $vendorDir . '/mzur/kirby-form/src/helpers.php',
     '7f15a39b34659ec7c61fd4bc2f79c539' => $baseDir . '/site/plugins/kirby-extended/helpers.php',
+    '513c89d6408d266be7db63374b5a5cc9' => $vendorDir . '/mzur/kirby-uniform/config.php',
+    '1f7ddc2baab73fdd75a4663f7a275bb1' => $vendorDir . '/mzur/kirby-uniform/src/helpers.php',
 );
