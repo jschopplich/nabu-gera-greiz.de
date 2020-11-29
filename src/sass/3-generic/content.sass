@@ -142,3 +142,7 @@
     transform: translateY(-50%)
     img
       border-radius: $radius
+    &:not(.is-selected)
+      img
+        opacity: 0.25;
+        filter: blur(1px);
