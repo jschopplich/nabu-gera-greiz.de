@@ -6,7 +6,7 @@ return function ($page) {
         ->children()
         ->listed()
         ->filterBy('template', 'article')
-        ->filter(fn($child) => $child->date()->toDate('%Y') === $page->virtualYear())
+        ->filter(fn($child) => $child->date()->toDate('%Y') === $page->virtualYear()->toString())
         ->sortBy(fn($child) => $child->date()->toDate(), 'desc')
         ->paginate(12);
 
