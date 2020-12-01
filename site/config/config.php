@@ -59,6 +59,15 @@ return [
         'templates' => require __DIR__ . '/meta-templates.php',
     ],
 
+    'kirby-extended.locked-pages' => [
+        'slug' => 'geschuetzt',
+        'title' => 'Geschützte Seite',
+        'error' => [
+            'csrf' => 'Der CSRF-Token ist nicht korrket',
+            'password' => 'Das Passwort ist nicht korrekt'
+        ]
+    ],
+
     'distantnative.retour' => [
         'config' => $base . '/site/config/redirects.yml',
         'database' => $base . '/storage/logs/retour.sqlite'

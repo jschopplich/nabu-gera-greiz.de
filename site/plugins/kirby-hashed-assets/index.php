@@ -41,7 +41,7 @@ $handleAsset = function ($kirby, $url, $options, $extension) {
     return $url;
 };
 
-Kirby::plugin('johannschopplich/hashed-assets-helper', [
+Kirby::plugin('johannschopplich/kirby-hashed-assets', [
     'components' => [
         'css' => fn($kirby, $url, $options) => $handleAsset($kirby, $url, $options, 'css'),
         'js' => fn($kirby, $url, $options) => $handleAsset($kirby, $url, $options, 'js')

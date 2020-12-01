@@ -115,7 +115,7 @@ tabs:
           access:
             type: fields
             fields:
-              security: fields/extended.secured-pages
+              security: fields/locked-pages
           metaInfo:
             type: info
             headline: Hinweis

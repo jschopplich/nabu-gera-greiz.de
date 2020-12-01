@@ -1,19 +1,19 @@
 type: group
 fields:
-  securedPageEnabled:
+  lockedPageEnabled:
     type: toggle
     label:
       en: Page Protection
       de: Seitensichtbarkeit
     text:
-      en: Password protection this page?
+      en: Password-protect this page?
       de: Seite mit Passwort schützen?
-
-  securedPagePassword:
+  lockedPagePassword:
     label:
       en: Password
       de: Passwort
     type: text
     icon: lock
+    required: true
     when:
-      securedPageEnabled: true
+      lockedPageEnabled: true
