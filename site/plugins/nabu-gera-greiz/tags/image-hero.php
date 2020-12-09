@@ -60,6 +60,11 @@ return [
             $dataUri = $tag->file->placeholderUri();
             $useSrcset = $tag->kirby()->option('kirbytext.image.srcset', false);
 
+            // Disable source set generation for GIFs
+            if (Str::endsWith($tag->file->filename(), 'gif')) {
+                $useSrcset = false;
+            }
+
             $image = Html::img($dataUri, A::merge($imageAttr, [
                 'data-src' => !$useSrcset ? $tag->src : null,
                 'data-srcset' => $useSrcset ? $tag->file->srcset() : null,

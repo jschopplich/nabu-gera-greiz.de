@@ -3,6 +3,7 @@
 use Kirby\Cms\Html;
 use Kirby\Cms\Url;
 use Kirby\Toolkit\A;
+use Kirby\Toolkit\Str;
 
 return [
     'attr' => [
@@ -58,6 +59,11 @@ return [
         if ($tag->file !== null) {
             $dataUri = $tag->file->placeholderUri();
             $useSrcset = $tag->kirby()->option('kirbytext.image.srcset', false);
+
+            // Disable source set generation for GIFs
+            if (Str::endsWith($tag->file->filename(), 'gif')) {
+                $useSrcset = false;
+            }
 
             $image = Html::img($dataUri, A::merge($imageAttr, [
                 'data-src' => !$useSrcset ? $tag->src : null,
