@@ -1,4 +1,4 @@
-<nav class="navbar is-spaced is-<?php e($page->isHomePage(), 'home', 'default') ?>">
+<nav class="navbar is-spaced <?php e($page->isHomePage(), 'is-primary is-home', 'is-default') ?>">
   <div class="navbar-brand">
     <div class="navbar-tabs is-hidden-desktop">
       <ul>
