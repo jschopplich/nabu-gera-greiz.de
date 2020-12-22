@@ -68,11 +68,6 @@ return [
         ]
     ],
 
-    'distantnative.retour' => [
-        'config' => $base . '/site/config/redirects.yml',
-        'database' => $base . '/storage/logs/retour.sqlite'
-    ],
-
     'community.markdown-field' => [
         'font' => [
             'family' => 'sans-serif',

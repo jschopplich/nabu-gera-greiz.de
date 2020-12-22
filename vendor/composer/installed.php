@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'de2ca2be69ed742fbe0b2b2f1720fa7050235002',
+    'reference' => 'e8a78e5b52ec29d822a8d9f3f0edc478bd317c63',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,43 +18,43 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'de2ca2be69ed742fbe0b2b2f1720fa7050235002',
+      'reference' => 'e8a78e5b52ec29d822a8d9f3f0edc478bd317c63',
     ),
     'claviska/simpleimage' => 
     array (
-      'pretty_version' => '3.3.4',
-      'version' => '3.3.4.0',
+      'pretty_version' => '3.5.1',
+      'version' => '3.5.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '3786d80af8e6d05e5e42f0350e5e5da5b92041a0',
+      'reference' => 'ab2ab8a4672738ab77b39b00922ee4e79aeadb11',
     ),
     'distantnative/retour-for-kirby' => 
     array (
-      'pretty_version' => '2.3.2',
-      'version' => '2.3.2.0',
+      'pretty_version' => '3.0.0',
+      'version' => '3.0.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f5db2b3de47deb1def42708190da8fdf57ea5ae6',
+      'reference' => 'e9409cfca31e30d15409d5e8bf1ea481436883ce',
     ),
     'filp/whoops' => 
     array (
-      'pretty_version' => '2.7.2',
-      'version' => '2.7.2.0',
+      'pretty_version' => '2.9.1',
+      'version' => '2.9.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '17d0d3f266c8f925ebd035cd36f83cf802b47d4a',
+      'reference' => '307fb34a5ab697461ec4c9db865b20ff2fd40771',
     ),
     'getkirby/cms' => 
     array (
-      'pretty_version' => '3.4.4',
-      'version' => '3.4.4.0',
+      'pretty_version' => '3.5.0',
+      'version' => '3.5.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '6112f1cb8ebf9c36e8a9f97ae08acc910ddbc792',
+      'reference' => '0d2751af7cb478df14f30fac47fe9a2cd3b38114',
     ),
     'getkirby/composer-installer' => 
     array (
@@ -76,12 +76,12 @@
     ),
     'johannschopplich/kirby-extended' => 
     array (
-      'pretty_version' => 'v1.1.0',
-      'version' => '1.1.0.0',
+      'pretty_version' => 'v1.1.1',
+      'version' => '1.1.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '4ad146ff29e79b80a184ed3aa43bac6d8037b68f',
+      'reference' => 'b22b810dee3873320de86d8fc1cb7a625b279c21',
     ),
     'k-community/markdown-field' => 
     array (
@@ -103,12 +103,12 @@
     ),
     'laminas/laminas-escaper' => 
     array (
-      'pretty_version' => '2.6.1',
-      'version' => '2.6.1.0',
+      'pretty_version' => '2.7.0',
+      'version' => '2.7.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '25f2a053eadfa92ddacb609dcbbc39362610da70',
+      'reference' => '5e04bc5ae5990b17159d79d331055e2c645e5cc5',
     ),
     'laminas/laminas-zendframework-bridge' => 
     array (
@@ -164,12 +164,12 @@
     ),
     'phpmailer/phpmailer' => 
     array (
-      'pretty_version' => 'v6.1.6',
-      'version' => '6.1.6.0',
+      'pretty_version' => 'v6.2.0',
+      'version' => '6.2.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'c2796cb1cb99d7717290b48c4e6f32cb6c60b7b3',
+      'reference' => 'e38888a75c070304ca5514197d4847a59a5c853f',
     ),
     'phpoption/phpoption' => 
     array (
@@ -191,12 +191,12 @@
     ),
     'symfony/css-selector' => 
     array (
-      'pretty_version' => 'v5.1.8',
-      'version' => '5.1.8.0',
+      'pretty_version' => 'v5.2.1',
+      'version' => '5.2.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '6cbebda22ffc0d4bb8fea0c1311c2ca54c4c8fa0',
+      'reference' => 'f789e7ead4c79e04ca9a6d6162fc629c89bd8054',
     ),
     'symfony/polyfill-ctype' => 
     array (
@@ -254,18 +254,18 @@
     ),
     'voku/simple_html_dom' => 
     array (
-      'pretty_version' => '4.7.27',
-      'version' => '4.7.27.0',
+      'pretty_version' => '4.7.28',
+      'version' => '4.7.28.0',
       'aliases' => 
       array (
       ),
-      'reference' => '3b3c4bb83ea7b341d91a878aea210d6d96591f49',
+      'reference' => '78d5894c7f0facfb4fb6369af15b1a87baea958c',
     ),
     'zendframework/zend-escaper' => 
     array (
       'replaced' => 
       array (
-        0 => '2.6.1',
+        0 => '^2.6.1',
       ),
     ),
   ),

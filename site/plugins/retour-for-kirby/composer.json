@@ -2,7 +2,7 @@
     "name": "distantnative/retour-for-kirby",
     "description": "Redirects and error tracking for Kirby",
     "type": "kirby-plugin",
-    "version": "2.3.2",
+    "version": "3.0.0",
     "license": "MIT",
     "keywords": [
         "kirby3",
@@ -19,14 +19,14 @@
         }
     ],
     "require": {
-        "getkirby/composer-installer": "^1.1"
+        "getkirby/composer-installer": "^1.2"
     },
     "config": {
         "optimize-autoloader": true
     },
     "autoload": {
         "psr-4": {
-            "distantnative\\Retour\\": "src/models/"
+            "distantnative\\Retour\\": "models/"
         }
     }
 }
