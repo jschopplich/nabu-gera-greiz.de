@@ -1,14 +1,16 @@
 {
-  "name": "johannschopplich/kirby-extended",
-  "description": "Env variables, meta tags generation and more",
+  "name": "johannschopplich/kirby-hashed-assets",
+  "description": "File name hashes support for css() and js() helpers",
   "type": "kirby-plugin",
   "keywords": [
+    "assets",
+    "components",
+    "css",
+    "helpers",
+    "js",
     "kirby",
-    "env",
-    "dotenv",
-    "seo",
-    "meta",
-    "meta-tags"
+    "laravel-mix",
+    "manifest"
   ],
   "license": "MIT",
   "authors": [
@@ -20,10 +22,7 @@
   ],
   "require": {
     "php": ">=7.4.0",
-    "getkirby/composer-installer": "^1.2",
-    "phpoption/phpoption": "^1.7",
-    "vlucas/phpdotenv": "^5.0",
-    "voku/html-min": "^4.4"
+    "getkirby/composer-installer": "^1.2"
   },
   "require-dev": {
     "getkirby/cms": "^3.0",
@@ -34,15 +33,11 @@
     "sort-packages": true
   },
   "autoload": {
-    "files": [
-      "helpers.php"
-    ],
     "psr-4": {
       "KirbyExtended\\": "classes/KirbyExtended/"
     }
   },
   "scripts": {
-    "fix": "php-cs-fixer fix --config .php_cs",
     "test": "phpunit",
     "dist": "composer install --no-dev --optimize-autoloader"
   },

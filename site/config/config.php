@@ -56,7 +56,11 @@ return [
 
     'kirby-extended.meta-tags' => [
         'default' => require __DIR__ . '/meta.php',
-        'templates' => require __DIR__ . '/meta-templates.php',
+        'templates' => require __DIR__ . '/meta-templates.php'
+    ],
+
+    'kirby-extended.html-minify' => [
+        'enable' => true
     ],
 
     'kirby-extended.locked-pages' => [

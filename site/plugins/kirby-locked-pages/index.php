@@ -1,26 +1,22 @@
 <?php
 
-namespace KirbyExtended\LockedPages;
+@include_once __DIR__ . '/vendor/autoload.php';
 
 use Kirby\Cms\App as Kirby;
 use Kirby\Cms\Page;
-
-load([
-    'KirbyExtended\LockedPages\LockedPages' => 'classes/KirbyExtended/LockedPages.php'
-], __DIR__);
+use KirbyExtended\LockedPages;
 
 Kirby::plugin('johannschopplich/kirby-locked-pages', [
     'hooks' => [
         'route:after' => function ($route, $path, $method, $result, $final) {
-            if (
-                $route->env() === 'site' &&
-                LockedPages::isLocked($result)
-            ) {
-                $url = url(option('kirby-extended.locked-pages.slug', 'locked'), [
-                    'query' => ['redirect' => $path]
-                ]);
-                go($url);
-            }
+            if ($route->env() !== 'site') return;
+            if (!LockedPages::isLocked($result)) return;
+
+            $path = option('kirby-extended.locked-pages.slug', 'locked');
+            $options = [
+                'query' => ['redirect' => $path]
+            ];
+            go(url($path, $options));
         }
     ],
     'routes' => [

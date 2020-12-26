@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'e8a78e5b52ec29d822a8d9f3f0edc478bd317c63',
+    'reference' => '8d57b6bd169a1fbc6c9e3ca1478f1976a24b7d16',
     'name' => '__root__',
   ),
   'versions' => 
@@ -41,7 +41,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'e8a78e5b52ec29d822a8d9f3f0edc478bd317c63',
+      'reference' => '8d57b6bd169a1fbc6c9e3ca1478f1976a24b7d16',
     ),
     'claviska/simpleimage' => 
     array (
@@ -99,12 +99,30 @@ private static $installed = array (
     ),
     'johannschopplich/kirby-extended' => 
     array (
-      'pretty_version' => 'v1.1.1',
-      'version' => '1.1.1.0',
+      'pretty_version' => 'v1.2.1',
+      'version' => '1.2.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'b22b810dee3873320de86d8fc1cb7a625b279c21',
+      'reference' => 'd1d78cf2b073931da2c394907477fde650250fed',
+    ),
+    'johannschopplich/kirby-hashed-assets' => 
+    array (
+      'pretty_version' => 'v1.0.0',
+      'version' => '1.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '1e9edffd8fc0ff0782d3f62357a60ea1896d7056',
+    ),
+    'johannschopplich/kirby-locked-pages' => 
+    array (
+      'pretty_version' => 'v1.0.1',
+      'version' => '1.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'c559445403011b53c4e699e629d629d31c9a2a8a',
     ),
     'k-community/markdown-field' => 
     array (

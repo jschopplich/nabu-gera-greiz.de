@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7ddd353a8157beafa1f99dace5e4d318",
+    "content-hash": "a53373efafb6703168db7bc1470d26ba",
     "packages": [
         {
             "name": "claviska/simpleimage",
@@ -355,27 +355,27 @@
         },
         {
             "name": "johannschopplich/kirby-extended",
-            "version": "v1.1.1",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johannschopplich/kirby-extended.git",
-                "reference": "b22b810dee3873320de86d8fc1cb7a625b279c21"
+                "reference": "d1d78cf2b073931da2c394907477fde650250fed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johannschopplich/kirby-extended/zipball/b22b810dee3873320de86d8fc1cb7a625b279c21",
-                "reference": "b22b810dee3873320de86d8fc1cb7a625b279c21",
+                "url": "https://api.github.com/repos/johannschopplich/kirby-extended/zipball/d1d78cf2b073931da2c394907477fde650250fed",
+                "reference": "d1d78cf2b073931da2c394907477fde650250fed",
                 "shasum": ""
             },
             "require": {
-                "getkirby/composer-installer": "^1.1",
+                "getkirby/composer-installer": "^1.2",
                 "php": ">=7.4.0",
                 "phpoption/phpoption": "^1.7",
-                "vlucas/phpdotenv": "^5.0"
+                "vlucas/phpdotenv": "^5.0",
+                "voku/html-min": "^4.4"
             },
             "require-dev": {
                 "getkirby/cms": "^3.0",
-                "phpstan/phpstan": "^0.12",
                 "phpunit/phpunit": "^9.0"
             },
             "type": "kirby-plugin",
@@ -401,7 +401,7 @@
                     "homepage": "https://johannschopplich.com"
                 }
             ],
-            "description": "Kirby plugin for env variables & HTML meta tags generation",
+            "description": "Env variables, meta tags generation and more",
             "keywords": [
                 "dotenv",
                 "env",
@@ -412,9 +412,117 @@
             ],
             "support": {
                 "issues": "https://github.com/johannschopplich/kirby-extended/issues",
-                "source": "https://github.com/johannschopplich/kirby-extended/tree/v1.1.1"
+                "source": "https://github.com/johannschopplich/kirby-extended/tree/v1.2.1"
             },
-            "time": "2020-12-09T08:01:47+00:00"
+            "time": "2020-12-26T20:48:42+00:00"
+        },
+        {
+            "name": "johannschopplich/kirby-hashed-assets",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johannschopplich/kirby-hashed-assets.git",
+                "reference": "1e9edffd8fc0ff0782d3f62357a60ea1896d7056"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johannschopplich/kirby-hashed-assets/zipball/1e9edffd8fc0ff0782d3f62357a60ea1896d7056",
+                "reference": "1e9edffd8fc0ff0782d3f62357a60ea1896d7056",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.2",
+                "php": ">=7.4.0"
+            },
+            "require-dev": {
+                "getkirby/cms": "^3.0",
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "kirby-plugin",
+            "extra": {
+                "kirby-cms-path": false
+            },
+            "autoload": {
+                "psr-4": {
+                    "KirbyExtended\\": "classes/KirbyExtended/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Johann Schopplich",
+                    "email": "pkg@johannschopplich.com",
+                    "homepage": "https://johannschopplich.com"
+                }
+            ],
+            "description": "File name hashes support for css() and js() helpers",
+            "keywords": [
+                "JS",
+                "assets",
+                "components",
+                "css",
+                "helpers",
+                "kirby",
+                "laravel-mix",
+                "manifest"
+            ],
+            "support": {
+                "issues": "https://github.com/johannschopplich/kirby-hashed-assets/issues",
+                "source": "https://github.com/johannschopplich/kirby-hashed-assets/tree/v1.0.0"
+            },
+            "time": "2020-12-26T20:33:57+00:00"
+        },
+        {
+            "name": "johannschopplich/kirby-locked-pages",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johannschopplich/kirby-locked-pages.git",
+                "reference": "c559445403011b53c4e699e629d629d31c9a2a8a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johannschopplich/kirby-locked-pages/zipball/c559445403011b53c4e699e629d629d31c9a2a8a",
+                "reference": "c559445403011b53c4e699e629d629d31c9a2a8a",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.2",
+                "php": ">=7.3.0"
+            },
+            "type": "kirby-plugin",
+            "autoload": {
+                "psr-4": {
+                    "KirbyExtended\\": "classes/KirbyExtended/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Johann Schopplich",
+                    "email": "pkg@johannschopplich.com",
+                    "homepage": "https://johannschopplich.com"
+                }
+            ],
+            "description": "Password-protect pages",
+            "keywords": [
+                "kirby",
+                "panel",
+                "password",
+                "protect",
+                "secure"
+            ],
+            "support": {
+                "issues": "https://github.com/johannschopplich/kirby-locked-pages/issues",
+                "source": "https://github.com/johannschopplich/kirby-locked-pages/tree/v1.0.1"
+            },
+            "time": "2020-12-26T16:54:32+00:00"
         },
         {
             "name": "k-community/markdown-field",

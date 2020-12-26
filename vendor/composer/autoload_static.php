@@ -10,9 +10,9 @@ class ComposerStaticInit35c729715e5b8e8d90d52a62b250a1d0
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '7e9bd612cc444b3eed788ebbe46263a0' => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src/autoload.php',
         '04c6c5c2f7095ccf6c481d3e53e1776f' => __DIR__ . '/..' . '/mustangostang/spyc/Spyc.php',
+        'f864ae44e8154e5ff6f4eec32f46d37f' => __DIR__ . '/..' . '/getkirby/cms/config/setup.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
-        'f864ae44e8154e5ff6f4eec32f46d37f' => __DIR__ . '/..' . '/getkirby/cms/config/setup.php',
         '7f15a39b34659ec7c61fd4bc2f79c539' => __DIR__ . '/../..' . '/site/plugins/kirby-extended/helpers.php',
     );
 
@@ -139,7 +139,9 @@ class ComposerStaticInit35c729715e5b8e8d90d52a62b250a1d0
         ),
         'KirbyExtended\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/site/plugins/kirby-extended/classes/KirbyExtended',
+            0 => __DIR__ . '/../..' . '/site/plugins/kirby-hashed-assets/classes/KirbyExtended',
+            1 => __DIR__ . '/../..' . '/site/plugins/kirby-locked-pages/classes/KirbyExtended',
+            2 => __DIR__ . '/../..' . '/site/plugins/kirby-extended/classes/KirbyExtended',
         ),
         'GrahamCampbell\\ResultType\\' => 
         array (
@@ -219,9 +221,12 @@ class ComposerStaticInit35c729715e5b8e8d90d52a62b250a1d0
         'GrahamCampbell\\ResultType\\Error' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Error.php',
         'GrahamCampbell\\ResultType\\Result' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Result.php',
         'GrahamCampbell\\ResultType\\Success' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Success.php',
+        'KirbyExtended\\AssetHashes' => __DIR__ . '/../..' . '/site/plugins/kirby-hashed-assets/classes/KirbyExtended/AssetHashes.php',
         'KirbyExtended\\Env' => __DIR__ . '/../..' . '/site/plugins/kirby-extended/classes/KirbyExtended/Env.php',
         'KirbyExtended\\EnvAdapter' => __DIR__ . '/../..' . '/site/plugins/kirby-extended/classes/KirbyExtended/EnvAdapter.php',
         'KirbyExtended\\HigherOrderTapProxy' => __DIR__ . '/../..' . '/site/plugins/kirby-extended/classes/KirbyExtended/HigherOrderTapProxy.php',
+        'KirbyExtended\\HtmlMinTemplate' => __DIR__ . '/../..' . '/site/plugins/kirby-extended/classes/KirbyExtended/HtmlMinTemplate.php',
+        'KirbyExtended\\LockedPages' => __DIR__ . '/../..' . '/site/plugins/kirby-locked-pages/classes/KirbyExtended/LockedPages.php',
         'KirbyExtended\\MetaTags' => __DIR__ . '/../..' . '/site/plugins/kirby-extended/classes/KirbyExtended/MetaTags.php',
         'KirbyExtended\\MetaTagsAdapter' => __DIR__ . '/../..' . '/site/plugins/kirby-extended/classes/KirbyExtended/MetaTagsAdapter.php',
         'Kirby\\Api\\Api' => __DIR__ . '/..' . '/getkirby/cms/src/Api/Api.php',

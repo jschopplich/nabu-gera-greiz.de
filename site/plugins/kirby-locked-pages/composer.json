@@ -1,0 +1,33 @@
+{
+  "name": "johannschopplich/kirby-locked-pages",
+  "description": "Password-protect pages",
+  "type": "kirby-plugin",
+  "keywords": [
+    "kirby",
+    "password",
+    "protect",
+    "secure",
+    "panel"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Johann Schopplich",
+      "email": "pkg@johannschopplich.com",
+      "homepage": "https://johannschopplich.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.3.0",
+    "getkirby/composer-installer": "^1.2"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "KirbyExtended\\": "classes/KirbyExtended/"
+    }
+  }
+}
