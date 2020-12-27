@@ -139,9 +139,9 @@ class ComposerStaticInit35c729715e5b8e8d90d52a62b250a1d0
         ),
         'KirbyExtended\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/site/plugins/kirby-hashed-assets/classes/KirbyExtended',
+            0 => __DIR__ . '/../..' . '/site/plugins/kirby-extended/classes/KirbyExtended',
             1 => __DIR__ . '/../..' . '/site/plugins/kirby-locked-pages/classes/KirbyExtended',
-            2 => __DIR__ . '/../..' . '/site/plugins/kirby-extended/classes/KirbyExtended',
+            2 => __DIR__ . '/../..' . '/site/plugins/kirby-hashed-assets/classes/KirbyExtended',
         ),
         'GrahamCampbell\\ResultType\\' => 
         array (

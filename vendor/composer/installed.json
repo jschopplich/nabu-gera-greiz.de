@@ -425,17 +425,17 @@
         },
         {
             "name": "johannschopplich/kirby-hashed-assets",
-            "version": "v1.0.0",
-            "version_normalized": "1.0.0.0",
+            "version": "v1.0.1",
+            "version_normalized": "1.0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johannschopplich/kirby-hashed-assets.git",
-                "reference": "1e9edffd8fc0ff0782d3f62357a60ea1896d7056"
+                "reference": "5d240a9293e0c424a438b1fe506d2d115863f898"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johannschopplich/kirby-hashed-assets/zipball/1e9edffd8fc0ff0782d3f62357a60ea1896d7056",
-                "reference": "1e9edffd8fc0ff0782d3f62357a60ea1896d7056",
+                "url": "https://api.github.com/repos/johannschopplich/kirby-hashed-assets/zipball/5d240a9293e0c424a438b1fe506d2d115863f898",
+                "reference": "5d240a9293e0c424a438b1fe506d2d115863f898",
                 "shasum": ""
             },
             "require": {
@@ -446,7 +446,7 @@
                 "getkirby/cms": "^3.0",
                 "phpunit/phpunit": "^9.0"
             },
-            "time": "2020-12-26T20:33:57+00:00",
+            "time": "2020-12-27T14:34:26+00:00",
             "type": "kirby-plugin",
             "extra": {
                 "kirby-cms-path": false
@@ -481,7 +481,7 @@
             ],
             "support": {
                 "issues": "https://github.com/johannschopplich/kirby-hashed-assets/issues",
-                "source": "https://github.com/johannschopplich/kirby-hashed-assets/tree/v1.0.0"
+                "source": "https://github.com/johannschopplich/kirby-hashed-assets/tree/v1.0.1"
             },
             "install-path": "../../site/plugins/kirby-hashed-assets"
         },

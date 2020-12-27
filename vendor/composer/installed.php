@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '8d57b6bd169a1fbc6c9e3ca1478f1976a24b7d16',
+    'reference' => '86c7197141063bf7b4e3ed90d0ee4c7e27665bd4',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '8d57b6bd169a1fbc6c9e3ca1478f1976a24b7d16',
+      'reference' => '86c7197141063bf7b4e3ed90d0ee4c7e27665bd4',
     ),
     'claviska/simpleimage' => 
     array (
@@ -85,12 +85,12 @@
     ),
     'johannschopplich/kirby-hashed-assets' => 
     array (
-      'pretty_version' => 'v1.0.0',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'v1.0.1',
+      'version' => '1.0.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '1e9edffd8fc0ff0782d3f62357a60ea1896d7056',
+      'reference' => '5d240a9293e0c424a438b1fe506d2d115863f898',
     ),
     'johannschopplich/kirby-locked-pages' => 
     array (

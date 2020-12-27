@@ -1,3 +1,4 @@
+import fs from 'fs'
 import fg from 'fast-glob'
 import replace from '@rollup/plugin-replace'
 import resolve from '@rollup/plugin-node-resolve'
@@ -7,7 +8,8 @@ import { terser } from 'rollup-plugin-terser'
 
 const inputDir = 'src/js'
 const inputFiles = []
-const outputDir = 'public/assets/js'
+const indexPath = fs.existsSync('public') ? 'public/' : ''
+const outputDir = `${indexPath}assets/js`
 const templateDir = 'templates'
 
 const production = !process.env.ROLLUP_WATCH
