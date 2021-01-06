@@ -9,21 +9,16 @@ use Kirby\Toolkit\Str;
 
 class AssetHashes
 {
-    /**
-     * Manifest containing hashed filenames
-     *
-     * @var array|null
-     */
-    protected static ?array $manifest = null;
+    protected static array $manifest;
 
     /**
-     * Get and cache static `$manifest`
+     * Get manifest containing hashed filenames
      *
      * @return array
      */
     public static function useManifest(): array
     {
-        if (static::$manifest !== null) {
+        if (isset(static::$manifest)) {
             return static::$manifest;
         }
 
@@ -37,14 +32,39 @@ class AssetHashes
     }
 
     /**
-     * Handle CSS or JS asset
+     * Handle CSS assets
+     *
+     * @param array $args
+     * @return string
+     */
+    public static function css(...$args): string
+    {
+        $args[] = 'css';
+        return static::handle(...$args);
+    }
+
+    /**
+     * Handle JS assets
+     *
+     * @param array $args
+     * @return string
+     */
+    public static function js(...$args): string
+    {
+        $args[] = 'js';
+        return static::handle(...$args);
+    }
+
+    /**
+     * Parse CSS or JS URL
      *
      * @param \Kirby\Cms\App $kirby Kirby instance
      * @param string $url Relative or absolute URL
      * @param string|array $options An array of attributes for the link tag or a media attribute string
+     * @param string $extension The asset's extension
      * @return string
      */
-    public static function handle(\Kirby\Cms\App $kirby, string $url, $options): string
+    public static function handle(\Kirby\Cms\App $kirby, string $url, $options, string $extension): string
     {
         // Bail if URL is absolute
         if (Url::isAbsolute($url)) {
@@ -52,7 +72,6 @@ class AssetHashes
         }
 
         $path = Url::path($url, true);
-        $extension = pathinfo($url, PATHINFO_EXTENSION);
         $assetsDir = Str::ltrim($kirby->root('assets'), kirby()->root());
         $absolutePath = $kirby->root() . $path;
 

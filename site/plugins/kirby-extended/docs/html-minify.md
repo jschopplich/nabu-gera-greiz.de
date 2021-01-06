@@ -2,9 +2,7 @@
 
 Kirby HTML templates can be minified by removing extra whitespaces, comments and other unneeded characters without breaking the content structure. As a result pages become smaller in size and load faster. It will also prepare the HTML for better gzip results, by re-ranging (sort alphabetical) attributes and css-class-names.
 
-[HtmlMin](https://github.com/voku/HtmlMin) is used under the hood.
-
-## Usage
+## Configuration
 
 Minifying HTML templates is disabled by default. To enable it, set `kirby-extended.html-minify.enable` to `true`.
 
@@ -12,8 +10,8 @@ Minifying HTML templates is disabled by default. To enable it, set `kirby-extend
 
 | Option | Default | Values | Description |
 | --- | --- | --- | --- |
-| `kirby-extended.html-minify.enable` | `false` | boolean | Enable or disable HTML minification.
-| `kirby-extended.html-minify.options` | `[]` | array | Options to pass to HtmlMin.
+| `kirby-extended.html-minify.enable` | `false` | boolean | Enable or disable HTML minification. |
+| `kirby-extended.html-minify.options` | `[]` | array | Options to pass to HtmlMin. |
 
 Head over to HtmlMin for a [list of all available options](https://github.com/voku/HtmlMin#options).
 
@@ -34,4 +32,6 @@ return [
 
 ## Credits
 
-> Forked from [kirby-minify-html](https://github.com/afbora/kirby-minify-html) by Ahmet Bora
+Forked from [kirby-minify-html](https://github.com/afbora/kirby-minify-html)
+Author: Ahmet Bora
+Licence: MIT

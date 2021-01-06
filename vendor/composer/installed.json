@@ -253,27 +253,26 @@
         },
         {
             "name": "getkirby/composer-installer",
-            "version": "1.2.0",
-            "version_normalized": "1.2.0.0",
+            "version": "1.2.1",
+            "version_normalized": "1.2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getkirby/composer-installer.git",
-                "reference": "240a8b2c275d61b66601feb58222b7d34bc6cf1e"
+                "reference": "c98ece30bfba45be7ce457e1102d1b169d922f3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getkirby/composer-installer/zipball/240a8b2c275d61b66601feb58222b7d34bc6cf1e",
-                "reference": "240a8b2c275d61b66601feb58222b7d34bc6cf1e",
+                "url": "https://api.github.com/repos/getkirby/composer-installer/zipball/c98ece30bfba45be7ce457e1102d1b169d922f3d",
+                "reference": "c98ece30bfba45be7ce457e1102d1b169d922f3d",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^1.0 || ^2.0"
             },
             "require-dev": {
-                "composer/composer": "^1.8 || 2.0.*@dev",
-                "phpunit/phpunit": "^7.0"
+                "composer/composer": "^1.8 || ^2.0"
             },
-            "time": "2020-09-13T14:43:34+00:00",
+            "time": "2020-12-28T12:54:39+00:00",
             "type": "composer-plugin",
             "extra": {
                 "class": "Kirby\\ComposerInstaller\\Plugin"
@@ -290,6 +289,16 @@
             ],
             "description": "Kirby's custom Composer installer for the Kirby CMS and for Kirby plugins",
             "homepage": "https://getkirby.com",
+            "support": {
+                "issues": "https://github.com/getkirby/composer-installer/issues",
+                "source": "https://github.com/getkirby/composer-installer/tree/1.2.1"
+            },
+            "funding": [
+                {
+                    "url": "https://getkirby.com/buy",
+                    "type": "custom"
+                }
+            ],
             "install-path": "../getkirby/composer-installer"
         },
         {
@@ -359,31 +368,30 @@
         },
         {
             "name": "johannschopplich/kirby-extended",
-            "version": "v1.2.1",
-            "version_normalized": "1.2.1.0",
+            "version": "v2.5.6",
+            "version_normalized": "2.5.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johannschopplich/kirby-extended.git",
-                "reference": "d1d78cf2b073931da2c394907477fde650250fed"
+                "reference": "5774c8954b49ab26db9eebc02561a2b42fe29617"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johannschopplich/kirby-extended/zipball/d1d78cf2b073931da2c394907477fde650250fed",
-                "reference": "d1d78cf2b073931da2c394907477fde650250fed",
+                "url": "https://api.github.com/repos/johannschopplich/kirby-extended/zipball/5774c8954b49ab26db9eebc02561a2b42fe29617",
+                "reference": "5774c8954b49ab26db9eebc02561a2b42fe29617",
                 "shasum": ""
             },
             "require": {
                 "getkirby/composer-installer": "^1.2",
                 "php": ">=7.4.0",
-                "phpoption/phpoption": "^1.7",
+                "symfony/polyfill-php80": "^1.20",
                 "vlucas/phpdotenv": "^5.0",
                 "voku/html-min": "^4.4"
             },
             "require-dev": {
-                "getkirby/cms": "^3.0",
-                "phpunit/phpunit": "^9.0"
+                "getkirby/cms": "^3.0"
             },
-            "time": "2020-12-26T20:48:42+00:00",
+            "time": "2021-01-06T11:06:21+00:00",
             "type": "kirby-plugin",
             "extra": {
                 "kirby-cms-path": false
@@ -419,23 +427,23 @@
             ],
             "support": {
                 "issues": "https://github.com/johannschopplich/kirby-extended/issues",
-                "source": "https://github.com/johannschopplich/kirby-extended/tree/v1.2.1"
+                "source": "https://github.com/johannschopplich/kirby-extended/tree/v2.5.6"
             },
             "install-path": "../../site/plugins/kirby-extended"
         },
         {
             "name": "johannschopplich/kirby-hashed-assets",
-            "version": "v1.0.1",
-            "version_normalized": "1.0.1.0",
+            "version": "v1.0.6",
+            "version_normalized": "1.0.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johannschopplich/kirby-hashed-assets.git",
-                "reference": "5d240a9293e0c424a438b1fe506d2d115863f898"
+                "reference": "826240cfc97c3b1623aabc61c345950fb67376de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johannschopplich/kirby-hashed-assets/zipball/5d240a9293e0c424a438b1fe506d2d115863f898",
-                "reference": "5d240a9293e0c424a438b1fe506d2d115863f898",
+                "url": "https://api.github.com/repos/johannschopplich/kirby-hashed-assets/zipball/826240cfc97c3b1623aabc61c345950fb67376de",
+                "reference": "826240cfc97c3b1623aabc61c345950fb67376de",
                 "shasum": ""
             },
             "require": {
@@ -446,7 +454,7 @@
                 "getkirby/cms": "^3.0",
                 "phpunit/phpunit": "^9.0"
             },
-            "time": "2020-12-27T14:34:26+00:00",
+            "time": "2021-01-05T21:44:57+00:00",
             "type": "kirby-plugin",
             "extra": {
                 "kirby-cms-path": false
@@ -481,7 +489,7 @@
             ],
             "support": {
                 "issues": "https://github.com/johannschopplich/kirby-hashed-assets/issues",
-                "source": "https://github.com/johannschopplich/kirby-hashed-assets/tree/v1.0.1"
+                "source": "https://github.com/johannschopplich/kirby-hashed-assets/tree/v1.0.6"
             },
             "install-path": "../../site/plugins/kirby-hashed-assets"
         },
@@ -539,23 +547,23 @@
         },
         {
             "name": "k-community/markdown-field",
-            "version": "1.0.6",
-            "version_normalized": "1.0.6.0",
+            "version": "1.0.8",
+            "version_normalized": "1.0.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sylvainjule/kirby-markdown-field.git",
-                "reference": "1fd21f6633cdb77ed8a3974e64a0111841bb46e8"
+                "reference": "5f68708742e3b9527cdbed36bbd054a626bb3760"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sylvainjule/kirby-markdown-field/zipball/1fd21f6633cdb77ed8a3974e64a0111841bb46e8",
-                "reference": "1fd21f6633cdb77ed8a3974e64a0111841bb46e8",
+                "url": "https://api.github.com/repos/sylvainjule/kirby-markdown-field/zipball/5f68708742e3b9527cdbed36bbd054a626bb3760",
+                "reference": "5f68708742e3b9527cdbed36bbd054a626bb3760",
                 "shasum": ""
             },
             "require": {
                 "getkirby/composer-installer": "^1.1"
             },
-            "time": "2020-03-28T11:24:15+00:00",
+            "time": "2020-12-28T14:27:51+00:00",
             "type": "kirby-plugin",
             "extra": {
                 "installer-name": "markdown-field"
@@ -576,43 +584,11 @@
                 }
             ],
             "description": "Enhanced markdown editor for Kirby 3",
+            "support": {
+                "issues": "https://github.com/sylvainjule/kirby-markdown-field/issues",
+                "source": "https://github.com/sylvainjule/kirby-markdown-field/tree/1.0.8"
+            },
             "install-path": "../../site/plugins/markdown-field"
-        },
-        {
-            "name": "kirbyzone/sitemapper",
-            "version": "1.2",
-            "version_normalized": "1.2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://gitlab.com/kirbyzone/sitemapper.git",
-                "reference": "de48a9ace7f7ab6366c0245cc43f30954cacd296"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/kirbyzone%2Fsitemapper/repository/archive.zip?sha=de48a9ace7f7ab6366c0245cc43f30954cacd296",
-                "reference": "de48a9ace7f7ab6366c0245cc43f30954cacd296",
-                "shasum": ""
-            },
-            "require": {
-                "getkirby/composer-installer": "^1.1"
-            },
-            "time": "2019-12-11T16:53:40+00:00",
-            "type": "kirby-plugin",
-            "installation-source": "dist",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Cre8iv Click",
-                    "email": "hello@cre8iv.click",
-                    "homepage": "https://cre8iv.click"
-                }
-            ],
-            "description": "Cre8iv Click's Automatic Sitemap Generator Plugin for Kirby",
-            "homepage": "https://gitlab.com/cre8ivclick/sitemapper",
-            "install-path": "../../site/plugins/sitemapper"
         },
         {
             "name": "laminas/laminas-escaper",

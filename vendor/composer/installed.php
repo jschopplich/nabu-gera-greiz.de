@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '86c7197141063bf7b4e3ed90d0ee4c7e27665bd4',
+    'reference' => '7757d8488879f672411c07819adcaad217a8d4e3',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '86c7197141063bf7b4e3ed90d0ee4c7e27665bd4',
+      'reference' => '7757d8488879f672411c07819adcaad217a8d4e3',
     ),
     'claviska/simpleimage' => 
     array (
@@ -58,12 +58,12 @@
     ),
     'getkirby/composer-installer' => 
     array (
-      'pretty_version' => '1.2.0',
-      'version' => '1.2.0.0',
+      'pretty_version' => '1.2.1',
+      'version' => '1.2.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '240a8b2c275d61b66601feb58222b7d34bc6cf1e',
+      'reference' => 'c98ece30bfba45be7ce457e1102d1b169d922f3d',
     ),
     'graham-campbell/result-type' => 
     array (
@@ -76,21 +76,21 @@
     ),
     'johannschopplich/kirby-extended' => 
     array (
-      'pretty_version' => 'v1.2.1',
-      'version' => '1.2.1.0',
+      'pretty_version' => 'v2.5.6',
+      'version' => '2.5.6.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'd1d78cf2b073931da2c394907477fde650250fed',
+      'reference' => '5774c8954b49ab26db9eebc02561a2b42fe29617',
     ),
     'johannschopplich/kirby-hashed-assets' => 
     array (
-      'pretty_version' => 'v1.0.1',
-      'version' => '1.0.1.0',
+      'pretty_version' => 'v1.0.6',
+      'version' => '1.0.6.0',
       'aliases' => 
       array (
       ),
-      'reference' => '5d240a9293e0c424a438b1fe506d2d115863f898',
+      'reference' => '826240cfc97c3b1623aabc61c345950fb67376de',
     ),
     'johannschopplich/kirby-locked-pages' => 
     array (
@@ -103,21 +103,12 @@
     ),
     'k-community/markdown-field' => 
     array (
-      'pretty_version' => '1.0.6',
-      'version' => '1.0.6.0',
+      'pretty_version' => '1.0.8',
+      'version' => '1.0.8.0',
       'aliases' => 
       array (
       ),
-      'reference' => '1fd21f6633cdb77ed8a3974e64a0111841bb46e8',
-    ),
-    'kirbyzone/sitemapper' => 
-    array (
-      'pretty_version' => '1.2',
-      'version' => '1.2.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'de48a9ace7f7ab6366c0245cc43f30954cacd296',
+      'reference' => '5f68708742e3b9527cdbed36bbd054a626bb3760',
     ),
     'laminas/laminas-escaper' => 
     array (

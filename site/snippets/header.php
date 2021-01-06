@@ -5,7 +5,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <?= $page->metaTags() ?>
+  <title><?= $page->customTitle()->or($page->title() . ' – ' . $site->title()) ?></title>
+
+  <?php $meta = $page->meta() ?>
+  <?= $meta->robots() ?>
+  <?= $meta->jsonld() ?>
+  <?= $meta->social() ?>
+
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="<?= $site->title()->html() ?>">
+
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/assets/img/icons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/icons/favicon-16x16.png" sizes="16x16" type="image/png">
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <?= css([

@@ -5,19 +5,6 @@ use Kirby\Toolkit\Str;
 
 return [
     [
-        'pattern' => 'robots.txt',
-        'method' => 'ALL',
-        'action' => function () {
-            $robots = 'User-agent: *' . PHP_EOL;
-            $robots .= 'Allow: /' . PHP_EOL;
-            $robots .= 'Sitemap: ' . url('sitemap.xml');
-            return kirby()
-                ->response()
-                ->type('text')
-                ->body($robots);
-        }
-    ],
-    [
         // Redirect articles from archive blogs, since now all articles are
         // located under `aktuelles` and archives are just virtual pages
         // e.g. `aktuelles/archiv/2018/name-of-the-article` -> `aktuelles/name-of-the-article`

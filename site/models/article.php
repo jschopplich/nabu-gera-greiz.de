@@ -1,31 +1,30 @@
 <?php
 
-return function ($page, $site) {
-    $metaDescription = $page->metaDescription()->or($page->text()->excerpt(140))->value();
-    $datePublished = $page->date()->toDate('%Y-%m-%d');
+use Kirby\Cms\Page;
 
-    return [
-        'article' => [
-            'meta' => [
-                'description' => $metaDescription,
-            ],
+class ArticlePage extends Page
+{
+    public function metadata(): array
+    {
+        $metaDescription = $this->metaDescription()->or($this->text()->excerpt(140))->value();
+        $datePublished = $this->date()->toDate('%Y-%m-%d');
+        $site = site();
+
+        return [
+            'description' => $metaDescription,
             'og' => [
                 'type' => 'article',
-                'description' => $metaDescription,
                 'namespace:article' => [
                     'author' => $site->author()->value(),
                     'published_time' => $datePublished
                 ]
             ],
-            'twitter' => [
-                'description' => $metaDescription
-            ],
-            'json-ld' => [
+            'jsonld' => [
                 'BlogPosting' => [
-                    'headline' => $page->title()->value(),
+                    'headline' => $this->title()->value(),
                     'description' => $metaDescription,
-                    'mainEntityOfPage' => $page->url(),
-                    'url' => $page->url(),
+                    'mainEntityOfPage' => $this->url(),
+                    'url' => $this->url(),
                     'author' => [
                         '@type' => 'Person',
                         'name' => $site->author()->value()
@@ -40,9 +39,9 @@ return function ($page, $site) {
                     ],
                     'datePublished' => $datePublished,
                     'dateCreated' => $datePublished,
-                    'dateModified' => $page->modified('%Y-%m-%d')
+                    'dateModified' => $this->modified('%Y-%m-%d')
                 ]
             ]
-        ]
-    ];
-};
+        ];
+    }
+}

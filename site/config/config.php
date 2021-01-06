@@ -1,7 +1,7 @@
 <?php
 
 $base = dirname(__DIR__, 2);
-\KirbyExtended\EnvAdapter::load($base);
+\KirbyExtended\Env::load($base);
 
 return [
 
@@ -54,21 +54,36 @@ return [
         ]
     ],
 
-    'kirby-extended.meta-tags' => [
-        'default' => require __DIR__ . '/meta.php',
-        'templates' => require __DIR__ . '/meta-templates.php'
-    ],
-
-    'kirby-extended.html-minify' => [
-        'enable' => true
-    ],
-
-    'kirby-extended.locked-pages' => [
-        'slug' => 'geschuetzt',
-        'title' => 'Geschützte Seite',
-        'error' => [
-            'csrf' => 'Der CSRF-Token ist nicht korrket',
-            'password' => 'Das Passwort ist nicht korrekt'
+    'kirby-extended' => [
+        'meta' => [
+            'defaults' => require __DIR__ . '/meta.php'
+        ],
+        'robots' => [
+            'enable' => true
+        ],
+        'sitemap' => [
+            'enable' => true,
+            'templatesInclude' => [
+                'article',
+                'blog-archive',
+                'blog',
+                'calendar',
+                'category',
+                'default',
+                'home',
+                'topic'
+            ]
+        ],
+        'html-minify' => [
+            'enable' => true
+        ],
+        'locked-pages' => [
+            'slug' => 'geschuetzt',
+            'title' => 'Geschützte Seite',
+            'error' => [
+                'csrf' => 'Der CSRF-Token ist nicht korrket',
+                'password' => 'Das Passwort ist nicht korrekt'
+            ]
         ]
     ],
 
@@ -78,10 +93,6 @@ return [
             'scaling' => true,
             'size' => 'regular',
         ]
-    ],
-
-    'cre8ivclick.sitemapper' => [
-        'title' => 'Sitemap'
     ]
 
 ];
