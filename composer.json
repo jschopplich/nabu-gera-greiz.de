@@ -1,13 +1,19 @@
 {
   "require": {
     "getkirby/cms": "^3.0",
-    "johannschopplich/kirby-extended": "^1.0",
+    "johannschopplich/kirby-extended": "^2.0",
     "johannschopplich/kirby-hashed-assets": "^1.0",
     "johannschopplich/kirby-locked-pages": "^1.0",
     "distantnative/retour-for-kirby": "^3.0",
     "k-community/markdown-field": "^1.0",
     "kirbyzone/sitemapper": "^1.2",
     "masterminds/html5": "^2.7"
+  },
+  "scripts": {
+    "start": [
+      "Composer\\Config::disableProcessTimeout",
+      "@php -S 127.0.0.1:8000 -t public/ server.php"
+    ]
   },
   "config": {
     "optimize-autoloader": true
