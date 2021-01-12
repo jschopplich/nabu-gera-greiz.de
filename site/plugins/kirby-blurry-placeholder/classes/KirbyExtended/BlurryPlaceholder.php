@@ -7,8 +7,6 @@ use Kirby\Exception\InvalidArgumentException;
 
 class BlurryPlaceholder
 {
-    const PIXEL_TARGET = 60;
-
     /**
      * Creates a blurry image placeholder
      *
@@ -18,9 +16,11 @@ class BlurryPlaceholder
      */
     public static function image(File $file): string
     {
-        // Aims for a bitmap of ~P pixels (w * h = ~P)
-        $placeholderHeight = sqrt(self::PIXEL_TARGET / $file->ratio());
-        $placeholderWidth = self::PIXEL_TARGET / $placeholderHeight;
+        $pixelTarget = option('kirby-extended.blurry-placeholder.pixel-target', 60);
+
+        // Aims for an image of ~P pixels (w * h = ~P)
+        $placeholderHeight = sqrt($pixelTarget / $file->ratio());
+        $placeholderWidth = $pixelTarget / $placeholderHeight;
 
         $placeholderImage = $file->thumb([
             'width'   => round($placeholderWidth),

@@ -367,18 +367,70 @@
             "install-path": "../graham-campbell/result-type"
         },
         {
-            "name": "johannschopplich/kirby-extended",
-            "version": "v2.5.6",
-            "version_normalized": "2.5.6.0",
+            "name": "johannschopplich/kirby-blurry-placeholder",
+            "version": "v1.1.4",
+            "version_normalized": "1.1.4.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/johannschopplich/kirby-extended.git",
-                "reference": "5774c8954b49ab26db9eebc02561a2b42fe29617"
+                "url": "https://github.com/johannschopplich/kirby-blurry-placeholder.git",
+                "reference": "1a3a85d15d94a9a7f776e189aebd4b4622a988a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johannschopplich/kirby-extended/zipball/5774c8954b49ab26db9eebc02561a2b42fe29617",
-                "reference": "5774c8954b49ab26db9eebc02561a2b42fe29617",
+                "url": "https://api.github.com/repos/johannschopplich/kirby-blurry-placeholder/zipball/1a3a85d15d94a9a7f776e189aebd4b4622a988a5",
+                "reference": "1a3a85d15d94a9a7f776e189aebd4b4622a988a5",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.2",
+                "php": ">=7.3.0"
+            },
+            "time": "2020-12-24T16:55:20+00:00",
+            "type": "kirby-plugin",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "KirbyExtended\\": "classes/KirbyExtended/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Johann Schopplich",
+                    "email": "pkg@johannschopplich.com",
+                    "homepage": "https://johannschopplich.com"
+                }
+            ],
+            "description": "Blurry image placeholders and lazy loading for better UX",
+            "keywords": [
+                "image",
+                "kirby",
+                "lazyload",
+                "placeholder",
+                "seo"
+            ],
+            "support": {
+                "issues": "https://github.com/johannschopplich/kirby-blurry-placeholder/issues",
+                "source": "https://github.com/johannschopplich/kirby-blurry-placeholder/tree/v1.1.4"
+            },
+            "install-path": "../../site/plugins/kirby-blurry-placeholder"
+        },
+        {
+            "name": "johannschopplich/kirby-extended",
+            "version": "v2.5.7",
+            "version_normalized": "2.5.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johannschopplich/kirby-extended.git",
+                "reference": "24d80fa3ff1e479613f3b0924dfd7b33e6c5b879"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johannschopplich/kirby-extended/zipball/24d80fa3ff1e479613f3b0924dfd7b33e6c5b879",
+                "reference": "24d80fa3ff1e479613f3b0924dfd7b33e6c5b879",
                 "shasum": ""
             },
             "require": {
@@ -391,7 +443,7 @@
             "require-dev": {
                 "getkirby/cms": "^3.0"
             },
-            "time": "2021-01-06T11:06:21+00:00",
+            "time": "2021-01-08T10:23:56+00:00",
             "type": "kirby-plugin",
             "extra": {
                 "kirby-cms-path": false
@@ -427,23 +479,23 @@
             ],
             "support": {
                 "issues": "https://github.com/johannschopplich/kirby-extended/issues",
-                "source": "https://github.com/johannschopplich/kirby-extended/tree/v2.5.6"
+                "source": "https://github.com/johannschopplich/kirby-extended/tree/v2.5.7"
             },
             "install-path": "../../site/plugins/kirby-extended"
         },
         {
             "name": "johannschopplich/kirby-hashed-assets",
-            "version": "v1.0.6",
-            "version_normalized": "1.0.6.0",
+            "version": "v1.0.7",
+            "version_normalized": "1.0.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johannschopplich/kirby-hashed-assets.git",
-                "reference": "826240cfc97c3b1623aabc61c345950fb67376de"
+                "reference": "17a0024d23ad863e3527af41c73af3eddd37d15f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johannschopplich/kirby-hashed-assets/zipball/826240cfc97c3b1623aabc61c345950fb67376de",
-                "reference": "826240cfc97c3b1623aabc61c345950fb67376de",
+                "url": "https://api.github.com/repos/johannschopplich/kirby-hashed-assets/zipball/17a0024d23ad863e3527af41c73af3eddd37d15f",
+                "reference": "17a0024d23ad863e3527af41c73af3eddd37d15f",
                 "shasum": ""
             },
             "require": {
@@ -454,7 +506,7 @@
                 "getkirby/cms": "^3.0",
                 "phpunit/phpunit": "^9.0"
             },
-            "time": "2021-01-05T21:44:57+00:00",
+            "time": "2021-01-11T15:29:08+00:00",
             "type": "kirby-plugin",
             "extra": {
                 "kirby-cms-path": false
@@ -489,7 +541,7 @@
             ],
             "support": {
                 "issues": "https://github.com/johannschopplich/kirby-hashed-assets/issues",
-                "source": "https://github.com/johannschopplich/kirby-hashed-assets/tree/v1.0.6"
+                "source": "https://github.com/johannschopplich/kirby-hashed-assets/tree/v1.0.7"
             },
             "install-path": "../../site/plugins/kirby-hashed-assets"
         },
@@ -547,23 +599,23 @@
         },
         {
             "name": "k-community/markdown-field",
-            "version": "1.0.8",
-            "version_normalized": "1.0.8.0",
+            "version": "1.0.9",
+            "version_normalized": "1.0.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sylvainjule/kirby-markdown-field.git",
-                "reference": "5f68708742e3b9527cdbed36bbd054a626bb3760"
+                "reference": "7b1c13e6e45ffdb8b9e2f436378f5ba93507b1dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sylvainjule/kirby-markdown-field/zipball/5f68708742e3b9527cdbed36bbd054a626bb3760",
-                "reference": "5f68708742e3b9527cdbed36bbd054a626bb3760",
+                "url": "https://api.github.com/repos/sylvainjule/kirby-markdown-field/zipball/7b1c13e6e45ffdb8b9e2f436378f5ba93507b1dc",
+                "reference": "7b1c13e6e45ffdb8b9e2f436378f5ba93507b1dc",
                 "shasum": ""
             },
             "require": {
                 "getkirby/composer-installer": "^1.1"
             },
-            "time": "2020-12-28T14:27:51+00:00",
+            "time": "2021-01-06T16:19:33+00:00",
             "type": "kirby-plugin",
             "extra": {
                 "installer-name": "markdown-field"
@@ -586,7 +638,7 @@
             "description": "Enhanced markdown editor for Kirby 3",
             "support": {
                 "issues": "https://github.com/sylvainjule/kirby-markdown-field/issues",
-                "source": "https://github.com/sylvainjule/kirby-markdown-field/tree/1.0.8"
+                "source": "https://github.com/sylvainjule/kirby-markdown-field/tree/1.0.9"
             },
             "install-path": "../../site/plugins/markdown-field"
         },
@@ -1215,17 +1267,17 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.20.0",
-            "version_normalized": "1.20.0.0",
+            "version": "v1.22.0",
+            "version_normalized": "1.22.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "f4ba089a5b6366e453971d3aad5fe8e897b37f41"
+                "reference": "c6c942b1ac76c82448322025e084cadc56048b4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/f4ba089a5b6366e453971d3aad5fe8e897b37f41",
-                "reference": "f4ba089a5b6366e453971d3aad5fe8e897b37f41",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/c6c942b1ac76c82448322025e084cadc56048b4e",
+                "reference": "c6c942b1ac76c82448322025e084cadc56048b4e",
                 "shasum": ""
             },
             "require": {
@@ -1234,11 +1286,11 @@
             "suggest": {
                 "ext-ctype": "For best performance"
             },
-            "time": "2020-10-23T14:02:19+00:00",
+            "time": "2021-01-07T16:49:33+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.20-dev"
+                    "dev-main": "1.22-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -1277,7 +1329,7 @@
                 "portable"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.20.0"
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.22.0"
             },
             "funding": [
                 {
@@ -1297,17 +1349,17 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.20.0",
-            "version_normalized": "1.20.0.0",
+            "version": "v1.22.0",
+            "version_normalized": "1.22.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "39d483bdf39be819deabf04ec872eb0b2410b531"
+                "reference": "f377a3dd1fde44d37b9831d68dc8dea3ffd28e13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/39d483bdf39be819deabf04ec872eb0b2410b531",
-                "reference": "39d483bdf39be819deabf04ec872eb0b2410b531",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/f377a3dd1fde44d37b9831d68dc8dea3ffd28e13",
+                "reference": "f377a3dd1fde44d37b9831d68dc8dea3ffd28e13",
                 "shasum": ""
             },
             "require": {
@@ -1316,11 +1368,11 @@
             "suggest": {
                 "ext-mbstring": "For best performance"
             },
-            "time": "2020-10-23T14:02:19+00:00",
+            "time": "2021-01-07T16:49:33+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.20-dev"
+                    "dev-main": "1.22-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -1360,7 +1412,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.20.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.22.0"
             },
             "funding": [
                 {
@@ -1380,27 +1432,27 @@
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.20.0",
-            "version_normalized": "1.20.0.0",
+            "version": "v1.22.0",
+            "version_normalized": "1.22.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "e70aa8b064c5b72d3df2abd5ab1e90464ad009de"
+                "reference": "dc3063ba22c2a1fd2f45ed856374d79114998f91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/e70aa8b064c5b72d3df2abd5ab1e90464ad009de",
-                "reference": "e70aa8b064c5b72d3df2abd5ab1e90464ad009de",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/dc3063ba22c2a1fd2f45ed856374d79114998f91",
+                "reference": "dc3063ba22c2a1fd2f45ed856374d79114998f91",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
             },
-            "time": "2020-10-23T14:02:19+00:00",
+            "time": "2021-01-07T16:49:33+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.20-dev"
+                    "dev-main": "1.22-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -1446,7 +1498,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php80/tree/v1.20.0"
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.22.0"
             },
             "funding": [
                 {

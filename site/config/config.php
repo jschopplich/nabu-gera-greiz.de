@@ -40,20 +40,6 @@ return [
       'extra' => true
     ],
 
-    'kirbytext' => [
-        'image' => [
-            'srcset' => true
-        ],
-        'video' => [
-            'class' => 'image is-16by9',
-            'iframe' => [
-                'class' => 'has-ratio',
-                'width' => '560',
-                'height' => '315'
-            ]
-        ]
-    ],
-
     'kirby-extended' => [
         'meta' => [
             'defaults' => require __DIR__ . '/meta.php'
@@ -65,6 +51,7 @@ return [
             'enable' => true,
             'templatesInclude' => [
                 'article',
+                'article-blocks',
                 'blog-archive',
                 'blog',
                 'calendar',

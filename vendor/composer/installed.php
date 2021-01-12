@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '7757d8488879f672411c07819adcaad217a8d4e3',
+    'reference' => 'fb65f81aac3b76f34cf7331d8172d7a6c53b0704',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '7757d8488879f672411c07819adcaad217a8d4e3',
+      'reference' => 'fb65f81aac3b76f34cf7331d8172d7a6c53b0704',
     ),
     'claviska/simpleimage' => 
     array (
@@ -74,23 +74,32 @@
       ),
       'reference' => '7e279d2cd5d7fbb156ce46daada972355cea27bb',
     ),
-    'johannschopplich/kirby-extended' => 
+    'johannschopplich/kirby-blurry-placeholder' => 
     array (
-      'pretty_version' => 'v2.5.6',
-      'version' => '2.5.6.0',
+      'pretty_version' => 'v1.1.4',
+      'version' => '1.1.4.0',
       'aliases' => 
       array (
       ),
-      'reference' => '5774c8954b49ab26db9eebc02561a2b42fe29617',
+      'reference' => '1a3a85d15d94a9a7f776e189aebd4b4622a988a5',
+    ),
+    'johannschopplich/kirby-extended' => 
+    array (
+      'pretty_version' => 'v2.5.7',
+      'version' => '2.5.7.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '24d80fa3ff1e479613f3b0924dfd7b33e6c5b879',
     ),
     'johannschopplich/kirby-hashed-assets' => 
     array (
-      'pretty_version' => 'v1.0.6',
-      'version' => '1.0.6.0',
+      'pretty_version' => 'v1.0.7',
+      'version' => '1.0.7.0',
       'aliases' => 
       array (
       ),
-      'reference' => '826240cfc97c3b1623aabc61c345950fb67376de',
+      'reference' => '17a0024d23ad863e3527af41c73af3eddd37d15f',
     ),
     'johannschopplich/kirby-locked-pages' => 
     array (
@@ -103,12 +112,12 @@
     ),
     'k-community/markdown-field' => 
     array (
-      'pretty_version' => '1.0.8',
-      'version' => '1.0.8.0',
+      'pretty_version' => '1.0.9',
+      'version' => '1.0.9.0',
       'aliases' => 
       array (
       ),
-      'reference' => '5f68708742e3b9527cdbed36bbd054a626bb3760',
+      'reference' => '7b1c13e6e45ffdb8b9e2f436378f5ba93507b1dc',
     ),
     'laminas/laminas-escaper' => 
     array (
@@ -209,30 +218,30 @@
     ),
     'symfony/polyfill-ctype' => 
     array (
-      'pretty_version' => 'v1.20.0',
-      'version' => '1.20.0.0',
+      'pretty_version' => 'v1.22.0',
+      'version' => '1.22.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f4ba089a5b6366e453971d3aad5fe8e897b37f41',
+      'reference' => 'c6c942b1ac76c82448322025e084cadc56048b4e',
     ),
     'symfony/polyfill-mbstring' => 
     array (
-      'pretty_version' => 'v1.20.0',
-      'version' => '1.20.0.0',
+      'pretty_version' => 'v1.22.0',
+      'version' => '1.22.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '39d483bdf39be819deabf04ec872eb0b2410b531',
+      'reference' => 'f377a3dd1fde44d37b9831d68dc8dea3ffd28e13',
     ),
     'symfony/polyfill-php80' => 
     array (
-      'pretty_version' => 'v1.20.0',
-      'version' => '1.20.0.0',
+      'pretty_version' => 'v1.22.0',
+      'version' => '1.22.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'e70aa8b064c5b72d3df2abd5ab1e90464ad009de',
+      'reference' => 'dc3063ba22c2a1fd2f45ed856374d79114998f91',
     ),
     'true/punycode' => 
     array (

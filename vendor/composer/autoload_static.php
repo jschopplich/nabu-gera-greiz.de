@@ -139,9 +139,10 @@ class ComposerStaticInit35c729715e5b8e8d90d52a62b250a1d0
         ),
         'KirbyExtended\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/site/plugins/kirby-hashed-assets/classes/KirbyExtended',
-            1 => __DIR__ . '/../..' . '/site/plugins/kirby-locked-pages/classes/KirbyExtended',
-            2 => __DIR__ . '/../..' . '/site/plugins/kirby-extended/classes/KirbyExtended',
+            0 => __DIR__ . '/../..' . '/site/plugins/kirby-blurry-placeholder/classes/KirbyExtended',
+            1 => __DIR__ . '/../..' . '/site/plugins/kirby-extended/classes/KirbyExtended',
+            2 => __DIR__ . '/../..' . '/site/plugins/kirby-locked-pages/classes/KirbyExtended',
+            3 => __DIR__ . '/../..' . '/site/plugins/kirby-hashed-assets/classes/KirbyExtended',
         ),
         'GrahamCampbell\\ResultType\\' => 
         array (
@@ -222,6 +223,8 @@ class ComposerStaticInit35c729715e5b8e8d90d52a62b250a1d0
         'GrahamCampbell\\ResultType\\Result' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Result.php',
         'GrahamCampbell\\ResultType\\Success' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Success.php',
         'KirbyExtended\\AssetHashes' => __DIR__ . '/../..' . '/site/plugins/kirby-hashed-assets/classes/KirbyExtended/AssetHashes.php',
+        'KirbyExtended\\BlurryPlaceholder' => __DIR__ . '/../..' . '/site/plugins/kirby-blurry-placeholder/classes/KirbyExtended/BlurryPlaceholder.php',
+        'KirbyExtended\\BlurryPlaceholderHelpers' => __DIR__ . '/../..' . '/site/plugins/kirby-blurry-placeholder/classes/KirbyExtended/BlurryPlaceholderHelpers.php',
         'KirbyExtended\\Env' => __DIR__ . '/../..' . '/site/plugins/kirby-extended/classes/KirbyExtended/Env.php',
         'KirbyExtended\\HigherOrderTapProxy' => __DIR__ . '/../..' . '/site/plugins/kirby-extended/classes/KirbyExtended/HigherOrderTapProxy.php',
         'KirbyExtended\\HtmlMinTemplate' => __DIR__ . '/../..' . '/site/plugins/kirby-extended/classes/KirbyExtended/HtmlMinTemplate.php',

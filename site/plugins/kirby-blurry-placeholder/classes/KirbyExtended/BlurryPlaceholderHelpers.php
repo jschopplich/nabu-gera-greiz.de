@@ -5,7 +5,7 @@ namespace KirbyExtended;
 class BlurryPlaceholderHelpers
 {
     /**
-     * Returns the URI-encoded string
+     * Returns the URI-encoded string of an SVG
      *
      * @param string $data
      * @return string

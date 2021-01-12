@@ -58,7 +58,7 @@ return [
 
         if ($tag->file !== null) {
             $dataUri = $tag->file->placeholderUri();
-            $useSrcset = $tag->kirby()->option('kirbytext.image.srcset', false);
+            $useSrcset = $tag->kirby()->option('kirbytext.image.srcset', true);
 
             // Disable source set generation for GIFs
             if (Str::endsWith($tag->file->filename(), 'gif')) {

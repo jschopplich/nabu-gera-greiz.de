@@ -1,21 +1,13 @@
 <?php
 
 load([
-    'KirbyExtended\\BlurryPlaceholder' => 'classes/KirbyExtended/BlurryPlaceholder.php',
-    'KirbyExtended\\BlurryPlaceholderHelpers' => 'classes/KirbyExtended/BlurryPlaceholderHelpers.php',
     'KirbyExtended\\HtmlTruncator' => 'classes/KirbyExtended/HtmlTruncator.php',
 ], __DIR__);
 
 use Kirby\Cms\App as Kirby;
-use KirbyExtended\BlurryPlaceholder;
 use KirbyExtended\HtmlTruncator;
 
-Kirby::plugin('nabu-gera-greiz/kirby-tags', [
-    'fileMethods' => [
-        'placeholder' => fn() => BlurryPlaceholder::image($this),
-        'placeholderUri' => fn() => BlurryPlaceholder::uri($this)
-    ],
-
+Kirby::plugin('nabu-gera-greiz/kirby-extensions', [
     'fieldMethods' => [
         'ktExcerpt' => function ($field, $length = 50) {
             $text = $field->kt();

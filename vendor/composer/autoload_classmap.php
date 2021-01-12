@@ -53,6 +53,8 @@ return array(
     'GrahamCampbell\\ResultType\\Result' => $vendorDir . '/graham-campbell/result-type/src/Result.php',
     'GrahamCampbell\\ResultType\\Success' => $vendorDir . '/graham-campbell/result-type/src/Success.php',
     'KirbyExtended\\AssetHashes' => $baseDir . '/site/plugins/kirby-hashed-assets/classes/KirbyExtended/AssetHashes.php',
+    'KirbyExtended\\BlurryPlaceholder' => $baseDir . '/site/plugins/kirby-blurry-placeholder/classes/KirbyExtended/BlurryPlaceholder.php',
+    'KirbyExtended\\BlurryPlaceholderHelpers' => $baseDir . '/site/plugins/kirby-blurry-placeholder/classes/KirbyExtended/BlurryPlaceholderHelpers.php',
     'KirbyExtended\\Env' => $baseDir . '/site/plugins/kirby-extended/classes/KirbyExtended/Env.php',
     'KirbyExtended\\HigherOrderTapProxy' => $baseDir . '/site/plugins/kirby-extended/classes/KirbyExtended/HigherOrderTapProxy.php',
     'KirbyExtended\\HtmlMinTemplate' => $baseDir . '/site/plugins/kirby-extended/classes/KirbyExtended/HtmlMinTemplate.php',

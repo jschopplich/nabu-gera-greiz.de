@@ -8,6 +8,8 @@ Enhanced markdown editor for Kirby 3, community built.
 
 ## Overview
 
+> This plugin is completely free and published under the MIT license. However, if you are using it in a commercial project and want to help me keep up with maintenance, please consider [making a donation of your choice](https://paypal.me/sylvainjl) or purchasing your license(s) through [my affiliate link](https://a.paddle.com/v2/click/1129/36369?link=1170).
+
 - [1. Installation](#1-installation)
 - [2. Setup](#2-setup)
 - [3. Options](#3-options)
@@ -150,12 +152,19 @@ query:
 
 ### 3.5. Size
 
-You can define the height of the field when empty. Default is `small`, which is equal to 1 line. Therefore when you set `buttons: false`, the field mimics a text field, only you have some highlighting on top of it.
+You can define the height of the field when empty. Default is `two-lines`, which mimics the textarea's default empty height.
 
-If you want it to look like an empty `textarea` field (2 lines), set it to `medium`.
+If you want the field to mimic a text field but with some markdown highlighting on top of it, set the size to `one-line` and `buttons: false`.
+
+All predefined sizes are:
 
 ```yaml
-size: medium
+- one-line
+- two-lines
+- small (same as textarea)
+- medium (same as textarea)
+- large (same as textarea)
+- huge (same as textarea)
 ```
 
 Note that you can make the default height any height you want with some [custom panel CSS](https://getkirby.com/docs/reference/system/options/panel#custom-panel-css). First, set the `size` option to any string you'd like:

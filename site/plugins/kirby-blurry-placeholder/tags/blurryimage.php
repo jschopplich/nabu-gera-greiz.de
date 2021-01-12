@@ -3,7 +3,6 @@
 use Kirby\Cms\Html;
 use Kirby\Cms\Url;
 use Kirby\Toolkit\A;
-use Kirby\Toolkit\Str;
 
 return [
     'attr' => [
@@ -16,7 +15,6 @@ return [
         'linkclass',
         'rel',
         'target',
-        'text',
         'title',
         'width'
     ],
@@ -58,33 +56,27 @@ return [
 
         if ($tag->file !== null) {
             $dataUri = $tag->file->placeholderUri();
-            $useSrcset = $tag->kirby()->option('kirbytext.image.srcset', true);
-
-            // Disable source set generation for GIFs
-            if (Str::endsWith($tag->file->filename(), 'gif')) {
-                $useSrcset = false;
-            }
+            $useSrcset = $tag->kirby()->option('kirby-extended.blurry-placeholder.srcset.enable');
+            $preset = $tag->kirby()->option('kirby-extended.blurry-placeholder.srcset.preset');
+            $sizes = $tag->kirby()->option('kirby-extended.blurry-placeholder.srcset.sizes');
 
             $image = Html::img($dataUri, A::merge($imageAttr, [
                 'data-src' => !$useSrcset ? $tag->src : null,
-                'data-srcset' => $useSrcset ? $tag->file->srcset() : null,
-                'data-sizes' => $useSrcset ? 'auto' : null,
+                'data-srcset' => $useSrcset ? $tag->file->srcset($preset) : null,
+                'data-sizes' => $useSrcset ? $sizes : null,
                 'data-lazyload' => 'true',
             ]));
         } else {
             $image = Html::img($tag->src, $imageAttr);
         }
 
-        $tag->class = trim($tag->class . ' nabu-image-hero', ' ');
-
         if ($tag->kirby()->option('kirbytext.image.figure', true) === false) {
             return $link($image);
         }
 
         // render KirbyText in caption
-        if ($tag->caption || $tag->text) {
-            // $tag->caption = [$tag->kirby()->kirbytext($tag->caption ?? $tag->text, [], true)];
-            $tag->caption = [Html::tag('p', [$tag->caption ?? $tag->text])];
+        if ($tag->caption) {
+            $tag->caption = [$tag->kirby()->kirbytext($tag->caption, [], true)];
         }
 
         return Html::figure([$link($image)], $tag->caption, [
