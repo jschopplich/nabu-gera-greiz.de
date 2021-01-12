@@ -6,7 +6,8 @@
     "johannschopplich/kirby-locked-pages": "^1.0",
     "distantnative/retour-for-kirby": "^3.0",
     "k-community/markdown-field": "^1.0",
-    "masterminds/html5": "^2.7"
+    "masterminds/html5": "^2.7",
+    "johannschopplich/kirby-blurry-placeholder": "^1.1"
   },
   "scripts": {
     "start": [
