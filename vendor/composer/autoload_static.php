@@ -141,8 +141,8 @@ class ComposerStaticInit35c729715e5b8e8d90d52a62b250a1d0
         array (
             0 => __DIR__ . '/../..' . '/site/plugins/kirby-blurry-placeholder/classes/KirbyExtended',
             1 => __DIR__ . '/../..' . '/site/plugins/kirby-extended/classes/KirbyExtended',
-            2 => __DIR__ . '/../..' . '/site/plugins/kirby-locked-pages/classes/KirbyExtended',
-            3 => __DIR__ . '/../..' . '/site/plugins/kirby-hashed-assets/classes/KirbyExtended',
+            2 => __DIR__ . '/../..' . '/site/plugins/kirby-hashed-assets/classes/KirbyExtended',
+            3 => __DIR__ . '/../..' . '/site/plugins/kirby-locked-pages/classes/KirbyExtended',
         ),
         'GrahamCampbell\\ResultType\\' => 
         array (
@@ -230,6 +230,7 @@ class ComposerStaticInit35c729715e5b8e8d90d52a62b250a1d0
         'KirbyExtended\\HtmlMinTemplate' => __DIR__ . '/../..' . '/site/plugins/kirby-extended/classes/KirbyExtended/HtmlMinTemplate.php',
         'KirbyExtended\\LockedPages' => __DIR__ . '/../..' . '/site/plugins/kirby-locked-pages/classes/KirbyExtended/LockedPages.php',
         'KirbyExtended\\PageMeta' => __DIR__ . '/../..' . '/site/plugins/kirby-extended/classes/KirbyExtended/PageMeta.php',
+        'KirbyExtended\\Redirects' => __DIR__ . '/../..' . '/site/plugins/kirby-extended/classes/KirbyExtended/Redirects.php',
         'KirbyExtended\\SiteMeta' => __DIR__ . '/../..' . '/site/plugins/kirby-extended/classes/KirbyExtended/SiteMeta.php',
         'Kirby\\Api\\Api' => __DIR__ . '/..' . '/getkirby/cms/src/Api/Api.php',
         'Kirby\\Api\\Collection' => __DIR__ . '/..' . '/getkirby/cms/src/Api/Collection.php',

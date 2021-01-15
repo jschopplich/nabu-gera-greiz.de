@@ -60,6 +60,7 @@ return array(
     'KirbyExtended\\HtmlMinTemplate' => $baseDir . '/site/plugins/kirby-extended/classes/KirbyExtended/HtmlMinTemplate.php',
     'KirbyExtended\\LockedPages' => $baseDir . '/site/plugins/kirby-locked-pages/classes/KirbyExtended/LockedPages.php',
     'KirbyExtended\\PageMeta' => $baseDir . '/site/plugins/kirby-extended/classes/KirbyExtended/PageMeta.php',
+    'KirbyExtended\\Redirects' => $baseDir . '/site/plugins/kirby-extended/classes/KirbyExtended/Redirects.php',
     'KirbyExtended\\SiteMeta' => $baseDir . '/site/plugins/kirby-extended/classes/KirbyExtended/SiteMeta.php',
     'Kirby\\Api\\Api' => $vendorDir . '/getkirby/cms/src/Api/Api.php',
     'Kirby\\Api\\Collection' => $vendorDir . '/getkirby/cms/src/Api/Collection.php',

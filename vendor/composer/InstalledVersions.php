@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'fb65f81aac3b76f34cf7331d8172d7a6c53b0704',
+    'reference' => '2c32de8a8bf9dec0c28d081cd71b71dfa88897e8',
     'name' => '__root__',
   ),
   'versions' => 
@@ -41,7 +41,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'fb65f81aac3b76f34cf7331d8172d7a6c53b0704',
+      'reference' => '2c32de8a8bf9dec0c28d081cd71b71dfa88897e8',
     ),
     'claviska/simpleimage' => 
     array (
@@ -108,12 +108,12 @@ private static $installed = array (
     ),
     'johannschopplich/kirby-extended' => 
     array (
-      'pretty_version' => 'v2.5.7',
-      'version' => '2.5.7.0',
+      'pretty_version' => 'v2.7.0',
+      'version' => '2.7.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '24d80fa3ff1e479613f3b0924dfd7b33e6c5b879',
+      'reference' => 'ce54c468cb611a49862cf5e3fe38a4ca7ccd5731',
     ),
     'johannschopplich/kirby-hashed-assets' => 
     array (

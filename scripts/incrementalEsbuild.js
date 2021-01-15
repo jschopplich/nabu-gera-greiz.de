@@ -1,21 +1,25 @@
+import fs from 'fs'
 import chokidar from 'chokidar'
 import esbuild from 'esbuild'
 import glob from 'tiny-glob'
 
 ;(async () => {
+  const inputDir = 'src/js'
   const isProduction = process.env.NODE_ENV === 'production'
 
   const builder = await esbuild.build({
-    color: true,
     entryPoints: [
-      './src/js/main.js',
-      // ...await glob('./src/js/templates/*.js')
+      `${inputDir}/main.js`,
+      ...fs.existsSync(`${inputDir}/templates`) ? await glob(`${inputDir}/templates/*.js`) : []
     ],
-    outdir: './public/assets/js',
+    outdir: 'public/assets/js',
+    outbase: inputDir,
+    format: 'esm',
     define: {
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
     },
     bundle: true,
+    splitting: true,
     minify: isProduction,
     sourcemap: !isProduction,
     incremental: !isProduction
@@ -23,7 +27,7 @@ import glob from 'tiny-glob'
 
   if (!isProduction) {
     chokidar
-      .watch('src/**/*.js', { awaitWriteFinish: true, ignoreInitial: true })
+      .watch(`${inputDir}/**/*.js`, { awaitWriteFinish: true, ignoreInitial: true })
       .on('all', (eventName, path) => {
         console.log(`${path} ${eventName}`)
         return builder.rebuild()
