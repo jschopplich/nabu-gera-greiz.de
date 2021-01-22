@@ -7,7 +7,7 @@ use Kirby\Data\Json;
 use Kirby\Toolkit\F;
 use Kirby\Toolkit\Str;
 
-class AssetHashes
+class AssetUrls
 {
     protected static array $manifest;
 
@@ -32,7 +32,7 @@ class AssetHashes
     }
 
     /**
-     * Handle CSS assets
+     * Returns the hashed URL for a CSS asset if present
      *
      * @param array $args
      * @return string
@@ -44,7 +44,7 @@ class AssetHashes
     }
 
     /**
-     * Handle JS assets
+     * Returns the hashed URL for a JS asset if present
      *
      * @param array $args
      * @return string
@@ -73,12 +73,13 @@ class AssetHashes
 
         $path = Url::path($url, true);
         $assetsDir = Str::ltrim($kirby->root('assets'), kirby()->root());
-        $absolutePath = $kirby->root() . $path;
 
         // Build path to template asset
         if ($url === '@template') {
             $path = "{$assetsDir}/{$extension}/templates/" . $kirby->site()->page()->template()->name() . ".{$extension}";
         }
+
+        $absolutePath = $kirby->root() . $path;
 
         // Check if the unhashed file exists before looking it up in the manifest
         if (F::exists($absolutePath)) {
@@ -93,7 +94,7 @@ class AssetHashes
 
         // Replace trailing `.{extension}` extension with `[.-]*.{extension}`,
         // with the asterix representing a hash to look for
-        $patternPath = preg_replace('/(\.' . $extension . ')+$/', '[.-]*$1', $absolutePath);
+        $patternPath = preg_replace('/(\.' . $extension . ')$/', '[.-]*$1', $absolutePath);
 
         // Find a hashed file outside of a manifest
         $fileMatch = glob($patternPath);

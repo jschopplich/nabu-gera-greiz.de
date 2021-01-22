@@ -1,12 +1,13 @@
 # Kirby Hashed Assets
 
-Use hashed assets with the `css()` and `js()` helpers without changing the asset paths passed.
+Enhances Kirby's `css()` and `js()` helpers to support hashed filenames. Pass your normal paths (e.g. `.../main.js`) – the plugin will lookup hashed assets and transform the path automatically (e.g. `../main.20201226.js`). That way you can even keep asset paths identical in development and production environment!
 
 ## Key features
 
 - 🛷 Cache bust assets without query strings
 - ⛸ Supports `manifest.json`
 - 🎿 Supports manually hashed file names
+- ☃️ Create preload links with `hashedUrl()` helper
 
 ## Requirements
 
@@ -85,6 +86,22 @@ Now rename the file in the format of `main.{hash}.js`. You may use the current d
 ```
 
 Voilà, without changing the asset path the hashed file will be found and rendered in your template!
+
+### Hashed filenames for preloading links
+
+You can use the global `hashedUrl()` helper to lookup a file like you normally would with the `css()` or `js()` helpers. While the latter return a link or respectively script tag, the `hashedUrl()` helper will only return a URL which you can use in any context.
+
+```php
+<link rel="preload" href="<?= hashedUrl('assets/css/templates/default.css') ?>" as="style">
+// <link rel="preload" href="/assets/css/templates/default.1732900e.css" as="style">
+```
+
+Since all evergreen browsers finally support JavaScript modules natively, you may prefer preloading modules:
+
+```php
+<link rel="modulepreload" href="<?= hashedUrl('assets/js/templates/home.js') ?>">
+// <link rel="preload" href="/assets/js/templates/home.92c6b511.js">
+```
 
 ## License
 

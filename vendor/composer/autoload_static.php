@@ -12,8 +12,10 @@ class ComposerStaticInit35c729715e5b8e8d90d52a62b250a1d0
         '04c6c5c2f7095ccf6c481d3e53e1776f' => __DIR__ . '/..' . '/mustangostang/spyc/Spyc.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         'f864ae44e8154e5ff6f4eec32f46d37f' => __DIR__ . '/..' . '/getkirby/cms/config/setup.php',
+        '87988fc7b1c1f093da22a1a3de972f3a' => __DIR__ . '/..' . '/getkirby/cms/config/helpers.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '7f15a39b34659ec7c61fd4bc2f79c539' => __DIR__ . '/../..' . '/site/plugins/kirby-extended/helpers.php',
+        '7bf725901b12463ff2bf161bbe1670c1' => __DIR__ . '/../..' . '/site/plugins/kirby-hashed-assets/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -222,7 +224,7 @@ class ComposerStaticInit35c729715e5b8e8d90d52a62b250a1d0
         'GrahamCampbell\\ResultType\\Error' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Error.php',
         'GrahamCampbell\\ResultType\\Result' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Result.php',
         'GrahamCampbell\\ResultType\\Success' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Success.php',
-        'KirbyExtended\\AssetHashes' => __DIR__ . '/../..' . '/site/plugins/kirby-hashed-assets/classes/KirbyExtended/AssetHashes.php',
+        'KirbyExtended\\AssetUrls' => __DIR__ . '/../..' . '/site/plugins/kirby-hashed-assets/classes/KirbyExtended/AssetUrls.php',
         'KirbyExtended\\BlurryPlaceholder' => __DIR__ . '/../..' . '/site/plugins/kirby-blurry-placeholder/classes/KirbyExtended/BlurryPlaceholder.php',
         'KirbyExtended\\BlurryPlaceholderHelpers' => __DIR__ . '/../..' . '/site/plugins/kirby-blurry-placeholder/classes/KirbyExtended/BlurryPlaceholderHelpers.php',
         'KirbyExtended\\Env' => __DIR__ . '/../..' . '/site/plugins/kirby-extended/classes/KirbyExtended/Env.php',
@@ -253,6 +255,7 @@ class ComposerStaticInit35c729715e5b8e8d90d52a62b250a1d0
         'Kirby\\Cms\\Auth' => __DIR__ . '/..' . '/getkirby/cms/src/Cms/Auth.php',
         'Kirby\\Cms\\Auth\\Challenge' => __DIR__ . '/..' . '/getkirby/cms/src/Cms/Auth/Challenge.php',
         'Kirby\\Cms\\Auth\\EmailChallenge' => __DIR__ . '/..' . '/getkirby/cms/src/Cms/Auth/EmailChallenge.php',
+        'Kirby\\Cms\\Auth\\Status' => __DIR__ . '/..' . '/getkirby/cms/src/Cms/Auth/Status.php',
         'Kirby\\Cms\\Block' => __DIR__ . '/..' . '/getkirby/cms/src/Cms/Block.php',
         'Kirby\\Cms\\BlockConverter' => __DIR__ . '/..' . '/getkirby/cms/src/Cms/BlockConverter.php',
         'Kirby\\Cms\\Blocks' => __DIR__ . '/..' . '/getkirby/cms/src/Cms/Blocks.php',

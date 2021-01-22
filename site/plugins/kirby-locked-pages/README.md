@@ -64,21 +64,18 @@ Once you've defined a custom template, Kirby will automatically use the one you'
 
 | Option | Default | Description |
 | --- | --- | --- |
-| `slug` | `locked` | Slug for login form (absolute to the site url).
-| `template` | `locked-pages-login` | Optional name of custom template (has to be created manually).
-| `title` | `Page locked` | Title of the login form.
-| `error.csrf` | `The CSRF token is invalid` | Error message for invalid CSRF.
-| `error.password` | `The password is incorrect` | Error message for invalid password.
+| `slug` | `locked` | Slug for login form (absolute to the site url). |
+| `template` | `locked-pages-login` | Optional name of custom template (has to be created manually). |
+| `title` | `Page locked` | Title of the login form. |
+| `error.csrf` | `The CSRF token is invalid` | Error message for invalid CSRF. |
+| `error.password` | `The password is incorrect` | Error message for invalid password. |
 
 > All of the `error` options have to be wrapped in an array.
 
 To give an example for your `config.php`:
 
 ```php
-<?php
-
 return [
-    // …
     'kirby-extended.locked-pages' => [
         'slug' => 'geschuetzt',
         'title' => 'Geschützte Seite',
@@ -89,6 +86,10 @@ return [
     ]
 ]
 ```
+
+## Credits
+
+- Inspired by [kirby-securedpages](https://github.com/kerli81/kirby-securedpages)
 
 ## License
 

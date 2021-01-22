@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '2c32de8a8bf9dec0c28d081cd71b71dfa88897e8',
+    'reference' => '570c434c13fec0a7888cdf5fa646f8f11e37cf96',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '2c32de8a8bf9dec0c28d081cd71b71dfa88897e8',
+      'reference' => '570c434c13fec0a7888cdf5fa646f8f11e37cf96',
     ),
     'claviska/simpleimage' => 
     array (
@@ -49,12 +49,12 @@
     ),
     'getkirby/cms' => 
     array (
-      'pretty_version' => '3.5.0',
-      'version' => '3.5.0.0',
+      'pretty_version' => '3.5.1',
+      'version' => '3.5.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '0d2751af7cb478df14f30fac47fe9a2cd3b38114',
+      'reference' => '551e2f427eaf18e471df1c304552ab3de35e37c6',
     ),
     'getkirby/composer-installer' => 
     array (
@@ -85,30 +85,30 @@
     ),
     'johannschopplich/kirby-extended' => 
     array (
-      'pretty_version' => 'v2.7.0',
-      'version' => '2.7.0.0',
+      'pretty_version' => 'v2.7.1',
+      'version' => '2.7.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'ce54c468cb611a49862cf5e3fe38a4ca7ccd5731',
+      'reference' => 'faaa10100da8ecee94da88860e8cc23caf8781e5',
     ),
     'johannschopplich/kirby-hashed-assets' => 
     array (
-      'pretty_version' => 'v1.0.7',
-      'version' => '1.0.7.0',
+      'pretty_version' => 'v1.1.3',
+      'version' => '1.1.3.0',
       'aliases' => 
       array (
       ),
-      'reference' => '17a0024d23ad863e3527af41c73af3eddd37d15f',
+      'reference' => '0dbe2e0264a1d80bda86f9b044329024e17bf6e7',
     ),
     'johannschopplich/kirby-locked-pages' => 
     array (
-      'pretty_version' => 'v1.0.1',
-      'version' => '1.0.1.0',
+      'pretty_version' => 'v1.0.4',
+      'version' => '1.0.4.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'c559445403011b53c4e699e629d629d31c9a2a8a',
+      'reference' => 'f4e33154259e5739ffb73dde1259236182a35fe1',
     ),
     'k-community/markdown-field' => 
     array (
@@ -254,12 +254,12 @@
     ),
     'vlucas/phpdotenv' => 
     array (
-      'pretty_version' => 'v5.2.0',
-      'version' => '5.2.0.0',
+      'pretty_version' => 'v5.3.0',
+      'version' => '5.3.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'fba64139db67123c7a57072e5f8d3db10d160b66',
+      'reference' => 'b3eac5c7ac896e52deab4a99068e3f4ab12d9e56',
     ),
     'voku/html-min' => 
     array (

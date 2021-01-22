@@ -179,17 +179,17 @@
         },
         {
             "name": "getkirby/cms",
-            "version": "3.5.0",
-            "version_normalized": "3.5.0.0",
+            "version": "3.5.1",
+            "version_normalized": "3.5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getkirby/kirby.git",
-                "reference": "0d2751af7cb478df14f30fac47fe9a2cd3b38114"
+                "reference": "551e2f427eaf18e471df1c304552ab3de35e37c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getkirby/kirby/zipball/0d2751af7cb478df14f30fac47fe9a2cd3b38114",
-                "reference": "0d2751af7cb478df14f30fac47fe9a2cd3b38114",
+                "url": "https://api.github.com/repos/getkirby/kirby/zipball/551e2f427eaf18e471df1c304552ab3de35e37c6",
+                "reference": "551e2f427eaf18e471df1c304552ab3de35e37c6",
                 "shasum": ""
             },
             "require": {
@@ -205,19 +205,20 @@
                 "phpmailer/phpmailer": "6.2.0",
                 "true/punycode": "2.1.1"
             },
-            "time": "2020-12-15T08:09:43+00:00",
+            "time": "2021-01-19T11:05:44+00:00",
             "type": "kirby-cms",
             "installation-source": "dist",
             "autoload": {
-                "files": [
-                    "config/setup.php"
-                ],
+                "psr-4": {
+                    "Kirby\\": "src/"
+                },
                 "classmap": [
                     "dependencies/"
                 ],
-                "psr-4": {
-                    "Kirby\\": "src/"
-                }
+                "files": [
+                    "config/setup.php",
+                    "config/helpers.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -420,17 +421,17 @@
         },
         {
             "name": "johannschopplich/kirby-extended",
-            "version": "v2.7.0",
-            "version_normalized": "2.7.0.0",
+            "version": "v2.7.1",
+            "version_normalized": "2.7.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johannschopplich/kirby-extended.git",
-                "reference": "ce54c468cb611a49862cf5e3fe38a4ca7ccd5731"
+                "reference": "faaa10100da8ecee94da88860e8cc23caf8781e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johannschopplich/kirby-extended/zipball/ce54c468cb611a49862cf5e3fe38a4ca7ccd5731",
-                "reference": "ce54c468cb611a49862cf5e3fe38a4ca7ccd5731",
+                "url": "https://api.github.com/repos/johannschopplich/kirby-extended/zipball/faaa10100da8ecee94da88860e8cc23caf8781e5",
+                "reference": "faaa10100da8ecee94da88860e8cc23caf8781e5",
                 "shasum": ""
             },
             "require": {
@@ -443,7 +444,7 @@
             "require-dev": {
                 "getkirby/cms": "^3.0"
             },
-            "time": "2021-01-15T09:51:26+00:00",
+            "time": "2021-01-18T15:57:19+00:00",
             "type": "kirby-plugin",
             "extra": {
                 "kirby-cms-path": false
@@ -479,23 +480,23 @@
             ],
             "support": {
                 "issues": "https://github.com/johannschopplich/kirby-extended/issues",
-                "source": "https://github.com/johannschopplich/kirby-extended/tree/v2.7.0"
+                "source": "https://github.com/johannschopplich/kirby-extended/tree/v2.7.1"
             },
             "install-path": "../../site/plugins/kirby-extended"
         },
         {
             "name": "johannschopplich/kirby-hashed-assets",
-            "version": "v1.0.7",
-            "version_normalized": "1.0.7.0",
+            "version": "v1.1.3",
+            "version_normalized": "1.1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johannschopplich/kirby-hashed-assets.git",
-                "reference": "17a0024d23ad863e3527af41c73af3eddd37d15f"
+                "reference": "0dbe2e0264a1d80bda86f9b044329024e17bf6e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johannschopplich/kirby-hashed-assets/zipball/17a0024d23ad863e3527af41c73af3eddd37d15f",
-                "reference": "17a0024d23ad863e3527af41c73af3eddd37d15f",
+                "url": "https://api.github.com/repos/johannschopplich/kirby-hashed-assets/zipball/0dbe2e0264a1d80bda86f9b044329024e17bf6e7",
+                "reference": "0dbe2e0264a1d80bda86f9b044329024e17bf6e7",
                 "shasum": ""
             },
             "require": {
@@ -506,13 +507,16 @@
                 "getkirby/cms": "^3.0",
                 "phpunit/phpunit": "^9.0"
             },
-            "time": "2021-01-11T15:29:08+00:00",
+            "time": "2021-01-20T14:34:31+00:00",
             "type": "kirby-plugin",
             "extra": {
                 "kirby-cms-path": false
             },
             "installation-source": "dist",
             "autoload": {
+                "files": [
+                    "helpers.php"
+                ],
                 "psr-4": {
                     "KirbyExtended\\": "classes/KirbyExtended/"
                 }
@@ -541,30 +545,30 @@
             ],
             "support": {
                 "issues": "https://github.com/johannschopplich/kirby-hashed-assets/issues",
-                "source": "https://github.com/johannschopplich/kirby-hashed-assets/tree/v1.0.7"
+                "source": "https://github.com/johannschopplich/kirby-hashed-assets/tree/v1.1.3"
             },
             "install-path": "../../site/plugins/kirby-hashed-assets"
         },
         {
             "name": "johannschopplich/kirby-locked-pages",
-            "version": "v1.0.1",
-            "version_normalized": "1.0.1.0",
+            "version": "v1.0.4",
+            "version_normalized": "1.0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johannschopplich/kirby-locked-pages.git",
-                "reference": "c559445403011b53c4e699e629d629d31c9a2a8a"
+                "reference": "f4e33154259e5739ffb73dde1259236182a35fe1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johannschopplich/kirby-locked-pages/zipball/c559445403011b53c4e699e629d629d31c9a2a8a",
-                "reference": "c559445403011b53c4e699e629d629d31c9a2a8a",
+                "url": "https://api.github.com/repos/johannschopplich/kirby-locked-pages/zipball/f4e33154259e5739ffb73dde1259236182a35fe1",
+                "reference": "f4e33154259e5739ffb73dde1259236182a35fe1",
                 "shasum": ""
             },
             "require": {
                 "getkirby/composer-installer": "^1.2",
                 "php": ">=7.3.0"
             },
-            "time": "2020-12-26T16:54:32+00:00",
+            "time": "2021-01-21T20:27:26+00:00",
             "type": "kirby-plugin",
             "installation-source": "dist",
             "autoload": {
@@ -593,7 +597,7 @@
             ],
             "support": {
                 "issues": "https://github.com/johannschopplich/kirby-locked-pages/issues",
-                "source": "https://github.com/johannschopplich/kirby-locked-pages/tree/v1.0.1"
+                "source": "https://github.com/johannschopplich/kirby-locked-pages/tree/v1.0.4"
             },
             "install-path": "../../site/plugins/kirby-locked-pages"
         },
@@ -1567,17 +1571,17 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v5.2.0",
-            "version_normalized": "5.2.0.0",
+            "version": "v5.3.0",
+            "version_normalized": "5.3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "fba64139db67123c7a57072e5f8d3db10d160b66"
+                "reference": "b3eac5c7ac896e52deab4a99068e3f4ab12d9e56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/fba64139db67123c7a57072e5f8d3db10d160b66",
-                "reference": "fba64139db67123c7a57072e5f8d3db10d160b66",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/b3eac5c7ac896e52deab4a99068e3f4ab12d9e56",
+                "reference": "b3eac5c7ac896e52deab4a99068e3f4ab12d9e56",
                 "shasum": ""
             },
             "require": {
@@ -1592,16 +1596,16 @@
             "require-dev": {
                 "bamarni/composer-bin-plugin": "^1.4.1",
                 "ext-filter": "*",
-                "phpunit/phpunit": "^7.5.20 || ^8.5.2 || ^9.0"
+                "phpunit/phpunit": "^7.5.20 || ^8.5.14 || ^9.5.1"
             },
             "suggest": {
                 "ext-filter": "Required to use the boolean validator."
             },
-            "time": "2020-09-14T15:57:31+00:00",
+            "time": "2021-01-20T15:23:13+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.2-dev"
+                    "dev-master": "5.3-dev"
                 }
             },
             "installation-source": "dist",
@@ -1632,6 +1636,10 @@
                 "env",
                 "environment"
             ],
+            "support": {
+                "issues": "https://github.com/vlucas/phpdotenv/issues",
+                "source": "https://github.com/vlucas/phpdotenv/tree/v5.3.0"
+            },
             "funding": [
                 {
                     "url": "https://github.com/GrahamCampbell",

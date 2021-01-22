@@ -9,14 +9,15 @@ use KirbyExtended\LockedPages;
 Kirby::plugin('johannschopplich/kirby-locked-pages', [
     'hooks' => [
         'route:after' => function ($route, $path, $method, $result, $final) {
-            if ($route->env() !== 'site') return;
+            if (!$final) return;
+            if (!is_a($result, Page::class)) return;
             if (!LockedPages::isLocked($result)) return;
 
-            $path = option('kirby-extended.locked-pages.slug', 'locked');
             $options = [
                 'query' => ['redirect' => $path]
             ];
-            go(url($path, $options));
+            $slug = option('kirby-extended.locked-pages.slug', 'locked');
+            go(url($slug, $options));
         }
     ],
     'routes' => [
@@ -24,6 +25,10 @@ Kirby::plugin('johannschopplich/kirby-locked-pages', [
             'pattern' => option('kirby-extended.locked-pages.slug', 'locked'),
             'method' => 'GET|POST',
             'action' => function () {
+                if (!get('redirect')) {
+                    return false;
+                }
+
                 return new Page([
                     'slug' => option('kirby-extended.locked-pages.slug', 'locked'),
                     'template' => option('kirby-extended.locked-pages.template', 'locked-pages-login'),
