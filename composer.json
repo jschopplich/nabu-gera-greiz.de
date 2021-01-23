@@ -1,13 +1,13 @@
 {
   "require": {
     "getkirby/cms": "^3.0",
+    "johannschopplich/kirby-blurry-placeholder": "^1.1",
     "johannschopplich/kirby-extended": "^2.0",
     "johannschopplich/kirby-hashed-assets": "^1.0",
     "johannschopplich/kirby-locked-pages": "^1.0",
     "distantnative/retour-for-kirby": "^3.0",
     "k-community/markdown-field": "^1.0",
-    "masterminds/html5": "^2.7",
-    "johannschopplich/kirby-blurry-placeholder": "^1.1"
+    "masterminds/html5": "^2.7"
   },
   "scripts": {
     "start": [
