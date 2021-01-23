@@ -2,10 +2,8 @@ type: pages
 templates:
   - article
   - article-blocks
-create: article-blocks
 sortBy: date desc
 info: "{{ page.date.toDate('%d.%m.%Y') }}"
-empty: Noch keine Artikel
 image:
   back: white
   cover: true
