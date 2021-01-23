@@ -1,7 +1,7 @@
 title: Bild
 
 accept:
-  mime: image/*
+  type: image
 
 columns:
   - width: 1/2
@@ -11,7 +11,8 @@ columns:
         fields:
           caption:
             label: Bildunterschrift
-            type: textarea
+            type: writer
+            inline: true
 
   - width: 1/2
     sections:
@@ -21,6 +22,3 @@ columns:
           alt:
             label: Alternativer Text
             type: text
-          link:
-            label: Link
-            type: url

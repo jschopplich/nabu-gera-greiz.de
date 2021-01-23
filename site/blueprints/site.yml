@@ -11,7 +11,9 @@ tabs:
             type: pages
             headline: Aktuelles
             parent: kirby.page('aktuelles')
-            template: article
+            templates:
+              - article
+              - article-blocks
             status: all
             sortBy: date desc
             info: "{{ page.date.toDate('%d.%m.%Y') }}"

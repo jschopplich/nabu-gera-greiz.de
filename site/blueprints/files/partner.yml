@@ -1,7 +1,7 @@
 title: Partnerlogo
 
 accept:
-  mime: image/*
+  type: image
 
 columns:
   - width: 1/2

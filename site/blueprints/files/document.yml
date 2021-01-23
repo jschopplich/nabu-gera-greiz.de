@@ -1,0 +1,8 @@
+title: Dokument
+
+accept:
+  type: document
+
+sections:
+  info:
+    text: Keine Felder zu bearbeiten.

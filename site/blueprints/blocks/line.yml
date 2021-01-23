@@ -1,0 +1,10 @@
+name: Linie
+icon: dots
+fields:
+  class:
+    label: Linientyp
+    type: select
+    default: "short"
+    options:
+      default: Standard
+      short: Kurz

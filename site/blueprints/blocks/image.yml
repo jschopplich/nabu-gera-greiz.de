@@ -1,0 +1,53 @@
+name: field.blocks.image.name
+icon: image
+preview: image
+fields:
+  norm:
+    label: Bildtyp
+    type: radio
+    columns: 2
+    default: "nabu-image-box"
+    options:
+      nabu-image-box: Box
+      nabu-image-hero: Hero
+  image:
+    label: field.blocks.image.name
+    type: files
+    multiple: false
+    image:
+      back: black
+    uploads:
+      template: image
+  alt:
+    label: field.blocks.image.alt
+    type: text
+    icon: title
+  caption:
+    label: field.blocks.image.caption
+    type: writer
+    icon: text
+    inline: true
+  link:
+    label: field.blocks.image.link
+    type: text
+    icon: url
+  ratio:
+    label: Seitenverhältnis
+    type: radio
+    default: "is-horizontal"
+    options:
+      is-horizontal: Horizontal
+      is-vertical: Vertikal
+    width: 1/2
+    when:
+      norm: nabu-image-box
+  properties:
+    label: Eigenschaften
+    type: select
+    options:
+      has-text-centered: Zentriert
+      is-floating-left: Linkbündig
+      is-floating-right: Rechtsbündig
+    width: 1/2
+    when:
+      norm: nabu-image-box

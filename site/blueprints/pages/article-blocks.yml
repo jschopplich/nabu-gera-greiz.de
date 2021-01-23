@@ -1,4 +1,4 @@
-title: Artikel (Markdown)
+title: Artikel (Blöcke)
 
 num: "{{ page.date.toDate('%Y%m%d') }}"
 
@@ -30,7 +30,24 @@ tabs:
                 type: text
               text:
                 label: Text
-                type: markdown
+                type: blocks
+                fieldsets:
+                  text:
+                    label: Text
+                    type: group
+                    fieldsets:
+                      - heading
+                      - text
+                      - list
+                      - line
+                      - document
+                  media:
+                    label: Medien
+                    type: group
+                    fieldsets:
+                      - image
+                      - carousel
+                      - video
 
       - width: 1/3
         sections:
