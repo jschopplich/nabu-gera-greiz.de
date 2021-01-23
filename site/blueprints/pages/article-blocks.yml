@@ -40,13 +40,13 @@ tabs:
                       - text
                       - list
                       - line
-                      - document
                   media:
                     label: Medien
                     type: group
                     fieldsets:
                       - image
                       - carousel
+                      - document
                       - video
 
       - width: 1/3
