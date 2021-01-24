@@ -5,11 +5,16 @@ return function ($kirby) {
     $collection = $page
         ->children()
         ->listed()
-        ->filterBy('template', 'article');
+        ->filterBy('template', 'in', ['article', 'article-blocks']);
 
     if ($pages = $page->associatedBlogs()->toPages()) {
         foreach ($pages as $blog) {
-            $collection->add($blog->children()->listed()->filterBy('template', 'article'));
+            $collection->add(
+                $blog
+                    ->children()
+                    ->listed()
+                    ->filterBy('template', 'in', ['article', 'article-blocks'])
+                );
         }
     }
 
