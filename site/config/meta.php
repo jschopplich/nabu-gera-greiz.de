@@ -1,6 +1,6 @@
 <?php
 
-return function ($kirby, $page, $site) {
+return function ($kirby, $site, $page) {
     $metaTitle = $page->metaTitle()->or($page->title() . ' – ' . $site->title())->value();
     $metaDescription = $page->metaDescription()->or($site->metaDescription())->value();
     $metaImage = $page->metaImage()->or($site->metaImage())->toFile()->resize(1280)->url();
