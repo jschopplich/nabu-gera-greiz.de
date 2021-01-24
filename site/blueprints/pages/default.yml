@@ -31,7 +31,7 @@ tabs:
       - width: 2/3
         sections:
           cover: sections/cover
-          icons: sections/nav-icons
+          icons: sections/meta-icons
 
       - width: 1/3
         sections:

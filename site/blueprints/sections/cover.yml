@@ -4,4 +4,6 @@ fields:
     label: Kopfzeilenbild
     type: files
     query: site.files.filterBy('template', 'image')
+    uploads:
+      template: image
     multiple: false

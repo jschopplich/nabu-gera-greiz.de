@@ -88,8 +88,8 @@ tabs:
                     label: Bild
                     type: files
                     multiple: false
-                    uploads: image
                     query: site.files.filterBy('template', 'image')
+                    uploads: image
                     image:
                       back: white
                   linkLabel:
@@ -104,8 +104,8 @@ tabs:
               partners:
                 label: Partnerbilder
                 type: files
-                uploads: partner
                 query: site.files.filterBy('template', 'partner')
+                uploads: partner
                 image:
                   back: white
                 required: true

@@ -1,0 +1,24 @@
+label: Text
+type: blocks
+fieldsets:
+  text:
+    label: Text
+    type: group
+    fieldsets:
+      - heading
+      - text
+      - list
+      - line
+  media:
+    label: Medien
+    type: group
+    fieldsets:
+      - image
+      - carousel
+      - document
+      - video
+  code:
+    label: Code
+    type: group
+    fieldsets:
+      - code

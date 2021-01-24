@@ -68,7 +68,7 @@ tabs:
       - width: 2/3
         sections:
           cover: sections/cover
-          icons: sections/nav-icons
+          icons: sections/meta-icons
           settings:
             type: fields
             fields:
