@@ -10,12 +10,14 @@ tabs:
           articleDrafts:
             extends: sections/articles
             headline: Artikelentwürfe
+            parent: kirby.page('aktuelles')
             status: draft
             layout: cards
             size: tiny
           unlistedArticles:
             extends: sections/articles
             headline: Ungelistete Artikel
+            parent: kirby.page('aktuelles')
             status: unlisted
 
       - width: 1/2
@@ -23,6 +25,7 @@ tabs:
           listedArticles:
             extends: sections/articles
             headline: Gelistete Artikel
+            parent: kirby.page('aktuelles')
             status: listed
 
   pages:

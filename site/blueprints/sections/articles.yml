@@ -1,5 +1,4 @@
 type: pages
-parent: kirby.page('aktuelles')
 templates:
   - article
   - article-blocks
