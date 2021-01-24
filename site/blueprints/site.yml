@@ -1,43 +1,39 @@
 title: Seite
 
 tabs:
-  pages:
-    label: Dashboard
-    icon: dashboard
+  articles:
+    label: Aktuelles
+    icon: headline
     columns:
-      - width: 1/2
+      - width: 1/1
         sections:
-          blog:
-            type: pages
-            headline: Aktuelles
-            parent: kirby.page('aktuelles')
-            templates:
-              - article
-              - article-blocks
-            status: all
-            sortBy: date desc
-            info: "{{ page.date.toDate('%d.%m.%Y') }}"
+          articleDrafts:
+            extends: sections/articles
+            headline: Artikelentwürfe
+            status: draft
             layout: cards
-            image:
-              back: white
-              cover: true
-            limit: 9
 
       - width: 1/2
         sections:
-          listed:
-            headline: Gelistete Seiten
-            type: pages
-            status: listed
-            info: "/{{ page.slug }}"
-            image: icon
-          unlisted:
-            headline: Ungelistete Seiten
-            type: pages
+          unlistedArticles:
+            extends: sections/articles
+            headline: Ungelistete Artikel
             status: unlisted
-            info: "/{{ page.slug }}"
-            image: icon
-          draft:
+
+      - width: 1/2
+        sections:
+          listedArticles:
+            extends: sections/articles
+            headline: Gelistete Artikel
+            status: listed
+
+  pages:
+    label: Seiten
+    icon: folder
+    columns:
+      - width: 1/2
+        sections:
+          pageDrafts:
             headline: Entwürfe
             type: pages
             status: draft
@@ -45,6 +41,21 @@ tabs:
               - default
               - category
               - blog
+            image: icon
+
+      - width: 1/2
+        sections:
+          listedPages:
+            headline: Gelistete Seiten
+            type: pages
+            status: listed
+            info: "/{{ page.slug }}"
+            image: icon
+          unlistedPages:
+            headline: Ungelistete Seiten
+            type: pages
+            status: unlisted
+            info: "/{{ page.slug }}"
             image: icon
 
   settings:
