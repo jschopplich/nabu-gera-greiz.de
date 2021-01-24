@@ -3,10 +3,7 @@
 return function ($kirby, $page, $site) {
     $metaTitle = $page->metaTitle()->or($page->title() . ' – ' . $site->title())->value();
     $metaDescription = $page->metaDescription()->or($site->metaDescription())->value();
-    $metaImage = (function () use ($page, $site) {
-        $file = $page->metaImage()->toFile() ?? $site->metaImage()->toFile();
-        return $file ? $file->resize(1280)->url() : '/assets/img/meta-image.jpg';
-    })();
+    $metaImage = $page->metaImage()->or($site->metaImage())->toFile()->resize(1280)->url();
 
     return [
         'description' => $metaDescription,
