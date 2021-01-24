@@ -1,3 +1,3 @@
 <?php
 
-require __DIR__ . '/default.php';
+require __DIR__ . '/article.php';
