@@ -13,7 +13,7 @@ fields:
     type: text
     icon: title
     help: >
-      Standardmäßig "<i>Seitentitel</i> – NABU Gera-Greiz e.V.".
+      Nur eingeben, wenn der automatisch generierte Titel für soziale Netzwerke zu lang sein sollte.
   metaDescription:
     label: Meta-Beschreibung
     type: textarea

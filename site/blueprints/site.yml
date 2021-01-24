@@ -5,16 +5,14 @@ tabs:
     label: Aktuelles
     icon: headline
     columns:
-      - width: 1/1
+      - width: 1/2
         sections:
           articleDrafts:
             extends: sections/articles
             headline: Artikelentwürfe
             status: draft
             layout: cards
-
-      - width: 1/2
-        sections:
+            size: tiny
           unlistedArticles:
             extends: sections/articles
             headline: Ungelistete Artikel
@@ -105,7 +103,8 @@ tabs:
                 label: Partnerbilder
                 type: files
                 query: site.files.filterBy('template', 'partner')
-                uploads: partner
+                uploads:
+                  template: partner
                 image:
                   back: white
                 required: true
@@ -144,5 +143,6 @@ tabs:
             fields:
               metaImage:
                 query: site.files.filterBy('template', 'image')
+                required: true
 
   images: tabs/images
