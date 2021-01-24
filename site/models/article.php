@@ -6,9 +6,16 @@ class ArticlePage extends Page
 {
     public function metadata(): array
     {
-        $metaDescription = $this->metaDescription()->or($this->text()->excerpt(140))->value();
         $datePublished = $this->date()->toDate('%Y-%m-%d');
-        $site = site();
+        $site = $this->site();
+
+        if ($this->metaDescription()->isNotEmpty()) {
+            $metaDescription = $this->metaDescription()->value();
+        } else {
+            $metaDescription = $this->intendedTemplate()->name() === 'article-blocks'
+                ? $this->text()->toBlocks()->excerpt(140)
+                : $this->text()->excerpt(140);
+        }
 
         return [
             'description' => $metaDescription,
