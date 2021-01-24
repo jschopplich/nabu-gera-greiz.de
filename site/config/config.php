@@ -52,7 +52,6 @@ return [
             'templatesInclude' => [
                 'article',
                 'article-blocks',
-                'blog-archive',
                 'blog',
                 'calendar',
                 'category',
