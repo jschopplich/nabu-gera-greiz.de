@@ -21,6 +21,18 @@ $kirby = new Kirby([
     ]
 ]);
 
+/**
+ * @param int $seconds Time in seconds
+ * @return bool
+ */
+function increase_time_limit(int $seconds): bool
+{
+    return set_time_limit(max(
+        ini_get('max_execution_time'), $seconds
+    ));
+}
+
+increase_time_limit(180);
 SiteMeta::sitemap();
 
 exit(0);
