@@ -1,4 +1,3 @@
-const validAttributes = ['data-src', 'data-srcset']
 const isCrawler = !('onscroll' in window) || /(gle|ing|ro)bot|crawl|spider/i.test(navigator.userAgent)
 
 const load = element => {
@@ -32,14 +31,6 @@ const onIntersection = loaded => (entries, observer) => {
   }
 }
 
-const onMutation = entries => {
-  for (const entry of entries) {
-    if (isLoaded(entry.target) && entry.type === 'attributes' && validAttributes.includes(entry.attributeName)) {
-      load(entry.target)
-    }
-  }
-}
-
 const getElements = (selector, root = document) => {
   if (selector instanceof Element) return [selector]
   if (selector instanceof NodeList) return selector
@@ -54,12 +45,11 @@ const getElements = (selector, root = document) => {
  * @param {object} [options] Optional default options
  * @returns {object} Object containing `observe` & `triggerLoad` methods and initialized observers
  */
-export function useLazyload (selector = '[data-lazyload]', options = {}) {
+export default (selector = '[data-lazyload]', options = {}) => {
   const {
     root,
     rootMargin = '0px',
     threshold = 0,
-    enableAutoReload = false,
     loaded = () => {}
   } = options
 
@@ -68,11 +58,6 @@ export function useLazyload (selector = '[data-lazyload]', options = {}) {
     rootMargin,
     threshold
   })
-
-  let mutationObserver
-  if (enableAutoReload) {
-    mutationObserver = new MutationObserver(onMutation)
-  }
 
   return {
     observe () {
@@ -87,14 +72,6 @@ export function useLazyload (selector = '[data-lazyload]', options = {}) {
           continue
         }
 
-        if (mutationObserver) {
-          mutationObserver.observe(element, {
-            subtree: true,
-            attributes: true,
-            attributeFilter: validAttributes
-          })
-        }
-
         observer.observe(element)
       }
     },
@@ -106,7 +83,6 @@ export function useLazyload (selector = '[data-lazyload]', options = {}) {
       loaded(element)
     },
 
-    observer,
-    mutationObserver
+    observer
   }
 }
