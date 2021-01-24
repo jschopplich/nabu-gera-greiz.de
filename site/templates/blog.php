@@ -27,11 +27,21 @@
                 <?php endif ?>
 
                 <span class="tag">
-                  <time datetime="<?= $article->date()->toDate('%F') ?>"><?= $article->date()->toDate('%e. %B %Y') ?></time>
+                  <time datetime="<?= $article->date()->toDate('%F') ?>">
+                    <?= $article->date()->toDate('%e. %B %Y') ?>
+                  </time>
                 </span>
               </div>
 
-              <?= $article->text()->ktExcerpt(60) ?>
+              <?php if ($article->intendedTemplate()->name() === 'article-blocks'): ?>
+                <?php
+                $blocks = $article->text()->toBlocks();
+                $blocks = $blocks->slice(0, 2);
+                echo $blocks;
+                ?>
+              <?php else: ?>
+                <?= $article->text()->ktExcerpt(60) ?>
+              <?php endif ?>
 
               <a href="<?= $article->url() ?>" class="button is-primary is-outlined">
                 Weiterlesen
