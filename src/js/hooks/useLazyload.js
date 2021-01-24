@@ -45,7 +45,7 @@ const getElements = (selector, root = document) => {
  * @param {object} [options] Optional default options
  * @returns {object} Object containing `observe` & `triggerLoad` methods and initialized observers
  */
-export default (selector = '[data-lazyload]', options = {}) => {
+export function useLazyload (selector = '[data-lazyload]', options = {}) {
   const {
     root,
     rootMargin = '0px',

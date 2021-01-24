@@ -15,33 +15,35 @@
       Aktuelle Beiträge
     </h2>
 
-    <?php foreach ($articles as $article): ?>
-      <div class="media box" data-animere="slideInUp">
-        <div class="media-left mr-5">
-          <?php if ($image = $article->images()->first()): ?>
-            <figure class="image is-96x96">
-              <img src="<?= $image->crop(96, 96, 'center')->url() ?>" alt="">
-            </figure>
-          <?php else: ?>
-            <span class="icon is-large has-text-grey-lighter">
-              <span class="fas fa-3x fa-newspaper" aria-hidden="true"></span>
-            </span>
-          <?php endif ?>
-        </div>
+    <div class="media-list">
+      <?php foreach ($articles as $article): ?>
+        <div class="media box" data-animere="slideInUp">
+          <div class="media-left mr-5">
+            <?php if ($image = $article->images()->first()): ?>
+              <figure class="image is-96x96">
+                <img src="<?= $image->crop(96, 96, 'center')->url() ?>" alt="">
+              </figure>
+            <?php else: ?>
+              <span class="icon is-large has-text-grey-lighter">
+                <span class="fas fa-3x fa-newspaper" aria-hidden="true"></span>
+              </span>
+            <?php endif ?>
+          </div>
 
-        <div class="media-content">
-          <span class="tag mb-2"><?= $article->date()->toDate('%e. %B %Y') ?></span>
-          <p class="title is-5">
-            <a class="stretched-link" href="<?= $article->url() ?>">
-              <?= $article->title() ?>
-            </a>
-          </p>
-          <?php if ($article->subtitle()->isNotEmpty()): ?>
-            <p class="subtitle is-6 has-text-grey-dark"><?= $article->subtitle() ?></p>
-          <?php endif ?>
+          <div class="media-content">
+            <span class="tag mb-2"><?= $article->date()->toDate('%e. %B %Y') ?></span>
+            <p class="title is-5">
+              <a class="stretched-link" href="<?= $article->url() ?>">
+                <?= $article->title() ?>
+              </a>
+            </p>
+            <?php if ($article->subtitle()->isNotEmpty()): ?>
+              <p class="subtitle is-6 has-text-grey-dark"><?= $article->subtitle() ?></p>
+            <?php endif ?>
+          </div>
         </div>
-      </div>
-    <?php endforeach ?>
+      <?php endforeach ?>
+    </div>
 
     <div class="has-text-centered mt-6">
       <a href="<?= page('aktuelles')->url() ?>" class="button is-primary is-outlined is-medium" role="button">
