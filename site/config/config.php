@@ -56,8 +56,7 @@ return [
                 'calendar',
                 'category',
                 'default',
-                'home',
-                'topic'
+                'home'
             ]
         ],
         'html-minify' => [
