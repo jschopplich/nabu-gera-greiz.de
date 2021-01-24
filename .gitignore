@@ -22,7 +22,3 @@ node_modules/
 /public/assets/manifest.json
 /public/assets/css/
 /public/assets/js/
-
-# Site-specific
-/site/config/.retour
-/site/config/redirects.yml

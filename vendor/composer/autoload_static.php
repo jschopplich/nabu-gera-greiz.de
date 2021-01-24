@@ -24,10 +24,6 @@ class ComposerStaticInit35c729715e5b8e8d90d52a62b250a1d0
             'voku\\helper\\' => 12,
             'voku\\' => 5,
         ),
-        'd' => 
-        array (
-            'distantnative\\Retour\\' => 21,
-        ),
         'W' => 
         array (
             'Whoops\\' => 7,
@@ -81,10 +77,6 @@ class ComposerStaticInit35c729715e5b8e8d90d52a62b250a1d0
         'voku\\' => 
         array (
             0 => __DIR__ . '/..' . '/voku/html-min/src/voku',
-        ),
-        'distantnative\\Retour\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/site/plugins/retour-for-kirby/models',
         ),
         'Whoops\\' => 
         array (
@@ -598,11 +590,6 @@ class ComposerStaticInit35c729715e5b8e8d90d52a62b250a1d0
         'Whoops\\Util\\SystemFacade' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
         'Whoops\\Util\\TemplateHelper' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
         'claviska\\SimpleImage' => __DIR__ . '/..' . '/claviska/simpleimage/src/claviska/SimpleImage.php',
-        'distantnative\\Retour\\Log' => __DIR__ . '/../..' . '/site/plugins/retour-for-kirby/models/Log.php',
-        'distantnative\\Retour\\Retour' => __DIR__ . '/../..' . '/site/plugins/retour-for-kirby/models/Retour.php',
-        'distantnative\\Retour\\Route' => __DIR__ . '/../..' . '/site/plugins/retour-for-kirby/models/Route.php',
-        'distantnative\\Retour\\Routes' => __DIR__ . '/../..' . '/site/plugins/retour-for-kirby/models/Routes.php',
-        'distantnative\\Retour\\Upgrades' => __DIR__ . '/../..' . '/site/plugins/retour-for-kirby/models/Upgrades.php',
         'voku\\helper\\AbstractDomParser' => __DIR__ . '/..' . '/voku/simple_html_dom/src/voku/helper/AbstractDomParser.php',
         'voku\\helper\\AbstractSimpleHtmlDom' => __DIR__ . '/..' . '/voku/simple_html_dom/src/voku/helper/AbstractSimpleHtmlDom.php',
         'voku\\helper\\AbstractSimpleHtmlDomNode' => __DIR__ . '/..' . '/voku/simple_html_dom/src/voku/helper/AbstractSimpleHtmlDomNode.php',

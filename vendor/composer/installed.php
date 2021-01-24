@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'e76c6a0b8f21e6a103ca865690dd7430b36ac411',
+    'reference' => '927797631a83d9f21c1448dedb46802ad5ecdfe2',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'e76c6a0b8f21e6a103ca865690dd7430b36ac411',
+      'reference' => '927797631a83d9f21c1448dedb46802ad5ecdfe2',
     ),
     'claviska/simpleimage' => 
     array (
@@ -28,15 +28,6 @@
       array (
       ),
       'reference' => 'ab2ab8a4672738ab77b39b00922ee4e79aeadb11',
-    ),
-    'distantnative/retour-for-kirby' => 
-    array (
-      'pretty_version' => '3.0.0',
-      'version' => '3.0.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'e9409cfca31e30d15409d5e8bf1ea481436883ce',
     ),
     'filp/whoops' => 
     array (

@@ -8,7 +8,6 @@ $baseDir = dirname($vendorDir);
 return array(
     'voku\\helper\\' => array($vendorDir . '/voku/simple_html_dom/src/voku/helper'),
     'voku\\' => array($vendorDir . '/voku/html-min/src/voku'),
-    'distantnative\\Retour\\' => array($baseDir . '/site/plugins/retour-for-kirby/models'),
     'Whoops\\' => array($vendorDir . '/filp/whoops/src/Whoops'),
     'TrueBV\\' => array($vendorDir . '/true/punycode/src'),
     'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),

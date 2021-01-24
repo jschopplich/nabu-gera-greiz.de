@@ -21,6 +21,12 @@ return [
         }
     ],
     [
+        'pattern' => 'archiv/(:num)',
+        'action' => function ($year) {
+            go("aktuelles/archiv/{$year}", 301);
+        }
+    ],
+    [
         // Virtual pages for blog archives
         'pattern' => '(:all)/archiv/(:num)',
         'action' => function ($all, $year) {
