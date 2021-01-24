@@ -2,13 +2,13 @@
 
 use Kirby\Cms\Page;
 
-class ArticlePage extends Page
+class ArticleBlocksPage extends Page
 {
     public function metadata(): array
     {
         $metaDescription = $this->metaDescription()->isNotEmpty()
             ? $this->metaDescription()->value()
-            : $this->text()->excerpt(140);
+            : $this->text()->toBlocks()->excerpt(140);
         $datePublished = $this->date()->toDate('%Y-%m-%d');
         $site = $this->site();
 
