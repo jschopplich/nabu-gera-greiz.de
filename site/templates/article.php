@@ -14,11 +14,17 @@
           <?php endif ?>
 
           <span class="tag">
-            <time datetime="<?= $page->date()->toDate('%F') ?>"><?= $page->date()->toDate('%e. %B %Y') ?></time>
+            <time datetime="<?= $page->date()->toDate('%F') ?>">
+              <?= $page->date()->toDate('%e. %B %Y') ?>
+            </time>
           </span>
         </div>
 
-        <?= $page->text()->kirbytext() ?>
+        <?php if ($page->intendedTemplate()->name() === 'article-blocks'): ?>
+          <?= $page->text()->toBlocks() ?>
+        <?php else: ?>
+          <?= $page->text()->kirbytext() ?>
+        <?php endif ?>
       </article>
 
       <?php snippet('prevnext') ?>
