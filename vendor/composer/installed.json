@@ -364,17 +364,17 @@
         },
         {
             "name": "johannschopplich/kirby-extended",
-            "version": "v2.7.2",
-            "version_normalized": "2.7.2.0",
+            "version": "v2.7.3",
+            "version_normalized": "2.7.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johannschopplich/kirby-extended.git",
-                "reference": "a6c167f724b8ee813b071f30a3f3a88636695cfe"
+                "reference": "02b32d175568be60cf28fa06588394dc33e0183e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johannschopplich/kirby-extended/zipball/a6c167f724b8ee813b071f30a3f3a88636695cfe",
-                "reference": "a6c167f724b8ee813b071f30a3f3a88636695cfe",
+                "url": "https://api.github.com/repos/johannschopplich/kirby-extended/zipball/02b32d175568be60cf28fa06588394dc33e0183e",
+                "reference": "02b32d175568be60cf28fa06588394dc33e0183e",
                 "shasum": ""
             },
             "require": {
@@ -387,7 +387,7 @@
             "require-dev": {
                 "getkirby/cms": "^3.0"
             },
-            "time": "2021-01-24T14:15:12+00:00",
+            "time": "2021-01-26T12:08:47+00:00",
             "type": "kirby-plugin",
             "extra": {
                 "kirby-cms-path": false
@@ -423,23 +423,23 @@
             ],
             "support": {
                 "issues": "https://github.com/johannschopplich/kirby-extended/issues",
-                "source": "https://github.com/johannschopplich/kirby-extended/tree/v2.7.2"
+                "source": "https://github.com/johannschopplich/kirby-extended/tree/v2.7.3"
             },
             "install-path": "../../site/plugins/kirby-extended"
         },
         {
             "name": "johannschopplich/kirby-hashed-assets",
-            "version": "v1.1.3",
-            "version_normalized": "1.1.3.0",
+            "version": "v1.2.1",
+            "version_normalized": "1.2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johannschopplich/kirby-hashed-assets.git",
-                "reference": "0dbe2e0264a1d80bda86f9b044329024e17bf6e7"
+                "reference": "8d9099e75d5a69cd7dfd9466007803c02c07ebce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johannschopplich/kirby-hashed-assets/zipball/0dbe2e0264a1d80bda86f9b044329024e17bf6e7",
-                "reference": "0dbe2e0264a1d80bda86f9b044329024e17bf6e7",
+                "url": "https://api.github.com/repos/johannschopplich/kirby-hashed-assets/zipball/8d9099e75d5a69cd7dfd9466007803c02c07ebce",
+                "reference": "8d9099e75d5a69cd7dfd9466007803c02c07ebce",
                 "shasum": ""
             },
             "require": {
@@ -450,7 +450,7 @@
                 "getkirby/cms": "^3.0",
                 "phpunit/phpunit": "^9.0"
             },
-            "time": "2021-01-20T14:34:31+00:00",
+            "time": "2021-01-26T23:03:53+00:00",
             "type": "kirby-plugin",
             "extra": {
                 "kirby-cms-path": false
@@ -488,31 +488,37 @@
             ],
             "support": {
                 "issues": "https://github.com/johannschopplich/kirby-hashed-assets/issues",
-                "source": "https://github.com/johannschopplich/kirby-hashed-assets/tree/v1.1.3"
+                "source": "https://github.com/johannschopplich/kirby-hashed-assets/tree/v1.2.1"
             },
             "install-path": "../../site/plugins/kirby-hashed-assets"
         },
         {
             "name": "johannschopplich/kirby-locked-pages",
-            "version": "v1.0.5",
-            "version_normalized": "1.0.5.0",
+            "version": "v1.2.0",
+            "version_normalized": "1.2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johannschopplich/kirby-locked-pages.git",
-                "reference": "a8e859ea178018823a602c5772f6a5735ff54b48"
+                "reference": "2f85e06a49018eeee58478f6dadfeb1ec0f6f5c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johannschopplich/kirby-locked-pages/zipball/a8e859ea178018823a602c5772f6a5735ff54b48",
-                "reference": "a8e859ea178018823a602c5772f6a5735ff54b48",
+                "url": "https://api.github.com/repos/johannschopplich/kirby-locked-pages/zipball/2f85e06a49018eeee58478f6dadfeb1ec0f6f5c6",
+                "reference": "2f85e06a49018eeee58478f6dadfeb1ec0f6f5c6",
                 "shasum": ""
             },
             "require": {
                 "getkirby/composer-installer": "^1.2",
                 "php": ">=7.3.0"
             },
-            "time": "2021-01-24T14:12:08+00:00",
+            "require-dev": {
+                "getkirby/cms": "^3.0"
+            },
+            "time": "2021-01-27T14:03:27+00:00",
             "type": "kirby-plugin",
+            "extra": {
+                "kirby-cms-path": false
+            },
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
@@ -540,7 +546,7 @@
             ],
             "support": {
                 "issues": "https://github.com/johannschopplich/kirby-locked-pages/issues",
-                "source": "https://github.com/johannschopplich/kirby-locked-pages/tree/v1.0.5"
+                "source": "https://github.com/johannschopplich/kirby-locked-pages/tree/v1.2.0"
             },
             "install-path": "../../site/plugins/kirby-locked-pages"
         },
@@ -1146,23 +1152,23 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v5.2.1",
-            "version_normalized": "5.2.1.0",
+            "version": "v5.2.2",
+            "version_normalized": "5.2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-                "reference": "f789e7ead4c79e04ca9a6d6162fc629c89bd8054"
+                "reference": "f65f217b3314504a1ec99c2d6ef69016bb13490f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/f789e7ead4c79e04ca9a6d6162fc629c89bd8054",
-                "reference": "f789e7ead4c79e04ca9a6d6162fc629c89bd8054",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/f65f217b3314504a1ec99c2d6ef69016bb13490f",
+                "reference": "f65f217b3314504a1ec99c2d6ef69016bb13490f",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.2.5"
             },
-            "time": "2020-12-08T17:02:38+00:00",
+            "time": "2021-01-27T10:01:46+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -1191,10 +1197,10 @@
                     "homepage": "https://symfony.com/contributors"
                 }
             ],
-            "description": "Symfony CssSelector Component",
+            "description": "Converts CSS selectors to XPath expressions",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/css-selector/tree/v5.2.1"
+                "source": "https://github.com/symfony/css-selector/tree/v5.2.2"
             },
             "funding": [
                 {

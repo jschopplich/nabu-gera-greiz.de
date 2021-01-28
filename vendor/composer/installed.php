@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'e2ae30036a18dfe855c76d9676138b4776e7f61e',
+    'reference' => '72b518f1b2a959f054d206a91b072fd3b2f5db94',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'e2ae30036a18dfe855c76d9676138b4776e7f61e',
+      'reference' => '72b518f1b2a959f054d206a91b072fd3b2f5db94',
     ),
     'claviska/simpleimage' => 
     array (
@@ -76,30 +76,30 @@
     ),
     'johannschopplich/kirby-extended' => 
     array (
-      'pretty_version' => 'v2.7.2',
-      'version' => '2.7.2.0',
+      'pretty_version' => 'v2.7.3',
+      'version' => '2.7.3.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'a6c167f724b8ee813b071f30a3f3a88636695cfe',
+      'reference' => '02b32d175568be60cf28fa06588394dc33e0183e',
     ),
     'johannschopplich/kirby-hashed-assets' => 
     array (
-      'pretty_version' => 'v1.1.3',
-      'version' => '1.1.3.0',
+      'pretty_version' => 'v1.2.1',
+      'version' => '1.2.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '0dbe2e0264a1d80bda86f9b044329024e17bf6e7',
+      'reference' => '8d9099e75d5a69cd7dfd9466007803c02c07ebce',
     ),
     'johannschopplich/kirby-locked-pages' => 
     array (
-      'pretty_version' => 'v1.0.5',
-      'version' => '1.0.5.0',
+      'pretty_version' => 'v1.2.0',
+      'version' => '1.2.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'a8e859ea178018823a602c5772f6a5735ff54b48',
+      'reference' => '2f85e06a49018eeee58478f6dadfeb1ec0f6f5c6',
     ),
     'k-community/markdown-field' => 
     array (
@@ -200,12 +200,12 @@
     ),
     'symfony/css-selector' => 
     array (
-      'pretty_version' => 'v5.2.1',
-      'version' => '5.2.1.0',
+      'pretty_version' => 'v5.2.2',
+      'version' => '5.2.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f789e7ead4c79e04ca9a6d6162fc629c89bd8054',
+      'reference' => 'f65f217b3314504a1ec99c2d6ef69016bb13490f',
     ),
     'symfony/polyfill-ctype' => 
     array (

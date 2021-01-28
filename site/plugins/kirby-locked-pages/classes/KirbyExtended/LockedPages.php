@@ -12,6 +12,10 @@ class LockedPages
             return false;
         }
 
+        if ($page->isDraft() || $page->isErrorPage()) {
+            return false;
+        }
+
         $protectedPage = static::find($page);
         if ($protectedPage === null) {
             return false;

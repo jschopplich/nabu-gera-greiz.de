@@ -1,6 +1,6 @@
 # Kirby Hashed Assets
 
-Enhances Kirby's `css()` and `js()` helpers to support hashed filenames. Pass your normal paths (e.g. `.../main.js`) – the plugin will lookup hashed assets and transform the path automatically (e.g. `../main.20201226.js`). That way you can even keep asset paths identical in development and production environment!
+Enhances Kirby's `css()` and `js()` helpers to support hashed filenames. Pass your normal paths (e.g. `…main.js`) – the plugin will lookup hashed assets and transform the path automatically (e.g. `…main.20201226.js`). That way you can even keep asset paths identical in development and production environment!
 
 ## Key features
 
@@ -68,6 +68,14 @@ For template-specific assets, use `@template` (instead of `@auto`):
 <?= js('@template') ?>
 // `<script src="https://example.com/assets/js/templates/home.92c6b511.js"></script>`
 ```
+
+> ⚠️ If no template file exists, `https://example.com/@template` will be echoed. This will lead to HTTP errors and blocked content since the requested file doesn't exist and the error page's HTML will be returned.
+
+If you are unsure if a template file exists, use the following helpers:
+- `cssTpl()`
+- `jsTpl()`
+
+They will echo a link tag, respectively script tag, only if a template file for current page's template is present.
 
 ### Manual hashing
 
