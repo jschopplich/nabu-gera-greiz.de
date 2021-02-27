@@ -5,10 +5,10 @@
   "scripts": {
     "assets:clean": "shx rm -rf public/assets/{css,js}",
     "assets:hash": "node scripts/hashAssets.js",
-    "sass:main": "sass --style=compressed src/sass/main.sass public/assets/css/main.css",
-    "esbuild": "node scripts/incrementalEsbuild.js",
+    "build:css": "sass --style=compressed src/sass/main.sass public/assets/css/main.css",
+    "build:js": "node scripts/incrementalEsbuild.js",
     "dev": "concurrently \"npm run sass:main -- --watch\" \"npm run esbuild\"",
-    "build": "npm run assets:clean && npm run sass:main -- --no-source-map && NODE_ENV=production npm run esbuild && npm run assets:hash",
+    "build": "npm run assets:clean && npm run sass:main -- --no-source-map && npm run esbuild && npm run assets:hash",
     "test": "echo \"No test specified\""
   },
   "dependencies": {
@@ -17,10 +17,9 @@
     "flickity": "^2.2.2"
   },
   "devDependencies": {
-    "chokidar": "^3.5.1",
-    "concurrently": "^5.3.0",
-    "esbuild": "^0.8.46",
-    "sass": "^1.32.7",
+    "concurrently": "^6.0.0",
+    "esbuild": "^0.8.53",
+    "sass": "^1.32.8",
     "shx": "^0.3.3",
     "tiny-glob": "^0.2.8"
   }

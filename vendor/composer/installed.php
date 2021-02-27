@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '940cf375e92592a4761fb322e4c65d8cf8d30be0',
+    'reference' => '680c4da6828a6c874fdbc7252cd7fb7127c2227b',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '940cf375e92592a4761fb322e4c65d8cf8d30be0',
+      'reference' => '680c4da6828a6c874fdbc7252cd7fb7127c2227b',
     ),
     'claviska/simpleimage' => 
     array (
@@ -40,12 +40,12 @@
     ),
     'getkirby/cms' => 
     array (
-      'pretty_version' => '3.5.3',
-      'version' => '3.5.3.0',
+      'pretty_version' => '3.5.3.1',
+      'version' => '3.5.3.1',
       'aliases' => 
       array (
       ),
-      'reference' => '317f494ee5166f36e32f9acf286f69786de30512',
+      'reference' => '38afb2d650f3764d23d732b23ae8f04ab9ffba69',
     ),
     'getkirby/composer-installer' => 
     array (
@@ -121,12 +121,12 @@
     ),
     'laminas/laminas-zendframework-bridge' => 
     array (
-      'pretty_version' => '1.1.1',
-      'version' => '1.1.1.0',
+      'pretty_version' => '1.2.0',
+      'version' => '1.2.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '6ede70583e101030bcace4dcddd648f760ddf642',
+      'reference' => '6cccbddfcfc742eb02158d6137ca5687d92cee32',
     ),
     'league/color-extractor' => 
     array (
