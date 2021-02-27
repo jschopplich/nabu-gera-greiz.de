@@ -58,11 +58,10 @@ npm install
 npm run dev
 ```
 
-3. Run the PHP built-in web server for local development or serve the backend by a web server of your choice, like Valet.
+3. Run the PHP built-in web server for local development (requires composer to be installed) or serve the backend by a web server of your choice, like Valet.
 
 ```bash
-chmod u+x serve
-./serve
+composer serve
 ```
 
 ### Production
@@ -73,7 +72,7 @@ Build the frontend assets (CSS & JS files) to `public/assets`:
 npm run build
 ```
 
-If you have caching enabled, make sure to whipe the cache content after each build:
+If you have caching enabled, make sure to whipe the cache after each build:
 
 ```bash
 rm -rf storage/cache/[folder-name-of-your-instance]
