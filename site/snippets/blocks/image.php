@@ -26,12 +26,14 @@ if ($block->location() === 'web') {
     <?php if ($link->isNotEmpty()): ?>
       <a href="<?= $link->toUrl() ?>">
     <?php endif ?>
-      <img src="<?= $dataUri ?>" alt="<?= $alt ?>"<?= attr([
+      <img <?= attr([
+        'src' => $dataUri,
+        'alt' => $alt,
         'data-src' => $src,
         'data-srcset' => $srcset,
         'data-sizes' => $sizes,
         'data-lazyload' => 'true',
-      ], ' ') ?>>
+      ]) ?>>
     <?php if ($link->isNotEmpty()): ?>
       </a>
     <?php endif ?>
