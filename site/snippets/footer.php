@@ -31,7 +31,7 @@
 
 <?php snippet('modals/newsletter') ?>
 
-<?= js('assets/js/main.js') ?>
+<?= js('assets/js/main.js', ['type' => 'module']) ?>
 
 <?= js([
   'assets/fonts/FontAwesomePro/js/fontawesome.min.js',
