@@ -6,9 +6,9 @@
     "assets:clean": "shx rm -rf public/assets/{css,js}",
     "assets:hash": "node scripts/hashAssets.js",
     "build:css": "sass --style=compressed src/sass/main.sass public/assets/css/main.css",
-    "build:js": "node scripts/incrementalEsbuild.js",
-    "dev": "concurrently \"npm run sass:main -- --watch\" \"npm run esbuild\"",
-    "build": "npm run assets:clean && npm run sass:main -- --no-source-map && npm run esbuild && npm run assets:hash",
+    "build:js": "esbuild --bundle --format=esm --outdir=public/assets/js src/js/main.js",
+    "dev": "npm run assets:clean && concurrently \"npm run build:css -- --watch\" \"npm run js:main -- --watch --sourcemap\"",
+    "build": "npm run assets:clean && npm run build:css -- --no-source-map && npm run build:js -- --minify && npm run assets:hash",
     "test": "echo \"No test specified\""
   },
   "dependencies": {
