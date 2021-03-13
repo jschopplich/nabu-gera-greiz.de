@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '680c4da6828a6c874fdbc7252cd7fb7127c2227b',
+    'reference' => 'aaacb3ed91b263a58877c4f217021211b214d7fd',
     'name' => '__root__',
   ),
   'versions' => 
@@ -42,7 +42,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '680c4da6828a6c874fdbc7252cd7fb7127c2227b',
+      'reference' => 'aaacb3ed91b263a58877c4f217021211b214d7fd',
     ),
     'claviska/simpleimage' => 
     array (
@@ -91,12 +91,12 @@ private static $installed = array (
     ),
     'johannschopplich/kirby-blurry-placeholder' => 
     array (
-      'pretty_version' => 'v1.1.4',
-      'version' => '1.1.4.0',
+      'pretty_version' => 'v1.2.1',
+      'version' => '1.2.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '1a3a85d15d94a9a7f776e189aebd4b4622a988a5',
+      'reference' => 'eae815f529fee70cf421e884c922d8321facd75e',
     ),
     'johannschopplich/kirby-extended' => 
     array (
@@ -109,12 +109,12 @@ private static $installed = array (
     ),
     'johannschopplich/kirby-hashed-assets' => 
     array (
-      'pretty_version' => 'v1.2.1',
-      'version' => '1.2.1.0',
+      'pretty_version' => 'v2.0.0',
+      'version' => '2.0.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '8d9099e75d5a69cd7dfd9466007803c02c07ebce',
+      'reference' => 'b4b0feb5b2a9820668dd9bccd3477070749fde65',
     ),
     'johannschopplich/kirby-locked-pages' => 
     array (
@@ -224,8 +224,8 @@ private static $installed = array (
     ),
     'symfony/css-selector' => 
     array (
-      'pretty_version' => 'v5.2.3',
-      'version' => '5.2.3.0',
+      'pretty_version' => 'v5.2.4',
+      'version' => '5.2.4.0',
       'aliases' => 
       array (
       ),
@@ -524,7 +524,6 @@ self::$canGetVendors = method_exists('Composer\Autoload\ClassLoader', 'getRegist
 $installed = array();
 
 if (self::$canGetVendors) {
-
 foreach (ClassLoader::getRegisteredLoaders() as $vendorDir => $loader) {
 if (isset(self::$installedByVendor[$vendorDir])) {
 $installed[] = self::$installedByVendor[$vendorDir];

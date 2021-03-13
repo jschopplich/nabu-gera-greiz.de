@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "assets:clean": "shx rm -rf public/assets/{css,js}",
-    "assets:hash": "node scripts/hashAssets.js",
+    "assets:hash": "node site/plugins/kirby-hashed-assets/scripts/hashAssets.js",
     "build:css": "sass --style=compressed src/sass/main.sass public/assets/css/main.css",
     "build:js": "esbuild --bundle --format=esm --outdir=public/assets/js src/js/main.js",
     "dev": "npm run assets:clean && concurrently \"npm run build:css -- --watch\" \"npm run js:main -- --watch --sourcemap\"",
@@ -12,13 +12,13 @@
     "test": "echo \"No test specified\""
   },
   "dependencies": {
-    "animere": "^1.4.0",
+    "animere": "^1.9.2",
     "bulma": "^0.9.2",
     "flickity": "^2.2.2"
   },
   "devDependencies": {
     "concurrently": "^6.0.0",
-    "esbuild": "^0.8.53",
+    "esbuild": "^0.9.2",
     "sass": "^1.32.8",
     "shx": "^0.3.3",
     "tiny-glob": "^0.2.8"

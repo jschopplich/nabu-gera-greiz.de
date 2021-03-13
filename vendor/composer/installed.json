@@ -312,24 +312,24 @@
         },
         {
             "name": "johannschopplich/kirby-blurry-placeholder",
-            "version": "v1.1.4",
-            "version_normalized": "1.1.4.0",
+            "version": "v1.2.1",
+            "version_normalized": "1.2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johannschopplich/kirby-blurry-placeholder.git",
-                "reference": "1a3a85d15d94a9a7f776e189aebd4b4622a988a5"
+                "reference": "eae815f529fee70cf421e884c922d8321facd75e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johannschopplich/kirby-blurry-placeholder/zipball/1a3a85d15d94a9a7f776e189aebd4b4622a988a5",
-                "reference": "1a3a85d15d94a9a7f776e189aebd4b4622a988a5",
+                "url": "https://api.github.com/repos/johannschopplich/kirby-blurry-placeholder/zipball/eae815f529fee70cf421e884c922d8321facd75e",
+                "reference": "eae815f529fee70cf421e884c922d8321facd75e",
                 "shasum": ""
             },
             "require": {
                 "getkirby/composer-installer": "^1.2",
                 "php": ">=7.3.0"
             },
-            "time": "2020-12-24T16:55:20+00:00",
+            "time": "2021-03-04T20:57:11+00:00",
             "type": "kirby-plugin",
             "installation-source": "dist",
             "autoload": {
@@ -358,7 +358,7 @@
             ],
             "support": {
                 "issues": "https://github.com/johannschopplich/kirby-blurry-placeholder/issues",
-                "source": "https://github.com/johannschopplich/kirby-blurry-placeholder/tree/v1.1.4"
+                "source": "https://github.com/johannschopplich/kirby-blurry-placeholder/tree/v1.2.1"
             },
             "install-path": "../../site/plugins/kirby-blurry-placeholder"
         },
@@ -429,17 +429,17 @@
         },
         {
             "name": "johannschopplich/kirby-hashed-assets",
-            "version": "v1.2.1",
-            "version_normalized": "1.2.1.0",
+            "version": "v2.0.0",
+            "version_normalized": "2.0.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johannschopplich/kirby-hashed-assets.git",
-                "reference": "8d9099e75d5a69cd7dfd9466007803c02c07ebce"
+                "reference": "b4b0feb5b2a9820668dd9bccd3477070749fde65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johannschopplich/kirby-hashed-assets/zipball/8d9099e75d5a69cd7dfd9466007803c02c07ebce",
-                "reference": "8d9099e75d5a69cd7dfd9466007803c02c07ebce",
+                "url": "https://api.github.com/repos/johannschopplich/kirby-hashed-assets/zipball/b4b0feb5b2a9820668dd9bccd3477070749fde65",
+                "reference": "b4b0feb5b2a9820668dd9bccd3477070749fde65",
                 "shasum": ""
             },
             "require": {
@@ -450,7 +450,7 @@
                 "getkirby/cms": "^3.0",
                 "phpunit/phpunit": "^9.0"
             },
-            "time": "2021-01-26T23:03:53+00:00",
+            "time": "2021-03-03T09:49:43+00:00",
             "type": "kirby-plugin",
             "extra": {
                 "kirby-cms-path": false
@@ -488,7 +488,7 @@
             ],
             "support": {
                 "issues": "https://github.com/johannschopplich/kirby-hashed-assets/issues",
-                "source": "https://github.com/johannschopplich/kirby-hashed-assets/tree/v1.2.1"
+                "source": "https://github.com/johannschopplich/kirby-hashed-assets/tree/v2.0.0"
             },
             "install-path": "../../site/plugins/kirby-hashed-assets"
         },
@@ -1160,8 +1160,8 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v5.2.3",
-            "version_normalized": "5.2.3.0",
+            "version": "v5.2.4",
+            "version_normalized": "5.2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
@@ -1208,7 +1208,7 @@
             "description": "Converts CSS selectors to XPath expressions",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/css-selector/tree/v5.2.3"
+                "source": "https://github.com/symfony/css-selector/tree/v5.2.4"
             },
             "funding": [
                 {

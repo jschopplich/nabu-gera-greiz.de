@@ -1,5 +1,16 @@
 const isCrawler = !('onscroll' in window) || /(gle|ing|ro)bot|crawl|spider/i.test(navigator.userAgent)
 
+const debounceFn = (fn, delay = 250) => {
+  let timeoutId
+  return (...args) => {
+    if (timeoutId) clearTimeout(timeoutId)
+    timeoutId = setTimeout(() => {
+      timeoutId = null
+      fn(...args)
+    }, delay)
+  }
+}
+
 const load = element => {
   const newSrc = element.dataset.src
   if (newSrc) element.src = newSrc
@@ -7,8 +18,10 @@ const load = element => {
   const newSrcset = element.dataset.srcset
   if (newSrcset) {
     element.srcset = newSrcset
-    if (element.dataset.sizes === 'auto') {
-      element.sizes = `${element.offsetWidth}px`
+
+    const newSizes = element.dataset.sizes
+    if (newSizes) {
+      element.sizes = newSizes === 'auto' ? `${element.offsetWidth}px` : newSizes
     }
   }
 
@@ -16,6 +29,14 @@ const load = element => {
 }
 
 const isLoaded = element => element.dataset.loaded === 'true'
+
+const recalcSizes = elements => {
+  for (const element of elements) {
+    if (element.dataset.sizes === 'auto') {
+      element.sizes = `${element.offsetWidth}px`
+    }
+  }
+}
 
 const onIntersection = loaded => (entries, observer) => {
   for (const entry of entries) {
@@ -32,7 +53,7 @@ const onIntersection = loaded => (entries, observer) => {
 
 const getElements = (selector, root = document) => {
   if (selector instanceof Element) return [selector]
-  if (selector instanceof NodeList) return selector
+  if (selector instanceof NodeList) return [...selector]
 
   return root.querySelectorAll(selector)
 }
@@ -73,6 +94,9 @@ export function useLazyload (selector = '[data-lazyload]', options = {}) {
 
         observer.observe(element)
       }
+
+      const debounced = debounceFn(() => recalcSizes(elements), 100)
+      window.addEventListener('resize', debounced)
     },
 
     triggerLoad (element) {
