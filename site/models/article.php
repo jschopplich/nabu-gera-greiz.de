@@ -1,8 +1,6 @@
 <?php
 
-use Kirby\Cms\Page;
-
-class ArticlePage extends Page
+class ArticlePage extends \Kirby\Cms\Page
 {
     public function metadata(): array
     {
