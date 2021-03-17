@@ -35,10 +35,9 @@ return [
 
             $path = "{$all}/archiv/{$year}";
             $cache = kirby()->cache('pages');
-            $page = $cache->get($path);
 
-            if ($page !== null && option('debug') !== true) {
-                return $page;
+            if ($cache->exists($path) && !option('debug')) {
+                return $cache->get($path);
             }
 
             $page = Page::factory([
