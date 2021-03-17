@@ -1,4 +1,4 @@
-import { useLazyload } from './hooks/useLazyload'
+import { useLazyload } from './hooks'
 import Animere from 'animere'
 import Modals from './components/modal'
 import Carousels from './components/carousel'
