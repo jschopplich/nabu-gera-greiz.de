@@ -1,3 +1,6 @@
+import { useDebounceFn } from './'
+
+const validAttributes = ['data-src', 'data-srcset']
 const isCrawler = !('onscroll' in window) || /(gle|ing|ro)bot|crawl|spider/i.test(navigator.userAgent)
 
 const load = element => {
@@ -7,6 +10,7 @@ const load = element => {
   const newSrcset = element.dataset.srcset
   if (newSrcset) {
     element.srcset = newSrcset
+
     const newSizes = element.dataset.sizes
     if (newSizes) {
       element.sizes = newSizes === 'auto' ? `${element.offsetWidth}px` : newSizes
@@ -31,25 +35,45 @@ const onIntersection = loaded => (entries, observer) => {
   }
 }
 
+const onMutation = entries => {
+  for (const entry of entries) {
+    if (
+      isLoaded(entry.target) &&
+      entry.type === 'attributes' &&
+      validAttributes.includes(entry.attributeName)
+    ) {
+      load(entry.target)
+    }
+  }
+}
+
+const recalcSizes = elements => {
+  for (const element of elements) {
+    if (element.dataset.sizes === 'auto') {
+      element.sizes = `${element.offsetWidth}px`
+    }
+  }
+}
+
 const getElements = (selector, root = document) => {
   if (selector instanceof Element) return [selector]
-  if (selector instanceof NodeList) return selector
-
+  if (selector instanceof NodeList) return [...selector]
   return root.querySelectorAll(selector)
 }
 
 /**
- * SEO-friendly lazyload implementation derivatised from lozad.js
+ * Lazily loads images SEO-friendly
  *
- * @param {(string|Element|NodeList)} [selector] Optional custom selector, element or node list
- * @param {object} [options] Optional default options
+ * @param {(string|HTMLElement|NodeList)} [selector="[data-lazyload]"] Optional custom selector, element or node list
+ * @param {object} [options={}] Optional default options
  * @returns {object} Object containing `observe` & `triggerLoad` methods and initialized observers
  */
-export function useLazyload (selector = '[data-lazyload]', options = {}) {
+export default function (selector = '[data-lazyload]', options = {}) {
   const {
     root,
     rootMargin = '0px',
     threshold = 0,
+    enableAutoReload = false,
     loaded = () => {}
   } = options
 
@@ -58,6 +82,11 @@ export function useLazyload (selector = '[data-lazyload]', options = {}) {
     rootMargin,
     threshold
   })
+
+  let mutationObserver
+  if (enableAutoReload) {
+    mutationObserver = new MutationObserver(onMutation)
+  }
 
   return {
     observe () {
@@ -72,8 +101,19 @@ export function useLazyload (selector = '[data-lazyload]', options = {}) {
           continue
         }
 
+        if (mutationObserver) {
+          mutationObserver.observe(element, {
+            subtree: true,
+            attributes: true,
+            attributeFilter: validAttributes
+          })
+        }
+
         observer.observe(element)
       }
+
+      const debounced = useDebounceFn(() => recalcSizes(elements), 100)
+      window.addEventListener('resize', debounced)
     },
 
     triggerLoad (element) {
@@ -83,6 +123,7 @@ export function useLazyload (selector = '[data-lazyload]', options = {}) {
       loaded(element)
     },
 
-    observer
+    observer,
+    mutationObserver
   }
 }
