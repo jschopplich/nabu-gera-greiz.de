@@ -1,7 +1,5 @@
 name: Dokument
 icon: attachment
-wysiwyg: true
-preview: text
 fields:
   file:
     label: Dokument

@@ -1,7 +1,7 @@
 <?php /** @var \Kirby\Cms\Block $block */ ?>
-<?php if ($file = $block->image()->toFile()): ?>
+<?php if ($file = $block->file()->toFile()): ?>
   <p>
-    <a download href="<?= $file->url() ?>">
+    <a href="<?= $file->url() ?>" download>
       <?= $block->text() ?>
     </a>
   </p>

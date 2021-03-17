@@ -6,7 +6,7 @@ accept:
 columns:
   - width: 1/2
     sections:
-      meta:
+      link:
         type: fields
         fields:
           link:
@@ -15,7 +15,7 @@ columns:
 
   - width: 1/2
     sections:
-      content:
+      alt:
         type: fields
         fields:
           alt:

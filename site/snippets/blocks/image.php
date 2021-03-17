@@ -1,47 +1,45 @@
 <?php
 
+use Kirby\Toolkit\Html;
+
 /** @var \Kirby\Cms\Block $block */
 $alt     = $block->alt();
 $caption = $block->caption();
 $link    = $block->link();
 $props   = trim($block->norm() . ' ' . $block->properties() . ' ' . $block->ratio(), ' ');
-$src     = null;
-$srcset  = null;
-$sizes   = null;
-$dataUri = null;
+$img     = null;
 
 if ($block->location() === 'web') {
-  $src = $block->src();
+  $img = Html::img($block->src(), ['alt' => $alt]);
 } elseif ($image = $block->image()->toFile()) {
   if ($alt->isEmpty()) $alt = $image->alt();
   if ($caption->isEmpty()) $caption = $image->caption();
-  $srcset = $image->srcset();
-  $sizes = 'auto';
-  $dataUri = $image->placeholderUri();
+
+  $img = Html::img($image->placeholderUri(), [
+    'alt' => $alt,
+    'data-srcset' => $image->srcset(),
+    'data-sizes' => 'auto',
+    'data-lazyload' => 'true',
+    'width' => $image->width(),
+    'height' => $image->height()
+  ]);
 }
 
-?>
-<?php if ($src || $srcset): ?>
-  <figure<?= attr(['class' => $props], ' ') ?>>
-    <?php if ($link->isNotEmpty()): ?>
-      <a href="<?= $link->toUrl() ?>">
-    <?php endif ?>
-      <img <?= attr([
-        'src' => $dataUri,
-        'alt' => $alt,
-        'data-src' => $src,
-        'data-srcset' => $srcset,
-        'data-sizes' => $sizes,
-        'data-lazyload' => 'true',
-      ]) ?>>
-    <?php if ($link->isNotEmpty()): ?>
-      </a>
-    <?php endif ?>
+if ($img === null) return;
 
-    <?php if ($caption->isNotEmpty()): ?>
-      <figcaption>
-        <?= $caption ?>
-      </figcaption>
-    <?php endif ?>
-  </figure>
-<?php endif ?>
+?>
+<figure<?= attr(['class' => $props], ' ') ?>>
+  <?php if ($link->isNotEmpty()): ?>
+    <a href="<?= $link->toUrl() ?>">
+      <?= $img ?>
+    </a>
+  <?php else: ?>
+    <?= $img ?>
+  <?php endif ?>
+
+  <?php if ($caption->isNotEmpty()): ?>
+    <figcaption>
+      <?= $caption ?>
+    </figcaption>
+  <?php endif ?>
+</figure>

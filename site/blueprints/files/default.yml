@@ -1,7 +1,5 @@
 title: Datei
 
-fields:
-  alt:
-    label: Alternativer Text
-    type: text
-    help: Nur für Bilder erforderlich.
+sections:
+  info:
+    text: Keine Felder zu bearbeiten.
