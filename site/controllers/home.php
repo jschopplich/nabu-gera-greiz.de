@@ -1,6 +1,6 @@
 <?php
 
-return function ($kirby) {
+return function (\Kirby\Cms\App $kirby) {
     $page = $kirby->page('aktuelles');
     $collection = $page
         ->children()

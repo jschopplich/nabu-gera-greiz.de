@@ -1,6 +1,6 @@
 <?php
 
-return function ($page) {
+return function (\Kirby\Cms\Page $page) {
     $articles = $page
         ->parent()
         ->children()

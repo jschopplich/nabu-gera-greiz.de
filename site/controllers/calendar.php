@@ -2,7 +2,7 @@
 
 use Kirby\Data\Json;
 
-return function ($page) {
+return function (\Kirby\Cms\Page $page) {
     $events = [];
 
     foreach ($page->calendar()->toStructure() as $event) {
