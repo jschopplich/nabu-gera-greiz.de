@@ -33,14 +33,7 @@ return [
             // Locale setting is not inherited from global configuration
             setlocale(LC_TIME, 'de_DE.UTF-8');
 
-            $path = "{$all}/archiv/{$year}";
-            $cache = kirby()->cache('pages');
-
-            if ($cache->exists($path) && !option('debug')) {
-                return $cache->get($path);
-            }
-
-            $page = Page::factory([
+            return Page::factory([
                 'slug' => $year,
                 'parent' => page($all),
                 'template' => 'blog-archive',
@@ -50,11 +43,6 @@ return [
                     'virtualYear' => $year
                 ]
             ]);
-
-            $content = $page->render();
-            $cache->set($path, $content);
-
-            return $content;
         }
     ],
     [
